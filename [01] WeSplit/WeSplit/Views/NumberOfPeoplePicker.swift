@@ -13,13 +13,22 @@ internal struct NumberOfPeoplePicker: View {
 	@Binding var rangeOfPeople: Range<Int>
 	
 	var body: some View {
-		Picker(
-			"NUM_PEOPLE_LABEL".localized(),
-			selection: $numPeople
-		) {
-			ForEach(rangeOfPeople, id: \.self) {
-				Text("\($0) \("PEOPLE".localized())")
+		HStack {
+			Text(
+				"NUM_PEOPLE_LABEL".localized()
+			)
+			.frame(maxWidth: 180, alignment: .leading)
+			
+			Picker(
+				"NUM_PEOPLE_LABEL".localized(),
+				selection: $numPeople
+			) {
+				ForEach(rangeOfPeople, id: \.self) {
+					Text("\($0) \("PEOPLE".localized())")
+				}
 			}
+			.pickerStyle(.menu)
+			.frame(width: 120, alignment: .trailing)
 		}
 	}
 }
