@@ -1,0 +1,33 @@
+/* 
+ Localizable.strings
+ WeSplit
+ 
+ Created by Joe Pham on 2022-07-12.
+ 
+ */
+
+"APP_NAME" = "WeSplit";
+
+/* General */
+"GENERAL_HEADER" = "Thông tin chung";
+
+/* Check Amount */
+"CHECK_AMOUNT_LABEL" = "Số tiền gốc";
+"CHECK_AMOUNT_PLACEHOLDER" = "Số tiền";
+
+/* Number of people */
+"NUM_PEOPLE_NAV_TITLE" = "Số Người để Chia";
+"NUM_PEOPLE_LABEL" = "Số người để chia";
+
+/* Tip percentage */
+"TIP_PERCENT_HEADER" = "Lượng tip";
+"TIP_PERCENT_TITLE" = "Lượng tip";
+"TIP_PERCENT_FOOTER" = "Dựa trên hóa đơn gốc, bạn muốn để lại bao nhiêu tiền tip?";
+
+/* Total per person */
+"TOTAL_PER_PERSON_HEADER" = "Mỗi người cần trả...";
+
+/* SINGLE WORDS */
+"PEOPLE" = "người";
+
+"KEYBOARD_BUTTON_DONE" = "Xong";

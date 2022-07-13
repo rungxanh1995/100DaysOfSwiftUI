@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2113B0287E0B68002B2772 /* WeSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113AF287E0B68002B2772 /* WeSplitView.swift */; };
+		2C2113B4287E7021002B2772 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113B3287E7021002B2772 /* String+Ext.swift */; };
+		2C2113B8287E70F5002B2772 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C2113BA287E70F5002B2772 /* Localizable.strings */; };
+		2C2113BD287F553A002B2772 /* CheckAmountInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113BC287F553A002B2772 /* CheckAmountInput.swift */; };
+		2C2113BF287F5582002B2772 /* NumberOfPeoplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */; };
+		2C2113C3287F5DD7002B2772 /* TipPercentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */; };
 		2C2C7AA7287E05D5001E8302 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */; };
 		2C2C7AA9287E05D5001E8302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C7AA8287E05D5001E8302 /* ContentView.swift */; };
 		2C2C7AAB287E05D8001E8302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C7AAA287E05D8001E8302 /* Assets.xcassets */; };
@@ -14,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2113AF287E0B68002B2772 /* WeSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitView.swift; sourceTree = "<group>"; };
+		2C2113B3287E7021002B2772 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		2C2113B9287E70F5002B2772 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C2113BB287E70F7002B2772 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; usesTabs = 1; };
+		2C2113BC287F553A002B2772 /* CheckAmountInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAmountInput.swift; sourceTree = "<group>"; };
+		2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPeoplePicker.swift; sourceTree = "<group>"; };
+		2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPercentPicker.swift; sourceTree = "<group>"; };
 		2C2C7AA3287E05D5001E8302 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		2C2C7AA8287E05D5001E8302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2113B1287E0C03002B2772 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C2113AF287E0B68002B2772 /* WeSplitView.swift */,
+				2C2113BC287F553A002B2772 /* CheckAmountInput.swift */,
+				2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */,
+				2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C2113B2287E7014002B2772 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C2113B3287E7021002B2772 /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C2113B5287E70B9002B2772 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C2113BA287E70F5002B2772 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2C2C7A9A287E05D5001E8302 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +93,9 @@
 			children = (
 				2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */,
 				2C2C7AA8287E05D5001E8302 /* ContentView.swift */,
+				2C2113B5287E70B9002B2772 /* Resources */,
+				2C2113B2287E7014002B2772 /* Extensions */,
+				2C2113B1287E0C03002B2772 /* Views */,
 				2C2C7AAA287E05D8001E8302 /* Assets.xcassets */,
 				2C2C7AAC287E05D8001E8302 /* Preview Content */,
 			);
@@ -109,6 +152,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 2C2C7A9A287E05D5001E8302;
 			productRefGroup = 2C2C7AA4287E05D5001E8302 /* Products */;
@@ -126,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C2C7AAE287E05D8001E8302 /* Preview Assets.xcassets in Resources */,
+				2C2113B8287E70F5002B2772 /* Localizable.strings in Resources */,
 				2C2C7AAB287E05D8001E8302 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +182,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2113BF287F5582002B2772 /* NumberOfPeoplePicker.swift in Sources */,
+				2C2113B0287E0B68002B2772 /* WeSplitView.swift in Sources */,
+				2C2113BD287F553A002B2772 /* CheckAmountInput.swift in Sources */,
+				2C2113C3287F5DD7002B2772 /* TipPercentPicker.swift in Sources */,
 				2C2C7AA9287E05D5001E8302 /* ContentView.swift in Sources */,
+				2C2113B4287E7021002B2772 /* String+Ext.swift in Sources */,
 				2C2C7AA7287E05D5001E8302 /* WeSplitApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C2113BA287E70F5002B2772 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C2113B9287E70F5002B2772 /* en */,
+				2C2113BB287E70F7002B2772 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C2C7AAF287E05D8001E8302 /* Debug */ = {
@@ -273,6 +335,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -302,6 +365,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
