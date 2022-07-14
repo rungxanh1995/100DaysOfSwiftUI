@@ -8,7 +8,7 @@
 import Foundation
 
 /// Represents a real-life check, with original amount, number of people to split, and tip
-struct Check: Equatable {
+struct Check {
 	
 	var originalAmount = 0.0
 	
@@ -29,9 +29,5 @@ struct Check: Equatable {
 	
 	var totalPerPerson: Double {
 		totalWithTip / Double(numberOfPeople)
-	}
-	
-	static func == (lhs: Check, rhs: Check) -> Bool {
-		return lhs.originalAmount == rhs.originalAmount
 	}
 }
