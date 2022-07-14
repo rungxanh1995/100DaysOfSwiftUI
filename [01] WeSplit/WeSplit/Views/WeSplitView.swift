@@ -9,26 +9,8 @@ import SwiftUI
 
 struct WeSplitView: View {
 	
-	@State private var checkAmount = 0.0
+	@State var check: Check
 	@FocusState private var isCheckAmountFocused: Bool
-	
-	@State private var numberOfPeople = 2
-	@State private var allowedPeopleRange = 2..<20
-	
-	@State private var isTipIncluded = true
-	private var selectedTipAmount: Double {
-		isTipIncluded ? Double(selectedTipPercentage) / 100 : 0
-	}
-	@State private var selectedTipPercentage = 10
-	private let tipPercentages = [10, 15, 20, 25]
-	
-	private var totalWithTip: Double {
-		checkAmount * (1 + selectedTipAmount)
-	}
-	
-	private var totalPerPerson: Double {
-		totalWithTip / Double(numberOfPeople)
-	}
 	
 	var body: some View {
 		NavigationView {
@@ -38,16 +20,16 @@ struct WeSplitView: View {
 					header: Text("GENERAL_HEADER".localized())
 				) {
 					CheckAmountInput(
-						checkAmount: $checkAmount,
+						checkAmount: $check.originalAmount,
 						amountIsFocused: $isCheckAmountFocused
 					)
 					
 					NumberOfPeoplePicker(
-						numPeople: $numberOfPeople,
-						rangeOfPeople: $allowedPeopleRange
+						numPeople: $check.numberOfPeople,
+						rangeOfPeople: check.allowedPeopleRange
 					)
 					
-					Toggle(isOn: $isTipIncluded) {
+					Toggle(isOn: $check.isTipIncluded) {
 						Text("INCLUDE_TIP_LABEL".localized())
 					}
 				}
@@ -58,24 +40,24 @@ struct WeSplitView: View {
 					footer: Text("TIP_PERCENT_FOOTER".localized())
 				) {
 					TipPercentPicker(
-						percentageOptions: tipPercentages,
-						selectedOption: $selectedTipPercentage
+						percentageOptions: check.tipPercentages,
+						selectedOption: $check.selectedTipPercentage
 					)
 				}
-				.isEmpty(!isTipIncluded)
+				.isEmpty(!check.isTipIncluded)
 				
 				Section(
 					header: Text("GRAND_TOTAL_HEADER".localized()),
 					footer: Text("GRAND_TOTAL_FOOTER".localized())
 				) {
-					Text(totalWithTip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+					Text(check.totalWithTip, format: .currency(code: Locale.current.currencyCode ?? "USD"))
 				}
-				.isEmpty(!isTipIncluded)
+				.isEmpty(!check.isTipIncluded)
 				
 				Section(
 					header: Text("TOTAL_PER_PERSON_HEADER".localized())
 				) {
-					Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
+					Text(check.totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
 				}
 			}
 			.navigationTitle(

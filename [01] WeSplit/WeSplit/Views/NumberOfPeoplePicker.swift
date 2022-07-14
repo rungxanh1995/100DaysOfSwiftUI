@@ -10,7 +10,7 @@ import SwiftUI
 internal struct NumberOfPeoplePicker: View {
 	
 	@Binding var numPeople: Int
-	@Binding var rangeOfPeople: Range<Int>
+	var rangeOfPeople: Range<Int>
 	
 	var body: some View {
 		HStack {
