@@ -19,6 +19,9 @@
 "NUM_PEOPLE_NAV_TITLE" = "Number of People";
 "NUM_PEOPLE_LABEL" = "Number of People";
 
+/* Include tip */
+"INCLUDE_TIP_LABEL" = "Include Tip";
+
 /* Tip percentage */
 "TIP_PERCENT_HEADER" = "Tip percentage";
 "TIP_PERCENT_TITLE" = "Tip percentage";

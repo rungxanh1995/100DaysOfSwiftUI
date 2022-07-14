@@ -15,11 +15,12 @@ struct WeSplitView: View {
 	@State private var numberOfPeople = 2
 	@State private var allowedPeopleRange = 2..<20
 	
-	@State private var selectedTipPercentage = 15
-	private let tipPercentages = [10, 15, 20, 25, 0]
+	@State private var isTipIncluded = true
+	@State private var selectedTipPercentage = 10
+	private let tipPercentages = [10, 15, 20, 25]
 	
 	private var totalPerPerson: Double {
-		let tipSelected = Double(selectedTipPercentage) / 100
+		let tipSelected = isTipIncluded ? Double(selectedTipPercentage) / 100 : 0
 		return (checkAmount * (1 + tipSelected)) / Double(numberOfPeople)
 	}
 	
@@ -39,8 +40,13 @@ struct WeSplitView: View {
 						numPeople: $numberOfPeople,
 						rangeOfPeople: $allowedPeopleRange
 					)
+					
+					Toggle(isOn: $isTipIncluded) {
+						Text("INCLUDE_TIP_LABEL".localized())
+					}
 				}
 				
+			
 				Section(
 					header: Text("TIP_PERCENT_HEADER".localized()),
 					footer: Text("TIP_PERCENT_FOOTER".localized())
@@ -50,6 +56,9 @@ struct WeSplitView: View {
 						selectedOption: $selectedTipPercentage
 					)
 				}
+				.modifier(
+					EmptyModifier(isEmpty: !isTipIncluded)
+				)
 				
 				Section(
 					header: Text("TOTAL_PER_PERSON_HEADER".localized())

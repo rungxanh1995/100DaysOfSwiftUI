@@ -13,6 +13,7 @@
 		2C2113BD287F553A002B2772 /* CheckAmountInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113BC287F553A002B2772 /* CheckAmountInput.swift */; };
 		2C2113BF287F5582002B2772 /* NumberOfPeoplePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */; };
 		2C2113C3287F5DD7002B2772 /* TipPercentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */; };
+		2C2113C5287FA733002B2772 /* EmptyModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2113C4287FA733002B2772 /* EmptyModifier.swift */; };
 		2C2C7AA7287E05D5001E8302 /* WeSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */; };
 		2C2C7AA9287E05D5001E8302 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C7AA8287E05D5001E8302 /* ContentView.swift */; };
 		2C2C7AAB287E05D8001E8302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C7AAA287E05D8001E8302 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 		2C2113BC287F553A002B2772 /* CheckAmountInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAmountInput.swift; sourceTree = "<group>"; };
 		2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfPeoplePicker.swift; sourceTree = "<group>"; };
 		2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipPercentPicker.swift; sourceTree = "<group>"; };
+		2C2113C4287FA733002B2772 /* EmptyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModifier.swift; sourceTree = "<group>"; };
 		2C2C7AA3287E05D5001E8302 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		2C2C7AA8287E05D5001E8302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 				2C2113BC287F553A002B2772 /* CheckAmountInput.swift */,
 				2C2113BE287F5582002B2772 /* NumberOfPeoplePicker.swift */,
 				2C2113C2287F5DD7002B2772 /* TipPercentPicker.swift */,
+				2C2113C4287FA733002B2772 /* EmptyModifier.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				2C2113B0287E0B68002B2772 /* WeSplitView.swift in Sources */,
 				2C2113BD287F553A002B2772 /* CheckAmountInput.swift in Sources */,
 				2C2113C3287F5DD7002B2772 /* TipPercentPicker.swift in Sources */,
+				2C2113C5287FA733002B2772 /* EmptyModifier.swift in Sources */,
 				2C2C7AA9287E05D5001E8302 /* ContentView.swift in Sources */,
 				2C2113B4287E7021002B2772 /* String+Ext.swift in Sources */,
 				2C2C7AA7287E05D5001E8302 /* WeSplitApp.swift in Sources */,

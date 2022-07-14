@@ -19,6 +19,9 @@
 "NUM_PEOPLE_NAV_TITLE" = "Số Người để Chia";
 "NUM_PEOPLE_LABEL" = "Số người để chia";
 
+/* Include tip */
+"INCLUDE_TIP_LABEL" = "Tính cả tip";
+
 /* Tip percentage */
 "TIP_PERCENT_HEADER" = "Lượng tip";
 "TIP_PERCENT_TITLE" = "Lượng tip";
