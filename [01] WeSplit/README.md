@@ -25,7 +25,7 @@ Implementation of extra concepts beyond the scope of its original tutorial were 
 		</tr>
 		<tr>
 			<td>Source of Truth</td>
-			<td>Ensure single source of truth in the app, by using property wrappers like `@State`, `@FocusState`, `@Binding` in tandem</td>
+			<td>Ensure single source of truth in the app, by using property wrappers like <pre>@State</pre>, <pre>@FocusState</pre>, <pre>@Binding</pre> in tandem</td>
 		</tr>
 		<tr>
 			<td>Model</td>
