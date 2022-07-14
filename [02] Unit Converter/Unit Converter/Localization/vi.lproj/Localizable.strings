@@ -1,0 +1,51 @@
+/* 
+  Localizable.strings
+  Unit Converter
+
+  Created by Joe Pham on 2022-07-14.
+  
+*/
+
+"APP_NAME" = "Đổi Đơn vị";
+
+/* Unit Type */
+"CHOOSE_UNIT_LABEL" = "Chọn Đơn vị";
+"TEMPERATURE" = "Nhiệt độ";
+"LENGTH" = "Độ dài";
+"TIME" = "Thời gian";
+"VOLUME" = "Thể tích";
+
+/* Convert From Section */
+"CONVERT_FROM_HEADER" = "Đổi từ";
+"CONVERT_FROM_FOOTER" = "Giá trị bạn nhập vào có thể sẽ không đổi được do dấu phẩy thập phân. Khi đó vui lòng hãy nhập số nguyên.";
+"VALUE_PLACEHOLDER" = "Giá trị";
+"SOURCE_UNIT_HEADER" = "Đơn vị gốc";
+
+/* Convert To Section */
+"CONVERT_TO_HEADER" = "Đổi thành";
+"DESTINATION_UNIT_HEADER" = "Đơn vị đích";
+
+/* Temperature */
+"CELCIUS" = "°C";
+"FARENHEIT" = "°F";
+"KELVIN" = "K";
+
+/* Length */
+"METERS" = "mét";
+"KILOMETERS" = "kilômét";
+"FEET" = "bộ";
+"YARDS" = "thước";
+"MILES" = "dặm";
+
+/* Time */
+"SECONDS" = "giây";
+"MINUTES" = "phút";
+"HOURS" = "giờ";
+
+/* Volume */
+"MILLILITERS" = "mililít";
+"LITERS" = "lít";
+"CUPS" = "cup";
+"OUNCES" = "oz";
+
+"KEYBOARD_BUTTON_DONE" = "Xong";
