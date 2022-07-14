@@ -1,0 +1,44 @@
+/* 
+  Localizable.strings
+  Unit Converter
+
+  Created by Joe Pham on 2022-07-14.
+  
+*/
+
+"APP_NAME" = "Unit Converter";
+
+/* Unit Type */
+"CHOOSE_UNIT_LABEL" = "Choose Unit";
+"TEMPERATURE" = "Temperature";
+"LENGTH" = "Length";
+"TIME" = "Time";
+"VOLUME" = "Volume";
+
+/* Convert From Section */
+"CONVERT_FROM_HEADER" = "Convert from";
+"VALUE_PLACEHOLDER" = "Value";
+"SOURCE_UNIT_HEADER" = "Source unit";
+
+/* Temperature */
+"CELCIUS" = "°C";
+"FARENHEIT" = "°F";
+"KELVIN" = "K";
+
+/* Length */
+"METERS" = "m";
+"KILOMETERS" = "km";
+"FEET" = "ft.";
+"YARDS" = "yd.";
+"MILES" = "mile";
+
+/* Time */
+"SECONDS" = "seconds";
+"MINUTES" = "minutes";
+"HOURS" = "hours";
+
+/* Volume */
+"MILLILITERS" = "mL";
+"LITERS" = "L";
+"CUPS" = "cups";
+"OUNCES" = "oz";

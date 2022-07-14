@@ -11,6 +11,19 @@
 		2CE813142880766400640396 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813132880766400640396 /* ContentView.swift */; };
 		2CE813162880766500640396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE813152880766500640396 /* Assets.xcassets */; };
 		2CE813192880766500640396 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE813182880766500640396 /* Preview Assets.xcassets */; };
+		2CE8132628807B1000640396 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8132528807B1000640396 /* String+Ext.swift */; };
+		2CE8132C28807BBC00640396 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CE8132E28807BBC00640396 /* Localizable.strings */; };
+		2CE8133128807BF000640396 /* UCForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8133028807BF000640396 /* UCForm.swift */; };
+		2CE8133528807C8200640396 /* UnitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8133428807C8200640396 /* UnitType.swift */; };
+		2CE8133A2880888800640396 /* UCPickUnitTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813392880888800640396 /* UCPickUnitTypeView.swift */; };
+		2CE8134228808ABF00640396 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134128808ABF00640396 /* TemperatureUnit.swift */; };
+		2CE8134428808C9B00640396 /* UCUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134328808C9B00640396 /* UCUnit.swift */; };
+		2CE8134728808F4B00640396 /* LengthUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134628808F4B00640396 /* LengthUnit.swift */; };
+		2CE8134A28808FA600640396 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134928808FA600640396 /* TimeUnit.swift */; };
+		2CE8134C2880903800640396 /* VolumeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134B2880903800640396 /* VolumeUnit.swift */; };
+		2CE8134F288091AB00640396 /* UnitTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134E288091AB00640396 /* UnitTypes.swift */; };
+		2CE8135128809BD100640396 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8135028809BD100640396 /* Collection+Ext.swift */; };
+		2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813552880A3F000640396 /* UCSourceUnitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +32,20 @@
 		2CE813132880766400640396 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2CE813152880766500640396 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CE813182880766500640396 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CE8132528807B1000640396 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		2CE8132D28807BBC00640396 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CE8132F28807BC100640396 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CE8133028807BF000640396 /* UCForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCForm.swift; sourceTree = "<group>"; };
+		2CE8133428807C8200640396 /* UnitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitType.swift; sourceTree = "<group>"; };
+		2CE813392880888800640396 /* UCPickUnitTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCPickUnitTypeView.swift; sourceTree = "<group>"; };
+		2CE8134128808ABF00640396 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		2CE8134328808C9B00640396 /* UCUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCUnit.swift; sourceTree = "<group>"; };
+		2CE8134628808F4B00640396 /* LengthUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnit.swift; sourceTree = "<group>"; };
+		2CE8134928808FA600640396 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
+		2CE8134B2880903800640396 /* VolumeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeUnit.swift; sourceTree = "<group>"; };
+		2CE8134E288091AB00640396 /* UnitTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTypes.swift; sourceTree = "<group>"; };
+		2CE8135028809BD100640396 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
+		2CE813552880A3F000640396 /* UCSourceUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSourceUnitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +80,10 @@
 			children = (
 				2CE813112880766400640396 /* Unit_ConverterApp.swift */,
 				2CE813132880766400640396 /* ContentView.swift */,
+				2CE8132028807A5200640396 /* Model */,
+				2CE8132128807A5800640396 /* Views */,
+				2CE8131F28807A4C00640396 /* Extensions */,
+				2CE8132428807AA800640396 /* Localization */,
 				2CE813152880766500640396 /* Assets.xcassets */,
 				2CE813172880766500640396 /* Preview Content */,
 			);
@@ -65,6 +96,95 @@
 				2CE813182880766500640396 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CE8131F28807A4C00640396 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8132528807B1000640396 /* String+Ext.swift */,
+				2CE8135028809BD100640396 /* Collection+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CE8132028807A5200640396 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8133428807C8200640396 /* UnitType.swift */,
+				2CE8134E288091AB00640396 /* UnitTypes.swift */,
+				2CE8134328808C9B00640396 /* UCUnit.swift */,
+				2CE8134028808A9A00640396 /* Temperature */,
+				2CE8134528808F3000640396 /* Length */,
+				2CE8134828808F9500640396 /* Time */,
+				2CE8134D2880906300640396 /* Volume */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2CE8132128807A5800640396 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8133028807BF000640396 /* UCForm.swift */,
+				2CE813382880885A00640396 /* PickUnit */,
+				2CE813542880A3CE00640396 /* SourceUnit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CE8132428807AA800640396 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8132E28807BBC00640396 /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		2CE813382880885A00640396 /* PickUnit */ = {
+			isa = PBXGroup;
+			children = (
+				2CE813392880888800640396 /* UCPickUnitTypeView.swift */,
+			);
+			path = PickUnit;
+			sourceTree = "<group>";
+		};
+		2CE8134028808A9A00640396 /* Temperature */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8134128808ABF00640396 /* TemperatureUnit.swift */,
+			);
+			path = Temperature;
+			sourceTree = "<group>";
+		};
+		2CE8134528808F3000640396 /* Length */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8134628808F4B00640396 /* LengthUnit.swift */,
+			);
+			path = Length;
+			sourceTree = "<group>";
+		};
+		2CE8134828808F9500640396 /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8134928808FA600640396 /* TimeUnit.swift */,
+			);
+			path = Time;
+			sourceTree = "<group>";
+		};
+		2CE8134D2880906300640396 /* Volume */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8134B2880903800640396 /* VolumeUnit.swift */,
+			);
+			path = Volume;
+			sourceTree = "<group>";
+		};
+		2CE813542880A3CE00640396 /* SourceUnit */ = {
+			isa = PBXGroup;
+			children = (
+				2CE813552880A3F000640396 /* UCSourceUnitView.swift */,
+			);
+			path = SourceUnit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +229,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 2CE813052880766400640396;
 			productRefGroup = 2CE8130F2880766400640396 /* Products */;
@@ -126,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE813192880766500640396 /* Preview Assets.xcassets in Resources */,
+				2CE8132C28807BBC00640396 /* Localizable.strings in Resources */,
 				2CE813162880766500640396 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,12 +259,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE8134728808F4B00640396 /* LengthUnit.swift in Sources */,
+				2CE8132628807B1000640396 /* String+Ext.swift in Sources */,
+				2CE8134228808ABF00640396 /* TemperatureUnit.swift in Sources */,
+				2CE8134C2880903800640396 /* VolumeUnit.swift in Sources */,
+				2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */,
+				2CE8133528807C8200640396 /* UnitType.swift in Sources */,
+				2CE8135128809BD100640396 /* Collection+Ext.swift in Sources */,
+				2CE8133128807BF000640396 /* UCForm.swift in Sources */,
 				2CE813142880766400640396 /* ContentView.swift in Sources */,
 				2CE813122880766400640396 /* Unit_ConverterApp.swift in Sources */,
+				2CE8133A2880888800640396 /* UCPickUnitTypeView.swift in Sources */,
+				2CE8134A28808FA600640396 /* TimeUnit.swift in Sources */,
+				2CE8134428808C9B00640396 /* UCUnit.swift in Sources */,
+				2CE8134F288091AB00640396 /* UnitTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CE8132E28807BBC00640396 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CE8132D28807BBC00640396 /* en */,
+				2CE8132F28807BC100640396 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2CE8131A2880766500640396 /* Debug */ = {
