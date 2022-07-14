@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UCSourceUnitView: View {
 	@Binding var input: String
+	var isInputInFocus: FocusState<Bool>.Binding
 	var sourceUnitName: String
 	@Binding var sourceUnitSelected: Int
 	let availableUnits: [UCUnit]
@@ -24,6 +25,7 @@ struct UCSourceUnitView: View {
 					"VALUE_PLACEHOLDER".localized(),
 					text: $input)
 				.keyboardType(.decimalPad)
+				.focused(isInputInFocus)
 				
 				Spacer()
 				

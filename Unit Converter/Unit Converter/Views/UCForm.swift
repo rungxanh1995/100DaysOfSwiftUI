@@ -16,6 +16,8 @@ struct UCForm: View {
 	
 	/// User input for a unit
 	@State private var userUnitInput = ""
+	@FocusState private var isUserInputFocused: Bool
+
 	/// Available units for selected unit type
 	private var availableConvertUnits: [UCUnit] {
 		unitTypes.element(at: unitTypeSelected).units
@@ -55,6 +57,7 @@ struct UCForm: View {
 			
 			UCSourceUnitView(
 				input: $userUnitInput,
+				isInputInFocus: $isUserInputFocused,
 				sourceUnitName: sourceUnitSelected.name.localized(),
 				sourceUnitSelected: $sourceUnitIndices.element(at: unitTypeSelected),
 				availableUnits: availableConvertUnits
@@ -70,6 +73,16 @@ struct UCForm: View {
 		.navigationTitle(
 			Text("APP_NAME".localized())
 		)
+		.toolbar {
+			ToolbarItemGroup(placement: .keyboard) {
+				Spacer()
+				Button(
+					"KEYBOARD_BUTTON_DONE".localized()
+				) {
+					isUserInputFocused = false
+				}
+			}
+		}
     }
 }
 
