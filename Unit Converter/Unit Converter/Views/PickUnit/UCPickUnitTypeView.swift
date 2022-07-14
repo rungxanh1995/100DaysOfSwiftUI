@@ -29,6 +29,7 @@ struct UCPickUnitTypeView: View {
 					)
 				}
 			}
+			.pickerStyle(.segmented)
 		}
     }
 }

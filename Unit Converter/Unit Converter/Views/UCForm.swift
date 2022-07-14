@@ -52,19 +52,18 @@ struct UCForm: View {
 				unitSelected: $unitTypeSelected,
 				units: unitTypes
 			)
-			.pickerStyle(.segmented)
 			
 			UCSourceUnitView(
 				input: $userUnitInput,
 				sourceUnitName: sourceUnitSelected.name.localized(),
-				sourceUnitSelected: $sourceUnitIndices[unitTypeSelected],
+				sourceUnitSelected: $sourceUnitIndices.element(at: unitTypeSelected),
 				availableUnits: availableConvertUnits
 			)
 			
 			UCDestinationUnitView(
 				result: convertedResult,
 				destinationUnitName: destinationUnitSelected.name.localized(),
-				destinationUnitSelected: $destinationUnitIndices[unitTypeSelected],
+				destinationUnitSelected: $destinationUnitIndices.element(at: unitTypeSelected),
 				availableUnits: availableConvertUnits
 			)
 		}
