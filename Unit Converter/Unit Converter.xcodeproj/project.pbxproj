@@ -25,6 +25,7 @@
 		2CE8135128809BD100640396 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8135028809BD100640396 /* Collection+Ext.swift */; };
 		2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813552880A3F000640396 /* UCSourceUnitView.swift */; };
 		2CE813592880BECC00640396 /* UCDestinationUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813582880BECC00640396 /* UCDestinationUnitView.swift */; };
+		2CE8135B2880C16E00640396 /* UCUnitPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8135A2880C16E00640396 /* UCUnitPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		2CE8135028809BD100640396 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		2CE813552880A3F000640396 /* UCSourceUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSourceUnitView.swift; sourceTree = "<group>"; };
 		2CE813582880BECC00640396 /* UCDestinationUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCDestinationUnitView.swift; sourceTree = "<group>"; };
+		2CE8135A2880C16E00640396 /* UCUnitPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCUnitPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE813392880888800640396 /* UCPickUnitTypeView.swift */,
+				2CE8135A2880C16E00640396 /* UCUnitPicker.swift */,
 			);
 			path = PickUnit;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				2CE8134728808F4B00640396 /* LengthUnit.swift in Sources */,
 				2CE813592880BECC00640396 /* UCDestinationUnitView.swift in Sources */,
 				2CE8132628807B1000640396 /* String+Ext.swift in Sources */,
+				2CE8135B2880C16E00640396 /* UCUnitPicker.swift in Sources */,
 				2CE8134228808ABF00640396 /* TemperatureUnit.swift in Sources */,
 				2CE8134C2880903800640396 /* VolumeUnit.swift in Sources */,
 				2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */,
