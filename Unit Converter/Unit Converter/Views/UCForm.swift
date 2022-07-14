@@ -61,6 +61,12 @@ struct UCForm: View {
 				availableUnits: availableInputUnits
 			)
 			
+			UCDestinationUnitView(
+				result: convertedResult,
+				destinationUnitName: destinationUnitSelected.name.localized(),
+				destinationUnitSelected: $destinationUnitIndices[unitTypeSelected],
+				availableUnits: availableInputUnits
+			)
 		}
 		.navigationTitle(
 			Text("APP_NAME".localized())

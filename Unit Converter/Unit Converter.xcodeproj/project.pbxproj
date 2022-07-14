@@ -24,6 +24,7 @@
 		2CE8134F288091AB00640396 /* UnitTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134E288091AB00640396 /* UnitTypes.swift */; };
 		2CE8135128809BD100640396 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8135028809BD100640396 /* Collection+Ext.swift */; };
 		2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813552880A3F000640396 /* UCSourceUnitView.swift */; };
+		2CE813592880BECC00640396 /* UCDestinationUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813582880BECC00640396 /* UCDestinationUnitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2CE8134E288091AB00640396 /* UnitTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTypes.swift; sourceTree = "<group>"; };
 		2CE8135028809BD100640396 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		2CE813552880A3F000640396 /* UCSourceUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSourceUnitView.swift; sourceTree = "<group>"; };
+		2CE813582880BECC00640396 /* UCDestinationUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCDestinationUnitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				2CE8133028807BF000640396 /* UCForm.swift */,
 				2CE813382880885A00640396 /* PickUnit */,
 				2CE813542880A3CE00640396 /* SourceUnit */,
+				2CE813572880BEAF00640396 /* DestinationUnit */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -185,6 +188,14 @@
 				2CE813552880A3F000640396 /* UCSourceUnitView.swift */,
 			);
 			path = SourceUnit;
+			sourceTree = "<group>";
+		};
+		2CE813572880BEAF00640396 /* DestinationUnit */ = {
+			isa = PBXGroup;
+			children = (
+				2CE813582880BECC00640396 /* UCDestinationUnitView.swift */,
+			);
+			path = DestinationUnit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE8134728808F4B00640396 /* LengthUnit.swift in Sources */,
+				2CE813592880BECC00640396 /* UCDestinationUnitView.swift in Sources */,
 				2CE8132628807B1000640396 /* String+Ext.swift in Sources */,
 				2CE8134228808ABF00640396 /* TemperatureUnit.swift in Sources */,
 				2CE8134C2880903800640396 /* VolumeUnit.swift in Sources */,
