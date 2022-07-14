@@ -33,6 +33,7 @@
 		2C2113C4287FA733002B2772 /* EmptyModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModifier.swift; sourceTree = "<group>"; };
 		2C2113C6287FA819002B2772 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		2C2113C9287FADC7002B2772 /* Check.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Check.swift; sourceTree = "<group>"; };
+		2C2113CB287FB18B002B2772 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2C2C7AA3287E05D5001E8302 /* WeSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2C7AA6287E05D5001E8302 /* WeSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeSplitApp.swift; sourceTree = "<group>"; };
 		2C2C7AA8287E05D5001E8302 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		2C2C7A9A287E05D5001E8302 = {
 			isa = PBXGroup;
 			children = (
+				2C2113CB287FB18B002B2772 /* README.md */,
 				2C2C7AA5287E05D5001E8302 /* WeSplit */,
 				2C2C7AA4287E05D5001E8302 /* Products */,
 			);
