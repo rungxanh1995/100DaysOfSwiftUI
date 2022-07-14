@@ -27,6 +27,10 @@
 "TIP_PERCENT_TITLE" = "Lượng tip";
 "TIP_PERCENT_FOOTER" = "Dựa trên hóa đơn gốc, bạn muốn để lại bao nhiêu tiền tip?";
 
+/* Grand total */
+"GRAND_TOTAL_HEADER" = "Tổng số tiền";
+"GRAND_TOTAL_FOOTER" = "Bao gồm số tiền gốc và tiền tip";
+
 /* Total per person */
 "TOTAL_PER_PERSON_HEADER" = "Mỗi người cần trả...";
 

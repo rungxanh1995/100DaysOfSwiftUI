@@ -27,6 +27,10 @@
 "TIP_PERCENT_TITLE" = "Tip percentage";
 "TIP_PERCENT_FOOTER" = "How much tip would you like to leave, based on the original check amount entered";
 
+/* Grand total */
+"GRAND_TOTAL_HEADER" = "Grand Total";
+"GRAND_TOTAL_FOOTER" = "Original check amount and tip combined";
+
 /* Total per person */
 "TOTAL_PER_PERSON_HEADER" = "Each person pays...";
 
