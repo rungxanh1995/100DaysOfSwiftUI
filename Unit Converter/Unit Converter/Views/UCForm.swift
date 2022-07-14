@@ -17,7 +17,7 @@ struct UCForm: View {
 	/// User input for a unit
 	@State private var userUnitInput = ""
 	/// Available units for selected unit type
-	private var availableInputUnits: [UCUnit] {
+	private var availableConvertUnits: [UCUnit] {
 		unitTypes.element(at: unitTypeSelected).units
 	}
 	
@@ -26,7 +26,7 @@ struct UCForm: View {
 	/// Selected source unit
 	private var sourceUnitSelected: UCUnit {
 		let selectedIndex = sourceUnitIndices[unitTypeSelected]
-		return availableInputUnits.element(at: selectedIndex)
+		return availableConvertUnits.element(at: selectedIndex)
 	}
 	
 	/// Selected destination indices for all unit types
@@ -34,7 +34,7 @@ struct UCForm: View {
 	/// Selected destination unit
 	private var destinationUnitSelected: UCUnit {
 		let selectedIndex = destinationUnitIndices[unitTypeSelected]
-		return availableInputUnits.element(at: selectedIndex)
+		return availableConvertUnits.element(at: selectedIndex)
 	}
 	
 	private var convertedResult: Double {
@@ -58,14 +58,14 @@ struct UCForm: View {
 				input: $userUnitInput,
 				sourceUnitName: sourceUnitSelected.name.localized(),
 				sourceUnitSelected: $sourceUnitIndices[unitTypeSelected],
-				availableUnits: availableInputUnits
+				availableUnits: availableConvertUnits
 			)
 			
 			UCDestinationUnitView(
 				result: convertedResult,
 				destinationUnitName: destinationUnitSelected.name.localized(),
 				destinationUnitSelected: $destinationUnitIndices[unitTypeSelected],
-				availableUnits: availableInputUnits
+				availableUnits: availableConvertUnits
 			)
 		}
 		.navigationTitle(
