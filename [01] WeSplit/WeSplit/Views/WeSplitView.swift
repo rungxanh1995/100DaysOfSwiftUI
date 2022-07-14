@@ -27,7 +27,9 @@ struct WeSplitView: View {
 		NavigationView {
 			Form {
 				
-				Section {
+				Section(
+					header: Text("GENERAL_HEADER".localized())
+				) {
 					CheckAmountInput(
 						checkAmount: $checkAmount,
 						amountIsFocused: $isCheckAmountFocused
@@ -37,33 +39,27 @@ struct WeSplitView: View {
 						numPeople: $numberOfPeople,
 						rangeOfPeople: $allowedPeopleRange
 					)
-				} header: {
-					Text(
-						"GENERAL_HEADER".localized()
-					)
 				}
 				
-				Section {
+				Section(
+					header: Text("TIP_PERCENT_HEADER".localized()),
+					footer: Text("TIP_PERCENT_FOOTER".localized())
+				) {
 					TipPercentPicker(
 						percentageOptions: tipPercentages,
 						selectedOption: $selectedTipPercentage
 					)
-				} header: {
-					Text("TIP_PERCENT_HEADER".localized())
-				} footer: {
-					Text("TIP_PERCENT_FOOTER".localized())
 				}
 				
-				Section {
+				Section(
+					header: Text("TOTAL_PER_PERSON_HEADER".localized())
+				) {
 					Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-				} header: {
-					Text("TOTAL_PER_PERSON_HEADER".localized())
 				}
 			}
 			.navigationTitle(
 				"APP_NAME".localized()
 			)
-			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
 				ToolbarItemGroup(placement: .keyboard) {
 					Spacer()
