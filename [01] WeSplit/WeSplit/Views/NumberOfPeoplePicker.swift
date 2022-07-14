@@ -17,7 +17,8 @@ internal struct NumberOfPeoplePicker: View {
 			Text(
 				"NUM_PEOPLE_LABEL".localized()
 			)
-			.frame(maxWidth: 180, alignment: .leading)
+			
+			Spacer()
 			
 			Picker(
 				"NUM_PEOPLE_LABEL".localized(),
@@ -28,7 +29,6 @@ internal struct NumberOfPeoplePicker: View {
 				}
 			}
 			.pickerStyle(.menu)
-			.frame(width: 120, alignment: .trailing)
 		}
 	}
 }
