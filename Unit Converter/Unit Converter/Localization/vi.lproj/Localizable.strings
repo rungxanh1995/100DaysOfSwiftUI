@@ -17,6 +17,7 @@
 
 /* Convert From Section */
 "CONVERT_FROM_HEADER" = "Đổi từ";
+"CONVERT_FROM_FOOTER" = "Giá trị bạn nhập vào có thể sẽ không đổi được do dấu phẩy thập phân. Khi đó vui lòng hãy nhập số nguyên.";
 "VALUE_PLACEHOLDER" = "Giá trị";
 "SOURCE_UNIT_HEADER" = "Đơn vị gốc";
 

@@ -17,7 +17,8 @@ struct UCSourceUnitView: View {
 	
 	var body: some View {
 		Section(
-			header: Text("CONVERT_FROM_HEADER".localized())
+			header: Text("CONVERT_FROM_HEADER".localized()),
+			footer: Text("CONVERT_FROM_FOOTER".localized())
 		) {
 			// Input
 			HStack {

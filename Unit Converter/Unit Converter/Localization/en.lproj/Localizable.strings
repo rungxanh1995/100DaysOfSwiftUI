@@ -17,6 +17,7 @@
 
 /* Convert From Section */
 "CONVERT_FROM_HEADER" = "Convert from";
+"CONVERT_FROM_FOOTER" = "";
 "VALUE_PLACEHOLDER" = "Value";
 "SOURCE_UNIT_HEADER" = "Source unit";
 
