@@ -3,7 +3,7 @@
 ## About
 An app to calculate bill splitting between people, and let user decide if they want to include a tip for their dedicated server 👨‍🍳
 
-This project is originally a tutorial project from [100 Days of SwiftUI]() course by [Paul Hudson]().
+This project is originally a tutorial project from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) course by [Paul Hudson](https://twitter.com/twostraws).
 
 ## Extensions
 Implementation of extra concepts beyond the scope of its original tutorial were made to this project, including:
