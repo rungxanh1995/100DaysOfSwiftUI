@@ -20,6 +20,10 @@
 "VALUE_PLACEHOLDER" = "Giá trị";
 "SOURCE_UNIT_HEADER" = "Đơn vị gốc";
 
+/* Convert To Section */
+"CONVERT_TO_HEADER" = "Đổi thành";
+"DESTINATION_UNIT_HEADER" = "Đơn vị đích";
+
 /* Temperature */
 "CELCIUS" = "°C";
 "FARENHEIT" = "°F";

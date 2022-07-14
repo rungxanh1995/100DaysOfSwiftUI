@@ -20,6 +20,10 @@
 "VALUE_PLACEHOLDER" = "Value";
 "SOURCE_UNIT_HEADER" = "Source unit";
 
+/* Convert To Section */
+"CONVERT_TO_HEADER" = "Convert to";
+"DESTINATION_UNIT_HEADER" = "Destination unit";
+
 /* Temperature */
 "CELCIUS" = "°C";
 "FARENHEIT" = "°F";
