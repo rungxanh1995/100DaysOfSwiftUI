@@ -31,15 +31,11 @@ struct UCSourceUnitView: View {
 			}
 			
 			// Unit selection
-			Picker(
-				"SOURCE_UNIT_HEADER".localized(),
-				selection: $sourceUnitSelected
-			) {
-				ForEach(0 ..< availableUnits.count, id: \.self) {
-					Text(availableUnits[$0].name.localized())
-				}
-			}
-			.pickerStyle(.segmented)
+			UCUnitPicker(
+				header: "SOURCE_UNIT_HEADER".localized(),
+				selected: $sourceUnitSelected,
+				unitOptions: availableUnits
+			)
 		}
 	}
 }

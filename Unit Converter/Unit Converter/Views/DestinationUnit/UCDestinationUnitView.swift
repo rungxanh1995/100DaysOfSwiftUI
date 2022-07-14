@@ -25,15 +25,11 @@ struct UCDestinationUnitView: View {
 			}
 			
 			// Unit selection
-			Picker(
-				"DESTINATION_UNIT_HEADER".localized(),
-				selection: $destinationUnitSelected
-			) {
-				ForEach(0 ..< availableUnits.count, id: \.self) {
-					Text(availableUnits.element(at: $0).name.localized())
-				}
-			}
-			.pickerStyle(.segmented)
+			UCUnitPicker(
+				header: "DESTINATION_UNIT_HEADER".localized(),
+				selected: $destinationUnitSelected,
+				unitOptions: availableUnits
+			)
 		}
     }
 }
