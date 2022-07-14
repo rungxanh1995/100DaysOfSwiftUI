@@ -56,9 +56,7 @@ struct WeSplitView: View {
 						selectedOption: $selectedTipPercentage
 					)
 				}
-				.modifier(
-					EmptyModifier(isEmpty: !isTipIncluded)
-				)
+				.isEmpty(!isTipIncluded)
 				
 				Section(
 					header: Text("TOTAL_PER_PERSON_HEADER".localized())
