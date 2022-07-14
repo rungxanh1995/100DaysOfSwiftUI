@@ -9,6 +9,7 @@ import Foundation
 
 extension String {
 	
+	/// Generate localized version of the string, assuming the project has been set up to support multiple localizations
 	func localized() -> String {
 		return NSLocalizedString(
 			self,
