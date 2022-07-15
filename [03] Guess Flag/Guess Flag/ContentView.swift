@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-	private var countries: [CountryModel] = CountryModel.sampleData
-	private var randomCorrectAnswer = Int.random(in: 0...2)
+	@State
+	private var game = GuessFlagGame()
 	
-    var body: some View {
+	var body: some View {
 		ZStack {
 			LinearGradient(
 				gradient: Gradient(colors: [.yellow, .blue, .indigo]), startPoint: .top, endPoint: .bottomTrailing
@@ -22,26 +22,38 @@ struct ContentView: View {
 				
 				VStack {
 					Text("Tap flag of")
-					Text(countries.element(randomCorrectAnswer).name)
+					Text(game.correctCountryNameAnswer)
 				}
 				.foregroundStyle(.primary)
 				
-				ForEach(0..<3) { i in
+				ForEach(0..<game.numberOfFlagsShown, id: \.self) { eachFlag in
 					Button {
-						print("\(countries.element(i).name) tapped!")
+						game.checkFlagGuess(position: eachFlag)
 					} label: {
-						Image(countries.element(i).name)
+						Image(game.getCountryName(at: eachFlag))
 							.renderingMode(.original)
 					}
 					.clipShape(RoundedRectangle(cornerRadius: 25))
 				}
 			}
 		}
-    }
+		.alert(
+			game.scoreAlertTitle,
+			isPresented: $game.isScoreAlertShown
+		) {
+			Button(
+				"Continue",
+				action: { game.askNewQuestion() }
+			)
+		} message: {
+			Text("Your score is ...")
+		}
+	}
+	
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
+	static var previews: some View {
 		ContentView()
-    }
+	}
 }
