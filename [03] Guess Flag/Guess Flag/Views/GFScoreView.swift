@@ -11,7 +11,9 @@ struct GFScoreView: View {
 	var score: Int
 	
     var body: some View {
-		Text("\("Score".localized()): \(score)")
+		let scoreString: LocalizedStringKey = "\(Text("Score")): \(score)"
+		
+		Text(scoreString)
 			.font(.title.bold())
 			.foregroundColor(.white)
     }

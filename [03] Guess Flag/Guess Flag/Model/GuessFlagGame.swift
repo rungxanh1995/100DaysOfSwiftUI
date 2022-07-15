@@ -35,7 +35,7 @@ struct GuessFlagGame {
 		} else {
 			updateAlertContent(
 				title: "Wrong",
-				message: "\("Correct answer was") \(getCountryName(at: randomCorrectAnswer))"
+				message: "\(Text("Correct answer was")) \(randomCorrectAnswer + 1)"
 			)
 		}
 		updateScore(basedOn: isCorrectGuess)
