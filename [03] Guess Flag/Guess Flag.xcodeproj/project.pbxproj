@@ -12,7 +12,6 @@
 		2C09C0972880F8F700D52417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0962880F8F700D52417 /* Assets.xcassets */; };
 		2C09C09A2880F8F700D52417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0992880F8F700D52417 /* Preview Assets.xcassets */; };
 		2C09C0A22880FC7100D52417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0A42880FC7100D52417 /* Localizable.strings */; };
-		2C09C0AB2880FD2600D52417 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */; };
 		2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C72989E2881AF9C001941BD /* CountryModel.swift */; };
 		2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A12881AFD7001941BD /* CountryFlagModel.swift */; };
 		2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A32881B01F001941BD /* CountryModelStore.swift */; };
@@ -23,6 +22,7 @@
 		2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AF2881D7AA001941BD /* GFScoreView.swift */; };
 		2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B12881D8F5001941BD /* GFGameAreaView.swift */; };
 		2C7298B628821890001941BD /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B528821890001941BD /* String+Ext.swift */; };
+		2C7298B828821A64001941BD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B728821A64001941BD /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,6 @@
 		2C09C0992880F8F700D52417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C09C0A32880FC7100D52417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C09C0A52880FC7300D52417 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		2C72989E2881AF9C001941BD /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		2C7298A12881AFD7001941BD /* CountryFlagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagModel.swift; sourceTree = "<group>"; };
 		2C7298A32881B01F001941BD /* CountryModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelStore.swift; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		2C7298AF2881D7AA001941BD /* GFScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFScoreView.swift; sourceTree = "<group>"; };
 		2C7298B12881D8F5001941BD /* GFGameAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameAreaView.swift; sourceTree = "<group>"; };
 		2C7298B528821890001941BD /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		2C7298B728821A64001941BD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 		2C09C0A72880FC9B00D52417 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */,
+				2C7298B728821A64001941BD /* Array+Ext.swift */,
 				2C7298B528821890001941BD /* String+Ext.swift */,
 			);
 			path = Extensions;
@@ -209,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */,
+				2C7298B828821A64001941BD /* Array+Ext.swift in Sources */,
 				2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */,
 				2C09C0952880F8F600D52417 /* ContentView.swift in Sources */,
 				2C7298B628821890001941BD /* String+Ext.swift in Sources */,
@@ -220,7 +221,6 @@
 				2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */,
 				2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */,
 				2C7298A82881C63D001941BD /* GuessFlagGame.swift in Sources */,
-				2C09C0AB2880FD2600D52417 /* Collection+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
