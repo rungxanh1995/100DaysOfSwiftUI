@@ -19,6 +19,10 @@
 		2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A32881B01F001941BD /* CountryModelStore.swift */; };
 		2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */; };
 		2C7298A82881C63D001941BD /* GuessFlagGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A72881C63D001941BD /* GuessFlagGame.swift */; };
+		2C7298AC2881D610001941BD /* GFBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AB2881D610001941BD /* GFBackgroundView.swift */; };
+		2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AD2881D71C001941BD /* GFGameTitleView.swift */; };
+		2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AF2881D7AA001941BD /* GFScoreView.swift */; };
+		2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B12881D8F5001941BD /* GFGameAreaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2C7298A32881B01F001941BD /* CountryModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelStore.swift; sourceTree = "<group>"; };
 		2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagModelStore.swift; sourceTree = "<group>"; };
 		2C7298A72881C63D001941BD /* GuessFlagGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessFlagGame.swift; sourceTree = "<group>"; };
+		2C7298AB2881D610001941BD /* GFBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBackgroundView.swift; sourceTree = "<group>"; };
+		2C7298AD2881D71C001941BD /* GFGameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameTitleView.swift; sourceTree = "<group>"; };
+		2C7298AF2881D7AA001941BD /* GFScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFScoreView.swift; sourceTree = "<group>"; };
+		2C7298B12881D8F5001941BD /* GFGameAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameAreaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 				2C09C0922880F8F600D52417 /* Guess_FlagApp.swift */,
 				2C09C0942880F8F600D52417 /* ContentView.swift */,
 				2C7298A02881AF9F001941BD /* Model */,
+				2C7298AA2881D601001941BD /* Views */,
 				2C09C0A72880FC9B00D52417 /* Extensions */,
 				2C09C0A62880FC8500D52417 /* Localization */,
 				2C09C0962880F8F700D52417 /* Assets.xcassets */,
@@ -114,6 +123,17 @@
 				2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2C7298AA2881D601001941BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C7298AB2881D610001941BD /* GFBackgroundView.swift */,
+				2C7298AD2881D71C001941BD /* GFGameTitleView.swift */,
+				2C7298B12881D8F5001941BD /* GFGameAreaView.swift */,
+				2C7298AF2881D7AA001941BD /* GFScoreView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */,
 				2C09C0A92880FCB000D52417 /* String+Ext.swift in Sources */,
+				2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */,
 				2C09C0952880F8F600D52417 /* ContentView.swift in Sources */,
+				2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */,
 				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
+				2C7298AC2881D610001941BD /* GFBackgroundView.swift in Sources */,
 				2C09C0932880F8F600D52417 /* Guess_FlagApp.swift in Sources */,
 				2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */,
 				2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */,
@@ -340,9 +364,11 @@
 				DEVELOPMENT_TEAM = 8R3P49X4ZM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Guess-Flag-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -370,9 +396,11 @@
 				DEVELOPMENT_TEAM = 8R3P49X4ZM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Guess-Flag-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

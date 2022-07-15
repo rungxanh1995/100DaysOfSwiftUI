@@ -13,29 +13,26 @@ struct ContentView: View {
 	
 	var body: some View {
 		ZStack {
-			LinearGradient(
-				gradient: Gradient(colors: [.yellow, .blue, .indigo]), startPoint: .top, endPoint: .bottomTrailing
-			)
-			.ignoresSafeArea()
+			GFBackgroundView()
+				.ignoresSafeArea()
+				.statusBar(hidden: true)
 			
 			VStack {
+				Spacer()
 				
-				VStack {
-					Text("Tap flag of")
-					Text(game.correctCountryNameAnswer)
-				}
-				.foregroundStyle(.primary)
+				GFGameTitleView()
 				
-				ForEach(0..<game.numberOfFlagsShown, id: \.self) { eachFlag in
-					Button {
-						game.checkFlagGuess(position: eachFlag)
-					} label: {
-						Image(game.getCountryName(at: eachFlag))
-							.renderingMode(.original)
-					}
-					.clipShape(RoundedRectangle(cornerRadius: 25))
-				}
+				GFGameAreaView(game: $game)
+				
+				Spacer()
+				Spacer()
+				
+				GFScoreView()
+				
+				Spacer()
 			}
+			.padding()
+			.shadow(radius: 5)
 		}
 		.alert(
 			game.scoreAlertTitle,
@@ -44,6 +41,11 @@ struct ContentView: View {
 			Button(
 				"Continue",
 				action: { game.askNewQuestion() }
+			)
+			Button(
+				"Dismiss",
+				role: .cancel,
+				action: { }
 			)
 		} message: {
 			Text("Your score is ...")
