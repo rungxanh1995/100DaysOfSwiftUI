@@ -27,7 +27,7 @@ struct ContentView: View {
 				Spacer()
 				Spacer()
 				
-				GFScoreView()
+				GFScoreView(score: game.currentScore)
 				
 				Spacer()
 			}
@@ -48,7 +48,7 @@ struct ContentView: View {
 				action: { }
 			)
 		} message: {
-			Text("Your score is ...")
+			Text("Your score is \(game.currentScore)")
 		}
 	}
 	

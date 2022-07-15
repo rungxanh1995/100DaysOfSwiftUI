@@ -16,10 +16,30 @@ struct GuessFlagGame {
 	
 	var isScoreAlertShown: Bool = false
 	var scoreAlertTitle: String = ""
+	private var userScore = 0
+	var currentScore: Int {
+		get {
+			userScore
+		}
+	}
 	
 	mutating func checkFlagGuess(position flagPosition: Int) {
-		scoreAlertTitle = (flagPosition == randomCorrectAnswer) ? "Correct" : "Wrong"
+		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
+		if isCorrectGuess {
+			scoreAlertTitle = "Correct"
+		} else {
+			scoreAlertTitle = "Wrong"
+		}
+		updateScore(basedOn: isCorrectGuess)
 		isScoreAlertShown = true
+	}
+	
+	mutating private func updateScore(basedOn guessResult: Bool) {
+		if guessResult == true {
+			self.userScore += 1
+		} else {
+			self.userScore = max(0, userScore - 1)
+		}
 	}
 
 	/// Call this method in a closure, within the braces to work

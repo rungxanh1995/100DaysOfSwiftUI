@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct GFScoreView: View {
+	var score: Int
 	
     var body: some View {
-		Text("\("Score".localized()): 😎")
+		Text("\("Score".localized()): \(score)")
 			.font(.title.bold())
 			.foregroundColor(.white)
     }
