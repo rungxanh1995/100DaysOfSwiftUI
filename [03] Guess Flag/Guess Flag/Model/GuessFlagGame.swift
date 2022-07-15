@@ -48,9 +48,9 @@ struct GuessFlagGame {
 	
 	mutating private func updateScore(basedOn guessResult: Bool) {
 		if guessResult == true {
-			self.userScore += 1
+			userScore += 1
 		} else {
-			self.userScore = max(0, userScore - 1)
+			userScore = max(0, userScore - 1)
 		}
 	}
 
