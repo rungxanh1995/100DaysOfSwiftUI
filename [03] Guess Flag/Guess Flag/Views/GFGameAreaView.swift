@@ -17,8 +17,7 @@ struct GFGameAreaView: View {
 					.font(.subheadline.weight(.heavy))
 					.foregroundStyle(.secondary)
 				
-				let localizedCountryName = game.correctCountryNameAnswer.localized()
-				Text(localizedCountryName)
+				Text(game.correctCountryNameAnswer.localizedKey)
 					.font(.largeTitle.weight(.semibold))
 			}
 			

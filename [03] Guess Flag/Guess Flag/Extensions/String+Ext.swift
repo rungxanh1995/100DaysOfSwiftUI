@@ -9,7 +9,9 @@ import SwiftUI
 
 extension String {
 	
-	func localized() -> LocalizedStringKey {
-		return LocalizedStringKey(self)
+	/// The localized string key of this string,
+	/// to pass into supported SwiftUI views so that you get a translated version
+	var localizedKey: LocalizedStringKey {
+		LocalizedStringKey(self)
 	}
 }
