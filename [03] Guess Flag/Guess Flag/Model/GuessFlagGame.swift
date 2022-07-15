@@ -16,6 +16,7 @@ struct GuessFlagGame {
 	
 	var isScoreAlertShown: Bool = false
 	var scoreAlertTitle: String = ""
+	var scoreAlertMessage: String = ""
 	private var userScore = 0
 	var currentScore: Int {
 		get {
@@ -26,12 +27,23 @@ struct GuessFlagGame {
 	mutating func checkFlagGuess(position flagPosition: Int) {
 		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
 		if isCorrectGuess {
-			scoreAlertTitle = "Correct"
+			updateAlertContent(
+				title: "Correct".localized(),
+				message: "🎉"
+			)
 		} else {
-			scoreAlertTitle = "Wrong"
+			updateAlertContent(
+				title: "Wrong".localized(),
+				message: "\("Correct answer was".localized()) \(getCountryName(at: randomCorrectAnswer))"
+			)
 		}
 		updateScore(basedOn: isCorrectGuess)
 		isScoreAlertShown = true
+	}
+	
+	mutating private func updateAlertContent(title: String, message: String) {
+		scoreAlertTitle = title
+		scoreAlertMessage = message
 	}
 	
 	mutating private func updateScore(basedOn guessResult: Bool) {

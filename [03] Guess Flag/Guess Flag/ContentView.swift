@@ -48,7 +48,7 @@ struct ContentView: View {
 				action: { }
 			)
 		} message: {
-			Text("Your score is \(game.currentScore)")
+			Text(game.scoreAlertMessage)
 		}
 	}
 	
