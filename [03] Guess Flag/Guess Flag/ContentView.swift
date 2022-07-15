@@ -42,11 +42,6 @@ struct ContentView: View {
 				"Continue",
 				action: { game.askNewQuestion() }
 			)
-			Button(
-				"Dismiss",
-				role: .cancel,
-				action: { }
-			)
 		} message: {
 			Text(game.scoreAlertMessage)
 		}
