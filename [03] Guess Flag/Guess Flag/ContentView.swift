@@ -8,9 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
+	private var countries: [CountryModel] = CountryModel.sampleData
+	private var randomCorrectAnswer = Int.random(in: 0...2)
+	
     var body: some View {
-		Text("Hello, world!")
-			.padding()
+		ZStack {
+			LinearGradient(
+				gradient: Gradient(colors: [.yellow, .blue, .indigo]), startPoint: .top, endPoint: .bottomTrailing
+			)
+			.ignoresSafeArea()
+			
+			VStack {
+				
+				VStack {
+					Text("Tap flag of")
+					Text(countries.element(randomCorrectAnswer).name)
+				}
+				.foregroundStyle(.primary)
+				
+				ForEach(0..<3) { i in
+					Button {
+						print("\(countries.element(i).name) tapped!")
+					} label: {
+						Image(countries.element(i).name)
+							.renderingMode(.original)
+					}
+					.clipShape(RoundedRectangle(cornerRadius: 25))
+				}
+			}
+		}
     }
 }
 

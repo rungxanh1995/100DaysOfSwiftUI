@@ -10,7 +10,7 @@ import Foundation
 extension Collection {
 	
 	/// A readable extension to get an element at assigned index in the collection
-	func element(at index: Index) -> Self.Element {
+	func element(_ index: Index) -> Self.Element {
 		return self[index]
 	}
 }

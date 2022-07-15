@@ -14,6 +14,10 @@
 		2C09C0A22880FC7100D52417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0A42880FC7100D52417 /* Localizable.strings */; };
 		2C09C0A92880FCB000D52417 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0A82880FCB000D52417 /* String+Ext.swift */; };
 		2C09C0AB2880FD2600D52417 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */; };
+		2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C72989E2881AF9C001941BD /* CountryModel.swift */; };
+		2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A12881AFD7001941BD /* CountryFlagModel.swift */; };
+		2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A32881B01F001941BD /* CountryModelStore.swift */; };
+		2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		2C09C0A52880FC7300D52417 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C09C0A82880FCB000D52417 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
+		2C72989E2881AF9C001941BD /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		2C7298A12881AFD7001941BD /* CountryFlagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagModel.swift; sourceTree = "<group>"; };
+		2C7298A32881B01F001941BD /* CountryModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelStore.swift; sourceTree = "<group>"; };
+		2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagModelStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			children = (
 				2C09C0922880F8F600D52417 /* Guess_FlagApp.swift */,
 				2C09C0942880F8F600D52417 /* ContentView.swift */,
+				2C7298A02881AF9F001941BD /* Model */,
 				2C09C0A72880FC9B00D52417 /* Extensions */,
 				2C09C0A62880FC8500D52417 /* Localization */,
 				2C09C0962880F8F700D52417 /* Assets.xcassets */,
@@ -91,6 +100,17 @@
 				2C09C0A82880FCB000D52417 /* String+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C7298A02881AF9F001941BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C72989E2881AF9C001941BD /* CountryModel.swift */,
+				2C7298A32881B01F001941BD /* CountryModelStore.swift */,
+				2C7298A12881AFD7001941BD /* CountryFlagModel.swift */,
+				2C7298A52881B12C001941BD /* CountryFlagModelStore.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,7 +187,11 @@
 			files = (
 				2C09C0A92880FCB000D52417 /* String+Ext.swift in Sources */,
 				2C09C0952880F8F600D52417 /* ContentView.swift in Sources */,
+				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
 				2C09C0932880F8F600D52417 /* Guess_FlagApp.swift in Sources */,
+				2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */,
+				2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */,
+				2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */,
 				2C09C0AB2880FD2600D52417 /* Collection+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
