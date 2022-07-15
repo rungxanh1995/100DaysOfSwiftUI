@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /// Host and control the logic of the game
 struct GuessFlagGame {
@@ -15,8 +16,8 @@ struct GuessFlagGame {
 	let numberOfFlagsShown = 3
 	
 	var isScoreAlertShown: Bool = false
-	var scoreAlertTitle: String = ""
-	var scoreAlertMessage: String = ""
+	var scoreAlertTitle: LocalizedStringKey = ""
+	var scoreAlertMessage: LocalizedStringKey = ""
 	private var userScore = 0
 	var currentScore: Int {
 		get {
@@ -28,20 +29,20 @@ struct GuessFlagGame {
 		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
 		if isCorrectGuess {
 			updateAlertContent(
-				title: "Correct".localized(),
+				title: "Correct",
 				message: "🎉"
 			)
 		} else {
 			updateAlertContent(
-				title: "Wrong".localized(),
-				message: "\("Correct answer was".localized()) \(getCountryName(at: randomCorrectAnswer))"
+				title: "Wrong",
+				message: "\("Correct answer was") \(getCountryName(at: randomCorrectAnswer))"
 			)
 		}
 		updateScore(basedOn: isCorrectGuess)
 		isScoreAlertShown = true
 	}
 	
-	mutating private func updateAlertContent(title: String, message: String) {
+	mutating private func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
 		scoreAlertTitle = title
 		scoreAlertMessage = message
 	}

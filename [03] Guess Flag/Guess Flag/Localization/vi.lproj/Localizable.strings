@@ -6,4 +6,34 @@
   
 */
 
-"APP_NAME" = "Đoán Lá Cờ";
+"Guess The Flag" = "Đoán Quốc Kỳ";
+
+/* General */
+"Tap flag of" = "Chọn cờ của";
+"Score" = "Điểm số";
+
+/* Countries */
+"Estonia" = "Estonia";
+"France" = "Pháp";
+"Germany" = "Đức";
+"Ireland" = "Ai Len";
+"Italy" = "Ý";
+"Monaco" = "Monaco";
+"Nigeria" = "Nigeria";
+"Poland" = "Ba Lan";
+"Russia" = "Nga";
+"Spain" = "Tây Ban Nha";
+"UK" = "Liên hiệp Anh";
+"US" = "Hoa Kỳ";
+
+/* Alerts */
+"Congratulations!" = "Chúc mừng";
+"Correct" = "Đúng rồi";
+"Wrong" = "Sai rồi";
+"Correct answer was" = "Câu trả lời đúng là";
+"Your final score this round:" = "Điểm số vòng này của bạn:";
+
+/* Buttons */
+"Continue" = "Tiếp tục";
+"New Game" = "Game Mới";
+"Dismiss" = "Bỏ qua";

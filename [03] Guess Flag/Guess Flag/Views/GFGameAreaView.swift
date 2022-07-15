@@ -16,7 +16,7 @@ struct GFGameAreaView: View {
 				Text("Tap flag of")
 					.font(.subheadline.weight(.heavy))
 					.foregroundStyle(.secondary)
-				Text(game.correctCountryNameAnswer)
+				Text(game.correctCountryNameAnswer.localized())
 					.font(.largeTitle.weight(.semibold))
 			}
 			

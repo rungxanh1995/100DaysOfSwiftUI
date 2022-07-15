@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GFGameTitleView: View {
     var body: some View {
-		Text("APP_NAME".localized())
+		Text("Guess The Flag")
 			.font(.largeTitle.bold())
 			.foregroundColor(.white)
 			.shadow(radius: 5)
