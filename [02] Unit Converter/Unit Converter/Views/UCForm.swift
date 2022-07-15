@@ -81,6 +81,8 @@ struct UCForm: View {
 				) {
 					isUserInputFocused = false
 				}
+				.font(.body.bold())
+				.foregroundStyle(.primary)
 			}
 		}
     }
