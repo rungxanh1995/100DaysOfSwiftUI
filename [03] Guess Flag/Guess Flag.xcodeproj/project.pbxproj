@@ -22,7 +22,7 @@
 		2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AD2881D71C001941BD /* GFGameTitleView.swift */; };
 		2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298AF2881D7AA001941BD /* GFScoreView.swift */; };
 		2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B12881D8F5001941BD /* GFGameAreaView.swift */; };
-		2C7298B4288207B6001941BD /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B3288207B6001941BD /* String+Ext.swift */; };
+		2C7298B628821890001941BD /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B528821890001941BD /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		2C7298AD2881D71C001941BD /* GFGameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameTitleView.swift; sourceTree = "<group>"; };
 		2C7298AF2881D7AA001941BD /* GFScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFScoreView.swift; sourceTree = "<group>"; };
 		2C7298B12881D8F5001941BD /* GFGameAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameAreaView.swift; sourceTree = "<group>"; };
-		2C7298B3288207B6001941BD /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Ext.swift"; path = "../../../../.Trash/String+Ext.swift"; sourceTree = "<group>"; };
+		2C7298B528821890001941BD /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2C09C0AA2880FD2600D52417 /* Collection+Ext.swift */,
-				2C7298B3288207B6001941BD /* String+Ext.swift */,
+				2C7298B528821890001941BD /* String+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 				2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */,
 				2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */,
 				2C09C0952880F8F600D52417 /* ContentView.swift in Sources */,
-				2C7298B4288207B6001941BD /* String+Ext.swift in Sources */,
+				2C7298B628821890001941BD /* String+Ext.swift in Sources */,
 				2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */,
 				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
 				2C7298AC2881D610001941BD /* GFBackgroundView.swift in Sources */,
