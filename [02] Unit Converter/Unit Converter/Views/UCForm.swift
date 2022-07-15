@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UCForm: View {
 	/// Available unit types
-	private var unitTypes: [UnitType.Type] { UnitTypes.allTypes }
+	private var unitTypes: [UnitType.Type] { UnitTypeStore.defaultStore }
 	
 	/// Unit type selected by user to start
 	@State private var unitTypeSelected = 0
@@ -24,7 +24,7 @@ struct UCForm: View {
 	}
 	
 	/// Selected source indices for all unit types
-	@State private var sourceUnitIndices = Array(repeating: 0, count: UnitTypes.allTypes.count)
+	@State private var sourceUnitIndices = Array(repeating: 0, count: UnitTypeStore.defaultStore.count)
 	/// Selected source unit
 	private var sourceUnitSelected: UCUnit {
 		let selectedIndex = sourceUnitIndices[unitTypeSelected]
@@ -32,7 +32,7 @@ struct UCForm: View {
 	}
 	
 	/// Selected destination indices for all unit types
-	@State private var destinationUnitIndices = Array(repeating: 0, count: UnitTypes.allTypes.count)
+	@State private var destinationUnitIndices = Array(repeating: 0, count: UnitTypeStore.defaultStore.count)
 	/// Selected destination unit
 	private var destinationUnitSelected: UCUnit {
 		let selectedIndex = destinationUnitIndices[unitTypeSelected]
