@@ -16,7 +16,7 @@ struct GFGameOverView: View {
 			
 			Group {
 				Text("Game Over")
-				Image(systemName: "face.smiling.fill")
+				Text("🥳")
 			}
 			.font(.title.weight(.semibold))
 				.foregroundStyle(.secondary)
