@@ -11,6 +11,8 @@
 /* General */
 "Tap flag of" = "Chọn cờ của";
 "Score" = "Điểm số";
+"Game Over" = "Trò chơi Kết thúc";
+"Maximum number of questions reached!" = "Bạn đã đoán hết tối đa số câu hỏi!";
 
 /* Countries */
 "Estonia" = "Estonia";
