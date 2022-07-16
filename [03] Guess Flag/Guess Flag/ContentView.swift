@@ -38,10 +38,17 @@ struct ContentView: View {
 			game.scoreAlertTitle,
 			isPresented: $game.isScoreAlertShown
 		) {
-			Button(
-				"Continue",
-				action: { game.askNewQuestion() }
-			)
+			if game.checkIfGameOver() == false {
+				Button(
+					"Continue",
+					action: { game.askNewQuestion() }
+				)
+			} else {
+				Button(
+					"New Game",
+					action: { game.reset() }
+				)
+			}
 		} message: {
 			Text(game.scoreAlertMessage)
 		}
