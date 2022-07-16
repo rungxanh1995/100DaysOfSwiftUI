@@ -27,7 +27,9 @@ struct ContentView: View {
 				Spacer()
 				Spacer()
 				
-				GFScoreView(score: game.userScore)
+				if game.checkIfGameOver() == false {
+					GFScoreView(score: game.userScore)
+				}
 				
 				Spacer()
 			}
