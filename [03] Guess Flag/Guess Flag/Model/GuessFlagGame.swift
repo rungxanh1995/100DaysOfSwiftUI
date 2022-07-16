@@ -26,7 +26,32 @@ struct GuessFlagGame {
 	mutating func checkFlagGuess(position flagPosition: Int) {
 		numGuessesEachGame += 1
 		
+		guard checkIfGameOver() == false else {
+			updateForGameOver()
+			return
+		}
+		
 		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
+		updateOngoingGame(basedOn: isCorrectGuess)
+	}
+		
+	func checkIfGameOver() -> Bool {
+		if numGuessesEachGame < GuessFlagGame.maxQuestionsEachGame {
+			return false
+		} else {
+			return true
+		}
+	}
+	
+	mutating private func updateForGameOver() {
+		updateAlertContent(
+			title: "Game Over",
+			message: "Maximum number of questions reached!"
+		)
+		isScoreAlertShown = true
+	}
+	
+	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
 		if isCorrectGuess {
 			updateAlertContent(
 				title: "Correct",
@@ -40,18 +65,6 @@ struct GuessFlagGame {
 		}
 		updateScore(basedOn: isCorrectGuess)
 		isScoreAlertShown = true
-	}
-	
-	mutating func checkIfGameOver() -> Bool {
-		if numGuessesEachGame < GuessFlagGame.maxQuestionsEachGame {
-			return false
-		} else {
-			updateAlertContent(
-				title: "Game Over",
-				message: "Maximum number of questions reached!"
-			)
-			return true
-		}
 	}
 	
 	mutating private func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
