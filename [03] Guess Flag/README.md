@@ -43,7 +43,7 @@ I also proactively implemented extra concepts on top of the extra features, incl
 	</thead>
 	<tbody>
 		<tr>
-			<td>Components</td>
+			<td>View Composition</td>
 			<td>Modularize child views into reusable components for flexibility and readability</td>
 		</tr>
 		<tr>
