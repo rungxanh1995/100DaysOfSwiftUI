@@ -29,6 +29,8 @@ struct ContentView: View {
 				
 				if game.checkIfGameOver() == false {
 					GFScoreView(score: game.userScore)
+				} else {
+					Spacer()
 				}
 				
 				Spacer()
