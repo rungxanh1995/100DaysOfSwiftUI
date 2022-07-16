@@ -18,12 +18,9 @@ struct GuessFlagGame {
 	var isScoreAlertShown: Bool = false
 	var scoreAlertTitle: LocalizedStringKey = ""
 	var scoreAlertMessage: LocalizedStringKey = ""
-	private var userScore = 0
-	var currentScore: Int {
-		get {
-			userScore
-		}
-	}
+	
+	
+	private(set) var userScore = 0
 	
 	mutating func checkFlagGuess(position flagPosition: Int) {
 		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false

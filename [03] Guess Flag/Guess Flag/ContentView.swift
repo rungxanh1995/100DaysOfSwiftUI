@@ -27,7 +27,7 @@ struct ContentView: View {
 				Spacer()
 				Spacer()
 				
-				GFScoreView(score: game.currentScore)
+				GFScoreView(score: game.userScore)
 				
 				Spacer()
 			}
