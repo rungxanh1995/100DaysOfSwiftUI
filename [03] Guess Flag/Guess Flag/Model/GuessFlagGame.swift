@@ -16,10 +16,10 @@ struct GuessFlagGame {
 	private var randomCorrectAnswer: Int = Int.random(in: 0..<numberOfFlagsShown)
 	
 	var isScoreAlertShown: Bool = false
-	var scoreAlertTitle: LocalizedStringKey = ""
-	var scoreAlertMessage: LocalizedStringKey = ""
+	private(set) var scoreAlertTitle: LocalizedStringKey = ""
+	private(set) var scoreAlertMessage: LocalizedStringKey = ""
 	
-	static let maxQuestionsEachGame = 8
+	private static let maxQuestionsEachGame = 8
 	private var numGuessesEachGame = 0
 	private(set) var userScore = 0
 	
