@@ -25,6 +25,7 @@
 		2C7298B828821A64001941BD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298B728821A64001941BD /* Array+Ext.swift */; };
 		2C76D5F628824F2A00297670 /* GFGameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76D5F528824F2A00297670 /* GFGameOverView.swift */; };
 		2C76D5F828824F7700297670 /* GFGameOngoingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76D5F728824F7700297670 /* GFGameOngoingView.swift */; };
+		2C9FA0B62883204900FBCA8A /* QuizGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FA0B52883204900FBCA8A /* QuizGameProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		2C76D5F528824F2A00297670 /* GFGameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameOverView.swift; sourceTree = "<group>"; };
 		2C76D5F728824F7700297670 /* GFGameOngoingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameOngoingView.swift; sourceTree = "<group>"; };
 		2C76D5F92882582600297670 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2C9FA0B52883204900FBCA8A /* QuizGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		2C7298A02881AF9F001941BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C9FA0B52883204900FBCA8A /* QuizGameProtocol.swift */,
 				2C7298A72881C63D001941BD /* GuessFlagGame.swift */,
 				2C72989E2881AF9C001941BD /* CountryModel.swift */,
 				2C7298A32881B01F001941BD /* CountryModelStore.swift */,
@@ -225,6 +228,7 @@
 				2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */,
 				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
 				2C7298AC2881D610001941BD /* GFBackgroundView.swift in Sources */,
+				2C9FA0B62883204900FBCA8A /* QuizGameProtocol.swift in Sources */,
 				2C09C0932880F8F600D52417 /* Guess_FlagApp.swift in Sources */,
 				2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */,
 				2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */,
