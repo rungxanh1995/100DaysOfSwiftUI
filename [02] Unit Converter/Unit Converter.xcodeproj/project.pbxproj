@@ -21,7 +21,7 @@
 		2CE8134728808F4B00640396 /* LengthUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134628808F4B00640396 /* LengthUnit.swift */; };
 		2CE8134A28808FA600640396 /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134928808FA600640396 /* TimeUnit.swift */; };
 		2CE8134C2880903800640396 /* VolumeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134B2880903800640396 /* VolumeUnit.swift */; };
-		2CE8134F288091AB00640396 /* UnitTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134E288091AB00640396 /* UnitTypes.swift */; };
+		2CE8134F288091AB00640396 /* UnitTypeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8134E288091AB00640396 /* UnitTypeStore.swift */; };
 		2CE8135128809BD100640396 /* Collection+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8135028809BD100640396 /* Collection+Ext.swift */; };
 		2CE813562880A3F000640396 /* UCSourceUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813552880A3F000640396 /* UCSourceUnitView.swift */; };
 		2CE813592880BECC00640396 /* UCDestinationUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813582880BECC00640396 /* UCDestinationUnitView.swift */; };
@@ -45,7 +45,7 @@
 		2CE8134628808F4B00640396 /* LengthUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LengthUnit.swift; sourceTree = "<group>"; };
 		2CE8134928808FA600640396 /* TimeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
 		2CE8134B2880903800640396 /* VolumeUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeUnit.swift; sourceTree = "<group>"; };
-		2CE8134E288091AB00640396 /* UnitTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTypes.swift; sourceTree = "<group>"; };
+		2CE8134E288091AB00640396 /* UnitTypeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTypeStore.swift; sourceTree = "<group>"; };
 		2CE8135028809BD100640396 /* Collection+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Ext.swift"; sourceTree = "<group>"; };
 		2CE813552880A3F000640396 /* UCSourceUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCSourceUnitView.swift; sourceTree = "<group>"; };
 		2CE813582880BECC00640396 /* UCDestinationUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UCDestinationUnitView.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE8133428807C8200640396 /* UnitType.swift */,
-				2CE8134E288091AB00640396 /* UnitTypes.swift */,
+				2CE8134E288091AB00640396 /* UnitTypeStore.swift */,
 				2CE8134328808C9B00640396 /* UCUnit.swift */,
 				2CE8134028808A9A00640396 /* Temperature */,
 				2CE8134528808F3000640396 /* Length */,
@@ -288,7 +288,7 @@
 				2CE8133A2880888800640396 /* UCPickUnitTypeView.swift in Sources */,
 				2CE8134A28808FA600640396 /* TimeUnit.swift in Sources */,
 				2CE8134428808C9B00640396 /* UCUnit.swift in Sources */,
-				2CE8134F288091AB00640396 /* UnitTypes.swift in Sources */,
+				2CE8134F288091AB00640396 /* UnitTypeStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
