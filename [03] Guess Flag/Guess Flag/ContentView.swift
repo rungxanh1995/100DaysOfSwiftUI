@@ -45,9 +45,9 @@ struct ContentView: View {
 				)
 			} else {
 				Button(
-					"New Game",
-					action: { game.reset() }
-				)
+					"Dismiss",
+					role: .cancel
+				) { }
 			}
 		} message: {
 			Text(game.scoreAlertMessage)
