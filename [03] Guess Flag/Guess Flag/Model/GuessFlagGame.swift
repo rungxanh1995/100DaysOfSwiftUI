@@ -36,7 +36,7 @@ struct GuessFlagGame {
 	}
 		
 	func checkIfGameOver() -> Bool {
-		if numGuessesEachGame < GuessFlagGame.maxQuestionsEachGame {
+		if numGuessesEachGame <= GuessFlagGame.maxQuestionsEachGame {
 			return false
 		} else {
 			return true
