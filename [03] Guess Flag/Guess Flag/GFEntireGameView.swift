@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  GFEntireGameView.swift
 //  Guess Flag
 //
 //  Created by Joe Pham on 2022-07-14.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct GFEntireGameView: View {
 	@State
 	private var game = GuessFlagGame()
 	
@@ -62,6 +62,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		GFEntireGameView()
 	}
 }

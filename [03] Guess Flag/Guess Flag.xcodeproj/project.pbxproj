@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C09C0932880F8F600D52417 /* Guess_FlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0922880F8F600D52417 /* Guess_FlagApp.swift */; };
-		2C09C0952880F8F600D52417 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0942880F8F600D52417 /* ContentView.swift */; };
+		2C09C0952880F8F600D52417 /* GFEntireGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C09C0942880F8F600D52417 /* GFEntireGameView.swift */; };
 		2C09C0972880F8F700D52417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0962880F8F700D52417 /* Assets.xcassets */; };
 		2C09C09A2880F8F700D52417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0992880F8F700D52417 /* Preview Assets.xcassets */; };
 		2C09C0A22880FC7100D52417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0A42880FC7100D52417 /* Localizable.strings */; };
@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		2C09C08F2880F8F600D52417 /* Guess Flag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess Flag.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C09C0922880F8F600D52417 /* Guess_FlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guess_FlagApp.swift; sourceTree = "<group>"; };
-		2C09C0942880F8F600D52417 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C09C0942880F8F600D52417 /* GFEntireGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEntireGameView.swift; sourceTree = "<group>"; };
 		2C09C0962880F8F700D52417 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C09C0992880F8F700D52417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C09C0A32880FC7100D52417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -84,7 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				2C09C0922880F8F600D52417 /* Guess_FlagApp.swift */,
-				2C09C0942880F8F600D52417 /* ContentView.swift */,
+				2C09C0942880F8F600D52417 /* GFEntireGameView.swift */,
 				2C7298A02881AF9F001941BD /* Model */,
 				2C7298AA2881D601001941BD /* Views */,
 				2C09C0A72880FC9B00D52417 /* Extensions */,
@@ -223,7 +223,7 @@
 				2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */,
 				2C7298B828821A64001941BD /* Array+Ext.swift in Sources */,
 				2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */,
-				2C09C0952880F8F600D52417 /* ContentView.swift in Sources */,
+				2C09C0952880F8F600D52417 /* GFEntireGameView.swift in Sources */,
 				2C7298B628821890001941BD /* String+Ext.swift in Sources */,
 				2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */,
 				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
