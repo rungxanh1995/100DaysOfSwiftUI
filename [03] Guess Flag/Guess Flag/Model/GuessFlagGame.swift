@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 /// Host and control the logic of the game
-struct GuessFlagGame {
+struct GuessFlagGame: QuizGameProtocol {
 	private var countries = CountryModelStore.defaultStore
 	var correctCountryNameAnswer: String { countries.element(randomCorrectAnswer).name }
 	static let numberOfFlagsShown = 3
@@ -19,8 +19,8 @@ struct GuessFlagGame {
 	private(set) var scoreAlertTitle: LocalizedStringKey = ""
 	private(set) var scoreAlertMessage: LocalizedStringKey = ""
 	
-	private static let maxQuestionsEachGame = 8
-	private var numGuessesEachGame = 0
+	internal static let maxQuestionsEachGame = 8
+	internal var numGuessesEachGame = 0
 	private(set) var userScore = 0
 	
 	mutating func checkFlagGuess(position flagPosition: Int) {
@@ -72,7 +72,7 @@ struct GuessFlagGame {
 		scoreAlertMessage = message
 	}
 	
-	mutating private func updateScore(basedOn guessResult: Bool) {
+	mutating internal func updateScore(basedOn guessResult: Bool) {
 		if guessResult == true {
 			userScore += 1
 		} else {
