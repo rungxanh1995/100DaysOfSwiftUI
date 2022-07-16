@@ -11,10 +11,14 @@ struct GFScoreView: View {
 	var score: Int
 	
     var body: some View {
-		HStack(spacing: 0) {
+		
+		// You can use an HStack to group these text views.
+		// However, I implement this way to better support accessability.
+		// For info: https://www.hackingwithswift.com/quick-start/swiftui/how-to-combine-text-views-together
+		(
 			Text("Score")
-			Text(": \(score)")
-		}
+			+ Text(": \(score)")
+		)
 		.font(.title.bold())
 		.foregroundColor(.white)
     }
