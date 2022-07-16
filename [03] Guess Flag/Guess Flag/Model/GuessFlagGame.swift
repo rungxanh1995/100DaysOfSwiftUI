@@ -11,18 +11,21 @@ import SwiftUI
 /// Host and control the logic of the game
 struct GuessFlagGame {
 	private var countries = CountryModelStore.defaultStore
-	private var randomCorrectAnswer: Int = 0
 	var correctCountryNameAnswer: String { countries.element(randomCorrectAnswer).name }
-	let numberOfFlagsShown = 3
+	static let numberOfFlagsShown = 3
+	private var randomCorrectAnswer: Int = Int.random(in: 0..<numberOfFlagsShown)
 	
 	var isScoreAlertShown: Bool = false
 	var scoreAlertTitle: LocalizedStringKey = ""
 	var scoreAlertMessage: LocalizedStringKey = ""
 	
-	
+	static let maxQuestionsEachGame = 8
+	private var numGuessesEachGame = 0
 	private(set) var userScore = 0
 	
 	mutating func checkFlagGuess(position flagPosition: Int) {
+		numGuessesEachGame += 1
+		
 		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
 		if isCorrectGuess {
 			updateAlertContent(
@@ -37,6 +40,18 @@ struct GuessFlagGame {
 		}
 		updateScore(basedOn: isCorrectGuess)
 		isScoreAlertShown = true
+	}
+	
+	mutating func checkIfGameOver() -> Bool {
+		if numGuessesEachGame < GuessFlagGame.maxQuestionsEachGame {
+			return false
+		} else {
+			updateAlertContent(
+				title: "Game Over",
+				message: "Maximum number of questions reached!"
+			)
+			return true
+		}
 	}
 	
 	mutating private func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
@@ -59,11 +74,18 @@ struct GuessFlagGame {
 	}
 	
 	private func getRandomCorrectAnswer() -> Int {
-		Int.random(in: 0..<numberOfFlagsShown)
+		Int.random(in: 0..<GuessFlagGame.numberOfFlagsShown)
 	}
 	
 	func getCountryName(at index: Int) -> String {
 		countries.element(index).name
 	}
 	
+	/// Reset the game back to starting state.
+	/// Call this method in a closure, within the braces to work.
+	mutating func reset() {
+		userScore = 0
+		numGuessesEachGame = 0
+		askNewQuestion()
+	}
 }

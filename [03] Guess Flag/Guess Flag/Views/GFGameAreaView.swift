@@ -21,7 +21,7 @@ struct GFGameAreaView: View {
 					.font(.largeTitle.weight(.semibold))
 			}
 			
-			ForEach(0..<game.numberOfFlagsShown, id: \.self) { eachFlag in
+			ForEach(0..<GuessFlagGame.numberOfFlagsShown, id: \.self) { eachFlag in
 				Button {
 					game.checkFlagGuess(position: eachFlag)
 				} label: {
