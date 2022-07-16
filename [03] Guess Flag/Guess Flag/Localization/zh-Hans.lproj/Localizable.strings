@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  Guess Flag
+
+  Created by Joe Pham on 2022-07-14.
+  
+*/
+
+"Guess The Flag" = "猜猜国旗";
+
+/* General */
+"Tap flag of" = "点击国旗";
+"Score" = "分";
+"Game Over" = "游戏结束";
+"Maximum number of questions reached!" = "达到了最多问题数量！";
+
+/* Countries */
+"Estonia" = "爱沙尼亚";
+"France" = "法国";
+"Germany" = "德国";
+"Ireland" = "爱尔兰";
+"Italy" = "意大利";
+"Monaco" = "摩纳哥";
+"Nigeria" = "尼日利亚";
+"Poland" = "波兰";
+"Russia" = "俄罗斯";
+"Spain" = "西班牙";
+"UK" = "英国";
+"US" = "美国";
+
+/* Alerts */
+"Congratulations!" = "祝辞！";
+"Correct" = "正确";
+"Wrong" = "错了";
+"Correct answer was" = "答案是";
+"Your final score this round:" = "你这一轮的分:";
+
+/* Buttons */
+"Continue" = "持续";
+"New Game" = "游戏";
+"Dismiss" = "取消";
+

@@ -48,6 +48,7 @@
 		2C7298B728821A64001941BD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		2C76D5F528824F2A00297670 /* GFGameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameOverView.swift; sourceTree = "<group>"; };
 		2C76D5F728824F7700297670 /* GFGameOngoingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameOngoingView.swift; sourceTree = "<group>"; };
+		2C76D5F92882582600297670 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +186,7 @@
 				en,
 				Base,
 				vi,
+				"zh-Hans",
 			);
 			mainGroup = 2C09C0862880F8F600D52417;
 			productRefGroup = 2C09C0902880F8F600D52417 /* Products */;
@@ -240,6 +242,7 @@
 			children = (
 				2C09C0A32880FC7100D52417 /* en */,
 				2C09C0A52880FC7300D52417 /* vi */,
+				2C76D5F92882582600297670 /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
