@@ -12,16 +12,31 @@ struct GFGameOverView: View {
 	
     var body: some View {
 		VStack(spacing: 20) {
-			Text("Game Over")
-				.font(.title.bold())
+			Spacer()
+			
+			Group {
+				Text("Game Over")
+				Image(systemName: "face.smiling.fill")
+			}
+			.font(.title.weight(.semibold))
 				.foregroundStyle(.secondary)
+						
+			Group {
+				Text("Your final score this round:") + Text(" \(game.userScore)")
+			}
+			.font(.body.weight(.semibold))
+			.foregroundStyle(.secondary)
+			
+			Spacer()
 			
 			Button(
 				"New Game",
 				action: { game.reset() }
 			)
 			.buttonStyle(.borderedProminent)
-			.tint(Color("Toned maroon"))
+			.tint(Color("Dark indigo"))
+			
+			Spacer()
 		}
     }
 }
