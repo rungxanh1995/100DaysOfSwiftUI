@@ -11,25 +11,11 @@ struct GFGameAreaView: View {
 	@Binding var game: GuessFlagGame
 	
 	var body: some View {
-		VStack(spacing: 20) {
-			VStack {
-				Text("Tap flag of")
-					.font(.subheadline.weight(.heavy))
-					.foregroundStyle(.secondary)
-				
-				Text(game.correctCountryNameAnswer.localizedKey)
-					.font(.largeTitle.weight(.semibold))
-			}
-			
-			ForEach(0..<GuessFlagGame.numberOfFlagsShown, id: \.self) { eachFlag in
-				Button {
-					game.checkFlagGuess(position: eachFlag)
-				} label: {
-					Image(game.getCountryName(at: eachFlag))
-						.renderingMode(.original)
-				}
-				.clipShape(Capsule())
-				.shadow(radius: 5, y: 5)
+		Group {
+			if game.checkIfGameOver() == false {
+				GFGameOngoingView(game: $game)
+			} else {
+				GFGameOverView(game: $game)
 			}
 		}
 		.frame(maxWidth: .infinity)
