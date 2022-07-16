@@ -62,4 +62,4 @@ I also proactively implemented extra concepts on top of the extra features, incl
 </table>
 
 ## Screenshot 📸
-![Screenshot](screenshots/screenshot.jpg)
+![Screenshot](screenshots/screenshot.png)
