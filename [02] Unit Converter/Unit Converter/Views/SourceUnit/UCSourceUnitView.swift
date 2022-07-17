@@ -40,5 +40,6 @@ struct UCSourceUnitView: View {
 				unitOptions: availableUnits
 			)
 		}
+		.listRowSeparator(.hidden)
 	}
 }

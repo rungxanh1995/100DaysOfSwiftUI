@@ -31,5 +31,6 @@ struct UCDestinationUnitView: View {
 				unitOptions: availableUnits
 			)
 		}
+		.listRowSeparator(.hidden)
     }
 }
