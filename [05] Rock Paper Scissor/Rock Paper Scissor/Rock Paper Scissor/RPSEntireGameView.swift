@@ -13,25 +13,33 @@ struct RPSEntireGameView: View {
 	private var currentGame: RPSGame = RPSGame()
 	
 	var body: some View {
+		let isGameOver = currentGame.checkIfGameOver()
+		
 		ZStack {
 			RPSBackgroundView(mode: currentGame.gameMode)
-			
-			// TODO: Keep this for later use
-			/*
-			if currentGame.checkIfGameOver() == false {
-				RPSGamePlayingView()
-			} else {
-				RPSGameOverView(game: currentGame)
-			}
-			 */
 			
 			VStack {
 				RPSRibbonHeaderView()
 				Spacer()
-				RPSGamePlayingView(game: $currentGame)
+				if isGameOver == false {
+					RPSGamePlayingView(game: $currentGame)
+				} else {
+					RPSGameOverView(game: $currentGame)
+				}
 				Spacer()
 				RPSScoreView(score: currentGame.userScore)
 			}
+		}
+		.alert(
+			currentGame.scoreAlertTitle,
+			isPresented: $currentGame.isScoreAlertShown
+		) {
+			Button(
+				isGameOver == false ? "Continue" : "Dismiss",
+				action: { }
+			)
+		} message: {
+			Text(currentGame.scoreAlertMessage)
 		}
 	}
 }

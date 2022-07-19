@@ -5,7 +5,7 @@
 	//  Created by Joe Pham on 2022-07-16.
 	//
 
-import Foundation
+import SwiftUI
 
 	/// Manages the specific game logic
 struct RPSGame {
@@ -17,6 +17,51 @@ struct RPSGame {
 	static let maxQuestionsEachGame: Int = 10
 	var numGuessesEachGame: Int = 0
 	var userScore: Int = 0
+	
+	var isScoreAlertShown: Bool = false
+	// TODO: Refactor these alert content into a struct if possible
+	private(set) var scoreAlertTitle: LocalizedStringKey = ""
+	private(set) var scoreAlertMessage: LocalizedStringKey = ""
+	
+	mutating func playerSelectedAnswer(_ answer: RPSGestureType) {
+		numGuessesEachGame += 1
+		
+		guard checkIfGameOver() == false else {
+			updateForGameOver()
+			return
+		}
+		
+		let whetherAnswerIsCorrect = isCorrectAnswer(playerMove: answer)
+		updateOngoingGame(basedOn: whetherAnswerIsCorrect)
+	}
+	
+	
+	mutating private func updateForGameOver() {
+		updateAlertContent(
+			title: "Game Over",
+			message: "Maximum number of questions reached!"
+		)
+		isScoreAlertShown = true
+	}
+	
+	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
+		if isCorrectGuess {
+			updateAlertContent(
+				title: "Correct",
+				message: "🎉"
+			)
+		} else {
+			updateAlertContent(
+				title: "Wrong",
+				message: "😵"
+			)
+		}
+		updateScore(basedOn: isCorrectGuess)
+		askNewQuestion()
+		isScoreAlertShown = true
+	}
+	
+	
 	
 	func isCorrectAnswer(playerMove: RPSGestureType) -> Bool {
 		if gameMode == .playToWin {
@@ -38,17 +83,16 @@ struct RPSGame {
 		}
 	}
 	
-	mutating func playerSelectedAnswer(_ answer: RPSGestureType) {
-		let whetherAnswerIsCorrect = isCorrectAnswer(playerMove: answer)
-		updateScore(basedOn: whetherAnswerIsCorrect)
-		askNewQuestion()
-	}
+	
 }
 
 extension RPSGame: QuizGameProtocol {
 	func checkIfGameOver() -> Bool {
-			// code
-		return false
+		if numGuessesEachGame <= RPSGame.maxQuestionsEachGame {
+			return false
+		} else {
+			return true
+		}
 	}
 	
 	mutating internal func askNewQuestion() {
@@ -57,7 +101,9 @@ extension RPSGame: QuizGameProtocol {
 	}
 	
 	mutating func reset() {
-			// code
+		userScore = 0
+		numGuessesEachGame = 0
+		askNewQuestion()
 	}
 	
 	mutating internal func updateScore(basedOn guessResult: Bool) {
@@ -66,5 +112,12 @@ extension RPSGame: QuizGameProtocol {
 		} else {
 			userScore = max(0, userScore - 1)
 		}
+	}
+}
+
+extension RPSGame {
+	mutating func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
+		scoreAlertTitle = title
+		scoreAlertMessage = message
 	}
 }
