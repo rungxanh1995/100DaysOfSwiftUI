@@ -31,6 +31,8 @@
 		2CDDE179288639AD002E1914 /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE177288639AD002E1914 /* Lora-Medium.ttf */; };
 		2CDDE17B28863A42002E1914 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */; };
 		2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE17F2886567C002E1914 /* RPSAlert.swift */; };
+		2CDDE183288677E6002E1914 /* LightShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* LightShadowModifier.swift */; };
+		2CDDE18528867842002E1914 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE18428867842002E1914 /* View+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		2CDDE177288639AD002E1914 /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
 		2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		2CDDE17F2886567C002E1914 /* RPSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSAlert.swift; sourceTree = "<group>"; };
+		2CDDE182288677E6002E1914 /* LightShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightShadowModifier.swift; sourceTree = "<group>"; };
+		2CDDE18428867842002E1914 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				2CDDE175288638FF002E1914 /* Rock-Paper-Scissor-Info.plist */,
 				2C55C9CC2883986900BD9538 /* Rock_Paper_ScissorApp.swift */,
 				2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */,
+				2CDDE181288677C7002E1914 /* Modifiers */,
 				2CBFF8762883AC7B009F2EDD /* Extensions */,
 				2CBFF86D2883A935009F2EDD /* Models */,
 				2CDDE1562885F618002E1914 /* Views */,
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */,
+				2CDDE18428867842002E1914 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -191,6 +197,14 @@
 				2CDDE173288634D7002E1914 /* RPSFont.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2CDDE181288677C7002E1914 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE182288677E6002E1914 /* LightShadowModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +293,8 @@
 				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
 				2CDDE15C28860422002E1914 /* RPSGameModeView.swift in Sources */,
 				2C55C9CD2883986900BD9538 /* Rock_Paper_ScissorApp.swift in Sources */,
+				2CDDE183288677E6002E1914 /* LightShadowModifier.swift in Sources */,
+				2CDDE18528867842002E1914 /* View+Ext.swift in Sources */,
 				2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */,
 				2CDDE15E2886073E002E1914 /* RPSScoreView.swift in Sources */,
 				2CDDE16128860818002E1914 /* RPSGestureSelectionView.swift in Sources */,
