@@ -24,7 +24,6 @@ struct RPSGamePlayingView: View {
 				)
 				.frame(width: 120, height: 120)
 			}
-//			.padding()
 			
 			
 			Group {
@@ -35,7 +34,6 @@ struct RPSGamePlayingView: View {
 				
 				RPSGestureSelectionView(game: $game)
 			}
-//			.padding()
 		}
     }
 }
