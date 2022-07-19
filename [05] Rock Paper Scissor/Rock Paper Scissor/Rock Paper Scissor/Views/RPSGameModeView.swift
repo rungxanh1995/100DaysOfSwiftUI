@@ -15,7 +15,7 @@ struct RPSGameModeView: View {
 		let modeVerb: String = (mode == .playToWin) ? "WIN" : "LOSE"
 		
 		HStack {
-			Text("Which move to")
+			Text("Your move to")
 			Text(modeVerb)
 				.foregroundColor((mode == .playToWin) ? Color("Bright blue") : Color("Bright orange"))
 			Text("it?")

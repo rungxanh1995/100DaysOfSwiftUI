@@ -13,8 +13,7 @@ struct RPSGamePlayingView: View {
     var body: some View {
 		VStack {
 			Group {
-				let computerMoveName = game.computerRandomGesture.rawValue
-				Text("Computer move is \(computerMoveName)")
+				Text("Computer move is")
 					.font(RPSFont.LoraMedium)
 					.foregroundColor(.white)
 					.shadow(radius: 5, y: 5)
