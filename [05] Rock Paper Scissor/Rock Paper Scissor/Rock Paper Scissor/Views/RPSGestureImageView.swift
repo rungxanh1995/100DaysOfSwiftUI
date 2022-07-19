@@ -15,7 +15,7 @@ struct RPSGestureImageView: View {
 		return Image(gestureImageName)
 			.resizable()
 			.frame(maxWidth: 75, maxHeight: 75)
-			.shadow(radius: 5, x: 0, y: 5)
+			.withLightShadow()
 			.padding()
 	}
 	

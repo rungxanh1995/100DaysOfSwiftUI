@@ -21,6 +21,7 @@ struct RPSScoreView: View {
 		)
 		.font(RPSFont.LoraMedium)
 		.foregroundColor(.white)
+		.withLightShadow()
 	}
 }
 

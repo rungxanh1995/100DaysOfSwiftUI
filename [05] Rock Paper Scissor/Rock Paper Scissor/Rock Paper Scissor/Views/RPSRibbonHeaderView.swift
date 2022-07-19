@@ -10,7 +10,7 @@ import SwiftUI
 struct RPSRibbonHeaderView: View {
 	var body: some View {
 		Image("VintageHeaderRibbon")
-			.shadow(radius: 7.5, x: 0, y: 5)
+			.withLightShadow()
 	}
 }
 

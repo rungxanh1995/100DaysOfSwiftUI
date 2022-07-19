@@ -16,7 +16,7 @@ struct RPSGamePlayingView: View {
 				Text("Computer move is")
 					.font(RPSFont.LoraMedium)
 					.foregroundColor(.white)
-					.shadow(radius: 5, y: 5)
+					.withLightShadow()
 				
 				RPSGestureImageView(
 					gesture: game.computerRandomGesture
@@ -29,7 +29,7 @@ struct RPSGamePlayingView: View {
 				RPSGameModeView(mode: game.gameMode)
 					.font(RPSFont.LoraLarge)
 					.foregroundColor(.white)
-					.shadow(radius: 5, y: 5)
+					.withLightShadow()
 				
 				RPSGestureSelectionView(game: $game)
 			}
