@@ -31,7 +31,7 @@ struct RPSEntireGameView: View {
 			}
 		}
 		.alert(
-			currentGame.scoreAlertTitle,
+			currentGame.scoreAlert.title,
 			isPresented: $currentGame.isScoreAlertShown
 		) {
 			Button(
@@ -39,7 +39,7 @@ struct RPSEntireGameView: View {
 				action: { }
 			)
 		} message: {
-			Text(currentGame.scoreAlertMessage)
+			Text(currentGame.scoreAlert.message)
 		}
 	}
 }

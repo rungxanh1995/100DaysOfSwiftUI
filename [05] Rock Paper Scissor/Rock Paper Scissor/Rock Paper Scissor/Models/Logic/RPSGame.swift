@@ -19,9 +19,7 @@ struct RPSGame {
 	var userScore: Int = 0
 	
 	var isScoreAlertShown: Bool = false
-	// TODO: Refactor these alert content into a struct if possible
-	private(set) var scoreAlertTitle: LocalizedStringKey = ""
-	private(set) var scoreAlertMessage: LocalizedStringKey = ""
+	private(set) var scoreAlert: RPSAlert = RPSAlert()
 	
 	mutating func playerSelectedAnswer(_ answer: RPSGestureType) {
 		numGuessesEachGame += 1
@@ -37,21 +35,21 @@ struct RPSGame {
 	
 	
 	mutating private func updateForGameOver() {
-		updateAlertContent(
+		scoreAlert.updateContent(
 			title: "Game Over",
-			message: "Maximum number of questions reached!"
+			message: "Maximum questions reached!"
 		)
 		isScoreAlertShown = true
 	}
 	
 	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
 		if isCorrectGuess {
-			updateAlertContent(
+			scoreAlert.updateContent(
 				title: "Correct",
 				message: "🎉"
 			)
 		} else {
-			updateAlertContent(
+			scoreAlert.updateContent(
 				title: "Wrong",
 				message: "😵"
 			)
@@ -112,12 +110,5 @@ extension RPSGame: QuizGameProtocol {
 		} else {
 			userScore = max(0, userScore - 1)
 		}
-	}
-}
-
-extension RPSGame {
-	mutating func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
-		scoreAlertTitle = title
-		scoreAlertMessage = message
 	}
 }
