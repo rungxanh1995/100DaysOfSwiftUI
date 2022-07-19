@@ -11,7 +11,7 @@ import SwiftUI
 struct Rock_Paper_ScissorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RPSEntireGameView()
 				.statusBar(hidden: true)
         }
     }

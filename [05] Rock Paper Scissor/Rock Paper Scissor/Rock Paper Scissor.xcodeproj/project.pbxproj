@@ -8,31 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		2C55C9CD2883986900BD9538 /* Rock_Paper_ScissorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55C9CC2883986900BD9538 /* Rock_Paper_ScissorApp.swift */; };
-		2C55C9CF2883986900BD9538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55C9CE2883986900BD9538 /* ContentView.swift */; };
+		2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */; };
 		2C55C9D12883986A00BD9538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D02883986A00BD9538 /* Assets.xcassets */; };
 		2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */; };
-		2CBFF86C2883A931009F2EDD /* RPSGameMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF86B2883A931009F2EDD /* RPSGameMove.swift */; };
-		2CBFF86F2883A9A0009F2EDD /* Rock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF86E2883A9A0009F2EDD /* Rock.swift */; };
-		2CBFF8712883A9FD009F2EDD /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8702883A9FD009F2EDD /* Paper.swift */; };
-		2CBFF8732883AA23009F2EDD /* Scissor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8722883AA23009F2EDD /* Scissor.swift */; };
-		2CBFF8752883AB39009F2EDD /* RPSMovesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8742883AB39009F2EDD /* RPSMovesStore.swift */; };
+		2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */; };
 		2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */; };
 		2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8792883AD52009F2EDD /* RPSGame.swift */; };
+		2CDDE14D2885EE07002E1914 /* RPSGestureType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE14C2885EE07002E1914 /* RPSGestureType.swift */; };
+		2CDDE1502885EEA0002E1914 /* RPSGameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE14F2885EEA0002E1914 /* RPSGameMode.swift */; };
+		2CDDE1522885F007002E1914 /* QuizGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE1512885F007002E1914 /* QuizGameProtocol.swift */; };
+		2CDDE1582885F634002E1914 /* RPSBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE1572885F634002E1914 /* RPSBackgroundView.swift */; };
+		2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */; };
+		2CDDE15C28860422002E1914 /* RPSGameModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE15B28860422002E1914 /* RPSGameModeView.swift */; };
+		2CDDE15E2886073E002E1914 /* RPSScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE15D2886073E002E1914 /* RPSScoreView.swift */; };
+		2CDDE16128860818002E1914 /* RPSGestureSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE16028860818002E1914 /* RPSGestureSelectionView.swift */; };
+		2CDDE16328860862002E1914 /* RPSGameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE16228860862002E1914 /* RPSGameOverView.swift */; };
+		2CDDE165288608DC002E1914 /* RPSGamePlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE164288608DC002E1914 /* RPSGamePlayingView.swift */; };
+		2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */; };
+		2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE169288630C7002E1914 /* RPSRibbonHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C55C9C92883986900BD9538 /* Rock Paper Scissor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rock Paper Scissor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C55C9CC2883986900BD9538 /* Rock_Paper_ScissorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock_Paper_ScissorApp.swift; sourceTree = "<group>"; };
-		2C55C9CE2883986900BD9538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSEntireGameView.swift; sourceTree = "<group>"; };
 		2C55C9D02883986A00BD9538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2CBFF86B2883A931009F2EDD /* RPSGameMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameMove.swift; sourceTree = "<group>"; };
-		2CBFF86E2883A9A0009F2EDD /* Rock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rock.swift; sourceTree = "<group>"; };
-		2CBFF8702883A9FD009F2EDD /* Paper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
-		2CBFF8722883AA23009F2EDD /* Scissor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scissor.swift; sourceTree = "<group>"; };
-		2CBFF8742883AB39009F2EDD /* RPSMovesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMovesStore.swift; sourceTree = "<group>"; };
+		2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureStore.swift; sourceTree = "<group>"; };
 		2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		2CBFF8792883AD52009F2EDD /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		2CDDE14C2885EE07002E1914 /* RPSGestureType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureType.swift; sourceTree = "<group>"; };
+		2CDDE14F2885EEA0002E1914 /* RPSGameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameMode.swift; sourceTree = "<group>"; };
+		2CDDE1512885F007002E1914 /* QuizGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameProtocol.swift; sourceTree = "<group>"; };
+		2CDDE1572885F634002E1914 /* RPSBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSBackgroundView.swift; sourceTree = "<group>"; };
+		2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureImageView.swift; sourceTree = "<group>"; };
+		2CDDE15B28860422002E1914 /* RPSGameModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameModeView.swift; sourceTree = "<group>"; };
+		2CDDE15D2886073E002E1914 /* RPSScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSScoreView.swift; sourceTree = "<group>"; };
+		2CDDE16028860818002E1914 /* RPSGestureSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureSelectionView.swift; sourceTree = "<group>"; };
+		2CDDE16228860862002E1914 /* RPSGameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameOverView.swift; sourceTree = "<group>"; };
+		2CDDE164288608DC002E1914 /* RPSGamePlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGamePlayingView.swift; sourceTree = "<group>"; };
+		2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
+		2CDDE169288630C7002E1914 /* RPSRibbonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSRibbonHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				2C55C9CC2883986900BD9538 /* Rock_Paper_ScissorApp.swift */,
-				2C55C9CE2883986900BD9538 /* ContentView.swift */,
+				2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */,
 				2CBFF8762883AC7B009F2EDD /* Extensions */,
 				2CBFF86D2883A935009F2EDD /* Models */,
+				2CDDE1562885F618002E1914 /* Views */,
+				2CDDE16628862616002E1914 /* Helper */,
 				2C55C9D02883986A00BD9538 /* Assets.xcassets */,
 				2C55C9D22883986A00BD9538 /* Preview Content */,
 			);
@@ -86,12 +104,8 @@
 		2CBFF86D2883A935009F2EDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2CBFF86B2883A931009F2EDD /* RPSGameMove.swift */,
-				2CBFF86E2883A9A0009F2EDD /* Rock.swift */,
-				2CBFF8702883A9FD009F2EDD /* Paper.swift */,
-				2CBFF8722883AA23009F2EDD /* Scissor.swift */,
-				2CBFF8742883AB39009F2EDD /* RPSMovesStore.swift */,
-				2CBFF8792883AD52009F2EDD /* RPSGame.swift */,
+				2CDDE1532885F0C5002E1914 /* General */,
+				2CDDE16B2886334C002E1914 /* Logic */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +116,48 @@
 				2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CDDE1532885F0C5002E1914 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE1512885F007002E1914 /* QuizGameProtocol.swift */,
+				2CDDE14C2885EE07002E1914 /* RPSGestureType.swift */,
+				2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */,
+				2CDDE14F2885EEA0002E1914 /* RPSGameMode.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		2CDDE1562885F618002E1914 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE1572885F634002E1914 /* RPSBackgroundView.swift */,
+				2CDDE169288630C7002E1914 /* RPSRibbonHeaderView.swift */,
+				2CDDE164288608DC002E1914 /* RPSGamePlayingView.swift */,
+				2CDDE16228860862002E1914 /* RPSGameOverView.swift */,
+				2CDDE15B28860422002E1914 /* RPSGameModeView.swift */,
+				2CDDE16028860818002E1914 /* RPSGestureSelectionView.swift */,
+				2CDDE15D2886073E002E1914 /* RPSScoreView.swift */,
+				2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2CDDE16628862616002E1914 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		2CDDE16B2886334C002E1914 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2CBFF8792883AD52009F2EDD /* RPSGame.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,15 +230,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CBFF8752883AB39009F2EDD /* RPSMovesStore.swift in Sources */,
+				2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */,
+				2CDDE1502885EEA0002E1914 /* RPSGameMode.swift in Sources */,
+				2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */,
+				2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */,
 				2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */,
-				2CBFF8732883AA23009F2EDD /* Scissor.swift in Sources */,
-				2CBFF86F2883A9A0009F2EDD /* Rock.swift in Sources */,
-				2CBFF8712883A9FD009F2EDD /* Paper.swift in Sources */,
-				2C55C9CF2883986900BD9538 /* ContentView.swift in Sources */,
+				2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */,
 				2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */,
+				2CDDE14D2885EE07002E1914 /* RPSGestureType.swift in Sources */,
+				2CDDE16328860862002E1914 /* RPSGameOverView.swift in Sources */,
+				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
+				2CDDE15C28860422002E1914 /* RPSGameModeView.swift in Sources */,
 				2C55C9CD2883986900BD9538 /* Rock_Paper_ScissorApp.swift in Sources */,
-				2CBFF86C2883A931009F2EDD /* RPSGameMove.swift in Sources */,
+				2CDDE15E2886073E002E1914 /* RPSScoreView.swift in Sources */,
+				2CDDE16128860818002E1914 /* RPSGestureSelectionView.swift in Sources */,
+				2CDDE1522885F007002E1914 /* QuizGameProtocol.swift in Sources */,
+				2CDDE165288608DC002E1914 /* RPSGamePlayingView.swift in Sources */,
+				2CDDE1582885F634002E1914 /* RPSBackgroundView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +382,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -347,7 +411,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
