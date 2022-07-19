@@ -26,9 +26,7 @@ struct RPSEntireGameView: View {
 			 */
 			
 			VStack {
-				Spacer()
 				RPSRibbonHeaderView()
-				Spacer()
 				Spacer()
 				RPSGamePlayingView(game: $currentGame)
 				Spacer()

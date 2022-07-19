@@ -12,24 +12,30 @@ struct RPSGamePlayingView: View {
 	
     var body: some View {
 		VStack {
-			let computerMoveName = game.computerRandomGesture.rawValue
-			Text("Computer move is \(computerMoveName)")
-				.font(RPSFont.Lora)
-				.foregroundColor(.black)
-				.shadow(radius: 5, y: 5)
+			Group {
+				let computerMoveName = game.computerRandomGesture.rawValue
+				Text("Computer move is \(computerMoveName)")
+					.font(RPSFont.Lora)
+					.foregroundColor(.white)
+					.shadow(radius: 5, y: 5)
+				
+				RPSGestureImageView(
+					gesture: game.computerRandomGesture
+				)
+				.frame(width: 120, height: 120)
+			}
+//			.padding()
 			
-			RPSGestureImageView(
-				gesture: game.computerRandomGesture
-			)
-			.frame(width: 120, height: 120)
 			
-			RPSGameModeView(mode: game.gameMode)
-//				.font(.title.weight(.semibold))
-				.font(RPSFont.LoraBold)
-				.foregroundColor(.black)
-				.shadow(radius: 5, y: 5)
-			
-			RPSGestureSelectionView(game: $game)
+			Group {
+				RPSGameModeView(mode: game.gameMode)
+					.font(RPSFont.LoraBold)
+					.foregroundColor(.white)
+					.shadow(radius: 5, y: 5)
+				
+				RPSGestureSelectionView(game: $game)
+			}
+//			.padding()
 		}
     }
 }
@@ -39,5 +45,6 @@ struct RPSGamePlayingView_Previews: PreviewProvider {
 		StatefulPreviewWrapper(RPSGame()) {
 			RPSGamePlayingView(game: $0)
 		}
+		.preferredColorScheme(.dark)
 	}
 }

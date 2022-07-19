@@ -20,13 +20,14 @@ struct RPSScoreView: View {
 			+ Text(": \(score)")
 		)
 		.font(RPSFont.LoraMedium)
-		.foregroundColor(.black)
+		.foregroundColor(.white)
 	}
 }
 
 struct RPSScoreView_Previews: PreviewProvider {
 	static var previews: some View {
 		RPSScoreView(score: 0)
+			.preferredColorScheme(.dark)
 	}
 }
 
