@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LightShadowModifier: ViewModifier {
-	private(set) var color: Color = .black
+	private(set) var color: Color = Color(.sRGBLinear, white: 0, opacity: 0.33)
 	
 	func body(content: Content) -> some View {
 		return content
