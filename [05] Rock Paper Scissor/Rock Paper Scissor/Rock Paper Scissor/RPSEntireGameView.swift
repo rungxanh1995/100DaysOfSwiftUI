@@ -12,9 +12,6 @@ struct RPSEntireGameView: View {
 	@State
 	private var currentGame: RPSGame = RPSGame()
 	
-	@State
-	var playerScore = 0
-	
 	var body: some View {
 		ZStack {
 			RPSBackgroundView(mode: currentGame.gameMode)
