@@ -18,7 +18,6 @@ struct RPSEntireGameView: View {
 	var body: some View {
 		ZStack {
 			RPSBackgroundView(mode: currentGame.gameMode)
-				.statusBar(hidden: true)
 			
 			// TODO: Keep this for later use
 			/*

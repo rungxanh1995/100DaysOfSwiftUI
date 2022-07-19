@@ -19,7 +19,7 @@ struct RPSScoreView: View {
 			Text("Score")
 			+ Text(": \(score)")
 		)
-		.font(.title.bold())
+		.font(RPSFont.LoraMedium)
 		.foregroundColor(.black)
 	}
 }

@@ -26,6 +26,10 @@
 		2CDDE165288608DC002E1914 /* RPSGamePlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE164288608DC002E1914 /* RPSGamePlayingView.swift */; };
 		2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */; };
 		2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE169288630C7002E1914 /* RPSRibbonHeaderView.swift */; };
+		2CDDE174288634D7002E1914 /* RPSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE173288634D7002E1914 /* RPSFont.swift */; };
+		2CDDE178288639AD002E1914 /* Lora-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE176288639AC002E1914 /* Lora-Bold.ttf */; };
+		2CDDE179288639AD002E1914 /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE177288639AD002E1914 /* Lora-Medium.ttf */; };
+		2CDDE17B28863A42002E1914 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,11 @@
 		2CDDE164288608DC002E1914 /* RPSGamePlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGamePlayingView.swift; sourceTree = "<group>"; };
 		2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		2CDDE169288630C7002E1914 /* RPSRibbonHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSRibbonHeaderView.swift; sourceTree = "<group>"; };
+		2CDDE173288634D7002E1914 /* RPSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSFont.swift; sourceTree = "<group>"; };
+		2CDDE175288638FF002E1914 /* Rock-Paper-Scissor-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Rock-Paper-Scissor-Info.plist"; sourceTree = SOURCE_ROOT; };
+		2CDDE176288639AC002E1914 /* Lora-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Bold.ttf"; sourceTree = "<group>"; };
+		2CDDE177288639AD002E1914 /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
+		2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +90,13 @@
 		2C55C9CB2883986900BD9538 /* Rock Paper Scissor */ = {
 			isa = PBXGroup;
 			children = (
+				2CDDE175288638FF002E1914 /* Rock-Paper-Scissor-Info.plist */,
 				2C55C9CC2883986900BD9538 /* Rock_Paper_ScissorApp.swift */,
 				2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */,
 				2CBFF8762883AC7B009F2EDD /* Extensions */,
 				2CBFF86D2883A935009F2EDD /* Models */,
 				2CDDE1562885F618002E1914 /* Views */,
+				2CDDE1702886346E002E1914 /* Other Resources */,
 				2CDDE16628862616002E1914 /* Helper */,
 				2C55C9D02883986A00BD9538 /* Assets.xcassets */,
 				2C55C9D22883986A00BD9538 /* Preview Content */,
@@ -160,6 +171,25 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		2CDDE1702886346E002E1914 /* Other Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE1722886348B002E1914 /* Fonts */,
+			);
+			path = "Other Resources";
+			sourceTree = "<group>";
+		};
+		2CDDE1722886348B002E1914 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2CDDE176288639AC002E1914 /* Lora-Bold.ttf */,
+				2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */,
+				2CDDE177288639AD002E1914 /* Lora-Medium.ttf */,
+				2CDDE173288634D7002E1914 /* RPSFont.swift */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,8 +248,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDDE178288639AD002E1914 /* Lora-Bold.ttf in Resources */,
+				2CDDE17B28863A42002E1914 /* Lora-Regular.ttf in Resources */,
 				2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */,
 				2C55C9D12883986A00BD9538 /* Assets.xcassets in Resources */,
+				2CDDE179288639AD002E1914 /* Lora-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +267,7 @@
 				2CDDE1502885EEA0002E1914 /* RPSGameMode.swift in Sources */,
 				2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */,
 				2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */,
+				2CDDE174288634D7002E1914 /* RPSFont.swift in Sources */,
 				2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */,
 				2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */,
 				2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */,
@@ -303,6 +337,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -357,6 +393,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -378,9 +416,11 @@
 				DEVELOPMENT_TEAM = 8R3P49X4ZM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rock-Paper-Scissor-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,9 +447,11 @@
 				DEVELOPMENT_TEAM = 8R3P49X4ZM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Rock-Paper-Scissor-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (

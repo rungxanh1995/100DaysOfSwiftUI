@@ -14,7 +14,7 @@ struct RPSGamePlayingView: View {
 		VStack {
 			let computerMoveName = game.computerRandomGesture.rawValue
 			Text("Computer move is \(computerMoveName)")
-				.font(.body.weight(.bold))
+				.font(RPSFont.Lora)
 				.foregroundColor(.black)
 				.shadow(radius: 5, y: 5)
 			
@@ -24,7 +24,8 @@ struct RPSGamePlayingView: View {
 			.frame(width: 120, height: 120)
 			
 			RPSGameModeView(mode: game.gameMode)
-				.font(.title.weight(.semibold))
+//				.font(.title.weight(.semibold))
+				.font(RPSFont.LoraBold)
 				.foregroundColor(.black)
 				.shadow(radius: 5, y: 5)
 			
