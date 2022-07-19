@@ -15,7 +15,7 @@ struct RPSGamePlayingView: View {
 			Group {
 				let computerMoveName = game.computerRandomGesture.rawValue
 				Text("Computer move is \(computerMoveName)")
-					.font(RPSFont.Lora)
+					.font(RPSFont.LoraMedium)
 					.foregroundColor(.white)
 					.shadow(radius: 5, y: 5)
 				
@@ -28,7 +28,7 @@ struct RPSGamePlayingView: View {
 			
 			Group {
 				RPSGameModeView(mode: game.gameMode)
-					.font(RPSFont.LoraBold)
+					.font(RPSFont.LoraLarge)
 					.foregroundColor(.white)
 					.shadow(radius: 5, y: 5)
 				

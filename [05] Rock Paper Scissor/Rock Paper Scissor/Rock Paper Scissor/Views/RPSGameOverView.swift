@@ -19,14 +19,14 @@ struct RPSGameOverView: View {
 				Text("Game Over")
 				Text("🥳")
 			}
-			.font(.title.weight(.semibold))
-			.foregroundStyle(.secondary)
+			.font(RPSFont.LoraLarge)
+			.foregroundStyle(.white)
 			
 			Group {
-				Text("Your final score this round:") + Text(" \(game.userScore)")
+				Text("Your score this round:") + Text(" \(game.userScore)")
 			}
-			.font(.body.weight(.semibold))
-			.foregroundStyle(.secondary)
+			.font(RPSFont.LoraMedium)
+			.foregroundStyle(.white)
 			
 			Spacer()
 			
@@ -34,9 +34,22 @@ struct RPSGameOverView: View {
 				"New Game",
 				action: { game.reset() }
 			)
+			.font(RPSFont.LoraSmall)
+			.foregroundColor(.white)
+			.tint(Color("Bright orange"))
 			.buttonStyle(.borderedProminent)
 			
 			Spacer()
 		}
+		.foregroundStyle(.thinMaterial)
+	}
+}
+
+struct GameOverView_Previews: PreviewProvider {
+	static var previews: some View {
+		StatefulPreviewWrapper(RPSGame()) {
+			RPSGameOverView(game: $0)
+		}
+		.preferredColorScheme(.dark)
 	}
 }
