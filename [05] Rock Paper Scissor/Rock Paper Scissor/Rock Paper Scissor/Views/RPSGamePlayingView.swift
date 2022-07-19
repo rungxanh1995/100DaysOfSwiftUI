@@ -19,10 +19,13 @@ struct RPSGamePlayingView: View {
 					.withLightShadow()
 				
 				RPSGestureImageView(
+					game: $game,
 					gesture: game.computerRandomGesture
 				)
 				.frame(width: 120, height: 120)
-			}
+				.disabled(true)
+				// player must not interact with gesture from question
+ 			}
 			
 			
 			Group {

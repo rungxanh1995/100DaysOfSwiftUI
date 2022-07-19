@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct RPSGestureImageView: View {
+	@Binding var game: RPSGame
 	private(set) var gesture: RPSGestureType
+	@State private var isPressed = false
 	
 	var body: some View {
 		let gestureImageName = Self.getImageName(from: gesture)
@@ -17,6 +19,12 @@ struct RPSGestureImageView: View {
 			.frame(maxWidth: 75, maxHeight: 75)
 			.withLightShadow()
 			.padding()
+			.onLongPressGesture(minimumDuration: 0.1) {
+				game.playerSelectedAnswer(gesture)
+			} onPressingChanged: { alreadyPressed in
+				self.isPressed = alreadyPressed
+			}
+			.opacity(isPressed ? 0.25 : 1.0)
 	}
 	
 	private static func getImageName(from gesture: RPSGestureType) -> String {
