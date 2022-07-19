@@ -38,7 +38,11 @@ struct RPSGame {
 		}
 	}
 	
-	
+	mutating func playerSelectedAnswer(_ answer: RPSGestureType) {
+		let whetherAnswerIsCorrect = isCorrectAnswer(playerMove: answer)
+		updateScore(basedOn: whetherAnswerIsCorrect)
+		askNewQuestion()
+	}
 }
 
 extension RPSGame: QuizGameProtocol {
@@ -47,15 +51,20 @@ extension RPSGame: QuizGameProtocol {
 		return false
 	}
 	
-	mutating func askNewQuestion() {
-			// code
+	mutating internal func askNewQuestion() {
+		computerRandomGesture = RPSGame.allGestures.randomElement()!
+		gameMode = RPSGameMode.allCases.randomElement()!
 	}
 	
 	mutating func reset() {
 			// code
 	}
 	
-	mutating func updateScore(basedOn guessResult: Bool) {
-			// code
+	mutating internal func updateScore(basedOn guessResult: Bool) {
+		if guessResult == true {
+			userScore += 1
+		} else {
+			userScore = max(0, userScore - 1)
+		}
 	}
 }

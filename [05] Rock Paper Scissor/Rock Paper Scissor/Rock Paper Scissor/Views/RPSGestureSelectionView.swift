@@ -18,11 +18,7 @@ struct RPSGestureSelectionView: View {
 				
 				RPSGestureImageView(gesture: gesture)
 					.onTapGesture {
-						// TODO: Code next steps here
-						// including update score,
-						// and next question
-						print(gesture.rawValue)
-						print(game.isCorrectAnswer(playerMove: gesture))
+						game.playerSelectedAnswer(gesture)
 					}
 			}
 		}
