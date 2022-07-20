@@ -1,0 +1,30 @@
+/* 
+  Localizable.strings
+  Rock Paper Scissor
+
+  Created by Joe Pham on 2022-07-19.
+  
+*/
+
+/* General Content */
+"Computer move is" = "电脑的随机手势是";
+"Your move to" = "哪一个手势可以";
+"WIN" = "赢";
+"LOSE" = "输";
+"it?" = "它？";
+
+"Game Over" = "游戏结束";
+"Maximum questions reached!" = "达到了最多问题数量！";
+"Your score this round:" = "你这一局得分：";
+
+/* Score */
+"Score" = "分";
+
+/* Alert */
+"Correct" = "正确了";
+"Wrong" = "错了";
+
+/* Buttons */
+"Continue" = "持续";
+"Dismiss" = "取消";
+"New Game" = "新局";
