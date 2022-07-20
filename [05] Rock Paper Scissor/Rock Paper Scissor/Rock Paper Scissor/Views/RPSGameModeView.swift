@@ -12,7 +12,7 @@ struct RPSGameModeView: View {
 	
 	
     var body: some View {
-		let modeVerb: String = (mode == .playToWin) ? "WIN" : "LOSE"
+		let modeVerb: LocalizedStringKey = (mode == .playToWin) ? "WIN" : "LOSE"
 		
 		HStack {
 			Text("Your move to")

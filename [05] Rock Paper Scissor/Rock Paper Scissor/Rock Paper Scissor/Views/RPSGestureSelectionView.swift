@@ -15,11 +15,10 @@ struct RPSGestureSelectionView: View {
 		
 		HStack {
 			ForEach(RPSGestureType.allCases, id: \.self) { gesture in
-				
-				RPSGestureImageView(gesture: gesture)
-					.onTapGesture {
-						game.playerSelectedAnswer(gesture)
-					}
+				RPSGestureImageView(
+					game: $game,
+					gesture: gesture
+				)
 			}
 		}
 	}

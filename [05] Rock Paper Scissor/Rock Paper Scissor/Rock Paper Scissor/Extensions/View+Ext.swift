@@ -8,7 +8,7 @@
 import SwiftUI
 
 extension View {
-	func withLightShadow(of color: Color = .black) -> some View {
-		modifier(LightShadowModifier(color: color))
+	func withLightShadow(of color: Color = Color(.sRGBLinear, white: 0, opacity: 0.33)) -> some View {
+		modifier(RPSShadowModifier(color: color))
 	}
 }

@@ -11,6 +11,7 @@
 		2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */; };
 		2C55C9D12883986A00BD9538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D02883986A00BD9538 /* Assets.xcassets */; };
 		2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */; };
+		2CA3F81C28878A1D00EB73AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F81E28878A1D00EB73AD /* Localizable.strings */; };
 		2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */; };
 		2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */; };
 		2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8792883AD52009F2EDD /* RPSGame.swift */; };
@@ -31,7 +32,7 @@
 		2CDDE179288639AD002E1914 /* Lora-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE177288639AD002E1914 /* Lora-Medium.ttf */; };
 		2CDDE17B28863A42002E1914 /* Lora-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */; };
 		2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE17F2886567C002E1914 /* RPSAlert.swift */; };
-		2CDDE183288677E6002E1914 /* LightShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* LightShadowModifier.swift */; };
+		2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */; };
 		2CDDE18528867842002E1914 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE18428867842002E1914 /* View+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,9 @@
 		2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSEntireGameView.swift; sourceTree = "<group>"; };
 		2C55C9D02883986A00BD9538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2CA3F81D28878A1D00EB73AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CA3F81F28878A2000EB73AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		2CA3F82028878A2100EB73AD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureStore.swift; sourceTree = "<group>"; };
 		2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		2CBFF8792883AD52009F2EDD /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
@@ -62,7 +66,7 @@
 		2CDDE177288639AD002E1914 /* Lora-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Medium.ttf"; sourceTree = "<group>"; };
 		2CDDE17A28863A42002E1914 /* Lora-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lora-Regular.ttf"; sourceTree = "<group>"; };
 		2CDDE17F2886567C002E1914 /* RPSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSAlert.swift; sourceTree = "<group>"; };
-		2CDDE182288677E6002E1914 /* LightShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightShadowModifier.swift; sourceTree = "<group>"; };
+		2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSShadowModifier.swift; sourceTree = "<group>"; };
 		2CDDE18428867842002E1914 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +121,14 @@
 				2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2CA3F81928878A1100EB73AD /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+				2CA3F81E28878A1D00EB73AD /* Localizable.strings */,
+			);
+			path = Translations;
 			sourceTree = "<group>";
 		};
 		2CBFF86D2883A935009F2EDD /* Models */ = {
@@ -183,6 +195,7 @@
 		2CDDE1702886346E002E1914 /* Other Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2CA3F81928878A1100EB73AD /* Translations */,
 				2CDDE1722886348B002E1914 /* Fonts */,
 			);
 			path = "Other Resources";
@@ -202,7 +215,7 @@
 		2CDDE181288677C7002E1914 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
-				2CDDE182288677E6002E1914 /* LightShadowModifier.swift */,
+				2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -249,6 +262,8 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
+				"zh-Hans",
 			);
 			mainGroup = 2C55C9C02883986900BD9538;
 			productRefGroup = 2C55C9CA2883986900BD9538 /* Products */;
@@ -266,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CDDE178288639AD002E1914 /* Lora-Bold.ttf in Resources */,
+				2CA3F81C28878A1D00EB73AD /* Localizable.strings in Resources */,
 				2CDDE17B28863A42002E1914 /* Lora-Regular.ttf in Resources */,
 				2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */,
 				2C55C9D12883986A00BD9538 /* Assets.xcassets in Resources */,
@@ -293,7 +309,7 @@
 				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
 				2CDDE15C28860422002E1914 /* RPSGameModeView.swift in Sources */,
 				2C55C9CD2883986900BD9538 /* Rock_Paper_ScissorApp.swift in Sources */,
-				2CDDE183288677E6002E1914 /* LightShadowModifier.swift in Sources */,
+				2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */,
 				2CDDE18528867842002E1914 /* View+Ext.swift in Sources */,
 				2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */,
 				2CDDE15E2886073E002E1914 /* RPSScoreView.swift in Sources */,
@@ -305,6 +321,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CA3F81E28878A1D00EB73AD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA3F81D28878A1D00EB73AD /* en */,
+				2CA3F81F28878A2000EB73AD /* zh-Hans */,
+				2CA3F82028878A2100EB73AD /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C55C9D52883986A00BD9538 /* Debug */ = {
@@ -357,6 +386,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -413,6 +443,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
@@ -437,6 +468,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Rock-Paper-Scissor-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RPS;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +500,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Rock-Paper-Scissor-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = RPS;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
