@@ -19,7 +19,7 @@ struct RPSGestureImageView: View {
 			.frame(maxWidth: 75, maxHeight: 75)
 			.withLightShadow()
 			.padding()
-			.onLongPressGesture(minimumDuration: 0.1) {
+			.onLongPressGesture(minimumDuration: 0.01) {
 				game.playerSelectedAnswer(gesture)
 			} onPressingChanged: { alreadyPressed in
 				self.isPressed = alreadyPressed
