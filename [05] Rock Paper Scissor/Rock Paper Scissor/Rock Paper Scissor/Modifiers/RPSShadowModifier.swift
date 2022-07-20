@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LightShadowModifier: ViewModifier {
+struct RPSShadowModifier: ViewModifier {
 	private(set) var color: Color = Color(.sRGBLinear, white: 0, opacity: 0.33)
 	
 	func body(content: Content) -> some View {
