@@ -11,7 +11,7 @@ struct RPSBackgroundView: View {
 	private(set) var mode: RPSGameMode
 	
 	private let winColorStop1 = Gradient.Stop(color: Color.mint, location: 0.25)
-	private let winColorStop2 = Gradient.Stop(color: Color.blue, location: 0.85)
+	private let winColorStop2 = Gradient.Stop(color: Color.blue, location: 0.75)
 	private let loseColorStop1 = Gradient.Stop(color: Color.orange, location: 0.25)
 	private let loseColorStop2 = Gradient.Stop(color: Color.red, location: 0.75)
 	
