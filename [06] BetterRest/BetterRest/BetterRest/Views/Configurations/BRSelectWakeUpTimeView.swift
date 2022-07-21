@@ -12,12 +12,13 @@ struct BRSelectWakeUpTimeView: View {
 	var domainModel: BetterRest
 	
     var body: some View {
-		VStack(alignment: .leading, spacing: 0) {
-			Text("When do you want to wake up?")
-				.font(.headline)
+		HStack {
+			Text("Wake up time:")
+			
+			Spacer()
 			
 			DatePicker(
-				"Enter a wake up time",
+				"Enter a desired wake up time",
 				selection: $domainModel.desiredWakeUpTime,
 				displayedComponents: .hourAndMinute
 			)

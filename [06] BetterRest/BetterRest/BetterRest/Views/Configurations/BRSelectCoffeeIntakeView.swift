@@ -11,13 +11,17 @@ struct BRSelectCoffeeIntakeView: View {
 	@Binding
 	var domainModel: BetterRest
 	
+	private var numCoffee: Int {
+		domainModel.coffeeAmountCups
+	}
+	
     var body: some View {
-		VStack(alignment: .leading, spacing: 0) {
-			Text("Daily coffee intake")
-				.font(.headline)
+		HStack {
+			Text("Coffee intake:")
 			
+			Spacer()
 			Stepper(
-				domainModel.coffeeAmountCups == 1 ? "1 cup" : "\(domainModel.coffeeAmountCups) cups",
+				numCoffee == 1 ? "1 cup" : "\(numCoffee) cups",
 				value: $domainModel.coffeeAmountCups,
 				in: BetterRest.reasonableCoffeeIntakeCups
 			)

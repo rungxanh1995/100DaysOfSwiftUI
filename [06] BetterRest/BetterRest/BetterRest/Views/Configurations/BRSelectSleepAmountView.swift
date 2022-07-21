@@ -12,12 +12,13 @@ struct BRSelectSleepAmountView: View {
 	var domainModel: BetterRest
 	
 	var body: some View {
-		VStack(alignment: .leading, spacing: 0) {
-			Text("Desired amount of sleep")
-				.font(.headline)
+		HStack {
+			Text("Sleep amount:")
+			
+			Spacer()
 			
 			Stepper(
-				"\(domainModel.sleepAmountHrs.formatted()) hours",
+				"\(domainModel.sleepAmountHrs.formatted()) hrs",
 				value: $domainModel.sleepAmountHrs,
 				in: BetterRest.reasonableSleepAmountRangeHrs,
 				step: 0.25

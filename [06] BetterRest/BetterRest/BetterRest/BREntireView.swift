@@ -16,11 +16,16 @@ struct BREntireView: View {
 		
 		NavigationView {
 			Form {
-				BRSelectWakeUpTimeView(domainModel: $domainModel)
-				
-				BRSelectSleepAmountView(domainModel: $domainModel)
-				
-				BRSelectCoffeeIntakeView(domainModel: $domainModel)
+				Section(
+					header: Text("Your inputs"),
+					footer: Text("Customize the information above to get a tailored bedtime for a better rest")
+				) {
+					BRSelectWakeUpTimeView(domainModel: $domainModel)
+					
+					BRSelectSleepAmountView(domainModel: $domainModel)
+					
+					BRSelectCoffeeIntakeView(domainModel: $domainModel)
+				}
 				
 				Section(header: Text("Suggested bedtime")) {
 					HStack {
