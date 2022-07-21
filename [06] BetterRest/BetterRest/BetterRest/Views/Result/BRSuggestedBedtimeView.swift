@@ -11,10 +11,13 @@ struct BRSuggestedBedtimeView: View {
 	var bedtime: Date
 	
     var body: some View {
-		HStack {
+		VStack {
 			Text("You should hit the bed at")
 			Spacer()
-			Text(bedtime.formatted(date: .omitted, time: .shortened))
+			Text(
+				bedtime.formatted(date: .omitted, time: .shortened)
+			)
+			.font(.title)
 		}
     }
 }

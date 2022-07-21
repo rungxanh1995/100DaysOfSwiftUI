@@ -23,9 +23,13 @@ struct BREntireView: View {
 				BRSelectCoffeeIntakeView(domainModel: $domainModel)
 				
 				Section(header: Text("Suggested bedtime")) {
-					BRSuggestedBedtimeView(
-						bedtime: domainModel.suggestedBedtime
-					)
+					HStack {
+						Spacer()
+						BRSuggestedBedtimeView(
+							bedtime: domainModel.suggestedBedtime
+						)
+						Spacer()
+					}
 				}
 			}
 			.navigationTitle("BetterRest")
