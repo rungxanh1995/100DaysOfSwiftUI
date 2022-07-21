@@ -10,29 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
 	@State
-	private var desiredWakeUpTime = Self.defaultWakeUpTime
-	
-	static var defaultWakeUpTime: Date {
-		var components = DateComponents()
-		components.hour = 7
-		components.minute = 0
-		return Calendar.current.date(from: components) ?? Date.now
-	}
-	
-	@State
-	private var sleepAmountHrs = 8.0
-	
-	let reasonableSleepAmountRangeHrs: ClosedRange<Double> = 4...12
-	
-	@State
-	private var coffeeAmountCups = 1
-	
-	@State
-	private var alertTitle: LocalizedStringKey = ""
-	@State
-	private var alertMessage: LocalizedStringKey = ""
-	@State
-	private var toShowAlert: Bool = false
+	private var domainModel: BetterRest = BetterRest()
 	
     var body: some View {
 		
@@ -44,7 +22,7 @@ struct ContentView: View {
 					
 					DatePicker(
 						"Enter a wake up time",
-						selection: $desiredWakeUpTime,
+						selection: $domainModel.desiredWakeUpTime,
 						displayedComponents: .hourAndMinute
 					)
 					.labelsHidden()
@@ -55,9 +33,9 @@ struct ContentView: View {
 						.font(.headline)
 					
 					Stepper(
-						"\(sleepAmountHrs.formatted()) hours",
-						value: $sleepAmountHrs,
-						in: reasonableSleepAmountRangeHrs,
+						"\(domainModel.sleepAmountHrs.formatted()) hours",
+						value: $domainModel.sleepAmountHrs,
+						in: domainModel.reasonableSleepAmountRangeHrs,
 						step: 0.25
 					)
 				}
@@ -67,49 +45,20 @@ struct ContentView: View {
 						.font(.headline)
 					
 					Stepper(
-						coffeeAmountCups == 1 ? "1 cup" : "\(coffeeAmountCups) cups",
-						value: $coffeeAmountCups,
+						domainModel.coffeeAmountCups == 1 ? "1 cup" : "\(domainModel.coffeeAmountCups) cups",
+						value: $domainModel.coffeeAmountCups,
 						in: 1...10
 					)
 				}
 			}
 			.navigationTitle("BetterRest")
 			.toolbar {
-				Button("Calculate", action: calculateBedtime)
+				Button("Calculate") { domainModel.calculateBedtime() }
 			}
-			.alert(alertTitle, isPresented: $toShowAlert) {
+			.alert(domainModel.alertTitle, isPresented: $domainModel.toShowAlert) {
 				Button("OK") { }
-			} message: { Text(alertMessage) }
+			} message: { Text(domainModel.alertMessage) }
 		}
-	}
-	
-	func calculateBedtime() {
-		do {
-			let mlConfig = MLModelConfiguration()
-			let actualSleepCalculator = try ActualSleepTrainedCalculator(configuration: mlConfig)
-			
-			let wakeUpDateComponents = Calendar.current.dateComponents([.hour, .minute], from: desiredWakeUpTime)
-			let wakeUpHourInSecondsFromMidnight = (wakeUpDateComponents.hour ?? 8) * 60 * 60
-			let wakeUpMinuteInSecondsFromMidnight = (wakeUpDateComponents.minute ?? 0) * 60
-			let wakeUpSecondsFromMidnight = wakeUpHourInSecondsFromMidnight + wakeUpMinuteInSecondsFromMidnight
-			
-			let bedtimePrediction = try actualSleepCalculator.prediction(
-				wake: Double(wakeUpSecondsFromMidnight),
-				estimatedSleep: sleepAmountHrs,
-				coffee: Double(coffeeAmountCups)
-			)
-			
-			let suggestedBedtime = desiredWakeUpTime - bedtimePrediction.actualSleep
-			
-			
-			alertTitle = "Suggested bedtime is"
-			alertMessage = "\(suggestedBedtime.formatted(date: .omitted, time: .shortened))"
-		} catch {
-			alertTitle = "Error"
-			alertMessage = "Something wrong happened calculating bedtime"
-		}
-		
-		toShowAlert = true
 	}
 }
 
