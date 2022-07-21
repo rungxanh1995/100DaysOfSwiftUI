@@ -29,7 +29,7 @@ I developed the app with knowledge learned from previous course modules, along w
 			<td>Hand gesture and app icon images were manually generated. I collected templates then later used Pixelmator to create the image assets</td>
 		</tr>
 		<tr>
-			<td>Modulization</td>
+			<td>Modularization</td>
 			<td>Tried my best to organize the code with a sensible folder structure, thinking I could help my future self to look back and understand the code better (or another colleague developer, in a professional environment)</td>
 		</tr>
 	</tbody>
