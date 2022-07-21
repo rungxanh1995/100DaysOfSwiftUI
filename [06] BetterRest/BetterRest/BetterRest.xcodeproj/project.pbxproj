@@ -13,6 +13,7 @@
 		2C496FC62889FAEA0028F484 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC52889FAEA0028F484 /* StatefulPreviewWrapper.swift */; };
 		2C496FC82889FB670028F484 /* BRSelectSleepAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC72889FB670028F484 /* BRSelectSleepAmountView.swift */; };
 		2C496FCA2889FBD70028F484 /* BRSelectCoffeeIntakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC92889FBD70028F484 /* BRSelectCoffeeIntakeView.swift */; };
+		2C496FD1288A0AED0028F484 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C496FD3288A0AED0028F484 /* Localizable.strings */; };
 		2CA3F82E288898F200EB73AD /* BetterRestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3F82D288898F200EB73AD /* BetterRestApp.swift */; };
 		2CA3F830288898F200EB73AD /* BREntireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3F82F288898F200EB73AD /* BREntireView.swift */; };
 		2CA3F832288898F300EB73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F831288898F300EB73AD /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		2C496FC52889FAEA0028F484 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		2C496FC72889FB670028F484 /* BRSelectSleepAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSelectSleepAmountView.swift; sourceTree = "<group>"; };
 		2C496FC92889FBD70028F484 /* BRSelectCoffeeIntakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSelectCoffeeIntakeView.swift; sourceTree = "<group>"; };
+		2C496FD2288A0AED0028F484 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C496FD5288A0AF00028F484 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CA3F82A288898F200EB73AD /* BetterRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3F82D288898F200EB73AD /* BetterRestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestApp.swift; sourceTree = "<group>"; };
 		2CA3F82F288898F200EB73AD /* BREntireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREntireView.swift; sourceTree = "<group>"; };
@@ -106,6 +109,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		2C496FD0288A0ADB0028F484 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				2C496FD3288A0AED0028F484 /* Localizable.strings */,
+			);
+			path = Localizations;
+			sourceTree = "<group>";
+		};
 		2CA3F821288898F200EB73AD = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +141,7 @@
 				2C496FB32889EEE50028F484 /* Model */,
 				2C496FB92889F2590028F484 /* Views */,
 				2C496FC42889FADB0028F484 /* Helpers */,
+				2C496FD0288A0ADB0028F484 /* Localizations */,
 				2CA3F831288898F300EB73AD /* Assets.xcassets */,
 				2CA3F833288898F300EB73AD /* Preview Content */,
 			);
@@ -186,6 +198,7 @@
 			knownRegions = (
 				en,
 				Base,
+				vi,
 			);
 			mainGroup = 2CA3F821288898F200EB73AD;
 			productRefGroup = 2CA3F82B288898F200EB73AD /* Products */;
@@ -203,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CA3F835288898F300EB73AD /* Preview Assets.xcassets in Resources */,
+				2C496FD1288A0AED0028F484 /* Localizable.strings in Resources */,
 				2CA3F832288898F300EB73AD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +241,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2C496FD3288A0AED0028F484 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2C496FD2288A0AED0028F484 /* en */,
+				2C496FD5288A0AF00028F484 /* vi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2CA3F836288898F300EB73AD /* Debug */ = {
