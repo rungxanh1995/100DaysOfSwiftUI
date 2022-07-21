@@ -15,7 +15,6 @@ import SwiftUI
 struct BetterRest {
 	
 	var desiredWakeUpTime = Self.defaultWakeUpTime
-	
 	static var defaultWakeUpTime: Date {
 		var components = DateComponents()
 		components.hour = 7
@@ -24,16 +23,21 @@ struct BetterRest {
 	}
 	
 	var sleepAmountHrs = 8.0
-	
-	let reasonableSleepAmountRangeHrs: ClosedRange<Double> = 4...12
+	static let reasonableSleepAmountRangeHrs: ClosedRange<Double> = 4...12
 	
 	var coffeeAmountCups = 1
+	static let reasonableCoffeeIntakeCups: ClosedRange<Int> = 1...10
+
+	/// The very bedtime solution to app users
+	var suggestedBedtime: Date { calculateBedtime() }
 	
-	private(set) var alertTitle: LocalizedStringKey = ""
-	private(set) var alertMessage: LocalizedStringKey = ""
-	var toShowAlert: Bool = false
+	private func calculateBedtime() -> Date {
+		var suggestedBedtime: Date = Date.now
+		getBedtimeAndHandleErrors(for: &suggestedBedtime)
+		return suggestedBedtime
+	}
 	
-	mutating func calculateBedtime() {
+	private func getBedtimeAndHandleErrors(for bedtime: inout Date) {
 		do {
 			let mlConfig = MLModelConfiguration()
 			let actualSleepCalculator = try ActualSleepTrainedCalculator(configuration: mlConfig)
@@ -49,16 +53,7 @@ struct BetterRest {
 				coffee: Double(coffeeAmountCups)
 			)
 			
-			let suggestedBedtime = desiredWakeUpTime - bedtimePrediction.actualSleep
-			
-			
-			alertTitle = "Suggested bedtime is"
-			alertMessage = "\(suggestedBedtime.formatted(date: .omitted, time: .shortened))"
-		} catch {
-			alertTitle = "Error"
-			alertMessage = "Something wrong happened calculating bedtime"
-		}
-		
-		toShowAlert = true
+			bedtime = desiredWakeUpTime - bedtimePrediction.actualSleep
+		} catch { }
 	}
 }

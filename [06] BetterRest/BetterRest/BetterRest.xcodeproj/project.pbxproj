@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2C496FB72889EF080028F484 /* BetterRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FB62889EF080028F484 /* BetterRest.swift */; };
+		2C496FBD2889F2A20028F484 /* BRSuggestedBedtimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FBC2889F2A20028F484 /* BRSuggestedBedtimeView.swift */; };
+		2C496FC32889FA9F0028F484 /* BRSelectWakeUpTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC22889FA9F0028F484 /* BRSelectWakeUpTimeView.swift */; };
+		2C496FC62889FAEA0028F484 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC52889FAEA0028F484 /* StatefulPreviewWrapper.swift */; };
+		2C496FC82889FB670028F484 /* BRSelectSleepAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC72889FB670028F484 /* BRSelectSleepAmountView.swift */; };
+		2C496FCA2889FBD70028F484 /* BRSelectCoffeeIntakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FC92889FBD70028F484 /* BRSelectCoffeeIntakeView.swift */; };
 		2CA3F82E288898F200EB73AD /* BetterRestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3F82D288898F200EB73AD /* BetterRestApp.swift */; };
-		2CA3F830288898F200EB73AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3F82F288898F200EB73AD /* ContentView.swift */; };
+		2CA3F830288898F200EB73AD /* BREntireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3F82F288898F200EB73AD /* BREntireView.swift */; };
 		2CA3F832288898F300EB73AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F831288898F300EB73AD /* Assets.xcassets */; };
 		2CA3F835288898F300EB73AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F834288898F300EB73AD /* Preview Assets.xcassets */; };
 		2CA683092889D32000D44580 /* ActualSleepTrainedCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 2CA683082889D32000D44580 /* ActualSleepTrainedCalculator.mlmodel */; };
@@ -17,9 +22,14 @@
 
 /* Begin PBXFileReference section */
 		2C496FB62889EF080028F484 /* BetterRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRest.swift; sourceTree = "<group>"; };
+		2C496FBC2889F2A20028F484 /* BRSuggestedBedtimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSuggestedBedtimeView.swift; sourceTree = "<group>"; };
+		2C496FC22889FA9F0028F484 /* BRSelectWakeUpTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSelectWakeUpTimeView.swift; sourceTree = "<group>"; };
+		2C496FC52889FAEA0028F484 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
+		2C496FC72889FB670028F484 /* BRSelectSleepAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSelectSleepAmountView.swift; sourceTree = "<group>"; };
+		2C496FC92889FBD70028F484 /* BRSelectCoffeeIntakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRSelectCoffeeIntakeView.swift; sourceTree = "<group>"; };
 		2CA3F82A288898F200EB73AD /* BetterRest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterRest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3F82D288898F200EB73AD /* BetterRestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetterRestApp.swift; sourceTree = "<group>"; };
-		2CA3F82F288898F200EB73AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CA3F82F288898F200EB73AD /* BREntireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BREntireView.swift; sourceTree = "<group>"; };
 		2CA3F831288898F300EB73AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CA3F834288898F300EB73AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CA683082889D32000D44580 /* ActualSleepTrainedCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ActualSleepTrainedCalculator.mlmodel; sourceTree = "<group>"; };
@@ -61,6 +71,41 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		2C496FB92889F2590028F484 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C496FBA2889F26C0028F484 /* Configurations */,
+				2C496FBB2889F2790028F484 /* Result */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C496FBA2889F26C0028F484 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2C496FC22889FA9F0028F484 /* BRSelectWakeUpTimeView.swift */,
+				2C496FC72889FB670028F484 /* BRSelectSleepAmountView.swift */,
+				2C496FC92889FBD70028F484 /* BRSelectCoffeeIntakeView.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2C496FBB2889F2790028F484 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2C496FBC2889F2A20028F484 /* BRSuggestedBedtimeView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		2C496FC42889FADB0028F484 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2C496FC52889FAEA0028F484 /* StatefulPreviewWrapper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2CA3F821288898F200EB73AD = {
 			isa = PBXGroup;
 			children = (
@@ -81,8 +126,10 @@
 			isa = PBXGroup;
 			children = (
 				2CA3F82D288898F200EB73AD /* BetterRestApp.swift */,
-				2CA3F82F288898F200EB73AD /* ContentView.swift */,
+				2CA3F82F288898F200EB73AD /* BREntireView.swift */,
 				2C496FB32889EEE50028F484 /* Model */,
+				2C496FB92889F2590028F484 /* Views */,
+				2C496FC42889FADB0028F484 /* Helpers */,
 				2CA3F831288898F300EB73AD /* Assets.xcassets */,
 				2CA3F833288898F300EB73AD /* Preview Content */,
 			);
@@ -167,10 +214,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA3F830288898F200EB73AD /* ContentView.swift in Sources */,
+				2C496FBD2889F2A20028F484 /* BRSuggestedBedtimeView.swift in Sources */,
+				2CA3F830288898F200EB73AD /* BREntireView.swift in Sources */,
+				2C496FC32889FA9F0028F484 /* BRSelectWakeUpTimeView.swift in Sources */,
 				2CA683092889D32000D44580 /* ActualSleepTrainedCalculator.mlmodel in Sources */,
+				2C496FCA2889FBD70028F484 /* BRSelectCoffeeIntakeView.swift in Sources */,
+				2C496FC82889FB670028F484 /* BRSelectSleepAmountView.swift in Sources */,
 				2CA3F82E288898F200EB73AD /* BetterRestApp.swift in Sources */,
 				2C496FB72889EF080028F484 /* BetterRest.swift in Sources */,
+				2C496FC62889FAEA0028F484 /* StatefulPreviewWrapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
