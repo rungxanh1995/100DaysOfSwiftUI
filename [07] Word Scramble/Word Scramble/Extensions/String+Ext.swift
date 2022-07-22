@@ -46,3 +46,12 @@ extension String {
 		return misspelledRange.location == NSNotFound
 	}
 }
+
+extension String {
+	
+	func cleanedAndLowercased() -> Self {
+		return self
+			.trimmingCharacters(in: .whitespacesAndNewlines)
+			.lowercased()
+	}
+}

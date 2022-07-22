@@ -59,7 +59,7 @@ struct ContentView: View {
 	
 	private func addNewWord() {
 		guard newWord.count > 0 else { return }
-		let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+		let answer = newWord.cleanedAndLowercased()
 		
 		// validation for answer here
 		guard answer.isNotAlreadyAnswered(in: usedWords) else {
