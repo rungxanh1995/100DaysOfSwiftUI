@@ -62,17 +62,17 @@ struct ContentView: View {
 		let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
 		
 		// validation for answer here
-		guard isOriginal(word: answer) else {
+		guard answer.isNotAlreadyAnswered(in: usedWords) else {
 			wordError(title: "Word used already", message: "Be more original")
 			return
 		}
 		
-		guard isPossible(word: answer) else {
+		guard answer.hasAllLettersTaken(from: rootWord) else {
 			wordError(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
 			return
 		}
 		
-		guard isReal(word: answer) else {
+		guard answer.isARealWord(in: "en") else {
 			wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
 			return
 		}
@@ -96,42 +96,6 @@ struct ContentView: View {
 		fatalError("Could not load start.txt from bundle.")
 	}
 	
-	
-	/// Check whether the word has been used before or not
-	private func isOriginal(word: String) -> Bool {
-		!usedWords.contains(word)
-	}
-	
-	
-	/// Check whether a random word can be made out of the available letters from the root word
-	/// and remove each matching letter so it can't be used twice
-	private func isPossible(word: String) -> Bool {
-		var tempWord = rootWord
-		
-		for character in word {
-			if let matchedCharacterPosition = tempWord.firstIndex(of: character) {
-				tempWord.remove(at: matchedCharacterPosition)
-			} else {
-				return false
-			}
-		}
-		
-		return true
-	}
-	
-	private func isReal(word: String) -> Bool {
-		let spellChecker = UITextChecker()
-		let newWordRange = NSRange(location: 0, length: word.utf16.count)
-		let misspelledRange = spellChecker.rangeOfMisspelledWord(
-			in: word,
-			range: newWordRange,
-			startingAt: 0, wrap: false,
-			language: "en"
-		)
-		
-		return misspelledRange.location == NSNotFound
-	}
-	
 	func wordError(title: String, message: String) {
 		errorTitle = title
 		errorMessage = message
@@ -140,7 +104,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+	static var previews: some View {
+		ContentView()
+	}
 }
