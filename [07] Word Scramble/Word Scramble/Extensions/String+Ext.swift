@@ -15,6 +15,10 @@ extension String {
 		return !usedWords.contains(self)
 	}
 	
+	func isAlreadyAnswered(in usedWords: [String]) -> Bool {
+		return !self.isNotAlreadyAnswered(in: usedWords)
+	}
+	
 	/// Check whether a word can be made out of the available letters from its root word
 	/// then remove each matching letter so it can't be used twice
 	func hasAllLettersTaken(from itsRootWord: String) -> Bool {
@@ -31,6 +35,10 @@ extension String {
 		return true
 	}
 	
+	func notHaveAllLettersTaken(from itsRootWord: String) -> Bool {
+		return !self.hasAllLettersTaken(from: itsRootWord)
+	}
+	
 	/// Check whether a word is a real one in target language (passed in by its 2-character language code).
 	/// For example, English language code is "en"
 	func isARealWord(in languageCode: String) -> Bool {
@@ -44,6 +52,10 @@ extension String {
 		)
 		
 		return misspelledRange.location == NSNotFound
+	}
+	
+	func isNotARealWord(in languageCode: String) -> Bool {
+		return !self.isARealWord(in: "en")
 	}
 }
 
