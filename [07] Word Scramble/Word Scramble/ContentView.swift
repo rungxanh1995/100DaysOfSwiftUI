@@ -64,13 +64,7 @@ struct ContentView: View {
 			.onSubmit(addNewWord)
 			.onAppear(perform: startGame)
 			.navigationTitle("Word Scramble")
-			.toolbar(content: {
-				Button(action: startGame) {
-					Label("New Root Word", systemImage: "shuffle")
-				}
-				.buttonStyle(.bordered)
-				.tint(.mint)
-			})
+			.navigationBarTitleDisplayMode(.inline)
 			.alert(errorTitle, isPresented: $showingError) {
 				Button("OK", role: .cancel) { }
 			} message: {
