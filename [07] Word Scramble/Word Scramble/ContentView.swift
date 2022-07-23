@@ -94,8 +94,8 @@ struct ContentView: View {
 	}
 	
 	private func hasPassedValidations(_ answer: String) -> Bool {
-		guard answer.count > 0 else {
-			wordError(title: "Empty answer", message: "You didn't enter a word")
+		guard answer.isNotTooShort else {
+			wordError(title: "Short answer", message: "Try another answer with at least 3 characters")
 			return false
 		}
 		

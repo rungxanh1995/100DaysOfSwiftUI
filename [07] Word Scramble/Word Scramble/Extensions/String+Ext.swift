@@ -10,6 +10,14 @@ import SwiftUI
 /// Custom extensions to serve the game logic
 extension String {
 	
+	var isTooShort: Bool {
+		return self.count < 3
+	}
+	
+	var isNotTooShort: Bool {
+		return !isTooShort
+	}
+	
 	/// Check whether the word has been used before or not
 	func isNotAlreadyAnswered(in usedWords: [String]) -> Bool {
 		return !usedWords.contains(self)
