@@ -88,12 +88,12 @@ struct ContentView: View {
 	}
 	
 	private func hasPassedValidations(_ answer: String) -> Bool {
-		guard answer.isNotTooShort else {
+		guard answer.count > 0 else {
 			wordError(title: "Short answer", message: "Try another answer with at least 3 characters")
 			return false
 		}
 		
-		guard answer.isOriginal(in: usedWords) else {
+		guard isOriginal(word: answer) else {
 			wordError(title: "Word used already", message: "Be more original")
 			return false
 		}
