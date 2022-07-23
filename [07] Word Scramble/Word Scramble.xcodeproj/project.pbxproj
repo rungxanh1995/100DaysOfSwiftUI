@@ -13,6 +13,8 @@
 		2C496FE5288AE8780028F484 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FE4288AE8780028F484 /* ContentView.swift */; };
 		2C496FE7288AE8790028F484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C496FE6288AE8790028F484 /* Assets.xcassets */; };
 		2C496FEA288AE8790028F484 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C496FE9288AE8790028F484 /* Preview Assets.xcassets */; };
+		2C508424288C238C000B8012 /* WSAnswerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C508423288C238C000B8012 /* WSAnswerValidator.swift */; };
+		2C508426288C23AD000B8012 /* AnswerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C508425288C23AD000B8012 /* AnswerValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2C496FE4288AE8780028F484 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C496FE6288AE8790028F484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C496FE9288AE8790028F484 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C508423288C238C000B8012 /* WSAnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSAnswerValidator.swift; sourceTree = "<group>"; };
+		2C508425288C23AD000B8012 /* AnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			children = (
 				2C496FE2288AE8780028F484 /* Word_ScrambleApp.swift */,
 				2C496FE4288AE8780028F484 /* ContentView.swift */,
+				2C50842C288C278F000B8012 /* Validator */,
 				2C3B7DD1288B356400CCFD04 /* Extensions */,
 				2C3B7DCF288B301300CCFD04 /* start.txt */,
 				2C496FE6288AE8790028F484 /* Assets.xcassets */,
@@ -79,6 +84,15 @@
 				2C496FE9288AE8790028F484 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C50842C288C278F000B8012 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				2C508423288C238C000B8012 /* WSAnswerValidator.swift */,
+				2C508425288C23AD000B8012 /* AnswerValidator.swift */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +168,8 @@
 			files = (
 				2C3B7DD3288B357300CCFD04 /* String+Ext.swift in Sources */,
 				2C496FE5288AE8780028F484 /* ContentView.swift in Sources */,
+				2C508426288C23AD000B8012 /* AnswerValidator.swift in Sources */,
+				2C508424288C238C000B8012 /* WSAnswerValidator.swift in Sources */,
 				2C496FE3288AE8780028F484 /* Word_ScrambleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
