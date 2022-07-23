@@ -19,12 +19,12 @@ extension String {
 	}
 	
 	/// Check whether the word has been used before or not
-	func isNotAlreadyAnswered(in usedWords: [String]) -> Bool {
-		return !usedWords.contains(self)
+	func isOriginal(in wordCollection: [String]) -> Bool {
+		return !wordCollection.contains(self)
 	}
 	
-	func isAlreadyAnswered(in usedWords: [String]) -> Bool {
-		return !self.isNotAlreadyAnswered(in: usedWords)
+	func isNotOriginal(in wordCollection: [String]) -> Bool {
+		return !self.isOriginal(in: wordCollection)
 	}
 	
 	/// Check whether a word can be made out of the available letters from its root word

@@ -99,7 +99,7 @@ struct ContentView: View {
 			return false
 		}
 		
-		guard isOriginal(word: answer) else {
+		guard answer.isOriginal(in: usedWords) else {
 			wordError(title: "Word used already", message: "Be more original")
 			return false
 		}
