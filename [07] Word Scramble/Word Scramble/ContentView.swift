@@ -24,13 +24,7 @@ struct ContentView: View {
 				Section(
 					header: Text("Root word")
 				) {
-					HStack {
-						Spacer()
-						Text(game.rootWord)
-							.font(.title)
-							.foregroundColor(.primary)
-						Spacer()
-					}
+					WSRootWordView(game: $game)
 				}
 				
 				Section(
