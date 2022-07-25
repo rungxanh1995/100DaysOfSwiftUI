@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WSEntireView.swift
 //  Word Scramble
 //
 //  Created by Joe Pham on 2022-07-22.
@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-// Task: sẽ dùng UITextChecker
-// nên mình sẽ tạo 1 wrapper class hoặc struct để bớt decoupling
-
-struct ContentView: View {
+struct WSEntireView: View {
 	@State
 	private var game = WSGame(rootWord: "")
 
@@ -81,6 +78,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
 	static var previews: some View {
-		ContentView()
+		WSEntireView()
 	}
 }
