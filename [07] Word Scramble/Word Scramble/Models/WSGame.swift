@@ -21,7 +21,7 @@ struct WSGame {
 	
 	// MARK: - Validation functions
 	mutating func answerPassedValidations() -> Bool {
-		guard userAnswer.count >= 3 else {
+		guard answerHasAtLeast3Chars() else {
 			setAlert(title: "Short answer", message: "Try another answer with at least 3 characters")
 			return false
 		}
@@ -42,6 +42,10 @@ struct WSGame {
 		}
 		
 		return true
+	}
+	
+	func answerHasAtLeast3Chars() -> Bool {
+		return userAnswer.count >= 3
 	}
 	
 	func answerIsNotAlreadyUsed() -> Bool {
