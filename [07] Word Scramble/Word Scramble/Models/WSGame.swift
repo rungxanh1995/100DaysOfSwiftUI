@@ -12,6 +12,11 @@ struct WSGame {
 	var rootWord: String
 	var userAnswer: String = ""
 	var usedWords: [String] = []
+	var userScore: Int {
+		var score = 0
+		for usedWord in usedWords { score += usedWord.count }
+		return score
+	}
 	
 	private(set) var errorTitle = ""
 	private(set) var errorMessage = ""
