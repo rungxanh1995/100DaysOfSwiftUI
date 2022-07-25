@@ -82,19 +82,8 @@ struct ContentView: View {
 	
 	
 	func startGame() {
-		if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
-			if let startWords = try? String(contentsOf: startWordsURL) {
-				let allWords = startWords.components(separatedBy: "\n")
-				game.rootWord = allWords.randomElement() ?? "silkworm"
-				return
-			}
-		}
-		
-			// If were are *here* then there was a problem – trigger a crash and report the error
-		fatalError("Could not load start.txt from bundle.")
+		game.rootWord = WSPreparer.generateRandomRootWord()
 	}
-	
-	
 }
 
 struct ContentView_Previews: PreviewProvider {
