@@ -48,49 +48,28 @@ struct WSGame {
 	}
 	
 	func answerHasAtLeast3Chars() -> Bool {
-		return userAnswer.count >= 3
+		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		return validator.hasAtLeast(charCount: 3, word: userAnswer)
 	}
 	
 	func answerDoesNotMatchRootWord() -> Bool {
-		return userAnswer != rootWord
+		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		return validator.isNotRootWord(userAnswer)
 	}
 	
 	func answerIsNotAlreadyUsed() -> Bool {
-		return isOriginal(userAnswer)
-	}
-	
-	/// Check whether the word has been used before or not
-	private func isOriginal(_ word: String) -> Bool {
-		!usedWords.contains(word)
+		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		return validator.isOriginal(userAnswer)
 	}
 
 	func answerHasLettersFromRootWord() -> Bool {
-		return isPossible(word: userAnswer)
-	}
-	
-	/// Check whether a random word can be made out of the available letters from the root word
-	/// and remove each matching letter so it can't be used twice
-	private func isPossible(word: String) -> Bool {
-		var tempWord = rootWord
-		
-		for character in word {
-			if let matchedCharacterPosition = tempWord.firstIndex(of: character) {
-				tempWord.remove(at: matchedCharacterPosition)
-			} else {
-				return false
-			}
-		}
-		
-		return true
+		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		return validator.isPossible(word: userAnswer)
 	}
 	
 	func answerIsRealInEnglish() -> Bool {
-		return isReal(userAnswer, in: "en")
-	}
-	
-	private func isReal(_ word: String, in language: String) -> Bool {
-		let spellChecker = WSSpellchecker(wordToCheck: word, languageCode: language)
-		return spellChecker.wordSpelledCorrectly()
+		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		return validator.isReal(userAnswer, in: "en")
 	}
 	
 	// MARK: - Error alert
