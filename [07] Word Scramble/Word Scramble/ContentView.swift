@@ -25,6 +25,7 @@ struct ContentView: View {
 					header: Text("Root word")
 				) {
 					WSRootWordView(game: $game)
+					WSUserScoreView(game: $game)
 				}
 				
 				Section(
