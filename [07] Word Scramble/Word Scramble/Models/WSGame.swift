@@ -47,33 +47,33 @@ struct WSGame {
 		return true
 	}
 	
-	func answerHasAtLeast3Chars() -> Bool {
+	private func answerHasAtLeast3Chars() -> Bool {
 		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.hasAtLeast(charCount: 3, word: userAnswer)
 	}
 	
-	func answerDoesNotMatchRootWord() -> Bool {
+	private func answerDoesNotMatchRootWord() -> Bool {
 		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isNotRootWord(userAnswer)
 	}
 	
-	func answerIsNotAlreadyUsed() -> Bool {
+	private func answerIsNotAlreadyUsed() -> Bool {
 		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isOriginal(userAnswer)
 	}
 
-	func answerHasLettersFromRootWord() -> Bool {
+	private func answerHasLettersFromRootWord() -> Bool {
 		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isPossible(word: userAnswer)
 	}
 	
-	func answerIsRealInEnglish() -> Bool {
+	private func answerIsRealInEnglish() -> Bool {
 		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isReal(userAnswer, in: "en")
 	}
 	
 	// MARK: - Error alert
-	mutating func setAlert(title: String, message: String) {
+	private mutating func setAlert(title: String, message: String) {
 		errorTitle = title
 		errorMessage = message
 		showingError = true
