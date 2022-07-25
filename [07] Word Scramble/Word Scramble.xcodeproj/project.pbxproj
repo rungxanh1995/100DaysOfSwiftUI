@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0A47E2288E86E9002A1CA4 /* WSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A47E1288E86E9002A1CA4 /* WSGame.swift */; };
 		2C3B7DD0288B301300CCFD04 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B7DCF288B301300CCFD04 /* start.txt */; };
 		2C3B7DD3288B357300CCFD04 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7DD2288B357300CCFD04 /* String+Ext.swift */; };
 		2C496FE3288AE8780028F484 /* Word_ScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FE2288AE8780028F484 /* Word_ScrambleApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C0A47E1288E86E9002A1CA4 /* WSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSGame.swift; sourceTree = "<group>"; };
 		2C3B7DCF288B301300CCFD04 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		2C3B7DD2288B357300CCFD04 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		2C496FDF288AE8780028F484 /* Word Scramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Scramble.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0A47E0288E86DB002A1CA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C0A47E1288E86E9002A1CA4 /* WSGame.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		2C3B7DD1288B356400CCFD04 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 			children = (
 				2C496FE2288AE8780028F484 /* Word_ScrambleApp.swift */,
 				2C496FE4288AE8780028F484 /* ContentView.swift */,
+				2C0A47E0288E86DB002A1CA4 /* Models */,
 				2C50842C288C278F000B8012 /* Validator */,
 				2C3B7DD1288B356400CCFD04 /* Extensions */,
 				2C3B7DCF288B301300CCFD04 /* start.txt */,
@@ -171,6 +182,7 @@
 				2C508426288C23AD000B8012 /* AnswerValidator.swift in Sources */,
 				2C508424288C238C000B8012 /* WSAnswerValidator.swift in Sources */,
 				2C496FE3288AE8780028F484 /* Word_ScrambleApp.swift in Sources */,
+				2C0A47E2288E86E9002A1CA4 /* WSGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
