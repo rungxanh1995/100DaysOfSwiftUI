@@ -26,6 +26,11 @@ struct WSGame {
 			return false
 		}
 		
+		guard answerDoesNotMatchRootWord() else {
+			setAlert(title: "Same as root word", message: "Can't just cheat using the root word, my friend")
+			return false
+		}
+		
 		guard answerIsNotAlreadyUsed() else {
 			setAlert(title: "Word used already", message: "Be more original")
 			return false
@@ -46,6 +51,10 @@ struct WSGame {
 	
 	func answerHasAtLeast3Chars() -> Bool {
 		return userAnswer.count >= 3
+	}
+	
+	func answerDoesNotMatchRootWord() -> Bool {
+		return userAnswer != rootWord
 	}
 	
 	func answerIsNotAlreadyUsed() -> Bool {
