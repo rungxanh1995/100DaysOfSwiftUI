@@ -36,16 +36,7 @@ struct ContentView: View {
 				}
 				
 				Section {
-					ForEach(game.usedWords, id: \.self) { usedWord in
-						HStack {
-							Text(usedWord)
-							Spacer()
-							Text("Word length")
-								.foregroundColor(.secondary)
-								.font(.body.italic())
-							Image(systemName: "\(usedWord.count).circle.fill")
-						}
-					}
+					WSUsedWordsView(game: $game)
 				}
 			}
 			.onSubmit(addNewWord)

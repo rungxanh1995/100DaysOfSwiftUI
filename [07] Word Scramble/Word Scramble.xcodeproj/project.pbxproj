@@ -11,6 +11,7 @@
 		2C0A47E4288EF10D002A1CA4 /* WSPreparer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A47E3288EF10D002A1CA4 /* WSPreparer.swift */; };
 		2C0A47E7288EF70F002A1CA4 /* WSRootWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A47E6288EF70F002A1CA4 /* WSRootWordView.swift */; };
 		2C0A47EA288EF77F002A1CA4 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A47E9288EF77F002A1CA4 /* StatefulPreviewWrapper.swift */; };
+		2C0A47EC288EF892002A1CA4 /* WSUsedWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A47EB288EF892002A1CA4 /* WSUsedWordsView.swift */; };
 		2C3B7DD0288B301300CCFD04 /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B7DCF288B301300CCFD04 /* start.txt */; };
 		2C3B7DD3288B357300CCFD04 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B7DD2288B357300CCFD04 /* String+Ext.swift */; };
 		2C496FE3288AE8780028F484 /* Word_ScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C496FE2288AE8780028F484 /* Word_ScrambleApp.swift */; };
@@ -24,6 +25,7 @@
 		2C0A47E3288EF10D002A1CA4 /* WSPreparer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSPreparer.swift; sourceTree = "<group>"; };
 		2C0A47E6288EF70F002A1CA4 /* WSRootWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSRootWordView.swift; sourceTree = "<group>"; };
 		2C0A47E9288EF77F002A1CA4 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
+		2C0A47EB288EF892002A1CA4 /* WSUsedWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSUsedWordsView.swift; sourceTree = "<group>"; };
 		2C3B7DCF288B301300CCFD04 /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		2C3B7DD2288B357300CCFD04 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		2C496FDF288AE8780028F484 /* Word Scramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Word Scramble.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0A47E6288EF70F002A1CA4 /* WSRootWordView.swift */,
+				2C0A47EB288EF892002A1CA4 /* WSUsedWordsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				2C0A47E7288EF70F002A1CA4 /* WSRootWordView.swift in Sources */,
 				2C496FE5288AE8780028F484 /* ContentView.swift in Sources */,
 				2C496FE3288AE8780028F484 /* Word_ScrambleApp.swift in Sources */,
+				2C0A47EC288EF892002A1CA4 /* WSUsedWordsView.swift in Sources */,
 				2C0A47E2288E86E9002A1CA4 /* WSGame.swift in Sources */,
 				2C0A47EA288EF77F002A1CA4 /* StatefulPreviewWrapper.swift in Sources */,
 			);
