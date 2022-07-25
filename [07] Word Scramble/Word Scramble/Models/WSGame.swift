@@ -7,10 +7,8 @@
 
 import UIKit
 
-// TODO: Consider this a class if answerHasLettersFromWord() not working properly
 struct WSGame {
 	
-	// TODO: Initialize root word
 	var rootWord: String
 	var userAnswer: String = ""
 	var usedWords: [String] = []
