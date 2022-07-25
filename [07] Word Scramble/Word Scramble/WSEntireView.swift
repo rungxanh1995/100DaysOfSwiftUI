@@ -12,7 +12,7 @@ struct WSEntireView: View {
 	private var game = WSGame(rootWord: "")
 
 	@State
-	private var newWord = ""
+	private var userAnswer = ""
 	
 	
     var body: some View {
@@ -29,7 +29,7 @@ struct WSEntireView: View {
 					header: Text("Your answer"),
 					footer: Text("Must be a word created only from letters of the root word")
 				) {
-					TextField("Enter your new word", text: $newWord)
+					TextField("Enter your new word", text: $userAnswer)
 						.autocapitalization(.none)
 				}
 				
@@ -57,21 +57,18 @@ struct WSEntireView: View {
     }
 	
 	private func addNewWord() {
-		game.userAnswer = newWord.cleanedAndLowercased()
+		game.userAnswer = userAnswer.cleanedAndLowercased()
 		
 		// validation for answer here
-		guard game.answerPassedValidations() else {
-			return
-		}
+		guard game.answerPassedValidations() else { return }
 		
 		withAnimation {
 			game.usedWords.insert(game.userAnswer, at: 0)
 		}
-		newWord = ""
+		userAnswer = ""
 	}
 	
-	
-	func startGame() {
+	private	func startGame() {
 		game.rootWord = WSPreparer.generateRandomRootWord()
 	}
 }
