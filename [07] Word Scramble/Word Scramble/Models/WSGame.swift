@@ -48,27 +48,27 @@ struct WSGame {
 	}
 	
 	func answerHasAtLeast3Chars() -> Bool {
-		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.hasAtLeast(charCount: 3, word: userAnswer)
 	}
 	
 	func answerDoesNotMatchRootWord() -> Bool {
-		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isNotRootWord(userAnswer)
 	}
 	
 	func answerIsNotAlreadyUsed() -> Bool {
-		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isOriginal(userAnswer)
 	}
 
 	func answerHasLettersFromRootWord() -> Bool {
-		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isPossible(word: userAnswer)
 	}
 	
 	func answerIsRealInEnglish() -> Bool {
-		let validator = WSValidator(rootWord: rootWord, usedWords: usedWords)
+		let validator: WSValidator = WSValidatorImpl(rootWord: rootWord, usedWords: usedWords)
 		return validator.isReal(userAnswer, in: "en")
 	}
 	
