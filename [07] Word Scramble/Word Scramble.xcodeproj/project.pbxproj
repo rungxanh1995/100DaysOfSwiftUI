@@ -102,7 +102,6 @@
 				2C496FE2288AE8780028F484 /* Word_ScrambleApp.swift */,
 				2C496FE4288AE8780028F484 /* ContentView.swift */,
 				2C0A47E0288E86DB002A1CA4 /* Models */,
-				2C50842C288C278F000B8012 /* Validator */,
 				2C0A47E5288EF6FA002A1CA4 /* Views */,
 				2C0A47E8288EF76B002A1CA4 /* Helpers */,
 				2C3B7DD1288B356400CCFD04 /* Extensions */,
@@ -119,13 +118,6 @@
 				2C496FE9288AE8790028F484 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2C50842C288C278F000B8012 /* Validator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Validator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
