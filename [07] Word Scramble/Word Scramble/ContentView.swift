@@ -17,12 +17,6 @@ struct ContentView: View {
 	@State
 	private var newWord = ""
 	
-	@State
-	private var errorTitle = ""
-	@State
-	private var errorMessage = ""
-	@State
-	private var showingError = false
 	
     var body: some View {
 		NavigationView {
@@ -64,10 +58,10 @@ struct ContentView: View {
 			.onAppear(perform: startGame)
 			.navigationTitle("Word Scramble")
 			.navigationBarTitleDisplayMode(.inline)
-			.alert(errorTitle, isPresented: $showingError) {
+			.alert(game.errorTitle, isPresented: $game.showingError) {
 				Button("OK", role: .cancel) { }
 			} message: {
-				Text(errorMessage)
+				Text(game.errorMessage)
 			}
 		}
     }
@@ -76,7 +70,7 @@ struct ContentView: View {
 		game.userAnswer = newWord.cleanedAndLowercased()
 		
 		// validation for answer here
-		guard hasPassedValidations(game.userAnswer) else {
+		guard game.answerPassedValidations() else {
 			return
 		}
 		
@@ -86,29 +80,6 @@ struct ContentView: View {
 		newWord = ""
 	}
 	
-	private func hasPassedValidations(_ answer: String) -> Bool {
-		guard answer.count > 0 else {
-			wordError(title: "Short answer", message: "Try another answer with at least 3 characters")
-			return false
-		}
-		
-		guard game.answerIsNotAlreadyUsed() else {
-			wordError(title: "Word used already", message: "Be more original")
-			return false
-		}
-		
-		guard game.answerHasLettersFromRootWord() else {
-			wordError(title: "Word not possible", message: "You can't spell that word from '\(game.rootWord)'!")
-			return false
-		}
-		
-		guard game.answerIsRealInEnglish() else {
-			wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
-			return false
-		}
-		
-		return true
-	}
 	
 	func startGame() {
 		if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
@@ -123,11 +94,7 @@ struct ContentView: View {
 		fatalError("Could not load start.txt from bundle.")
 	}
 	
-	func wordError(title: String, message: String) {
-		errorTitle = title
-		errorMessage = message
-		showingError = true
-	}
+	
 }
 
 struct ContentView_Previews: PreviewProvider {

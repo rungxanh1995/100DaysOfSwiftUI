@@ -15,7 +15,35 @@ struct WSGame {
 	var userAnswer: String = ""
 	var usedWords: [String] = []
 	
+	private(set) var errorTitle = ""
+	private(set) var errorMessage = ""
+	var showingError = false
+	
 	// MARK: - Validation functions
+	mutating func answerPassedValidations() -> Bool {
+		guard userAnswer.count >= 3 else {
+			setAlert(title: "Short answer", message: "Try another answer with at least 3 characters")
+			return false
+		}
+		
+		guard answerIsNotAlreadyUsed() else {
+			setAlert(title: "Word used already", message: "Be more original")
+			return false
+		}
+		
+		guard answerHasLettersFromRootWord() else {
+			setAlert(title: "Word not possible", message: "You can't spell that word from '\(rootWord)'!")
+			return false
+		}
+		
+		guard answerIsRealInEnglish() else {
+			setAlert(title: "Word not recognized", message: "You can't just make them up, you know!")
+			return false
+		}
+		
+		return true
+	}
+	
 	func answerIsNotAlreadyUsed() -> Bool {
 		return isOriginal(userAnswer)
 	}
@@ -63,4 +91,10 @@ struct WSGame {
 		return misspelledRange.location == NSNotFound
 	}
 	
+	// MARK: - Error alert
+	mutating func setAlert(title: String, message: String) {
+		errorTitle = title
+		errorMessage = message
+		showingError = true
+	}
 }
