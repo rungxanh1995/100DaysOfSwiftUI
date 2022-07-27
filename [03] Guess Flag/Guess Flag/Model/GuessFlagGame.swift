@@ -28,7 +28,6 @@ struct GuessFlagGame: QuizGameProtocol {
 		numGuessesEachGame += 1
 		
 		guard checkIfGameOver() == false else {
-			updateForGameOver()
 			return
 		}
 		
@@ -45,13 +44,6 @@ struct GuessFlagGame: QuizGameProtocol {
 		} else {
 			return true
 		}
-	}
-	
-	mutating private func updateForGameOver() {
-		updateAlertContent(
-			message: "Maximum number of questions reached!"
-		)
-		isAnswerResultShown = true
 	}
 	
 	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
