@@ -6,7 +6,7 @@ A quiz game asking players to guess the country's flag.
 This project is a tutorial project from [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui) course by [Paul Hudson](https://twitter.com/twostraws).
 
 ## Functionality Extensions 👨‍💻
-I developed extra features beyond the scope of its original tutorial. There was no instructions, and I was able to implement them with due research and critical  problem-solving skills.
+I developed extra features beyond the scope of its original tutorial via due research and critical problem-solving skills.
 <table>
 	<thead>
 		<tr>
@@ -15,6 +15,18 @@ I developed extra features beyond the scope of its original tutorial. There was 
 		</tr>
 	</thead>
 	<tbody>
+		<tr>
+			<td>Animations</td>
+			<td>
+			Animate the UI after player has selected a flag as their answer
+			</td>
+		</tr>
+		<tr>
+			<td>Grand Central Dispatch</td>
+			<td>
+			Auto advance to next question using DispatchQueue asyncAfter API
+			</td>
+		</tr>
 		<tr>
 			<td>User Score</td>
 			<td>
