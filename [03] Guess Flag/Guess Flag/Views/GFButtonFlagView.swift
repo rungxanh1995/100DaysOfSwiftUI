@@ -18,7 +18,8 @@ struct GFButtonFlagView: View {
 	@State
 	private(set) var flippedDegree: Double = 0.0
 	
-    var body: some View {
+	
+	var body: some View {
 		let onlyYAxis: (x: CGFloat, y: CGFloat, z: CGFloat) = (x: 0, y: 1, z: 0)
 		
 		Button {
@@ -28,6 +29,8 @@ struct GFButtonFlagView: View {
 			) {
 				flippedDegree += 360
 				game.animateFlagsAfterEachGuess.toggle()
+				
+				waitThenAskNewQuestion()
 			}
 		} label: {
 			Image(game.getCountryName(at: positionInStack))
@@ -45,6 +48,16 @@ struct GFButtonFlagView: View {
 }
 
 extension GFButtonFlagView {
+	// Could've had this in game struct.
+	// However, game is a struct and immutable.
+	// So I couldn't call this method directly in it.
+	private func waitThenAskNewQuestion() {
+		let waitDelay = 3.0
+		DispatchQueue.main.asyncAfter(deadline: .now() + waitDelay) {
+			game.askNewQuestion()
+		}
+	}
+
 	private func decideOpacityAmount() -> Double {
 		let fullyOpaque = 1.0
 		let translucent = 0.25

@@ -29,6 +29,7 @@ struct GFEntireGameView: View {
 				
 				if game.checkIfGameOver() == false {
 					GFScoreView(score: game.userScore)
+					GFAnswerResultTextView(game: $game)
 				} else {
 					Spacer()
 				}
@@ -37,24 +38,6 @@ struct GFEntireGameView: View {
 			}
 			.padding()
 			.shadow(radius: 5)
-		}
-		.alert(
-			game.scoreAlertTitle,
-			isPresented: $game.isScoreAlertShown
-		) {
-			if game.checkIfGameOver() == false {
-				Button(
-					"Continue",
-					action: { game.askNewQuestion() }
-				)
-			} else {
-				Button(
-					"Dismiss",
-					role: .cancel
-				) { }
-			}
-		} message: {
-			Text(game.scoreAlertMessage)
 		}
 	}
 	
