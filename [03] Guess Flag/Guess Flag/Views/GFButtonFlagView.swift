@@ -27,7 +27,7 @@ struct GFButtonFlagView: View {
 				.interpolatingSpring(stiffness: 25.0, damping: 5.0)
 			) {
 				flippedDegree += 360
-				game.dimFlagsAfterEachGuess.toggle()
+				game.animateFlagsAfterEachGuess.toggle()
 			}
 		} label: {
 			Image(game.getCountryName(at: positionInStack))
@@ -49,7 +49,7 @@ extension GFButtonFlagView {
 		let fullyOpaque = 1.0
 		let translucent = 0.25
 		
-		switch game.dimFlagsAfterEachGuess {
+		switch game.animateFlagsAfterEachGuess {
 			case true:
 				if game.isCorrectFlagGuess(at: positionInStack) {
 					return fullyOpaque
@@ -65,7 +65,7 @@ extension GFButtonFlagView {
 		let original = 1.0
 		let scaledDown = 0.75
 		
-		switch game.dimFlagsAfterEachGuess {
+		switch game.animateFlagsAfterEachGuess {
 			case true:
 				if game.isCorrectFlagGuess(at: positionInStack) {
 					return original
