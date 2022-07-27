@@ -19,10 +19,13 @@ struct GFButtonFlagView: View {
 	private(set) var flippedDegree: Double = 0.0
 	
     var body: some View {
+		let onlyYAxis: (x: CGFloat, y: CGFloat, z: CGFloat) = (x: 0, y: 1, z: 0)
+		
 		Button {
 			game.checkFlagGuess(position: positionInStack)
 			withAnimation(.easeInOut(duration: 0.75)) {
 				flippedDegree += 360
+				game.dimFlagsAfterEachGuess.toggle()
 			}
 		} label: {
 			Image(game.getCountryName(at: positionInStack))
@@ -32,9 +35,28 @@ struct GFButtonFlagView: View {
 		.shadow(radius: 5, y: 5)
 		.rotation3DEffect(
 			.degrees(flippedDegree),
-			axis: (x: 0, y: 1, z: 0)
+			axis: onlyYAxis
 		)
+		.opacity(decideOpacityAmount())
     }
+}
+
+extension GFButtonFlagView {
+	private func decideOpacityAmount() -> Double {
+		let fullyOpaque = 1.0
+		let translucent = 0.25
+		
+		switch game.dimFlagsAfterEachGuess {
+			case true:
+				if game.isCorrectFlagGuess(at: positionInStack) {
+					return fullyOpaque
+				} else {
+					return translucent
+				}
+			case false:
+				return fullyOpaque
+		}
+	}
 }
 
 struct GFButtonFlagView_Previews: PreviewProvider {

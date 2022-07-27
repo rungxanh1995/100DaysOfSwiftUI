@@ -23,6 +23,8 @@ struct GuessFlagGame: QuizGameProtocol {
 	internal var numGuessesEachGame = 0
 	private(set) var userScore = 0
 	
+	var dimFlagsAfterEachGuess: Bool = false
+	
 	mutating func checkFlagGuess(position flagPosition: Int) {
 		numGuessesEachGame += 1
 		
@@ -31,8 +33,11 @@ struct GuessFlagGame: QuizGameProtocol {
 			return
 		}
 		
-		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
-		updateOngoingGame(basedOn: isCorrectGuess)
+		updateOngoingGame(basedOn: isCorrectFlagGuess(at: flagPosition))
+	}
+	
+	func isCorrectFlagGuess(at flagPosition: Int) -> Bool {
+		return flagPosition == randomCorrectAnswer
 	}
 		
 	func checkIfGameOver() -> Bool {
@@ -84,6 +89,7 @@ struct GuessFlagGame: QuizGameProtocol {
 	mutating func askNewQuestion() {
 		countries.shuffle()
 		randomCorrectAnswer = getRandomCorrectAnswer()
+		dimFlagsAfterEachGuess = false
 	}
 	
 	private func getRandomCorrectAnswer() -> Int {
