@@ -12,6 +12,7 @@
 		2C09C0972880F8F700D52417 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0962880F8F700D52417 /* Assets.xcassets */; };
 		2C09C09A2880F8F700D52417 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0992880F8F700D52417 /* Preview Assets.xcassets */; };
 		2C09C0A22880FC7100D52417 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2C09C0A42880FC7100D52417 /* Localizable.strings */; };
+		2C0A81F52891D61C00CC882C /* GFAnswerResultTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A81F42891D61C00CC882C /* GFAnswerResultTextView.swift */; };
 		2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C72989E2881AF9C001941BD /* CountryModel.swift */; };
 		2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A12881AFD7001941BD /* CountryFlagModel.swift */; };
 		2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7298A32881B01F001941BD /* CountryModelStore.swift */; };
@@ -26,6 +27,8 @@
 		2C76D5F628824F2A00297670 /* GFGameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76D5F528824F2A00297670 /* GFGameOverView.swift */; };
 		2C76D5F828824F7700297670 /* GFGameOngoingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C76D5F728824F7700297670 /* GFGameOngoingView.swift */; };
 		2C9FA0B62883204900FBCA8A /* QuizGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FA0B52883204900FBCA8A /* QuizGameProtocol.swift */; };
+		2CEA09C52891830F00901308 /* GFButtonFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA09C42891830F00901308 /* GFButtonFlagView.swift */; };
+		2CEA09C8289183A200901308 /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA09C7289183A200901308 /* StatefulPreviewWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,7 @@
 		2C09C0992880F8F700D52417 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C09C0A32880FC7100D52417 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2C09C0A52880FC7300D52417 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2C0A81F42891D61C00CC882C /* GFAnswerResultTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAnswerResultTextView.swift; sourceTree = "<group>"; };
 		2C72989E2881AF9C001941BD /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		2C7298A12881AFD7001941BD /* CountryFlagModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryFlagModel.swift; sourceTree = "<group>"; };
 		2C7298A32881B01F001941BD /* CountryModelStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModelStore.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		2C76D5F728824F7700297670 /* GFGameOngoingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFGameOngoingView.swift; sourceTree = "<group>"; };
 		2C76D5F92882582600297670 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2C9FA0B52883204900FBCA8A /* QuizGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameProtocol.swift; sourceTree = "<group>"; };
+		2CEA09C42891830F00901308 /* GFButtonFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButtonFlagView.swift; sourceTree = "<group>"; };
+		2CEA09C7289183A200901308 /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 				2C7298A02881AF9F001941BD /* Model */,
 				2C7298AA2881D601001941BD /* Views */,
 				2C09C0A72880FC9B00D52417 /* Extensions */,
+				2CEA09C62891839300901308 /* Helpers */,
 				2C09C0A62880FC8500D52417 /* Localization */,
 				2C09C0962880F8F700D52417 /* Assets.xcassets */,
 				2C09C0982880F8F700D52417 /* Preview Content */,
@@ -142,8 +149,18 @@
 				2C7298AF2881D7AA001941BD /* GFScoreView.swift */,
 				2C76D5F728824F7700297670 /* GFGameOngoingView.swift */,
 				2C76D5F528824F2A00297670 /* GFGameOverView.swift */,
+				2CEA09C42891830F00901308 /* GFButtonFlagView.swift */,
+				2C0A81F42891D61C00CC882C /* GFAnswerResultTextView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2CEA09C62891839300901308 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA09C7289183A200901308 /* StatefulPreviewWrapper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +238,7 @@
 			files = (
 				2C76D5F828824F7700297670 /* GFGameOngoingView.swift in Sources */,
 				2C7298B02881D7AA001941BD /* GFScoreView.swift in Sources */,
+				2CEA09C52891830F00901308 /* GFButtonFlagView.swift in Sources */,
 				2C7298B828821A64001941BD /* Array+Ext.swift in Sources */,
 				2C7298B22881D8F5001941BD /* GFGameAreaView.swift in Sources */,
 				2C09C0952880F8F600D52417 /* GFEntireGameView.swift in Sources */,
@@ -228,9 +246,11 @@
 				2C7298AE2881D71C001941BD /* GFGameTitleView.swift in Sources */,
 				2C7298A62881B12C001941BD /* CountryFlagModelStore.swift in Sources */,
 				2C7298AC2881D610001941BD /* GFBackgroundView.swift in Sources */,
+				2CEA09C8289183A200901308 /* StatefulPreviewWrapper.swift in Sources */,
 				2C9FA0B62883204900FBCA8A /* QuizGameProtocol.swift in Sources */,
 				2C09C0932880F8F600D52417 /* Guess_FlagApp.swift in Sources */,
 				2C72989F2881AF9C001941BD /* CountryModel.swift in Sources */,
+				2C0A81F52891D61C00CC882C /* GFAnswerResultTextView.swift in Sources */,
 				2C7298A22881AFD7001941BD /* CountryFlagModel.swift in Sources */,
 				2C76D5F628824F2A00297670 /* GFGameOverView.swift in Sources */,
 				2C7298A42881B01F001941BD /* CountryModelStore.swift in Sources */,

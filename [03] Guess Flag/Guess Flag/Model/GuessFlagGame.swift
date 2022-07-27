@@ -15,24 +15,27 @@ struct GuessFlagGame: QuizGameProtocol {
 	static let numberOfFlagsShown = 3
 	private var randomCorrectAnswer: Int = Int.random(in: 0..<numberOfFlagsShown)
 	
-	var isScoreAlertShown: Bool = false
-	private(set) var scoreAlertTitle: LocalizedStringKey = ""
-	private(set) var scoreAlertMessage: LocalizedStringKey = ""
+	var isAnswerResultShown: Bool = false
+	private(set) var answerResultMessage: LocalizedStringKey = ""
 	
 	internal static let maxQuestionsEachGame = 8
 	internal var numGuessesEachGame = 0
 	private(set) var userScore = 0
 	
+	var animateFlagsAfterEachGuess: Bool = false
+	
 	mutating func checkFlagGuess(position flagPosition: Int) {
 		numGuessesEachGame += 1
 		
 		guard checkIfGameOver() == false else {
-			updateForGameOver()
 			return
 		}
 		
-		let isCorrectGuess = (flagPosition == randomCorrectAnswer) ? true : false
-		updateOngoingGame(basedOn: isCorrectGuess)
+		updateOngoingGame(basedOn: isCorrectFlagGuess(at: flagPosition))
+	}
+	
+	func isCorrectFlagGuess(at flagPosition: Int) -> Bool {
+		return flagPosition == randomCorrectAnswer
 	}
 		
 	func checkIfGameOver() -> Bool {
@@ -43,33 +46,22 @@ struct GuessFlagGame: QuizGameProtocol {
 		}
 	}
 	
-	mutating private func updateForGameOver() {
-		updateAlertContent(
-			title: "Game Over",
-			message: "Maximum number of questions reached!"
-		)
-		isScoreAlertShown = true
-	}
-	
 	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
 		if isCorrectGuess {
 			updateAlertContent(
-				title: "Correct",
 				message: "🎉"
 			)
 		} else {
 			updateAlertContent(
-				title: "Wrong",
 				message: "\(Text("Correct answer was")) \(randomCorrectAnswer + 1)"
 			)
 		}
 		updateScore(basedOn: isCorrectGuess)
-		isScoreAlertShown = true
+		isAnswerResultShown = true
 	}
 	
-	mutating private func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
-		scoreAlertTitle = title
-		scoreAlertMessage = message
+	mutating private func updateAlertContent(message: LocalizedStringKey) {
+		answerResultMessage = message
 	}
 	
 	mutating internal func updateScore(basedOn guessResult: Bool) {
@@ -84,6 +76,7 @@ struct GuessFlagGame: QuizGameProtocol {
 	mutating func askNewQuestion() {
 		countries.shuffle()
 		randomCorrectAnswer = getRandomCorrectAnswer()
+		animateFlagsAfterEachGuess = false
 	}
 	
 	private func getRandomCorrectAnswer() -> Int {
