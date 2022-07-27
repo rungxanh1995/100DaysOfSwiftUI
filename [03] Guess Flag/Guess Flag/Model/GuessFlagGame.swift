@@ -15,9 +15,8 @@ struct GuessFlagGame: QuizGameProtocol {
 	static let numberOfFlagsShown = 3
 	private var randomCorrectAnswer: Int = Int.random(in: 0..<numberOfFlagsShown)
 	
-	var isScoreAlertShown: Bool = false
-	private(set) var scoreAlertTitle: LocalizedStringKey = ""
-	private(set) var scoreAlertMessage: LocalizedStringKey = ""
+	var isAnswerResultShown: Bool = false
+	private(set) var answerResultMessage: LocalizedStringKey = ""
 	
 	internal static let maxQuestionsEachGame = 8
 	internal var numGuessesEachGame = 0
@@ -50,31 +49,27 @@ struct GuessFlagGame: QuizGameProtocol {
 	
 	mutating private func updateForGameOver() {
 		updateAlertContent(
-			title: "Game Over",
 			message: "Maximum number of questions reached!"
 		)
-		isScoreAlertShown = true
+		isAnswerResultShown = true
 	}
 	
 	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
 		if isCorrectGuess {
 			updateAlertContent(
-				title: "Correct",
 				message: "🎉"
 			)
 		} else {
 			updateAlertContent(
-				title: "Wrong",
 				message: "\(Text("Correct answer was")) \(randomCorrectAnswer + 1)"
 			)
 		}
 		updateScore(basedOn: isCorrectGuess)
-		isScoreAlertShown = true
+		isAnswerResultShown = true
 	}
 	
-	mutating private func updateAlertContent(title: LocalizedStringKey, message: LocalizedStringKey) {
-		scoreAlertTitle = title
-		scoreAlertMessage = message
+	mutating private func updateAlertContent(message: LocalizedStringKey) {
+		answerResultMessage = message
 	}
 	
 	mutating internal func updateScore(basedOn guessResult: Bool) {

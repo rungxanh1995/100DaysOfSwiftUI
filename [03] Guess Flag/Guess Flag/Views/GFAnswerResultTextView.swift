@@ -12,7 +12,7 @@ struct GFAnswerResultTextView: View {
 	var game: GuessFlagGame
 	
 	var body: some View {
-		Text(game.scoreAlertMessage)
+		Text(game.answerResultMessage)
 			.font(.headline)
 			.foregroundColor(.white)
 			.opacity(game.animateFlagsAfterEachGuess ? 1 : 0)
