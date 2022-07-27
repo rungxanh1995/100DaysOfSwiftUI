@@ -22,14 +22,7 @@ struct GFGameOngoingView: View {
 			}
 			
 			ForEach(0..<GuessFlagGame.numberOfFlagsShown, id: \.self) { eachFlag in
-				Button {
-					game.checkFlagGuess(position: eachFlag)
-				} label: {
-					Image(game.getCountryName(at: eachFlag))
-						.renderingMode(.original)
-				}
-				.clipShape(Capsule())
-				.shadow(radius: 5, y: 5)
+				GFButtonFlagView(game: $game, positionInStack: eachFlag)
 			}
 		}
     }
