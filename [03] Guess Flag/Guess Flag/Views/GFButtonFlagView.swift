@@ -23,7 +23,9 @@ struct GFButtonFlagView: View {
 		
 		Button {
 			game.checkFlagGuess(position: positionInStack)
-			withAnimation(.easeInOut(duration: 0.75)) {
+			withAnimation(
+				.interpolatingSpring(stiffness: 25.0, damping: 5.0)
+			) {
 				flippedDegree += 360
 				game.dimFlagsAfterEachGuess.toggle()
 			}
@@ -38,6 +40,7 @@ struct GFButtonFlagView: View {
 			axis: onlyYAxis
 		)
 		.opacity(decideOpacityAmount())
+		.scaleEffect(decideScaleAmount())
     }
 }
 
@@ -55,6 +58,22 @@ extension GFButtonFlagView {
 				}
 			case false:
 				return fullyOpaque
+		}
+	}
+	
+	private func decideScaleAmount() -> Double {
+		let original = 1.0
+		let scaledDown = 0.75
+		
+		switch game.dimFlagsAfterEachGuess {
+			case true:
+				if game.isCorrectFlagGuess(at: positionInStack) {
+					return original
+				} else {
+					return scaledDown
+				}
+			case false:
+				return original
 		}
 	}
 }
