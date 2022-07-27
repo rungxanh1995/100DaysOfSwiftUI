@@ -18,6 +18,10 @@ struct GFButtonFlagView: View {
 	@State
 	private(set) var flippedDegree: Double = 0.0
 	
+	/// Disable interactions of a flag to prevent auto next question bug
+	private var isDisabled: Bool {
+		game.animateFlagsAfterEachGuess ? true : false
+	}
 	
 	var body: some View {
 		let onlyYAxis: (x: CGFloat, y: CGFloat, z: CGFloat) = (x: 0, y: 1, z: 0)
@@ -44,6 +48,7 @@ struct GFButtonFlagView: View {
 		)
 		.opacity(decideOpacityAmount())
 		.scaleEffect(decideScaleAmount())
+		.disabled(isDisabled)
     }
 }
 
