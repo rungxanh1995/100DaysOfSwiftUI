@@ -13,11 +13,11 @@ struct MHQuestion {
 }
 
 extension MHQuestion {
-	func allQuestions(tablesUpTo: Int, numQuestions: Int) -> [MHQuestion] {
+	static func allQuestions(tablesUpTo: Int, numQuestions: Int) -> [MHQuestion] {
 		return generateQuestionsShuffled(for: tablesUpTo, numQuestions: numQuestions)
 	}
 	
-	private func generateQuestionsShuffled(
+	private static func generateQuestionsShuffled(
 		for tablesUpTo: Int,
 		numQuestions: Int
 	) -> [MHQuestion] {
@@ -28,7 +28,7 @@ extension MHQuestion {
 		return temp.selectFromStartTo(element: numQuestions)
 	}
 	
-	fileprivate func createMultiplicationQuestionsWithoutDuplicates(
+	fileprivate static func createMultiplicationQuestionsWithoutDuplicates(
 		upperBound tablesUpToBound: Int,
 		in tempTableToFill: inout [MHQuestion]
 	) -> Void {
