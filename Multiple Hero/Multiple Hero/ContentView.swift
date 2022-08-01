@@ -15,7 +15,7 @@ struct ContentView: View {
 	var body: some View {
 		
 		// Swap views in this VStack
-		VStack {
+		Group {
 			if game.isAskingForSettings {
 				VStack(spacing: 20) {
 					Text("Multiplication Hero")
