@@ -13,6 +13,8 @@
 		2C3A76ED289835EC00316017 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A76EC289835EC00316017 /* Preview Assets.xcassets */; };
 		2CB921B62898722D00C251BA /* MHGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921B52898722D00C251BA /* MHGame.swift */; };
 		2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */; };
+		2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BC2898740B00C251BA /* MHSettingsView.swift */; };
+		2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BE2898749A00C251BA /* MHActiveGameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		2C3A76EC289835EC00316017 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CB921B52898722D00C251BA /* MHGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHGame.swift; sourceTree = "<group>"; };
 		2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
+		2CB921BC2898740B00C251BA /* MHSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHSettingsView.swift; sourceTree = "<group>"; };
+		2CB921BE2898749A00C251BA /* MHActiveGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHActiveGameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 		2CB921B3289871F300C251BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CB921BC2898740B00C251BA /* MHSettingsView.swift */,
+				2CB921BE2898749A00C251BA /* MHActiveGameView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 				2C3A76E8289835EC00316017 /* ContentView.swift in Sources */,
 				2C3A76E6289835EC00316017 /* Multiple_HeroApp.swift in Sources */,
 				2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */,
+				2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */,
+				2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */,
 				2CB921B62898722D00C251BA /* MHGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
