@@ -18,10 +18,15 @@ struct MHActiveGameView: View {
 	
 	@ViewBuilder
 	private var gamePlayingView: some View {
-		Text("Game playing view here")
-			.transition(
-				.asymmetric(insertion: .scale, removal: .opacity)
-			)
+		List {
+			ForEach(0..<game.questions.count, id: \.self) { i in
+				HStack {
+					Text("\(game.questions[i].questionString)")
+					Text("\(game.questions[i].resultString)")
+				}
+				
+			}
+		}
 	}
 }
 
