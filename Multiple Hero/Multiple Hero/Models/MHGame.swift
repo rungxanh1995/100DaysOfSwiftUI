@@ -14,6 +14,6 @@ struct MHGame {
 	static let reasonableMultiplicationRange: ClosedRange<Int> = 2...12
 	var selectedMultiplicationTable: Int = 2
 	
-	static let questionsToBeAskedOptions: [Int] = [5, 10, 20]
-	var questionsToBeAskedPosition: Int = 5
+	static let numberOfQuestionsOptions: [Int] = [5, 10, 20]
+	var selectedNumberOfQuestions: Int = 5
 }
