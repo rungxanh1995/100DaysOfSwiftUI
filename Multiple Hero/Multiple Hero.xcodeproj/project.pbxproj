@@ -15,6 +15,8 @@
 		2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */; };
 		2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BC2898740B00C251BA /* MHSettingsView.swift */; };
 		2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BE2898749A00C251BA /* MHActiveGameView.swift */; };
+		2CB921C12898894100C251BA /* MHQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C02898894100C251BA /* MHQuestion.swift */; };
+		2CB921C428988BBF00C251BA /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C328988BBF00C251BA /* Array+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		2CB921BC2898740B00C251BA /* MHSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHSettingsView.swift; sourceTree = "<group>"; };
 		2CB921BE2898749A00C251BA /* MHActiveGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHActiveGameView.swift; sourceTree = "<group>"; };
+		2CB921C02898894100C251BA /* MHQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHQuestion.swift; sourceTree = "<group>"; };
+		2CB921C328988BBF00C251BA /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 				2C3A76E7289835EC00316017 /* ContentView.swift */,
 				2CB921B42898721300C251BA /* Models */,
 				2CB921B3289871F300C251BA /* Views */,
+				2CB921C228988BAD00C251BA /* Extensions */,
 				2CB921B92898739300C251BA /* Helpers */,
 				2C3A76E9289835EC00316017 /* Assets.xcassets */,
 				2C3A76EB289835EC00316017 /* Preview Content */,
@@ -91,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2CB921B52898722D00C251BA /* MHGame.swift */,
+				2CB921C02898894100C251BA /* MHQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +107,14 @@
 				2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2CB921C228988BAD00C251BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CB921C328988BBF00C251BA /* Array+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,9 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3A76E8289835EC00316017 /* ContentView.swift in Sources */,
+				2CB921C12898894100C251BA /* MHQuestion.swift in Sources */,
 				2C3A76E6289835EC00316017 /* Multiple_HeroApp.swift in Sources */,
 				2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */,
 				2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */,
+				2CB921C428988BBF00C251BA /* Array+Ext.swift in Sources */,
 				2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */,
 				2CB921B62898722D00C251BA /* MHGame.swift in Sources */,
 			);
