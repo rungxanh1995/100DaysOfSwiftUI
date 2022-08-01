@@ -8,24 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+
 	@State
-	private var isAskingForSettings = true  // start game with settings view
-	@State
-	private var isGameActuallyActive = false
-	
-	private let reasonableMultiplicationRange: ClosedRange<Int> = 2...12
-	@State
-	private var selectedMultiplicationTable: Int = 2
-	
-	private let questionsToBeAskedOptions: [Int] = [5, 10, 20]
-	@State
-	private var questionsToBeAskedPosition: Int = 5
+	private var game: MHGame = MHGame()
 	
 	var body: some View {
 		
 		// Swap views in this VStack
 		VStack {
-			if isAskingForSettings {
+			if game.isAskingForSettings {
 				VStack(spacing: 20) {
 					Text("Multiplication Hero")
 						.font(.largeTitle)
@@ -36,7 +27,7 @@ struct ContentView: View {
 				.padding(.horizontal, 20)
 			}
 			
-			if isGameActuallyActive {
+			if game.isGameActuallyActive {
 				// Player is actively playing
 				gamePlayingView
 			}
@@ -48,7 +39,7 @@ struct ContentView: View {
 		HStack {
 			Text("Tables up to:")
 			Spacer()
-			Stepper("\(selectedMultiplicationTable)", value: $selectedMultiplicationTable, in: reasonableMultiplicationRange)
+			Stepper("\(game.selectedMultiplicationTable)", value: $game.selectedMultiplicationTable, in: MHGame.reasonableMultiplicationRange)
 		}
 	}
 	
@@ -57,8 +48,8 @@ struct ContentView: View {
 		HStack {
 			Text("Num of questions:")
 			Spacer()
-			Picker("Number of questions", selection: $questionsToBeAskedPosition, content: {
-				ForEach(questionsToBeAskedOptions, id: \.self) {
+			Picker("Number of questions", selection: $game.questionsToBeAskedPosition, content: {
+				ForEach(MHGame.questionsToBeAskedOptions, id: \.self) {
 					Text("\($0)")
 				}
 			})
@@ -70,8 +61,8 @@ struct ContentView: View {
 	private var playButton: some View {
 		Button("Play") {
 			withAnimation(.easeInOut(duration: 0.5)) {
-				isAskingForSettings.toggle()
-				isGameActuallyActive.toggle()
+				game.isAskingForSettings.toggle()
+				game.isGameActuallyActive.toggle()
 			}
 		}
 		.buttonStyle(.borderedProminent)
