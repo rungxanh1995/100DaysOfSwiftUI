@@ -52,6 +52,7 @@ struct MHSettingsView: View {
 			withAnimation(.easeInOut(duration: 0.5)) {
 				game.isAskingForSettings.toggle()
 				game.isGameActuallyActive.toggle()
+				game.generateNewQuestions()
 			}
 		}
 		.buttonStyle(.borderedProminent)
