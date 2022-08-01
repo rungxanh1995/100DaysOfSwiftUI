@@ -16,4 +16,13 @@ struct MHGame {
 	
 	static let numberOfQuestionsOptions: [Int] = [5, 10, 20]
 	var selectedNumberOfQuestions: Int = 5
+	
+	private(set) var questions: [MHQuestion] = []
+	
+	mutating func generateNewQuestions() -> Void {
+		questions = MHQuestion.allQuestions(
+			tablesUpTo: selectedMultiplicationTable,
+			numQuestions: selectedNumberOfQuestions
+		)
+	}
 }
