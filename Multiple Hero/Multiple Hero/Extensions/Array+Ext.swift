@@ -12,6 +12,7 @@ extension Array {
 	func selectFromStartTo(element specificElementIndex: Int) -> Array<Element> {
 		guard !self.isEmpty else { return Array<Element>() }
 		
-		return Array(self[0..<specificElementIndex])
+		let cutoffSlice = self[0..<specificElementIndex]
+		return Array(/* from: */ cutoffSlice)
 	}
 }
