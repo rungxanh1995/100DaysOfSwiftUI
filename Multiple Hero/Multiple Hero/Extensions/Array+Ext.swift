@@ -15,4 +15,9 @@ extension Array {
 		let cutoffSlice = self[0..<specificElementIndex]
 		return Array(/* from: */ cutoffSlice)
 	}
+	
+	func element(at index: Int) -> Element? {
+		guard !self.isEmpty else { return nil }
+		return self[index]
+	}
 }
