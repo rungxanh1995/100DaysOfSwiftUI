@@ -17,6 +17,9 @@
 		2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BE2898749A00C251BA /* MHActiveGameView.swift */; };
 		2CB921C12898894100C251BA /* MHQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C02898894100C251BA /* MHQuestion.swift */; };
 		2CB921C428988BBF00C251BA /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C328988BBF00C251BA /* Array+Ext.swift */; };
+		2CB921C628989EFE00C251BA /* MHKeypadType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C528989EFE00C251BA /* MHKeypadType.swift */; };
+		2CB921C82898A49400C251BA /* MHKeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C72898A49400C251BA /* MHKeypadView.swift */; };
+		2CB921CB2898AB4A00C251BA /* MHKeypadStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921CA2898AB4A00C251BA /* MHKeypadStyleModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		2CB921BE2898749A00C251BA /* MHActiveGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHActiveGameView.swift; sourceTree = "<group>"; };
 		2CB921C02898894100C251BA /* MHQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHQuestion.swift; sourceTree = "<group>"; };
 		2CB921C328988BBF00C251BA /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
+		2CB921C528989EFE00C251BA /* MHKeypadType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadType.swift; sourceTree = "<group>"; };
+		2CB921C72898A49400C251BA /* MHKeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadView.swift; sourceTree = "<group>"; };
+		2CB921CA2898AB4A00C251BA /* MHKeypadStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadStyleModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +92,10 @@
 		2CB921B3289871F300C251BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2CB921C92898AB2E00C251BA /* Modifiers */,
 				2CB921BC2898740B00C251BA /* MHSettingsView.swift */,
 				2CB921BE2898749A00C251BA /* MHActiveGameView.swift */,
+				2CB921C72898A49400C251BA /* MHKeypadView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +105,7 @@
 			children = (
 				2CB921B52898722D00C251BA /* MHGame.swift */,
 				2CB921C02898894100C251BA /* MHQuestion.swift */,
+				2CB921C528989EFE00C251BA /* MHKeypadType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -115,6 +124,14 @@
 				2CB921C328988BBF00C251BA /* Array+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CB921C92898AB2E00C251BA /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2CB921CA2898AB4A00C251BA /* MHKeypadStyleModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,9 +205,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C3A76E8289835EC00316017 /* ContentView.swift in Sources */,
+				2CB921CB2898AB4A00C251BA /* MHKeypadStyleModifier.swift in Sources */,
 				2CB921C12898894100C251BA /* MHQuestion.swift in Sources */,
 				2C3A76E6289835EC00316017 /* Multiple_HeroApp.swift in Sources */,
+				2CB921C628989EFE00C251BA /* MHKeypadType.swift in Sources */,
 				2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */,
+				2CB921C82898A49400C251BA /* MHKeypadView.swift in Sources */,
 				2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */,
 				2CB921C428988BBF00C251BA /* Array+Ext.swift in Sources */,
 				2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */,
