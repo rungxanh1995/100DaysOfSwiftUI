@@ -18,9 +18,7 @@ struct ContentView: View {
 		Group {
 			if currentGame.isAskingForSettings {
 				MHSettingsView(game: $currentGame)
-			}
-			
-			if currentGame.isGameActive {
+			} else {
 				// Player is actively playing
 				MHActiveGameView(game: $currentGame)
 			}
