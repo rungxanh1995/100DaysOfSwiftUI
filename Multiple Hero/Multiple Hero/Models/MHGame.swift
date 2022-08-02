@@ -67,7 +67,7 @@ struct MHGame: QuizGameProtocol {
 		// code here
 	}
 	
-	mutating func reset() {
+	mutating func reset() -> Void {
 		userScore = 0
 		numGuessesEachGame = 0
 		playerAnswer = ""
