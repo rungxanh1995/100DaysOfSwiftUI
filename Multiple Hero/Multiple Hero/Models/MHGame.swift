@@ -68,7 +68,15 @@ struct MHGame: QuizGameProtocol {
 	}
 	
 	mutating func reset() {
-		// code here
+		userScore = 0
+		numGuessesEachGame = 0
+		playerAnswer = ""
+		
+		isAskingForSettings = true
+		isGameActive = false
+		
+		generateNewQuestions()
+		resetCurrentQuestion()
 	}
 	
 	mutating func updateScore(basedOn guessResult: Bool) {
