@@ -38,7 +38,10 @@ struct MHActiveGameView: View {
 				}
 				// TODO: Check this part to display score view on round over
 				else {
-					roundEndScoreView
+					VStack {
+						roundEndScoreView
+						playAgainButtonView
+					}
 				}
 				
 				happyEmojiView
@@ -111,6 +114,18 @@ extension MHActiveGameView {
 			.foregroundColor(game.animatingDecreaseScore ? .red : .clear)
 			.opacity(game.animatingDecreaseScore ? 0 : 1)
 			.offset(x: 0, y: game.animatingDecreaseScore ? 100 : 20)
+	}
+	
+	@ViewBuilder
+	private var playAgainButtonView: some View {
+		Button("Play Again") {
+			game.reset()
+		}
+		.font(.system(.title, design: .rounded).bold())
+		.padding()
+		.buttonStyle(.borderedProminent)
+		.clipShape(RoundedRectangle(cornerRadius: 12))
+		.tint(.teal)
 	}
 	
 	private func generateQuestions() {
