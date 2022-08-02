@@ -13,14 +13,18 @@ struct ContentView: View {
 	private var currentGame: MHGame = MHGame()
 	
 	var body: some View {
-		
-		// Swap views in this VStack
-		Group {
-			if currentGame.isAskingForSettings {
-				MHSettingsView(game: $currentGame)
-			} else {
-				// Player is actively playing
-				MHActiveGameView(game: $currentGame)
+		ZStack {
+			MHBackgroundView()
+				.ignoresSafeArea()
+				.statusBar(hidden: true)
+
+			Group {
+				if currentGame.isAskingForSettings {
+					MHSettingsView(game: $currentGame)
+				} else {
+					// Player is actively playing
+					MHActiveGameView(game: $currentGame)
+				}
 			}
 		}
 	}

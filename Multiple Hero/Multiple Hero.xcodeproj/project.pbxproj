@@ -23,6 +23,7 @@
 		2CF87B122898B4F00058D2AC /* MHKeypadActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B112898B4F00058D2AC /* MHKeypadActionHandler.swift */; };
 		2CF87B14289940930058D2AC /* QuizGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B13289940930058D2AC /* QuizGameProtocol.swift */; };
 		2CF87B162899E6700058D2AC /* MHButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B152899E6700058D2AC /* MHButtonView.swift */; };
+		2CF87B182899ED680058D2AC /* MHBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B172899ED680058D2AC /* MHBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		2CF87B112898B4F00058D2AC /* MHKeypadActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadActionHandler.swift; sourceTree = "<group>"; };
 		2CF87B13289940930058D2AC /* QuizGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameProtocol.swift; sourceTree = "<group>"; };
 		2CF87B152899E6700058D2AC /* MHButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHButtonView.swift; sourceTree = "<group>"; };
+		2CF87B172899ED680058D2AC /* MHBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				2CB921BE2898749A00C251BA /* MHActiveGameView.swift */,
 				2CB921C72898A49400C251BA /* MHKeypadView.swift */,
 				2CF87B152899E6700058D2AC /* MHButtonView.swift */,
+				2CF87B172899ED680058D2AC /* MHBackgroundView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				2CB921CB2898AB4A00C251BA /* MHKeypadStyleModifier.swift in Sources */,
 				2CB921C12898894100C251BA /* MHQuestion.swift in Sources */,
 				2C3A76E6289835EC00316017 /* Multiple_HeroApp.swift in Sources */,
+				2CF87B182899ED680058D2AC /* MHBackgroundView.swift in Sources */,
 				2CB921C628989EFE00C251BA /* MHKeypadType.swift in Sources */,
 				2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */,
 				2CB921C82898A49400C251BA /* MHKeypadView.swift in Sources */,
