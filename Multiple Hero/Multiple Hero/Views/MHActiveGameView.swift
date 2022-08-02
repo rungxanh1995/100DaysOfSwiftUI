@@ -62,7 +62,8 @@ struct MHActiveGameView: View {
 			.foregroundStyle(.regularMaterial)
 			
 			MHKeypadView() { action in
-				self.keypadButtonTapped(action: action)
+				MHKeypadActionHandler(game: $game)
+					.didTapButton(perform: action)
 			}
 		}
 		.onAppear(perform: generateQuestions)
@@ -77,48 +78,6 @@ extension MHActiveGameView {
 		game.isGameActive = true
 	}
 	
-	private func keypadButtonTapped(action: MHKeypadType) {
-		guard game.isGameActive else { return }
-		
-		game.animatingIncreaseScore = false
-		game.animatingDecreaseScore = false
-		
-		switch(action) {
-			case .k0, .k1, .k2, .k3, .k4, .k5, .k6, .k7, .k8, .k9:
-				if game.playerAnswer.count < 3 {
-					game.playerAnswer += String(action.rawValue)
-				}
-			case .backspace:
-				if game.playerAnswer.count > 0 {
-					game.playerAnswer.removeLast()
-				}
-			case .done:
-				guard !game.playerAnswer.isEmpty else { return }
-				
-				if game.questions[game.currentQuestion].resultString == game.playerAnswer {
-					game.score += 1
-					
-					withAnimation(Animation.linear(duration: 1)) {
-						game.animatingIncreaseScore = true
-					}
-				}
-				else {
-					withAnimation(Animation.linear(duration: 1)) {
-						game.animatingDecreaseScore = true
-					}
-				}
-				
-				game.playerAnswer = ""
-				
-				if game.currentQuestion >= game.questions.count - 1 {
-					game.isGameActive = false
-				}
-				
-				game.currentQuestion += 1
-			default:
-				break
-		}
-	}
 }
 
 struct MHActiveGameView_Previews: PreviewProvider {
