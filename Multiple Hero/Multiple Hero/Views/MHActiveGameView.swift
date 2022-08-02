@@ -12,6 +12,9 @@ struct MHActiveGameView: View {
 	@Binding
 	var game: MHGame
 	
+	@State
+	private var animationAmount = 1.0
+	
     var body: some View {
         gamePlayingView
     }
@@ -30,36 +33,17 @@ struct MHActiveGameView: View {
 					alignment: .top
 				)
 			ZStack {
-				HStack {
-					if game.isGameActive {
-						Text(game.getCurrentQuestion().questionString)
-							.foregroundColor(.orange)
-						Text(game.playerAnswer.isEmpty ? "?" : game.playerAnswer)
-							.foregroundColor(.mint)
-					}
-					// TODO: Check this part
-					else {
-						Text("Score ")
-							.foregroundColor(.orange)
-						Text("\(game.userScore)/\(game.questions.count)")
-							.foregroundColor(.mint)
-					}
+				if game.isGameActive {
+					currentQuestionAwaitingAnswerView
 				}
-				.font(.system(size: 64, design: .rounded))
+				// TODO: Check this part to display score view on round over
+				else {
+					roundEndScoreView
+				}
 				
-				Text("🥳")
-					.font(.largeTitle)
-					.foregroundColor(game.animatingIncreaseScore ? .green : .clear)
-					.opacity(game.animatingIncreaseScore ? 0 : 1)
-					.offset(x: 0, y: game.animatingIncreaseScore ? -100 : -75)
-				
-				Text("😭")
-					.font(.largeTitle)
-					.foregroundColor(game.animatingDecreaseScore ? .red : .clear)
-					.opacity(game.animatingDecreaseScore ? 0 : 1)
-					.offset(x: 0, y: game.animatingDecreaseScore ? 100 : 75)
+				happyEmojiView
+				sadEmojiView
 			}
-			.foregroundStyle(.regularMaterial)
 			
 			MHKeypadView() { action in
 				MHKeypadActionHandler(game: $game)
@@ -71,6 +55,64 @@ struct MHActiveGameView: View {
 }
 
 extension MHActiveGameView {
+	
+	@ViewBuilder
+	private var currentQuestionAwaitingAnswerView: some View {
+		HStack {
+			Text(game.getCurrentQuestion().questionString)
+				.foregroundColor(.orange)
+			Text(game.playerAnswer.isEmpty ? "..." : game.playerAnswer)
+				.foregroundColor(.mint)
+		}
+		.font(.system(size: 64, design: .rounded))
+		.padding()
+		.clipShape(RoundedRectangle(cornerRadius: 25))
+		.overlay(
+			RoundedRectangle(cornerRadius: 25)
+				.stroke(.orange, lineWidth: 2.0)
+				.scaleEffect(animationAmount)
+				.opacity(1.5 - animationAmount)
+				.animation(
+					.easeInOut(duration: 1)
+					.repeatForever(autoreverses: true),
+					value: animationAmount
+				)
+		)
+		.animation(.easeInOut, value: animationAmount)
+		.onAppear {
+			animationAmount = 1.5
+		}
+	}
+	
+	@ViewBuilder
+	private var roundEndScoreView: some View {
+		let scoreString = "\(game.userScore)/\(game.questions.count)"
+		HStack {
+			Text("Scored")
+				.foregroundColor(.orange)
+			Text(scoreString)
+				.foregroundColor(.mint)
+		}
+		.font(.system(size: 64, design: .rounded))
+	}
+	
+	@ViewBuilder
+	private var happyEmojiView: some View {
+		Text("🥳")
+			.font(.largeTitle)
+			.foregroundColor(game.animatingIncreaseScore ? .green : .clear)
+			.opacity(game.animatingIncreaseScore ? 0 : 1)
+			.offset(x: 0, y: game.animatingIncreaseScore ? -100 : -75)
+	}
+	
+	@ViewBuilder
+	private var sadEmojiView: some View {
+		Text("😭")
+			.font(.largeTitle)
+			.foregroundColor(game.animatingDecreaseScore ? .red : .clear)
+			.opacity(game.animatingDecreaseScore ? 0 : 1)
+			.offset(x: 0, y: game.animatingDecreaseScore ? 100 : 75)
+	}
 	
 	private func generateQuestions() {
 		game.generateNewQuestions()
