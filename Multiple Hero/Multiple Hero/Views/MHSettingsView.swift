@@ -51,7 +51,7 @@ struct MHSettingsView: View {
 		Button("Play") {
 			withAnimation(.easeInOut(duration: 0.5)) {
 				game.isAskingForSettings.toggle()
-				game.isGameActuallyActive.toggle()
+				game.isGameActive.toggle()
 				game.generateNewQuestions()
 			}
 		}

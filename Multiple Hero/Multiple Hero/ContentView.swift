@@ -20,7 +20,7 @@ struct ContentView: View {
 				MHSettingsView(game: $currentGame)
 			}
 			
-			if currentGame.isGameActuallyActive {
+			if currentGame.isGameActive {
 				// Player is actively playing
 				MHActiveGameView(game: $currentGame)
 			}

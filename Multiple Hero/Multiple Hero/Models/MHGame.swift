@@ -9,7 +9,7 @@ import Foundation
 
 struct MHGame {
 	var isAskingForSettings = true  // start game with settings view
-	var isGameActuallyActive = false
+	var isGameActive = false
 	
 	static let reasonableMultiplicationRange: ClosedRange<Int> = 2...12
 	var selectedMultiplicationTable: Int = 2
@@ -18,6 +18,13 @@ struct MHGame {
 	var selectedNumberOfQuestions: Int = 5
 	
 	private(set) var questions: [MHQuestion] = []
+	var currentQuestion = 0
+	
+	var playerAnswer = ""
+	var score = 0
+	
+	var animatingIncreaseScore = false
+	var animatingDecreaseScore = false
 	
 	mutating func generateNewQuestions() -> Void {
 		questions = MHQuestion.allQuestions(
