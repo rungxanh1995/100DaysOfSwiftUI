@@ -48,14 +48,16 @@ struct MHSettingsView: View {
 	
 	@ViewBuilder
 	private var playButton: some View {
-		Button("Play") {
+		MHButtonView(
+			buttonText: "Let's Play",
+			tintColor: .pink
+		) {
 			withAnimation(.easeInOut(duration: 0.5)) {
 				game.isAskingForSettings.toggle()
 				game.isGameActive.toggle()
 				game.generateNewQuestions()
 			}
 		}
-		.buttonStyle(.borderedProminent)
 	}
 }
 
