@@ -47,7 +47,7 @@ struct MHKeypadActionHandler {
 	
 	fileprivate func updateGameScoreAndAnimateEmojis() {
 		if game.questions[game.currentQuestion].resultString == game.playerAnswer {
-			game.score += 1
+			game.userScore += 1
 			
 			withAnimation(.easeInOut(duration: 1)) {
 				game.animatingIncreaseScore = true
@@ -60,7 +60,7 @@ struct MHKeypadActionHandler {
 	}
 	
 	fileprivate func decideRoundIsOver() {
-		if game.currentQuestion >= game.questions.count - 1 {
+		if game.checkIfGameOver() == true {
 			game.isGameActive = false
 		}
 	}

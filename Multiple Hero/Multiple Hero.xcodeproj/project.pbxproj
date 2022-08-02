@@ -21,6 +21,7 @@
 		2CB921C82898A49400C251BA /* MHKeypadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921C72898A49400C251BA /* MHKeypadView.swift */; };
 		2CB921CB2898AB4A00C251BA /* MHKeypadStyleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921CA2898AB4A00C251BA /* MHKeypadStyleModifier.swift */; };
 		2CF87B122898B4F00058D2AC /* MHKeypadActionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B112898B4F00058D2AC /* MHKeypadActionHandler.swift */; };
+		2CF87B14289940930058D2AC /* QuizGameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF87B13289940930058D2AC /* QuizGameProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		2CB921C72898A49400C251BA /* MHKeypadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadView.swift; sourceTree = "<group>"; };
 		2CB921CA2898AB4A00C251BA /* MHKeypadStyleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadStyleModifier.swift; sourceTree = "<group>"; };
 		2CF87B112898B4F00058D2AC /* MHKeypadActionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHKeypadActionHandler.swift; sourceTree = "<group>"; };
+		2CF87B13289940930058D2AC /* QuizGameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizGameProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		2CB921B42898721300C251BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CF87B13289940930058D2AC /* QuizGameProtocol.swift */,
 				2CB921B52898722D00C251BA /* MHGame.swift */,
 				2CB921C02898894100C251BA /* MHQuestion.swift */,
 				2CB921C528989EFE00C251BA /* MHKeypadType.swift */,
@@ -216,6 +219,7 @@
 				2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */,
 				2CB921C82898A49400C251BA /* MHKeypadView.swift in Sources */,
 				2CB921BF2898749A00C251BA /* MHActiveGameView.swift in Sources */,
+				2CF87B14289940930058D2AC /* QuizGameProtocol.swift in Sources */,
 				2CB921C428988BBF00C251BA /* Array+Ext.swift in Sources */,
 				2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */,
 				2CB921B62898722D00C251BA /* MHGame.swift in Sources */,

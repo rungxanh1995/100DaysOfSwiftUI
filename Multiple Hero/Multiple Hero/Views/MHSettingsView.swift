@@ -37,7 +37,7 @@ struct MHSettingsView: View {
 		HStack {
 			Text("Num of questions:")
 			Spacer()
-			Picker("Number of questions", selection: $game.selectedNumberOfQuestions, content: {
+			Picker("Number of questions", selection: $game.maxQuestionsEachGame, content: {
 				ForEach(MHGame.numberOfQuestionsOptions, id: \.self) {
 					Text("\($0)")
 				}

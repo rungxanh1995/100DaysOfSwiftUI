@@ -41,7 +41,7 @@ struct MHActiveGameView: View {
 					else {
 						Text("Score ")
 							.foregroundColor(.orange)
-						Text("\(game.score)/\(game.questions.count)")
+						Text("\(game.userScore)/\(game.questions.count)")
 							.foregroundColor(.mint)
 					}
 				}

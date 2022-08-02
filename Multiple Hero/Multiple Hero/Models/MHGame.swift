@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct MHGame {
+struct MHGame: QuizGameProtocol {
+	
 	var isAskingForSettings = true  // start game with settings view
 	var isGameActive = false
 	
@@ -15,13 +16,14 @@ struct MHGame {
 	var selectedMultiplicationTable: Int = 2
 	
 	static let numberOfQuestionsOptions: [Int] = [5, 10, 20]
-	var selectedNumberOfQuestions: Int = 5
+	internal var maxQuestionsEachGame: Int = 5
+	internal var numGuessesEachGame: Int = 0
 	
 	private(set) var questions: [MHQuestion] = []
 	var currentQuestion = 0
 	
 	var playerAnswer = ""
-	var score = 0
+	var userScore: Int = 0
 	
 	var animatingIncreaseScore = false
 	var animatingDecreaseScore = false
@@ -29,7 +31,28 @@ struct MHGame {
 	mutating func generateNewQuestions() -> Void {
 		questions = MHQuestion.allQuestions(
 			tablesUpTo: selectedMultiplicationTable,
-			numQuestions: selectedNumberOfQuestions
+			numQuestions: maxQuestionsEachGame
 		)
+	}
+	
+	func checkIfGameOver() -> Bool {
+		// code here
+		if currentQuestion < questions.count - 1 {
+			return false
+		} else {
+			return true
+		}
+	}
+	
+	mutating func askNewQuestion() {
+		// code here
+	}
+	
+	mutating func reset() {
+		// code here
+	}
+	
+	mutating func updateScore(basedOn guessResult: Bool) {
+		// code here
 	}
 }
