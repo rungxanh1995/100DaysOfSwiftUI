@@ -32,7 +32,7 @@ struct MHActiveGameView: View {
 			ZStack {
 				HStack {
 					if game.isGameActive {
-						Text(game.questions[game.currentQuestion].questionString)
+						Text(game.getCurrentQuestion().questionString)
 							.foregroundColor(.orange)
 						Text(game.playerAnswer.isEmpty ? "?" : game.playerAnswer)
 							.foregroundColor(.mint)
@@ -74,7 +74,7 @@ extension MHActiveGameView {
 	
 	private func generateQuestions() {
 		game.generateNewQuestions()
-		game.currentQuestion = 0
+		game.resetCurrentQuestion()
 		game.isGameActive = true
 	}
 	

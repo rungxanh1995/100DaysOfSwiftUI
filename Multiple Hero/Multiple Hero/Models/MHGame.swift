@@ -20,7 +20,7 @@ struct MHGame: QuizGameProtocol {
 	internal var numGuessesEachGame: Int = 0
 	
 	private(set) var questions: [MHQuestion] = []
-	var currentQuestion = 0
+	private(set) var currentQuestion = 0
 	
 	var playerAnswer = ""
 	var userScore: Int = 0
@@ -33,6 +33,19 @@ struct MHGame: QuizGameProtocol {
 			tablesUpTo: selectedMultiplicationTable,
 			numQuestions: maxQuestionsEachGame
 		)
+	}
+	
+	func getCurrentQuestion() -> MHQuestion {
+		// Questions should be pre-generated when game started
+		return questions.element(at: currentQuestion)!
+	}
+	
+	mutating func resetCurrentQuestion() -> Void {
+		self.currentQuestion = 0
+	}
+	
+	mutating func incrementCurrentQuestion() -> Void {
+		self.currentQuestion += 1
 	}
 	
 	func checkIfGameOver() -> Bool {
