@@ -66,6 +66,8 @@ struct MHGame: QuizGameProtocol {
 	}
 	
 	mutating func updateScore(basedOn guessResult: Bool) {
-		// code here
+		if guessResult == true {
+			userScore += 1
+		}
 	}
 }

@@ -46,9 +46,10 @@ struct MHKeypadActionHandler {
 	}
 	
 	fileprivate func updateGameScoreAndAnimateEmojis() {
-		if game.questions[game.currentQuestion].resultString == game.playerAnswer {
-			game.userScore += 1
-			
+		let answerResult = game.getCurrentQuestion().resultString == game.playerAnswer
+		game.updateScore(basedOn: answerResult)
+		
+		if answerResult == true {
 			withAnimation(.easeInOut(duration: 1)) {
 				game.animatingIncreaseScore = true
 			}
