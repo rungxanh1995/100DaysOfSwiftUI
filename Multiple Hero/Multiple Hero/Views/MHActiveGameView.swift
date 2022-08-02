@@ -101,7 +101,7 @@ extension MHActiveGameView {
 			.font(.largeTitle)
 			.foregroundColor(game.animatingIncreaseScore ? .green : .clear)
 			.opacity(game.animatingIncreaseScore ? 0 : 1)
-			.offset(x: 0, y: game.animatingIncreaseScore ? -100 : -75)
+			.offset(x: 0, y: game.animatingIncreaseScore ? -100 : -20)
 	}
 	
 	@ViewBuilder
@@ -110,7 +110,7 @@ extension MHActiveGameView {
 			.font(.largeTitle)
 			.foregroundColor(game.animatingDecreaseScore ? .red : .clear)
 			.opacity(game.animatingDecreaseScore ? 0 : 1)
-			.offset(x: 0, y: game.animatingDecreaseScore ? 100 : 75)
+			.offset(x: 0, y: game.animatingDecreaseScore ? 100 : 20)
 	}
 	
 	private func generateQuestions() {
