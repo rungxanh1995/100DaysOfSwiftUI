@@ -34,6 +34,7 @@ struct MHKeypadView: View {
 							}) {
 								let buttonNumber = "\(j + i * 3)"
 								Text(buttonNumber)
+									.font(.system(.title, design: .rounded))
 									.modifier(MHKeypadStyle(width: self.getWidth(geo), height: self.getHeight()))
 							}
 						}
@@ -44,14 +45,17 @@ struct MHKeypadView: View {
 				HStack {
 					Button(action: { actionPerformed?(.backspace) }) {
 						Image(systemName: "delete.left")
+							.font(.system(.title, design: .rounded))
 							.modifier(MHKeypadStyle(width: self.getWidth(geo), height: self.getHeight(), tintColor: Color.pink))
 					}
 					Button(action: { actionPerformed?(.k0) }) {
 						Text("0")
+							.font(.system(.title, design: .rounded))
 							.modifier(MHKeypadStyle(width: self.getWidth(geo), height: self.getHeight()))
 					}
 					Button(action: { actionPerformed?(.done) }) {
 						Image(systemName: "checkmark")
+							.font(.system(.title, design: .rounded))
 							.modifier(MHKeypadStyle(width: self.getWidth(geo), height: self.getHeight(), tintColor: Color.teal))
 					}
 				}
