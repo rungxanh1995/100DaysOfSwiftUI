@@ -15,7 +15,9 @@ struct MHSettingsView: View {
     var body: some View {
 		VStack(spacing: 20) {
 			Text("Multiplication Hero")
-				.font(.largeTitle)
+				.font(.system(.largeTitle, design: .serif).bold())
+				.multilineTextAlignment(.center)
+			
 			selectUpperboundForTablesView
 			selectNumberOfQuestionsView
 			playButton
