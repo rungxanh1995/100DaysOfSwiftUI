@@ -57,6 +57,12 @@ struct MHGame: QuizGameProtocol {
 		}
 	}
 	
+	mutating func decideRoundIsOver() {
+		if checkIfGameOver() == true {
+			isGameActive = false
+		}
+	}
+	
 	mutating func askNewQuestion() {
 		// code here
 	}
