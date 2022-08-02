@@ -118,14 +118,9 @@ extension MHActiveGameView {
 	
 	@ViewBuilder
 	private var playAgainButtonView: some View {
-		Button("Play Again") {
+		MHButtonView(buttonText: "Play Again") {
 			game.reset()
 		}
-		.font(.system(.title, design: .rounded).bold())
-		.padding()
-		.buttonStyle(.borderedProminent)
-		.clipShape(RoundedRectangle(cornerRadius: 12))
-		.tint(.teal)
 	}
 	
 	private func generateQuestions() {
