@@ -69,18 +69,17 @@ extension MHActiveGameView {
 		.clipShape(RoundedRectangle(cornerRadius: 25))
 		.overlay(
 			RoundedRectangle(cornerRadius: 25)
-				.stroke(.orange, lineWidth: 2.0)
+				.stroke(.orange)
 				.scaleEffect(animationAmount)
-				.opacity(1.5 - animationAmount)
+				.opacity(2 - animationAmount)
 				.animation(
-					.easeInOut(duration: 1)
+					.easeInOut(duration: 0.75)
 					.repeatForever(autoreverses: true),
 					value: animationAmount
 				)
 		)
-		.animation(.easeInOut, value: animationAmount)
 		.onAppear {
-			animationAmount = 1.5
+			animationAmount = 2
 		}
 	}
 	
