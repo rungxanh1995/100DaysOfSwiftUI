@@ -31,13 +31,21 @@ extension MHSettingsView {
 	
 	@ViewBuilder
 	private var gameNameAndInstructionView: some View {
-		VStack {
-			gameNameView
-				.padding(.bottom, 20)
-			settingInstructionTextView
+		ZStack {
+			// Matte glass effect
+			Color.white.opacity(0.5)
+				.clipShape(RoundedRectangle(cornerRadius: 20))
+				.shadow(color: .black.opacity(0.1), radius: 10, x: 0, y: 10)
+				.blur(radius: 1)
+			
+			VStack {
+				gameNameView
+					.padding(.bottom, 20)
+				settingInstructionTextView
+			}
+			.padding()
 		}
-		.padding()
-		.background(.ultraThinMaterial)
+		.foregroundColor(.black.opacity(0.8))
 		.clipShape(RoundedRectangle(cornerRadius: 20))
 		.shadow(radius: 5)
 	}
@@ -47,7 +55,6 @@ extension MHSettingsView {
 		Text("Multiple Hero")
 			.font(.system(.largeTitle, design: .serif).bold())
 			.multilineTextAlignment(.center)
-			.shadow(radius: 5, x: 0, y: 5)
 	}
 	
 	@ViewBuilder
@@ -96,10 +103,8 @@ extension MHSettingsView {
 Choose your table limit and number of questions below, then tap "Let's Play" to start
 """
 		)
-		.font(.system(.subheadline, design: .serif))
-		.foregroundColor(.white)
+		.font(.system(.body, design: .serif))
 		.multilineTextAlignment(.center)
-		.shadow(radius: 5, x: 0, y: 5)
 	}
 	
 	@ViewBuilder
