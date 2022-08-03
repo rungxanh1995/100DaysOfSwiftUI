@@ -14,16 +14,27 @@ struct MHSettingsView: View {
 	
     var body: some View {
 		VStack(spacing: 20) {
-			Text("Multiplication Hero")
-				.font(.system(.largeTitle, design: .serif).bold())
-				.multilineTextAlignment(.center)
-			
+			gameNameView
+			Spacer()
 			selectUpperboundForTablesView
 			selectNumberOfQuestionsView
 			playButton
+			Spacer()
 		}
+		.foregroundColor(.white)
 		.padding(.horizontal, 20)
     }
+}
+
+extension MHSettingsView {
+	
+	@ViewBuilder
+	private var gameNameView: some View {
+		Text("Multiplication Hero")
+			.font(.system(.largeTitle, design: .serif).bold())
+			.multilineTextAlignment(.center)
+			.shadow(radius: 5, x: 0, y: 5)
+	}
 	
 	@ViewBuilder
 	private var selectUpperboundForTablesView: some View {
@@ -32,6 +43,7 @@ struct MHSettingsView: View {
 			Spacer()
 			Stepper("\(game.selectedMultiplicationTable)", value: $game.selectedMultiplicationTable, in: MHGame.reasonableMultiplicationRange)
 		}
+		.font(.system(.headline, design: .rounded))
 	}
 	
 	@ViewBuilder
@@ -46,6 +58,7 @@ struct MHSettingsView: View {
 			})
 			.pickerStyle(.segmented)
 		}
+		.font(.system(.headline, design: .rounded))
 	}
 	
 	@ViewBuilder
@@ -66,5 +79,6 @@ struct MHSettingsView: View {
 struct MHSettingsView_Previews: PreviewProvider {
     static var previews: some View {
 		StatefulPreviewWrapper(MHGame()) { MHSettingsView(game: $0) }
+			.preferredColorScheme(.dark)
     }
 }
