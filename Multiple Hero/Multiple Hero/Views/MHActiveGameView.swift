@@ -22,35 +22,32 @@ struct MHActiveGameView: View {
 	@ViewBuilder
 	private var gamePlayingView: some View {
 		VStack {
-			// TODO: Add score view here
-			
-			Spacer()
-				.frame(
-					minWidth: 0,
-					maxWidth: .infinity,
-					minHeight: 0,
-					maxHeight: .infinity,
-					alignment: .top
-				)
-			ZStack {
-				if game.isGameActive {
+			if game.isGameActive {
+				Spacer()
+					.frame(
+						minWidth: 0,
+						maxWidth: .infinity,
+						minHeight: 0,
+						maxHeight: .infinity,
+						alignment: .top
+					)
+				
+				ZStack {
 					currentQuestionAwaitingAnswerView
-				}
-				// TODO: Check this part to display score view on round over
-				else {
-					VStack {
-						roundEndScoreView
-						playAgainButtonView
-					}
+					happyEmojiView
+					sadEmojiView
 				}
 				
-				happyEmojiView
-				sadEmojiView
+				MHKeypadView() { action in
+					MHKeypadActionHandler(game: $game)
+						.didTapButton(perform: action)
+				}
 			}
-			
-			MHKeypadView() { action in
-				MHKeypadActionHandler(game: $game)
-					.didTapButton(perform: action)
+			else {
+				VStack {
+					roundEndScoreView
+					playAgainButtonView
+				}
 			}
 		}
 		.onAppear(perform: generateQuestions)
@@ -67,7 +64,7 @@ extension MHActiveGameView {
 			Text(game.playerAnswer.isEmpty ? "..." : game.playerAnswer)
 				.foregroundColor(.mint)
 		}
-		.font(.system(size: 64, design: .rounded))
+		.font(.system(size: 48, weight: .bold, design: .rounded))
 		.padding()
 		.clipShape(RoundedRectangle(cornerRadius: 25))
 		.overlay(
@@ -81,6 +78,7 @@ extension MHActiveGameView {
 					value: animationAmount
 				)
 		)
+		.shadow(radius: 5, x: 0, y: 5)
 		.onAppear {
 			animationAmount = 2
 		}
@@ -89,13 +87,20 @@ extension MHActiveGameView {
 	@ViewBuilder
 	private var roundEndScoreView: some View {
 		let scoreString = "\(game.userScore)/\(game.questions.count)"
-		HStack {
-			Text("Scored")
-				.foregroundColor(.orange)
-			Text(scoreString)
-				.foregroundColor(.mint)
+		VStack {
+			Text("🎉")
+				.font(.system(size: 80))
+			
+			HStack {
+				
+				Text("Scored")
+					.foregroundColor(.orange)
+				Text(scoreString)
+					.foregroundColor(.mint)
+			}
 		}
-		.font(.system(size: 64, design: .rounded))
+		.font(.system(size: 48, weight: .bold, design: .rounded))
+		.shadow(radius: 5, x: 0, y: 5)
 	}
 	
 	@ViewBuilder
