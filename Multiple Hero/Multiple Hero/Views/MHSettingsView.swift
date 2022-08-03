@@ -14,12 +14,13 @@ struct MHSettingsView: View {
 	
     var body: some View {
 		VStack(spacing: 20) {
-			gameNameView
+			gameNameAndInstructionView
 			Spacer()
 			selectUpperboundForTablesView
 			selectNumberOfQuestionsView
 			playButton
 			Spacer()
+			introductoryTextView
 		}
 		.foregroundColor(.white)
 		.padding(.horizontal, 20)
@@ -27,6 +28,18 @@ struct MHSettingsView: View {
 }
 
 extension MHSettingsView {
+	
+	@ViewBuilder
+	private var gameNameAndInstructionView: some View {
+		VStack {
+			gameNameView
+			settingInstructionTextView
+		}
+		.padding()
+		.background(.ultraThinMaterial)
+		.clipShape(RoundedRectangle(cornerRadius: 20))
+		.shadow(radius: 5)
+	}
 	
 	@ViewBuilder
 	private var gameNameView: some View {
@@ -49,7 +62,7 @@ extension MHSettingsView {
 	@ViewBuilder
 	private var selectNumberOfQuestionsView: some View {
 		HStack {
-			Text("Num of questions:")
+			Text("Questions:")
 			Spacer()
 			Picker("Number of questions", selection: $game.maxQuestionsEachGame, content: {
 				ForEach(MHGame.numberOfQuestionsOptions, id: \.self) {
@@ -73,6 +86,31 @@ extension MHSettingsView {
 				game.generateNewQuestions()
 			}
 		}
+	}
+	
+	@ViewBuilder
+	private var settingInstructionTextView: some View {
+		Text(
+"""
+Choose your table limit and number of questions below, then tap "Let's Play" to start
+"""
+		)
+		.font(.system(.subheadline, design: .serif))
+		.foregroundColor(.white)
+		.multilineTextAlignment(.center)
+		.shadow(radius: 5, x: 0, y: 5)
+	}
+	
+	@ViewBuilder
+	private var introductoryTextView: some View {
+		Text(
+"""
+Multiple Hero is an 'edutainment' app for kids to help them practice multiplication tables – “what is 7 x 8?” and so on.
+"""
+		)
+			.font(.system(.caption, design: .rounded))
+			.foregroundStyle(.secondary)
+			.multilineTextAlignment(.leading)
 	}
 }
 
