@@ -23,14 +23,8 @@ struct MHActiveGameView: View {
 	private var gamePlayingView: some View {
 		VStack {
 			if game.isGameActive {
-				Spacer()
-					.frame(
-						minWidth: 0,
-						maxWidth: .infinity,
-						minHeight: 0,
-						maxHeight: .infinity,
-						alignment: .top
-					)
+				
+				gameMascotView
 				
 				ZStack {
 					currentQuestionAwaitingAnswerView
@@ -57,6 +51,14 @@ struct MHActiveGameView: View {
 extension MHActiveGameView {
 	
 	@ViewBuilder
+	private var gameMascotView: some View {
+		Image(game.randomMascotName)
+			.shadow(radius: 5, x: 0, y: 5)
+			.padding(.bottom, 100)
+			.wiggling()
+	}
+	
+	@ViewBuilder
 	private var currentQuestionAwaitingAnswerView: some View {
 		HStack {
 			Text(game.getCurrentQuestion().questionString)
@@ -65,23 +67,7 @@ extension MHActiveGameView {
 				.foregroundColor(.mint)
 		}
 		.font(.system(size: 48, weight: .bold, design: .rounded))
-		.padding()
-		.clipShape(RoundedRectangle(cornerRadius: 25))
-		.overlay(
-			RoundedRectangle(cornerRadius: 25)
-				.stroke(.orange)
-				.scaleEffect(animationAmount)
-				.opacity(2 - animationAmount)
-				.animation(
-					.easeInOut(duration: 0.75)
-					.repeatForever(autoreverses: true),
-					value: animationAmount
-				)
-		)
 		.shadow(radius: 5, x: 0, y: 5)
-		.onAppear {
-			animationAmount = 2
-		}
 	}
 	
 	@ViewBuilder

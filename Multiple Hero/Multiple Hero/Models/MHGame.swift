@@ -19,6 +19,7 @@ struct MHGame: QuizGameProtocol {
 	internal var maxQuestionsEachGame: Int = 5
 	internal var numGuessesEachGame: Int = 0
 	
+	private(set) var randomMascotName = MHMascot.randomMascotName()
 	private(set) var questions: [MHQuestion] = []
 	private(set) var currentQuestion = 0
 	
@@ -77,11 +78,16 @@ struct MHGame: QuizGameProtocol {
 		
 		generateNewQuestions()
 		resetCurrentQuestion()
+		getAnotherRandomMascotName()
 	}
 	
 	mutating func updateScore(basedOn guessResult: Bool) {
 		if guessResult == true {
 			userScore += 1
 		}
+	}
+	
+	mutating func getAnotherRandomMascotName() -> Void {
+		randomMascotName = MHMascot.randomMascotName()
 	}
 }
