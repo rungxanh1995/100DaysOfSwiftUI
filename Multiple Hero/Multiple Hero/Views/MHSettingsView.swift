@@ -78,7 +78,7 @@ extension MHSettingsView {
 	private var playButton: some View {
 		MHButtonView(
 			buttonText: "Let's Play",
-			tintColor: .pink
+			tintColor: .black
 		) {
 			withAnimation(.easeInOut(duration: 0.5)) {
 				game.isAskingForSettings.toggle()
