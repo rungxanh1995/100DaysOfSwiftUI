@@ -35,7 +35,6 @@ struct MHBackgroundView: View {
 			.onReceive(timer, perform: { _ in
 				modifyAnimationPoints()
 			})
-			.opacity(0.6)
 			.blur(radius: 75, opaque: true)
 	}
 }
