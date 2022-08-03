@@ -23,12 +23,16 @@ struct MHKeypadActionHandler {
 			
 			case .k0, .k1, .k2, .k3, .k4, .k5, .k6, .k7, .k8, .k9:
 				if game.playerAnswer.count < 3 {
-					game.playerAnswer += String(action.rawValue)
+					withAnimation(.linear(duration: 0.25)) {
+						game.playerAnswer += String(action.rawValue)
+					}
 				}
 			
 			case .backspace:
 				if game.playerAnswer.count > 0 {
-					game.playerAnswer.removeLast()
+					withAnimation(.easeInOut(duration: 0.25)) {
+						game.playerAnswer.removeLast()
+					}
 				}
 			
 			case .done:
@@ -36,8 +40,10 @@ struct MHKeypadActionHandler {
 				
 				updateGameScoreAndAnimateEmojis()
 				
-				game.playerAnswer = ""
-				game.decideRoundIsOver()
+				withAnimation(.easeInOut(duration: 0.5)) {
+					game.playerAnswer = ""
+					game.decideRoundIsOver()
+				}
 				game.incrementCurrentQuestion()
 			
 			default:

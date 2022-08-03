@@ -110,7 +110,9 @@ extension MHActiveGameView {
 	@ViewBuilder
 	private var playAgainButtonView: some View {
 		MHButtonView(buttonText: "Play Again") {
-			game.reset()
+			withAnimation(.easeInOut(duration: 0.5)) {
+				game.reset()
+			}
 		}
 	}
 	
