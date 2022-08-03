@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MHButtonView: View {
-	var buttonText: String
+	var buttonText: LocalizedStringKey
 	var tintColor: Color = .teal
 	var buttonAction: (() -> Void)
 	
