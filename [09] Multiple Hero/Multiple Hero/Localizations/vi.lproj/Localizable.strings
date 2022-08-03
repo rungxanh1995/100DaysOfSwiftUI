@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Multiple Hero
+
+  Created by Joe Pham on 2022-08-03.
+  
+*/
+
+/* Settings */
+"Multiple Hero" = "Anh Hùng Tính Nhân";
+
+"Choose your table limit and number of questions below, then tap \"Let's Play\" to start" = "Chọn giới hạn cho bảng nhân và số câu đố ở bên dưới, rồi bấm \"Cùng Chơi Nào!\" để bắt đầu";
+"Tables up to:" = "G.hạn bảng nhân:";
+"Questions:" = "Câu đố:";
+"Number of questions" = "Số câu đố";
+"Let's Play" = "Cùng Chơi Nào!";
+"Multiple Hero is an 'edutainment' app for kids to help them practice multiplication tables – “what is 7 x 8?” and so on." = "Anh Hùng Tính Nhân là một ƯD giáo dục-giải trí cho trẻ em để các bé tập thực hành bảng tính nhân - ví dụ “7 x 8 là bao nhiêu?”, v.v";
+
+/* Active Game */
+"Scored" = "Kết quả";
+"Play Again" = "Chơi Lại";
