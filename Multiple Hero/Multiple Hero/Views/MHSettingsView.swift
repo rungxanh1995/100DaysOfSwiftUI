@@ -33,6 +33,7 @@ extension MHSettingsView {
 	private var gameNameAndInstructionView: some View {
 		VStack {
 			gameNameView
+				.padding(.bottom, 20)
 			settingInstructionTextView
 		}
 		.padding()
@@ -43,7 +44,7 @@ extension MHSettingsView {
 	
 	@ViewBuilder
 	private var gameNameView: some View {
-		Text("Multiplication Hero")
+		Text("Multiple Hero")
 			.font(.system(.largeTitle, design: .serif).bold())
 			.multilineTextAlignment(.center)
 			.shadow(radius: 5, x: 0, y: 5)
