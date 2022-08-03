@@ -2,7 +2,8 @@
 //  WiggleModifier.swift
 //  Multiple Hero
 //
-//  Created by Joe Pham on 2022-08-02.
+//  Credit to Mark Malström.
+//	Link: https://gist.github.com/markmals/075273b58a94db20917235fdd5cda3cc
 //
 
 import SwiftUI
