@@ -45,12 +45,11 @@ struct MHGame: QuizGameProtocol {
 		self.currentQuestion = 0
 	}
 	
-	mutating func incrementCurrentQuestion() -> Void {
+	mutating private func incrementCurrentQuestion() -> Void {
 		self.currentQuestion += 1
 	}
 	
 	func checkIfGameOver() -> Bool {
-		// code here
 		if currentQuestion < questions.count - 1 {
 			return false
 		} else {
@@ -65,7 +64,7 @@ struct MHGame: QuizGameProtocol {
 	}
 	
 	mutating func askNewQuestion() {
-		// code here
+		incrementCurrentQuestion()
 	}
 	
 	mutating func reset() -> Void {

@@ -44,7 +44,7 @@ struct MHKeypadActionHandler {
 					game.playerAnswer = ""
 					game.decideRoundIsOver()
 				}
-				game.incrementCurrentQuestion()
+				game.askNewQuestion()
 			
 			default:
 				break
