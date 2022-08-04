@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
 
-	@State
+	@StateObject
 	private var currentGame: MHGame = MHGame()
 	
 	var body: some View {
@@ -20,13 +20,14 @@ struct ContentView: View {
 
 			Group {
 				if currentGame.isAskingForSettings {
-					MHSettingsView(game: $currentGame)
+					MHSettingsView()
 				} else {
 					// Player is actively playing
-					MHActiveGameView(game: $currentGame)
+					MHActiveGameView()
 				}
 			}
 		}
+		.environmentObject(currentGame)
 	}
 }
 

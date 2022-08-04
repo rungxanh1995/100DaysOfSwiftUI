@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MHSettingsView: View {
 	
-	@Binding
+	@EnvironmentObject
 	var game: MHGame
 	
     var body: some View {
@@ -122,7 +122,8 @@ Multiple Hero is an 'edutainment' app for kids to help them practice multiplicat
 
 struct MHSettingsView_Previews: PreviewProvider {
     static var previews: some View {
-		StatefulPreviewWrapper(MHGame()) { MHSettingsView(game: $0) }
+		MHSettingsView()
+			.environmentObject(MHGame())
 			.preferredColorScheme(.dark)
     }
 }

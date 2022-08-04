@@ -7,10 +7,13 @@
 
 import SwiftUI
 
-struct MHKeypadActionHandler {
+class MHKeypadActionHandler {
 	
-	@Binding
-	var game: MHGame
+	private let game: MHGame
+	
+	init(currentGame: MHGame) {
+		self.game = currentGame
+	}
 
 	
 	func didTapButton(perform action: MHKeypadType) -> Void {

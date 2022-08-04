@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MHActiveGameView: View {
 	
-	@Binding
+	@EnvironmentObject
 	var game: MHGame
 	
 	@State
@@ -33,7 +33,7 @@ struct MHActiveGameView: View {
 				}
 				
 				MHKeypadView() { action in
-					MHKeypadActionHandler(game: $game)
+					MHKeypadActionHandler(currentGame: game)
 						.didTapButton(perform: action)
 				}
 			}
@@ -126,6 +126,7 @@ extension MHActiveGameView {
 
 struct MHActiveGameView_Previews: PreviewProvider {
     static var previews: some View {
-		StatefulPreviewWrapper(MHGame()) { MHActiveGameView(game: $0) }
+		MHActiveGameView()
+			.environmentObject(MHGame())
     }
 }
