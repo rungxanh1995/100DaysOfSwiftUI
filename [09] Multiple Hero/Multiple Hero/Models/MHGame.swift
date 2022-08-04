@@ -21,7 +21,6 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	
 	private(set) var randomMascotName = MHMascot.randomMascotName()
 	private(set) var questions: [MHQuestion] = []
-	private(set) var currentQuestion = 0
 	
 	@Published var playerAnswer = ""
 	private(set) var userProgress: UserProgress = UserProgress()
@@ -38,19 +37,15 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	
 	func getCurrentQuestion() -> MHQuestion {
 		// Questions should be pre-generated when game started
-		return questions.element(at: currentQuestion)!
+		return questions.element(at: userProgress.currentQuestion)!
 	}
 	
 	func resetCurrentQuestion() -> Void {
-		self.currentQuestion = 0
-	}
-	
-	private func incrementCurrentQuestion() -> Void {
-		self.currentQuestion += 1
+		userProgress.resetCurrentQuestion()
 	}
 	
 	func checkIfGameOver() -> Bool {
-		if currentQuestion < questions.count - 1 {
+		if userProgress.currentQuestion < questions.count - 1 {
 			return false
 		} else {
 			return true
@@ -64,11 +59,12 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	}
 	
 	func askNewQuestion() {
-		incrementCurrentQuestion()
+		userProgress.incrementCurrentQuestion()
 	}
 	
 	func reset() -> Void {
 		userProgress.resetScore()
+		userProgress.resetCurrentQuestion()
 		numGuessesEachGame = 0
 		playerAnswer = ""
 		
@@ -76,7 +72,6 @@ class MHGame: QuizGameProtocol, ObservableObject {
 		isGameActive = false
 		
 		generateNewQuestions()
-		resetCurrentQuestion()
 		getAnotherRandomMascotName()
 	}
 	
