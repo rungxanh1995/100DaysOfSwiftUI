@@ -72,7 +72,7 @@ extension MHActiveGameView {
 	
 	@ViewBuilder
 	private var roundEndScoreView: some View {
-		let scoreString = "\(game.userScore)/\(game.questions.count)"
+		let scoreString = "\(game.userProgress.score)/\(game.maxQuestionsEachGame)"
 		VStack {
 			Text("🎉")
 				.font(.system(size: 80))

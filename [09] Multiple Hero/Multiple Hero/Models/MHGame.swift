@@ -24,7 +24,7 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	private(set) var currentQuestion = 0
 	
 	@Published var playerAnswer = ""
-	@Published var userScore: Int = 0
+	private(set) var userProgress: UserProgress = UserProgress()
 	
 	@Published var animatingIncreaseScore = false
 	@Published var animatingDecreaseScore = false
@@ -68,7 +68,7 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	}
 	
 	func reset() -> Void {
-		userScore = 0
+		userProgress.resetScore()
 		numGuessesEachGame = 0
 		playerAnswer = ""
 		
@@ -82,7 +82,7 @@ class MHGame: QuizGameProtocol, ObservableObject {
 	
 	func updateScore(basedOn guessResult: Bool) {
 		if guessResult == true {
-			userScore += 1
+			userProgress.incrementScore()
 		}
 	}
 	
