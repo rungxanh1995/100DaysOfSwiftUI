@@ -25,6 +25,8 @@ struct MHActiveGameView: View {
 			if game.isGameActive {
 				
 				gameMascotView
+				miniScoreView
+					.padding(.bottom, 50)
 				
 				ZStack {
 					currentQuestionAwaitingAnswerView
@@ -54,8 +56,29 @@ extension MHActiveGameView {
 	private var gameMascotView: some View {
 		Image(game.randomMascotName)
 			.shadow(radius: 5, x: 0, y: 5)
-			.padding(.bottom, 100)
+			.padding(.bottom, 20)
 			.wiggling()
+	}
+	
+	@ViewBuilder
+	private var miniScoreView: some View {
+		VStack(spacing: 0) {
+			Text("You got")
+				.font(.system(.body, design: .rounded).bold())
+				.foregroundColor(.primary)
+			
+			HStack {
+				Text("\(game.userProgress.score)")
+				Text(game.userProgress.score > 1 ? "points" : "point")
+			}
+			.font(.system(.title, design: .rounded).bold())
+				.foregroundColor(.primary)
+		}
+		.foregroundColor(.white)
+		.padding()
+		.background(.thinMaterial)
+		.clipShape(RoundedRectangle(cornerRadius: 30))
+		.shadow(radius: 5)
 	}
 	
 	@ViewBuilder
