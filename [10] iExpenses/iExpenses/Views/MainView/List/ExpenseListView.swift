@@ -19,7 +19,7 @@ struct ExpenseListView: View {
 		NavigationView {
 			Form {
 				Section(
-					header: Text("Personal")
+					header: Text("Personal Expenses")
 				) {
 					ForEach(viewModel.personalExpenseItems) { item in
 						ExpenseListCell(
@@ -31,7 +31,7 @@ struct ExpenseListView: View {
 				}
 				
 				Section(
-					header: Text("Business")
+					header: Text("Business Expenses")
 				) {
 					ForEach(viewModel.businessExpenseItems) { item in
 						ExpenseListCell(
@@ -40,6 +40,30 @@ struct ExpenseListView: View {
 						)
 					}
 					.onDelete(perform: viewModel.deleteBusinessExpenses)
+				}
+				
+				Section(
+					header: Text("School Expenses")
+				) {
+					ForEach(viewModel.schoolExpenseItems) { item in
+						ExpenseListCell(
+							expenseItem: item,
+							viewModel: ExpenseListCellViewModel(item: item)
+						)
+					}
+					.onDelete(perform: viewModel.deleteSchoolExpenses)
+				}
+				
+				Section(
+					header: Text("Other Expenses")
+				) {
+					ForEach(viewModel.otherExpenseItems) { item in
+						ExpenseListCell(
+							expenseItem: item,
+							viewModel: ExpenseListCellViewModel(item: item)
+						)
+					}
+					.onDelete(perform: viewModel.deleteOtherExpenses)
 				}
 			}
 			.navigationTitle("iExpense")
