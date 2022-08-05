@@ -26,7 +26,6 @@ struct AddExpenseView: View {
 						Text($0)
 					}
 				}
-				.pickerStyle(.inline)
 				
 				TextField("Amount", text: $viewModel.expenseAmount)
 					.keyboardType(.decimalPad)
