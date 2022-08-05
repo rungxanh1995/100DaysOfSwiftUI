@@ -21,49 +21,69 @@ struct ExpenseListView: View {
 				Section(
 					header: Text("Personal Expenses")
 				) {
-					ForEach(viewModel.personalExpenseItems) { item in
-						ExpenseListCell(
-							expenseItem: item,
-							viewModel: ExpenseListCellViewModel(item: item)
-						)
+					if viewModel.personalExpenseItems.isEmpty {
+						emptyExpenseText
+					} else {
+						ForEach(viewModel.personalExpenseItems) { item in
+							
+							ExpenseListCell(
+								expenseItem: item,
+								viewModel: ExpenseListCellViewModel(item: item)
+							)
+						}
+						.onDelete(perform: viewModel.deletePersonalExpenses)
 					}
-					.onDelete(perform: viewModel.deletePersonalExpenses)
 				}
 				
 				Section(
 					header: Text("Business Expenses")
 				) {
-					ForEach(viewModel.businessExpenseItems) { item in
-						ExpenseListCell(
-							expenseItem: item,
-							viewModel: ExpenseListCellViewModel(item: item)
-						)
+					
+					if viewModel.businessExpenseItems.isEmpty {
+						emptyExpenseText
+					} else {
+						ForEach(viewModel.businessExpenseItems) { item in
+							ExpenseListCell(
+								expenseItem: item,
+								viewModel: ExpenseListCellViewModel(item: item)
+							)
+						}
+						.onDelete(perform: viewModel.deleteBusinessExpenses)
 					}
-					.onDelete(perform: viewModel.deleteBusinessExpenses)
 				}
 				
 				Section(
 					header: Text("School Expenses")
 				) {
-					ForEach(viewModel.schoolExpenseItems) { item in
-						ExpenseListCell(
-							expenseItem: item,
-							viewModel: ExpenseListCellViewModel(item: item)
-						)
+					if viewModel.schoolExpenseItems.isEmpty {
+						emptyExpenseText
+					} else {
+						ForEach(viewModel.schoolExpenseItems) { item in
+							
+							ExpenseListCell(
+								expenseItem: item,
+								viewModel: ExpenseListCellViewModel(item: item)
+							)
+						}
+						.onDelete(perform: viewModel.deleteSchoolExpenses)
 					}
-					.onDelete(perform: viewModel.deleteSchoolExpenses)
 				}
 				
 				Section(
 					header: Text("Other Expenses")
 				) {
-					ForEach(viewModel.otherExpenseItems) { item in
-						ExpenseListCell(
-							expenseItem: item,
-							viewModel: ExpenseListCellViewModel(item: item)
-						)
+					if viewModel.otherExpenseItems.isEmpty {
+						emptyExpenseText
+					} else {
+						ForEach(viewModel.otherExpenseItems) { item in
+							
+							ExpenseListCell(
+								expenseItem: item,
+								viewModel: ExpenseListCellViewModel(item: item)
+							)
+						}
+						.onDelete(perform: viewModel.deleteOtherExpenses)
 					}
-					.onDelete(perform: viewModel.deleteOtherExpenses)
 				}
 			}
 			.navigationTitle("iExpense")
@@ -80,6 +100,19 @@ struct ExpenseListView: View {
 			}
 		}
     }
+}
+
+private extension ExpenseListView {
+	@ViewBuilder
+	private var emptyExpenseText: some View {
+		HStack {
+			Spacer()
+			Text("Nothing yet. Tap \(Image(systemName: "plus.rectangle.fill")) to add more")
+				.font(.system(.callout, design: .rounded))
+				.foregroundColor(.secondary)
+			Spacer()
+		}
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
