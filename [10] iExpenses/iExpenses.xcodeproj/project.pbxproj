@@ -86,12 +86,28 @@
 		2C3185E2289C6FD600B46A19 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				2C24C30E289ABA3900D6DBE3 /* ExpenseListView.swift */,
-				2C903F9F289CA248003E0840 /* ExpenseListCell.swift */,
-				2C341B35289D54A900A979CB /* ExpenseListCellViewModel.swift */,
-				2C96A609289C0C04004B5251 /* ExpenseListViewModel.swift */,
+				2C341B37289D59A700A979CB /* List */,
+				2C341B38289D59B100A979CB /* ListCell */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		2C341B37289D59A700A979CB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				2C24C30E289ABA3900D6DBE3 /* ExpenseListView.swift */,
+				2C96A609289C0C04004B5251 /* ExpenseListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		2C341B38289D59B100A979CB /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C903F9F289CA248003E0840 /* ExpenseListCell.swift */,
+				2C341B35289D54A900A979CB /* ExpenseListCellViewModel.swift */,
+			);
+			path = ListCell;
 			sourceTree = "<group>";
 		};
 		2C903F9E289C8F3F003E0840 /* Persistence */ = {
