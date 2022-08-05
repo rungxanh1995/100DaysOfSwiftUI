@@ -31,14 +31,14 @@ final class ExpenseListViewModel: ObservableObject {
 	@Published
 	private(set) var schoolExpenseItems: [ExpenseItem] = [] {
 		didSet {
-			businessPersistence.encodeAndSave(schoolExpenseItems)
+			schoolPersistence.encodeAndSave(schoolExpenseItems)
 		}
 	}
 	
 	@Published
 	private(set) var otherExpenseItems: [ExpenseItem] = [] {
 		didSet {
-			businessPersistence.encodeAndSave(otherExpenseItems)
+			otherPersistence.encodeAndSave(otherExpenseItems)
 		}
 	}
 	
