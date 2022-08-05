@@ -22,8 +22,8 @@ struct AddExpenseView: View {
 				TextField("Name", text: $viewModel.expenseName)
 				
 				Picker("Type", selection: $viewModel.expenseType) {
-					ForEach(viewModel.expenseTypes, id: \.self) {
-						Text($0)
+					ForEach(viewModel.expenseTypes, id: \.self) { expenseType in
+						Text(expenseType.rawValue)
 					}
 				}
 				

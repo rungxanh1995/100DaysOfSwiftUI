@@ -18,11 +18,11 @@ final class AddExpenseViewModel: ObservableObject {
 	var expenseName: String = ""
 	
 	@Published
-	var expenseType: String = "Personal"
+	var expenseType: ExpenseType = ExpenseType.personal
 	
 	@Published
 	var expenseAmount: String = ""
 	
-	let expenseTypes: [String] = ["Personal", "Work", "School", "Other"]
+	let expenseTypes: [ExpenseType] = ExpenseType.allCases
 
 }

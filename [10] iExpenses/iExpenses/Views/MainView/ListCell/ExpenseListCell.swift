@@ -19,7 +19,7 @@ struct ExpenseListCell: View {
 			VStack(alignment: .leading) {
 				Text(expenseItem.name)
 					.font(.system(.headline, design: .rounded))
-				Text(expenseItem.type)
+				Text(expenseItem.type.rawValue)
 					.font(.system(.caption2, design: .rounded))
 			}
 			
@@ -37,7 +37,7 @@ struct ExpenseListCell: View {
 
 struct ExpenseListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		let sampleItem = ExpenseItem(name: "Breakfast", type: "Personal", amount: 10.99)
+		let sampleItem = ExpenseItem(name: "Breakfast", type: ExpenseType.personal, amount: 10.99)
 		ExpenseListCell(
 			expenseItem: sampleItem,
 			viewModel: ExpenseListCellViewModel(
