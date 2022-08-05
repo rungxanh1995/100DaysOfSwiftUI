@@ -17,14 +17,30 @@ struct ExpenseListView: View {
 	
     var body: some View {
 		NavigationView {
-			List {
-				ForEach(viewModel.expenseItems) { item in
-					ExpenseListCell(
-						expenseItem: item,
-						viewModel: ExpenseListCellViewModel(item: item)
-					)
+			Form {
+				Section(
+					header: Text("Personal")
+				) {
+					ForEach(viewModel.personalExpenseItems) { item in
+						ExpenseListCell(
+							expenseItem: item,
+							viewModel: ExpenseListCellViewModel(item: item)
+						)
+					}
+					.onDelete(perform: viewModel.deletePersonalExpenses)
 				}
-				.onDelete(perform: viewModel.deleteExpenses)
+				
+				Section(
+					header: Text("Business")
+				) {
+					ForEach(viewModel.businessExpenseItems) { item in
+						ExpenseListCell(
+							expenseItem: item,
+							viewModel: ExpenseListCellViewModel(item: item)
+						)
+					}
+					.onDelete(perform: viewModel.deleteBusinessExpenses)
+				}
 			}
 			.navigationTitle("iExpense")
 			.toolbar {

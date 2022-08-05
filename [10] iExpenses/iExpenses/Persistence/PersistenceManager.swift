@@ -11,21 +11,27 @@ class PersistenceManager {
 	
 	private static let proxy = UserDefaults.standard
 	
-	private static var persistenceKey: String {
+	private let expenseType: ExpenseType
+	
+	init(expenseType: ExpenseType) {
+		self.expenseType = expenseType
+	}
+	
+	private var persistenceKey: String {
 		if type(of: Self.proxy) == UserDefaults.self {
-			return "iExpenses"
+			return "\(expenseType.rawValue).expenses"
 		}
 		
 		return "genericKey"
 	}
 	
-	static func encodeAndSave(_ items: [ExpenseItem]) -> Void {
+	func encodeAndSave(_ items: [ExpenseItem]) -> Void {
 		if let encoded = try? JSONEncoder().encode(items) {
 			Self.proxy.set(encoded, forKey: persistenceKey)
 		}
 	}
 	
-	static func decodeAndReturnSavedData<T: Decodable>(type: T.Type) -> T? {
+	func decodeAndReturnSavedDataOrNil<T: Decodable>(type: T.Type) -> T? {
 		if let data = Self.proxy.object(forKey: persistenceKey) as? Data,
 		   let object = try? JSONDecoder().decode(T.self, from: data) {
 			return object

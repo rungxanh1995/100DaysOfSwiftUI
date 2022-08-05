@@ -9,10 +9,20 @@ import Foundation
 
 final class ExpenseListViewModel: ObservableObject {
 	
+	private let personalPersistence = PersistenceManager(/* for: */ expenseType: .personal)
+	private let businessPersistence = PersistenceManager(/* for: */ expenseType: .business)
+	
 	@Published
-	private(set) var expenseItems: [ExpenseItem] = [] {
+	private(set) var personalExpenseItems: [ExpenseItem] = [] {
 		didSet {
-			PersistenceManager.encodeAndSave(expenseItems)
+			personalPersistence.encodeAndSave(personalExpenseItems)
+		}
+	}
+	
+	@Published
+	private(set) var businessExpenseItems: [ExpenseItem] = [] {
+		didSet {
+			businessPersistence.encodeAndSave(businessExpenseItems)
 		}
 	}
 	
@@ -23,14 +33,24 @@ final class ExpenseListViewModel: ObservableObject {
 	}
 	
 	fileprivate func loadSavedExpensesOrDefault() {
-		expenseItems = PersistenceManager
-			.decodeAndReturnSavedData(
-				type: [ExpenseItem].self
-			) ?? []
+		
+		personalExpenseItems = personalPersistence
+			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
+		
+		businessExpenseItems = businessPersistence
+			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
 	}
 	
 	func addExpense(_ newItem: ExpenseItem) -> Void {
-		expenseItems.append(newItem)
+		switch newItem.type {
+			case .personal:
+				personalExpenseItems.append(newItem)
+			case .business:
+				businessExpenseItems.append(newItem)
+			default:
+				// TODO: Handle more expense types here
+				break
+		}
 	}
 	
 	func addExpense(name: inout String, type: ExpenseType, amount: String) -> Void {
@@ -49,7 +69,11 @@ final class ExpenseListViewModel: ObservableObject {
 		return Double(amount) ?? 0.0
 	}
 	
-	func deleteExpenses(at offsets: IndexSet) -> Void {
-		expenseItems.remove(atOffsets: offsets)
+	func deletePersonalExpenses(at offsets: IndexSet) -> Void {
+		personalExpenseItems.remove(atOffsets: offsets)
+	}
+	
+	func deleteBusinessExpenses(at offsets: IndexSet) -> Void {
+		businessExpenseItems.remove(atOffsets: offsets)
 	}
 }
