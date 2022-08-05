@@ -19,7 +19,10 @@ struct ExpenseListView: View {
 		NavigationView {
 			List {
 				ForEach(viewModel.expenseItems) { item in
-					ExpenseListCell(expenseItem: item)
+					ExpenseListCell(
+						expenseItem: item,
+						viewModel: ExpenseListCellViewModel(item: item)
+					)
 				}
 				.onDelete(perform: viewModel.deleteExpenses)
 			}

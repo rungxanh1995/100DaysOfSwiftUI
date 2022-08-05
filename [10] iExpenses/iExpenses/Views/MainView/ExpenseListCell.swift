@@ -11,13 +11,16 @@ struct ExpenseListCell: View {
 	
 	let expenseItem: ExpenseItem
 	
+	@ObservedObject
+	var viewModel: ExpenseListCellViewModel
+	
 	var body: some View {
 		HStack {
 			VStack(alignment: .leading) {
 				Text(expenseItem.name)
-					.font(.headline)
+					.font(.system(.headline, design: .rounded))
 				Text(expenseItem.type)
-					.font(.caption2)
+					.font(.system(.caption2, design: .rounded))
 			}
 			
 			Spacer()
@@ -26,16 +29,20 @@ struct ExpenseListCell: View {
 				expenseItem.amount,
 				format: .currency(code: Locale.current.currencyCode ?? "USD")
 			)
-				.font(.caption)
-				.foregroundColor(.secondary)
+			.font(.system(.callout, design: .monospaced))
+			.foregroundColor(viewModel.colorForAmount)
 		}
 	}
 }
 
 struct ExpenseListCell_Previews: PreviewProvider {
 	static var previews: some View {
+		let sampleItem = ExpenseItem(name: "Breakfast", type: "Personal", amount: 10.99)
 		ExpenseListCell(
-			expenseItem: ExpenseItem(name: "Breakfast", type: "Personal", amount: 5.49)
+			expenseItem: sampleItem,
+			viewModel: ExpenseListCellViewModel(
+				item: sampleItem
+			)
 		)
 	}
 }
