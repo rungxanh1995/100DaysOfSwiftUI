@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		2C24C30D289ABA3900D6DBE3 /* iExpensesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C30C289ABA3900D6DBE3 /* iExpensesApp.swift */; };
-		2C24C30F289ABA3900D6DBE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C30E289ABA3900D6DBE3 /* ContentView.swift */; };
+		2C24C30F289ABA3900D6DBE3 /* ExpenseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C24C30E289ABA3900D6DBE3 /* ExpenseListView.swift */; };
 		2C24C311289ABA3900D6DBE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C310289ABA3900D6DBE3 /* Assets.xcassets */; };
 		2C24C314289ABA3900D6DBE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C24C313289ABA3900D6DBE3 /* Preview Assets.xcassets */; };
+		2C903F9D289C8DDB003E0840 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C903F9C289C8DDB003E0840 /* PersistenceManager.swift */; };
+		2C903FA0289CA248003E0840 /* ExpenseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C903F9F289CA248003E0840 /* ExpenseListCell.swift */; };
+		2C96A608289C0BDF004B5251 /* ExpenseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A607289C0BDF004B5251 /* ExpenseItem.swift */; };
+		2C96A60A289C0C05004B5251 /* ExpenseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A609289C0C04004B5251 /* ExpenseListViewModel.swift */; };
+		2C96A60D289C66F3004B5251 /* AddExpenseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A60C289C66F3004B5251 /* AddExpenseView.swift */; };
+		2C96A611289C6720004B5251 /* AddExpenseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A610289C6720004B5251 /* AddExpenseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C24C309289ABA3900D6DBE3 /* iExpenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C24C30C289ABA3900D6DBE3 /* iExpensesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iExpensesApp.swift; sourceTree = "<group>"; };
-		2C24C30E289ABA3900D6DBE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C24C30E289ABA3900D6DBE3 /* ExpenseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListView.swift; sourceTree = "<group>"; };
 		2C24C310289ABA3900D6DBE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C24C313289ABA3900D6DBE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C903F9C289C8DDB003E0840 /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
+		2C903F9F289CA248003E0840 /* ExpenseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListCell.swift; sourceTree = "<group>"; };
+		2C96A607289C0BDF004B5251 /* ExpenseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseItem.swift; sourceTree = "<group>"; };
+		2C96A609289C0C04004B5251 /* ExpenseListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseListViewModel.swift; sourceTree = "<group>"; };
+		2C96A60C289C66F3004B5251 /* AddExpenseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseView.swift; sourceTree = "<group>"; };
+		2C96A610289C6720004B5251 /* AddExpenseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				2C24C30C289ABA3900D6DBE3 /* iExpensesApp.swift */,
-				2C24C30E289ABA3900D6DBE3 /* ContentView.swift */,
+				2C903F9E289C8F3F003E0840 /* Persistence */,
+				2C96A60B289C64BA004B5251 /* Models */,
+				2C96A60E289C66F7004B5251 /* Views */,
 				2C24C310289ABA3900D6DBE3 /* Assets.xcassets */,
 				2C24C312289ABA3900D6DBE3 /* Preview Content */,
 			);
@@ -65,6 +79,50 @@
 				2C24C313289ABA3900D6DBE3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C3185E2289C6FD600B46A19 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				2C24C30E289ABA3900D6DBE3 /* ExpenseListView.swift */,
+				2C903F9F289CA248003E0840 /* ExpenseListCell.swift */,
+				2C96A609289C0C04004B5251 /* ExpenseListViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		2C903F9E289C8F3F003E0840 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2C903F9C289C8DDB003E0840 /* PersistenceManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		2C96A60B289C64BA004B5251 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C96A607289C0BDF004B5251 /* ExpenseItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C96A60E289C66F7004B5251 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C3185E2289C6FD600B46A19 /* MainView */,
+				2C96A60F289C6708004B5251 /* AddExpenseView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C96A60F289C6708004B5251 /* AddExpenseView */ = {
+			isa = PBXGroup;
+			children = (
+				2C96A60C289C66F3004B5251 /* AddExpenseView.swift */,
+				2C96A610289C6720004B5251 /* AddExpenseViewModel.swift */,
+			);
+			path = AddExpenseView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C24C30F289ABA3900D6DBE3 /* ContentView.swift in Sources */,
+				2C96A60A289C0C05004B5251 /* ExpenseListViewModel.swift in Sources */,
+				2C903F9D289C8DDB003E0840 /* PersistenceManager.swift in Sources */,
+				2C24C30F289ABA3900D6DBE3 /* ExpenseListView.swift in Sources */,
+				2C96A60D289C66F3004B5251 /* AddExpenseView.swift in Sources */,
+				2C903FA0289CA248003E0840 /* ExpenseListCell.swift in Sources */,
+				2C96A608289C0BDF004B5251 /* ExpenseItem.swift in Sources */,
 				2C24C30D289ABA3900D6DBE3 /* iExpensesApp.swift in Sources */,
+				2C96A611289C6720004B5251 /* AddExpenseViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +338,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,7 +367,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
