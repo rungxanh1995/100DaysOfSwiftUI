@@ -11,6 +11,8 @@ final class ExpenseListViewModel: ObservableObject {
 	
 	private let personalPersistence = PersistenceManager(/* for: */ expenseType: .personal)
 	private let businessPersistence = PersistenceManager(/* for: */ expenseType: .business)
+	private let schoolPersistence = PersistenceManager(/* for: */ expenseType: .school)
+	private let otherPersistence = PersistenceManager(/* for: */ expenseType: .other)
 	
 	@Published
 	private(set) var personalExpenseItems: [ExpenseItem] = [] {
@@ -23,6 +25,20 @@ final class ExpenseListViewModel: ObservableObject {
 	private(set) var businessExpenseItems: [ExpenseItem] = [] {
 		didSet {
 			businessPersistence.encodeAndSave(businessExpenseItems)
+		}
+	}
+	
+	@Published
+	private(set) var schoolExpenseItems: [ExpenseItem] = [] {
+		didSet {
+			businessPersistence.encodeAndSave(schoolExpenseItems)
+		}
+	}
+	
+	@Published
+	private(set) var otherExpenseItems: [ExpenseItem] = [] {
+		didSet {
+			businessPersistence.encodeAndSave(otherExpenseItems)
 		}
 	}
 	
@@ -39,6 +55,12 @@ final class ExpenseListViewModel: ObservableObject {
 		
 		businessExpenseItems = businessPersistence
 			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
+		
+		schoolExpenseItems = schoolPersistence
+			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
+		
+		otherExpenseItems = otherPersistence
+			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
 	}
 	
 	func addExpense(_ newItem: ExpenseItem) -> Void {
@@ -47,9 +69,10 @@ final class ExpenseListViewModel: ObservableObject {
 				personalExpenseItems.append(newItem)
 			case .business:
 				businessExpenseItems.append(newItem)
-			default:
-				// TODO: Handle more expense types here
-				break
+			case .school:
+				schoolExpenseItems.append(newItem)
+			case .other:
+				otherExpenseItems.append(newItem)
 		}
 	}
 	
@@ -75,5 +98,13 @@ final class ExpenseListViewModel: ObservableObject {
 	
 	func deleteBusinessExpenses(at offsets: IndexSet) -> Void {
 		businessExpenseItems.remove(atOffsets: offsets)
+	}
+	
+	func deleteSchoolExpenses(at offsets: IndexSet) -> Void {
+		schoolExpenseItems.remove(atOffsets: offsets)
+	}
+	
+	func deleteOtherExpenses(at offsets: IndexSet) -> Void {
+		otherExpenseItems.remove(atOffsets: offsets)
 	}
 }
