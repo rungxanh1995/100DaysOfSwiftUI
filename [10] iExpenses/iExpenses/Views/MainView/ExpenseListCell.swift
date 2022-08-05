@@ -22,7 +22,10 @@ struct ExpenseListCell: View {
 			
 			Spacer()
 			
-			Text(expenseItem.amount, format: .currency(code: "CAD"))
+			Text(
+				expenseItem.amount,
+				format: .currency(code: Locale.current.currencyCode ?? "USD")
+			)
 				.font(.caption)
 				.foregroundColor(.secondary)
 		}
