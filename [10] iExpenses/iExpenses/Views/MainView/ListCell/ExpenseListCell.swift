@@ -37,7 +37,13 @@ struct ExpenseListCell: View {
 
 struct ExpenseListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		let sampleItem = ExpenseItem(name: "Breakfast", type: ExpenseType.personal, amount: 10.99, currency: .CAD)
+		let sampleItem = ExpenseItem(
+			name: "Breakfast",
+			type: ExpenseType.personal,
+			amount: 10.99,
+			currency: .CAD,
+			notes: ""
+		)
 		ExpenseListCell(
 			expenseItem: sampleItem,
 			viewModel: ExpenseListCellViewModel(

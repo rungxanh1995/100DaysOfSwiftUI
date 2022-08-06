@@ -56,7 +56,8 @@ struct AddExpenseView: View {
 			name: &viewModel.expenseName,
 			type: viewModel.expenseType,
 			amount: viewModel.expenseAmount,
-			currency: viewModel.expenseCurrency
+			currency: viewModel.expenseCurrency,
+			notes: viewModel.expenseNotes
 		)
 		
 		dismissThisView()
