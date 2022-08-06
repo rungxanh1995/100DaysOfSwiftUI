@@ -15,12 +15,14 @@ struct ExpenseListCell: View {
 	var viewModel: ExpenseListCellViewModel
 	
 	var body: some View {
-		HStack {
+		HStack(alignment: .top) {
 			VStack(alignment: .leading) {
 				Text(expenseItem.name)
 					.font(.system(.headline, design: .rounded))
-				Text(expenseItem.type.rawValue)
+				Text(expenseItem.notes)
 					.font(.system(.caption2, design: .rounded))
+					.foregroundColor(.secondary)
+					.fixedSize(horizontal: false, vertical: true)
 			}
 			
 			Spacer()
@@ -29,7 +31,7 @@ struct ExpenseListCell: View {
 				expenseItem.amount,
 				format: .currency(code: expenseItem.currency.rawValue)
 			)
-			.font(.system(.callout, design: .monospaced))
+			.font(.system(.callout, design: .monospaced).bold())
 			.foregroundColor(viewModel.colorForAmount)
 		}
 	}
