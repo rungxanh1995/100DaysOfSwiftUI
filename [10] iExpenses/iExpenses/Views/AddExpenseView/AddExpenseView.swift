@@ -16,28 +16,50 @@ struct AddExpenseView: View {
 	@StateObject
 	var viewModel = AddExpenseViewModel()
 	
+	@State
+	private var autosizingTextFieldHeight: CGFloat = 0
+	
     var body: some View {
 		NavigationView {
 			Form {
-				TextField("Name", text: $viewModel.expenseName)
-				
-				Picker("Type", selection: $viewModel.expenseType) {
-					ForEach(viewModel.expenseTypes, id: \.self) { expenseType in
-						Text(expenseType.rawValue)
+				Section(
+					header: Text("General")
+				) {
+					TextField("Name", text: $viewModel.expenseName)
+					
+					Picker("Type", selection: $viewModel.expenseType) {
+						ForEach(viewModel.expenseTypes, id: \.self) { expenseType in
+							Text(expenseType.rawValue)
+						}
+					}
+					
+					HStack {
+						TextField("Amount", text: $viewModel.expenseAmount)
+							.keyboardType(.decimalPad)
+						
+						Picker("Currency", selection: $viewModel.expenseCurrency) {
+							ForEach(viewModel.expenseCurrencies, id: \.self) { expenseCurrency in
+								Text(expenseCurrency.rawValue)
+							}
+						}
+						.pickerStyle(.menu)
+						.labelsHidden()
 					}
 				}
 				
-				HStack {
-					TextField("Amount", text: $viewModel.expenseAmount)
-						.keyboardType(.decimalPad)
+				Section(
+					header: Text("Notes")
+				) {
+					let maxHeightOrDefault =
+					(autosizingTextFieldHeight <= AutosizingTextField.fixedHeight) ?
+					autosizingTextFieldHeight : AutosizingTextField.fixedHeight
 					
-					Picker("Currency", selection: $viewModel.expenseCurrency) {
-						ForEach(viewModel.expenseCurrencies, id: \.self) { expenseCurrency in
-							Text(expenseCurrency.rawValue)
-						}
-					}
-					.pickerStyle(.menu)
-					.labelsHidden()
+					AutosizingTextField(
+						text: $viewModel.expenseNotes,
+						hint: "Any extra notes...",
+						containerHeight: $autosizingTextFieldHeight
+					)
+					.frame(height: maxHeightOrDefault)
 				}
 			}
 			.navigationTitle("Add Expense")
