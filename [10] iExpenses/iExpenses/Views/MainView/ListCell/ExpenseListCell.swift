@@ -19,10 +19,13 @@ struct ExpenseListCell: View {
 			VStack(alignment: .leading) {
 				Text(expenseItem.name)
 					.font(.system(.headline, design: .rounded))
-				Text(expenseItem.notes)
-					.font(.system(.caption2, design: .rounded))
-					.foregroundColor(.secondary)
-					.fixedSize(horizontal: false, vertical: true)
+				
+				if viewModel.itemHasNotes {
+					Text(expenseItem.notes)
+						.font(.system(.caption2, design: .rounded))
+						.foregroundColor(.secondary)
+						.fixedSize(horizontal: false, vertical: true)
+				}
 			}
 			
 			Spacer()

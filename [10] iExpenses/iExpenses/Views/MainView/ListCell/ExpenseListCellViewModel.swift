@@ -10,6 +10,9 @@ import SwiftUI
 class ExpenseListCellViewModel: ObservableObject {
 	
 	private(set) var expenseItem: ExpenseItem
+	var itemHasNotes: Bool {
+		return expenseItem.notes != ""
+	}
 	
 	init(item: ExpenseItem) {
 		self.expenseItem = item
