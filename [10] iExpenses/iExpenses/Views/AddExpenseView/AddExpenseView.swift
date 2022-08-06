@@ -27,8 +27,18 @@ struct AddExpenseView: View {
 					}
 				}
 				
-				TextField("Amount", text: $viewModel.expenseAmount)
-					.keyboardType(.decimalPad)
+				HStack {
+					TextField("Amount", text: $viewModel.expenseAmount)
+						.keyboardType(.decimalPad)
+					
+					Picker("Currency", selection: $viewModel.expenseCurrency) {
+						ForEach(viewModel.expenseCurrencies, id: \.self) { expenseCurrency in
+							Text(expenseCurrency.rawValue)
+						}
+					}
+					.pickerStyle(.menu)
+					.labelsHidden()
+				}
 			}
 			.navigationTitle("Add Expense")
 			.toolbar {
@@ -45,7 +55,8 @@ struct AddExpenseView: View {
 		expenseListViewModel.addExpense(
 			name: &viewModel.expenseName,
 			type: viewModel.expenseType,
-			amount: viewModel.expenseAmount
+			amount: viewModel.expenseAmount,
+			currency: viewModel.expenseCurrency
 		)
 		
 		dismissThisView()

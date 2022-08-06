@@ -12,4 +12,7 @@ struct ExpenseItem: Codable, Identifiable {
 	let name: String
 	let type: ExpenseType
 	let amount: Double
+	let currency: ExpenseCurrency
 }
+
+

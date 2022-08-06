@@ -23,6 +23,9 @@ final class AddExpenseViewModel: ObservableObject {
 	@Published
 	var expenseAmount: String = ""
 	
+	@Published
+	var expenseCurrency: ExpenseCurrency = .CAD
+	
 	let expenseTypes: [ExpenseType] = ExpenseType.allCases
-
+	let expenseCurrencies: [ExpenseCurrency] = ExpenseCurrency.allCases
 }

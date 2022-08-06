@@ -76,11 +76,11 @@ final class ExpenseListViewModel: ObservableObject {
 		}
 	}
 	
-	func addExpense(name: inout String, type: ExpenseType, amount: String) -> Void {
+	func addExpense(name: inout String, type: ExpenseType, amount: String, currency: ExpenseCurrency) -> Void {
 		assignDefaultExpenseName(to: &name)
 		let convertedAmount = handleExpenseAmountOrDefault(amount)
 		
-		let newItem = ExpenseItem(name: name, type: type, amount: convertedAmount)
+		let newItem = ExpenseItem(name: name, type: type, amount: convertedAmount, currency: currency)
 		addExpense(newItem)
 	}
 	

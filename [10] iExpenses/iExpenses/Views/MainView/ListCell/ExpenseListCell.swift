@@ -27,7 +27,7 @@ struct ExpenseListCell: View {
 			
 			Text(
 				expenseItem.amount,
-				format: .currency(code: Locale.current.currencyCode ?? "USD")
+				format: .currency(code: expenseItem.currency.rawValue)
 			)
 			.font(.system(.callout, design: .monospaced))
 			.foregroundColor(viewModel.colorForAmount)
@@ -37,7 +37,7 @@ struct ExpenseListCell: View {
 
 struct ExpenseListCell_Previews: PreviewProvider {
 	static var previews: some View {
-		let sampleItem = ExpenseItem(name: "Breakfast", type: ExpenseType.personal, amount: 10.99)
+		let sampleItem = ExpenseItem(name: "Breakfast", type: ExpenseType.personal, amount: 10.99, currency: .CAD)
 		ExpenseListCell(
 			expenseItem: sampleItem,
 			viewModel: ExpenseListCellViewModel(
