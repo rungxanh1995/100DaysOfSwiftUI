@@ -69,4 +69,4 @@ Implementation of extra concepts beyond the scope of its original tutorial were 
 </table>
 
 ## Screenshot
-![Screenshot](screenshots/screenshot.jpg)
+![Screenshot](screenshots/screenshot.png)
