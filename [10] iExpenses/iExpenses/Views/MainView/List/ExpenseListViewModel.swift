@@ -63,7 +63,15 @@ final class ExpenseListViewModel: ObservableObject {
 			.decodeAndReturnSavedDataOrNil(type: [ExpenseItem].self) ?? []
 	}
 	
-	func addExpense(_ newItem: ExpenseItem) -> Void {
+	func addExpense(name: inout String, type: ExpenseType, amount: String, currency: ExpenseCurrency, notes: String) -> Void {
+		assignDefaultExpenseName(to: &name)
+		let convertedAmount = handleExpenseAmountOrDefault(amount)
+		
+		let newItem = ExpenseItem(name: name, type: type, amount: convertedAmount, currency: currency, notes: notes)
+		addExpense(newItem)
+	}
+	
+	private func addExpense(_ newItem: ExpenseItem) -> Void {
 		switch newItem.type {
 			case .personal:
 				personalExpenseItems.append(newItem)
@@ -74,14 +82,6 @@ final class ExpenseListViewModel: ObservableObject {
 			case .other:
 				otherExpenseItems.append(newItem)
 		}
-	}
-	
-	func addExpense(name: inout String, type: ExpenseType, amount: String, currency: ExpenseCurrency, notes: String) -> Void {
-		assignDefaultExpenseName(to: &name)
-		let convertedAmount = handleExpenseAmountOrDefault(amount)
-		
-		let newItem = ExpenseItem(name: name, type: type, amount: convertedAmount, currency: currency, notes: notes)
-		addExpense(newItem)
 	}
 	
 	fileprivate func assignDefaultExpenseName(to name: inout String) {
