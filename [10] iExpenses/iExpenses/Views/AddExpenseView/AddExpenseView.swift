@@ -11,10 +11,7 @@ struct AddExpenseView: View {
 	@Environment(\.dismiss) var dismissThisView
 	
 	@ObservedObject
-	var expenseListViewModel: ExpenseListViewModel
-	
-	@StateObject
-	var viewModel = AddExpenseViewModel()
+	var viewModel: AddExpenseViewModel
 	
 	@State
 	private var autosizingTextFieldHeight: CGFloat = 0
@@ -74,7 +71,7 @@ struct AddExpenseView: View {
 	
 	func addNewExpenseAndDismissView() -> Void {
 		
-		expenseListViewModel.addExpense(
+		viewModel.addExpense(
 			name: &viewModel.expenseName,
 			type: viewModel.expenseType,
 			amount: viewModel.expenseAmount,
@@ -88,6 +85,10 @@ struct AddExpenseView: View {
 
 struct AddExpenseView_Previews: PreviewProvider {
     static var previews: some View {
-        AddExpenseView(expenseListViewModel: ExpenseListViewModel())
+		AddExpenseView(
+			viewModel: AddExpenseViewModel(
+				parentVM: ExpenseListViewModel()
+			)
+		)
     }
 }

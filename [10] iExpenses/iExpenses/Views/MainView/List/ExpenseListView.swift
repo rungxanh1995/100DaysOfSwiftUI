@@ -96,7 +96,11 @@ struct ExpenseListView: View {
 				.buttonStyle(.bordered)
 			}
 			.sheet(isPresented: $isShowingAddExpenseView) {
-				AddExpenseView(expenseListViewModel: viewModel)
+				AddExpenseView(
+					viewModel: AddExpenseViewModel(
+						parentVM: viewModel
+					)
+				)
 			}
 		}
     }

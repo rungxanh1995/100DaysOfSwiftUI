@@ -14,6 +14,12 @@ import Foundation
 /// is done by `ExpenseListViewModel` instead, using `@ObservedObject`
 final class AddExpenseViewModel: ObservableObject {
 	
+	private let listViewModel: ExpenseListViewModel
+	
+	init(parentVM: ExpenseListViewModel) {
+		self.listViewModel = parentVM
+	}
+	
 	@Published
 	var expenseName: String = ""
 	
@@ -31,4 +37,10 @@ final class AddExpenseViewModel: ObservableObject {
 	
 	let expenseTypes: [ExpenseType] = ExpenseType.allCases
 	let expenseCurrencies: [ExpenseCurrency] = ExpenseCurrency.allCases
+	
+	func addExpense(
+		name: inout String, type: ExpenseType, amount: String, currency: ExpenseCurrency, notes: String
+	) -> Void {
+		listViewModel.addExpense(name: &name, type: type, amount: amount, currency: currency, notes: notes)
+	}
 }
