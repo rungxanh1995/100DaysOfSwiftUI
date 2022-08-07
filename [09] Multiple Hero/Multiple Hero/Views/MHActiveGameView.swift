@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MHActiveGameView: View {
 	
-	@Binding
+	@EnvironmentObject
 	var game: MHGame
 	
 	@State
@@ -25,6 +25,8 @@ struct MHActiveGameView: View {
 			if game.isGameActive {
 				
 				gameMascotView
+				miniScoreView
+					.padding(.bottom, 50)
 				
 				ZStack {
 					currentQuestionAwaitingAnswerView
@@ -33,7 +35,7 @@ struct MHActiveGameView: View {
 				}
 				
 				MHKeypadView() { action in
-					MHKeypadActionHandler(game: $game)
+					MHKeypadActionHandler(currentGame: game)
 						.didTapButton(perform: action)
 				}
 			}
@@ -54,8 +56,29 @@ extension MHActiveGameView {
 	private var gameMascotView: some View {
 		Image(game.randomMascotName)
 			.shadow(radius: 5, x: 0, y: 5)
-			.padding(.bottom, 100)
+			.padding(.bottom, 20)
 			.wiggling()
+	}
+	
+	@ViewBuilder
+	private var miniScoreView: some View {
+		VStack(spacing: 0) {
+			Text("You got")
+				.font(.system(.body, design: .rounded).bold())
+				.foregroundColor(.primary)
+			
+			HStack {
+				Text("\(game.userProgress.score)")
+				Text(game.userProgress.score > 1 ? "points" : "point")
+			}
+			.font(.system(.title, design: .rounded).bold())
+				.foregroundColor(.primary)
+		}
+		.foregroundColor(.white)
+		.padding()
+		.background(.thinMaterial)
+		.clipShape(RoundedRectangle(cornerRadius: 30))
+		.shadow(radius: 5)
 	}
 	
 	@ViewBuilder
@@ -72,7 +95,7 @@ extension MHActiveGameView {
 	
 	@ViewBuilder
 	private var roundEndScoreView: some View {
-		let scoreString = "\(game.userScore)/\(game.questions.count)"
+		let scoreString = "\(game.userProgress.score)/\(game.maxQuestionsEachGame)"
 		VStack {
 			Text("🎉")
 				.font(.system(size: 80))
@@ -126,6 +149,7 @@ extension MHActiveGameView {
 
 struct MHActiveGameView_Previews: PreviewProvider {
     static var previews: some View {
-		StatefulPreviewWrapper(MHGame()) { MHActiveGameView(game: $0) }
+		MHActiveGameView()
+			.environmentObject(MHGame())
     }
 }

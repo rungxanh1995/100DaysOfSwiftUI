@@ -13,7 +13,7 @@ protocol QuizGameProtocol {
 	// MARK: Properties
 	var maxQuestionsEachGame: Int { get set }
 	var numGuessesEachGame: Int { get set }
-	var userScore: Int { get }
+	var userProgress: UserProgress { get }
 	
 	// MARK: Functionality
 	func checkIfGameOver() -> Bool

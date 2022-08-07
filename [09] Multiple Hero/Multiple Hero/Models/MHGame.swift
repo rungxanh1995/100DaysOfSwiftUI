@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct MHGame: QuizGameProtocol {
+class MHGame: QuizGameProtocol, ObservableObject {
 	
-	var isAskingForSettings = true  // start game with settings view
-	var isGameActive = false
+	@Published var isAskingForSettings = true  // start game with settings view
+	@Published var isGameActive = false
 	
 	static let reasonableMultiplicationRange: ClosedRange<Int> = 2...12
-	var selectedMultiplicationTable: Int = 2
+	@Published var selectedMultiplicationTable: Int = 2
 	
 	static let numberOfQuestionsOptions: [Int] = [5, 10, 20]
 	internal var maxQuestionsEachGame: Int = 5
@@ -21,15 +21,14 @@ struct MHGame: QuizGameProtocol {
 	
 	private(set) var randomMascotName = MHMascot.randomMascotName()
 	private(set) var questions: [MHQuestion] = []
-	private(set) var currentQuestion = 0
 	
-	var playerAnswer = ""
-	var userScore: Int = 0
+	@Published var playerAnswer = ""
+	private(set) var userProgress: UserProgress = UserProgress()
 	
-	var animatingIncreaseScore = false
-	var animatingDecreaseScore = false
+	@Published var animatingIncreaseScore = false
+	@Published var animatingDecreaseScore = false
 	
-	mutating func generateNewQuestions() -> Void {
+	func generateNewQuestions() -> Void {
 		questions = MHQuestion.allQuestions(
 			tablesUpTo: selectedMultiplicationTable,
 			numQuestions: maxQuestionsEachGame
@@ -38,37 +37,34 @@ struct MHGame: QuizGameProtocol {
 	
 	func getCurrentQuestion() -> MHQuestion {
 		// Questions should be pre-generated when game started
-		return questions.element(at: currentQuestion)!
+		return questions.element(at: userProgress.currentQuestion)!
 	}
 	
-	mutating func resetCurrentQuestion() -> Void {
-		self.currentQuestion = 0
-	}
-	
-	mutating private func incrementCurrentQuestion() -> Void {
-		self.currentQuestion += 1
+	func resetCurrentQuestion() -> Void {
+		userProgress.resetCurrentQuestion()
 	}
 	
 	func checkIfGameOver() -> Bool {
-		if currentQuestion < questions.count - 1 {
+		if userProgress.currentQuestion < questions.count - 1 {
 			return false
 		} else {
 			return true
 		}
 	}
 	
-	mutating func decideRoundIsOver() {
+	func decideRoundIsOver() {
 		if checkIfGameOver() == true {
 			isGameActive = false
 		}
 	}
 	
-	mutating func askNewQuestion() {
-		incrementCurrentQuestion()
+	func askNewQuestion() {
+		userProgress.incrementCurrentQuestion()
 	}
 	
-	mutating func reset() -> Void {
-		userScore = 0
+	func reset() -> Void {
+		userProgress.resetScore()
+		userProgress.resetCurrentQuestion()
 		numGuessesEachGame = 0
 		playerAnswer = ""
 		
@@ -76,17 +72,16 @@ struct MHGame: QuizGameProtocol {
 		isGameActive = false
 		
 		generateNewQuestions()
-		resetCurrentQuestion()
 		getAnotherRandomMascotName()
 	}
 	
-	mutating func updateScore(basedOn guessResult: Bool) {
+	func updateScore(basedOn guessResult: Bool) {
 		if guessResult == true {
-			userScore += 1
+			userProgress.incrementScore()
 		}
 	}
 	
-	mutating func getAnotherRandomMascotName() -> Void {
+	func getAnotherRandomMascotName() -> Void {
 		randomMascotName = MHMascot.randomMascotName()
 	}
 }
