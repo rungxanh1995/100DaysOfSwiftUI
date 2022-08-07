@@ -26,7 +26,7 @@ struct AddExpenseView: View {
 					
 					Picker("Type", selection: $viewModel.expenseType) {
 						ForEach(viewModel.expenseTypes, id: \.self) { expenseType in
-							Text(expenseType.rawValue)
+							Text(expenseType.rawValue.localized())
 						}
 					}
 					
@@ -53,7 +53,7 @@ struct AddExpenseView: View {
 					
 					AutosizingTextField(
 						text: $viewModel.expenseNotes,
-						hint: "Any extra notes...",
+						hint: "Any extra notes...".localized(),
 						containerHeight: $autosizingTextFieldHeight
 					)
 					.frame(height: maxHeightOrDefault)

@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  iExpenses
+
+  Created by Joe Pham on 2022-08-07.
+  
+*/
+
+/* Main View */
+"Personal Expenses" = "Chi tiêu Cá nhân";
+"Business Expenses" = "Chi tiêu Công việc";
+"School Expenses" = "Chi tiêu Học tập";
+"Other Expenses" = "Chi tiêu Khác";
+
+"Nothing yet. Tap %@ to add more" = "Chưa có chi tiêu nào. Chạm %@ để thêm";
+
+/* Add View */
+"Add Expense" = "Thêm Chi tiêu";
+"General" = "Thông tin Chung";
+"Name" = "Tên";
+"Type" = "Thể loại";
+"Amount" = "Giá trị";
+"Currency" = "Tiền tệ";
+"Notes" = "Ghi chú";
+"Any extra notes..." = "Bổ sung thêm ghi chú...";
+
+/* Add View - Types */
+"Personal" = "Cá nhân";
+"Business" = "Công việc";
+"School" = "Học tập";
+"Other" = "Khác";

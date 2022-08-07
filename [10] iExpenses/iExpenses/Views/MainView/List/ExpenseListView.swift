@@ -109,9 +109,12 @@ struct ExpenseListView: View {
 private extension ExpenseListView {
 	@ViewBuilder
 	private var emptyExpenseText: some View {
+		
+		let emptyExpenseListSentence: LocalizedStringKey = "Nothing yet. Tap \(Image(systemName: "plus.rectangle.fill")) to add more"
+		
 		HStack {
 			Spacer()
-			Text("Nothing yet. Tap \(Image(systemName: "plus.rectangle.fill")) to add more")
+			Text(emptyExpenseListSentence)
 				.font(.system(.callout, design: .rounded))
 				.foregroundColor(.secondary)
 			Spacer()
