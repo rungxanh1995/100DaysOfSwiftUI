@@ -14,6 +14,7 @@
 "LENGTH" = "Length";
 "TIME" = "Time";
 "VOLUME" = "Volume";
+"WEIGHT" = "Weight";
 
 /* Convert From Section */
 "CONVERT_FROM_HEADER" = "Convert from";
@@ -47,5 +48,9 @@
 "LITERS" = "L";
 "CUPS" = "cups";
 "OUNCES" = "oz";
+
+/* Weight */
+"KILOGRAMS" = "kilograms";
+"POUNDS" = "pounds";
 
 "KEYBOARD_BUTTON_DONE" = "Done";

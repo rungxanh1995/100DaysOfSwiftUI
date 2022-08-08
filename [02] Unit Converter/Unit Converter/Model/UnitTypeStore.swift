@@ -15,6 +15,7 @@ struct UnitTypeStore {
 		data.append(LengthUnit.self)
 		data.append(TimeUnit.self)
 		data.append(VolumeUnit.self)
+		data.append(WeightUnit.self)
 		return data
 	}()
 }
