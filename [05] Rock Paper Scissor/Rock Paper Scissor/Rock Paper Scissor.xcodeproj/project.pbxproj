@@ -11,6 +11,7 @@
 		2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */; };
 		2C55C9D12883986A00BD9538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D02883986A00BD9538 /* Assets.xcassets */; };
 		2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */; };
+		2C695A6428A1B59900E4F4AE /* RPSGameplayHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */; };
 		2CA3F81C28878A1D00EB73AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F81E28878A1D00EB73AD /* Localizable.strings */; };
 		2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */; };
 		2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */; };
@@ -42,6 +43,7 @@
 		2C55C9CE2883986900BD9538 /* RPSEntireGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSEntireGameView.swift; sourceTree = "<group>"; };
 		2C55C9D02883986A00BD9538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameplayHelpView.swift; sourceTree = "<group>"; };
 		2CA3F81D28878A1D00EB73AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CA3F81F28878A2000EB73AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2CA3F82028878A2100EB73AD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				2CDDE16028860818002E1914 /* RPSGestureSelectionView.swift */,
 				2CDDE15D2886073E002E1914 /* RPSScoreView.swift */,
 				2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */,
+				2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				2CDDE14D2885EE07002E1914 /* RPSGestureType.swift in Sources */,
 				2CDDE16328860862002E1914 /* RPSGameOverView.swift in Sources */,
 				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
+				2C695A6428A1B59900E4F4AE /* RPSGameplayHelpView.swift in Sources */,
 				2CDDE15C28860422002E1914 /* RPSGameModeView.swift in Sources */,
 				2C55C9CD2883986900BD9538 /* Rock_Paper_ScissorApp.swift in Sources */,
 				2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */,

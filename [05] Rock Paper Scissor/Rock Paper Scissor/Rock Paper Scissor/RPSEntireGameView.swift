@@ -12,6 +12,9 @@ struct RPSEntireGameView: View {
 	@State
 	private var currentGame: RPSGame = RPSGame()
 	
+	@State
+	private var isShowingHelpView = false
+	
 	var body: some View {
 		let isGameOver = currentGame.checkIfGameOver()
 		
@@ -27,7 +30,15 @@ struct RPSEntireGameView: View {
 					RPSGameOverView(game: $currentGame)
 				}
 				Spacer()
-				RPSScoreView(score: currentGame.userScore)
+				HStack {
+					gameplayInfoButton
+						.offset(x: 20)
+						
+					Spacer()
+					RPSScoreView(score: currentGame.userScore)
+					Spacer()
+					hiddenPlaceholderButton
+				}
 			}
 		}
 		.alert(
@@ -40,6 +51,34 @@ struct RPSEntireGameView: View {
 			)
 		} message: {
 			Text(currentGame.scoreAlert.message)
+		}
+		.sheet(isPresented: $isShowingHelpView) {
+			RPSGameplayHelpView()
+		}
+	}
+}
+
+private extension RPSEntireGameView {
+	
+	@ViewBuilder
+	var gameplayInfoButton: some View {
+		Button {
+			isShowingHelpView.toggle()
+		} label: {
+			Image(systemName: "info.circle.fill")
+				.font(.title)
+				.foregroundColor(.white)
+		}
+	}
+	
+	/// A hidden button that does nothing,
+	/// used as a workaround to center the score view at bottom of main game view
+	@ViewBuilder
+	var hiddenPlaceholderButton: some View {
+		Button { } label: {
+			Image(systemName: "face.smiling")
+				.font(.title)
+				.hidden()
 		}
 	}
 }
