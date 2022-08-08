@@ -9,11 +9,13 @@
 "APP_NAME" = "Đổi Đơn vị";
 
 /* Unit Type */
+"Unit type to convert:" = "Đơn vị đo để chuyển đổi:";
 "CHOOSE_UNIT_LABEL" = "Chọn Đơn vị";
 "TEMPERATURE" = "Nhiệt độ";
 "LENGTH" = "Độ dài";
 "TIME" = "Thời gian";
 "VOLUME" = "Thể tích";
+"WEIGHT" = "Khối lượng";
 
 /* Convert From Section */
 "CONVERT_FROM_HEADER" = "Đổi từ";
@@ -47,5 +49,9 @@
 "LITERS" = "lít";
 "CUPS" = "cup";
 "OUNCES" = "oz";
+
+/* Weight */
+"KILOGRAMS" = "kilogam";
+"POUNDS" = "pound";
 
 "KEYBOARD_BUTTON_DONE" = "Xong";
