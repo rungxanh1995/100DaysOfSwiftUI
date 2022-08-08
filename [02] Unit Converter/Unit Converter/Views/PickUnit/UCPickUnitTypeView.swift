@@ -16,20 +16,27 @@ struct UCPickUnitTypeView: View {
 		Section(
 			header: Text("CHOOSE_UNIT_LABEL".localized())
 		) {
-			Picker(
-				"CHOOSE_UNIT_LABEL".localized(),
-				selection: $unitSelected
-			) {
-				ForEach(0..<units.count, id: \.self) {
-					Text(
-						units
-							.element(at: $0)
-							.name
-							.localized()
-					)
+			HStack {
+				Text("Unit type to convert:")
+				
+				Spacer()
+				
+				Picker(
+					"CHOOSE_UNIT_LABEL".localized(),
+					selection: $unitSelected
+				) {
+					ForEach(0..<units.count, id: \.self) {
+						Text(
+							units
+								.element(at: $0)
+								.name
+								.localized()
+						)
+					}
 				}
+				.pickerStyle(.menu)
+				.labelsHidden()
 			}
-			.pickerStyle(.segmented)
 		}
     }
 }
