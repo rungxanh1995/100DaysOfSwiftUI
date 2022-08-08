@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C5FE3BD28A1B07300AB748C /* WeightUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5FE3BC28A1B07300AB748C /* WeightUnit.swift */; };
 		2CE813122880766400640396 /* Unit_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813112880766400640396 /* Unit_ConverterApp.swift */; };
 		2CE813142880766400640396 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE813132880766400640396 /* ContentView.swift */; };
 		2CE813162880766500640396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE813152880766500640396 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C5FE3BC28A1B07300AB748C /* WeightUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUnit.swift; sourceTree = "<group>"; };
 		2CE8130E2880766400640396 /* Unit Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE813112880766400640396 /* Unit_ConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit_ConverterApp.swift; sourceTree = "<group>"; };
 		2CE813132880766400640396 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C5FE3BB28A1B06200AB748C /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				2C5FE3BC28A1B07300AB748C /* WeightUnit.swift */,
+			);
+			path = Weight;
+			sourceTree = "<group>";
+		};
 		2CE813052880766400640396 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +131,7 @@
 				2CE8134528808F3000640396 /* Length */,
 				2CE8134828808F9500640396 /* Time */,
 				2CE8134D2880906300640396 /* Volume */,
+				2C5FE3BB28A1B06200AB748C /* Weight */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +297,7 @@
 				2CE813142880766400640396 /* ContentView.swift in Sources */,
 				2CE813122880766400640396 /* Unit_ConverterApp.swift in Sources */,
 				2CE8133A2880888800640396 /* UCPickUnitTypeView.swift in Sources */,
+				2C5FE3BD28A1B07300AB748C /* WeightUnit.swift in Sources */,
 				2CE8134A28808FA600640396 /* TimeUnit.swift in Sources */,
 				2CE8134428808C9B00640396 /* UCUnit.swift in Sources */,
 				2CE8134F288091AB00640396 /* UnitTypeStore.swift in Sources */,
