@@ -28,3 +28,7 @@
 "Continue" = "Tiếp tục";
 "Dismiss" = "Bỏ qua";
 "New Game" = "Game Mới";
+
+/* Gameplay Help */
+"About This Game" = "Giới thiệu Trò chơi";
+"RPS (Rock-Paper-Scissors) is not your conventional RPS game. This game asks you to either play to win, or play to lose each round.\n\nA randomly selected move by the app is presented at the top, your task is to select one of the 3 hand gestures underneath to win/lose the offered gesture." = "RPS (Bao-Búa-Kéo) không phải chỉ là trò chơi mà bạn đã biết trước đây. Trong mỗi vòng chơi, bạn chơi để thắng hoặc thua.\n\nMột nước đi ngẫu nhiên sẽ hiển thị cho bạn ở bên trên, nhiệm vụ của bạn là chọn một trong 3 nước đi phía dưới để thắng/thua.";
