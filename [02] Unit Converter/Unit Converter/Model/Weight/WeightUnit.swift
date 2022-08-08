@@ -12,5 +12,5 @@ struct WeightUnit: UnitType {
 	static let units = [kilograms, pounds]
 	
 	private static let kilograms = UCUnit(name: "KILOGRAMS", unit: UnitMass.kilograms)
-	private static let pounds = UCUnit(name: "POUNDS", unit: UnitMass.ounces)
+	private static let pounds = UCUnit(name: "POUNDS", unit: UnitMass.pounds)
 }
