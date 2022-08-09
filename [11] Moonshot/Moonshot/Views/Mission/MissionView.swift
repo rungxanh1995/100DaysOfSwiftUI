@@ -16,11 +16,8 @@ struct MissionView: View {
 		GeometryReader { geometry in
 			ScrollView {
 				VStack {
-					Image(viewModel.mission.imageName)
-						.resizable()
-						.scaledToFit()
+					MissionImageView(mission: viewModel.mission)
 						.frame(maxWidth: geometry.size.width * 0.6)
-						.padding(.top)
 					
 					/// Divider
 					Rectangle()
