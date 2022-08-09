@@ -39,7 +39,7 @@ struct AstronautView: View {
 }
 
 struct AstronautView_Previews: PreviewProvider {
-	static private let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts", withExtension: "json")
+	static private let astronauts: [String: Astronaut] = Astronauts.allAstronauts
 	
     static var previews: some View {
 		AstronautView(
