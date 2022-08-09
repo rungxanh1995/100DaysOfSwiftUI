@@ -33,11 +33,9 @@ struct HomeView: View {
 							)
 						) {
 							VStack {
-								Image(eachMission.imageName)
-									.resizable()
-									.scaledToFit()
-									.frame(width: 100, height: 100)
-									.padding()
+								MissionListImageView(
+									mission: eachMission
+								)
 								
 								MissionListLabelView(
 									viewModel: MissionListLabelViewModel(
