@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct AstronautView: View {
-	let astronaut: Astronaut
+	
+	@ObservedObject
+	var viewModel: AstronautViewModel
 	
     var body: some View {
 		GeometryReader { geoProxy in
 			ScrollView {
 				VStack {
-					Image(astronaut.id)
+					Image(viewModel.astronaut.id)
 						.resizable()
 						.scaledToFit()
 						.clipShape(RoundedRectangle(cornerRadius: 16))
@@ -24,14 +26,14 @@ struct AstronautView: View {
 								.stroke(.moonshotLightColor)
 						)
 					
-					Text(astronaut.description)
+					Text(viewModel.astronaut.description)
 						.font(.system(.body, design: .serif))
 						.padding()
 				}
 			}
 		}
 		.background(.moonshotDarkColor)
-		.navigationTitle(astronaut.name)
+		.navigationTitle(viewModel.astronaut.name)
 		.navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -40,7 +42,9 @@ struct AstronautView_Previews: PreviewProvider {
 	static private let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts", withExtension: "json")
 	
     static var previews: some View {
-		AstronautView(astronaut: astronauts["white"]!)
-			.preferredColorScheme(.dark)
+		AstronautView(
+			viewModel: AstronautViewModel(astronaut: astronauts["white"]!)
+		)
+		.preferredColorScheme(.dark)
     }
 }
