@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 	
-	let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts", withExtension: "json")
-	let missions: [Mission] = Bundle.main.decode("missions", withExtension: "json")
+	@StateObject
+	var viewModel: HomeViewModel = HomeViewModel()
 	
 	let columns = [
 		GridItem(.adaptive(minimum: 150))
@@ -20,11 +20,11 @@ struct ContentView: View {
 		NavigationView {
 			ScrollView {
 				LazyVGrid(columns: columns) {
-					ForEach(missions) { eachMission in
+					ForEach(viewModel.missions) { eachMission in
 						NavigationLink(
 							destination: MissionView(
 								mission: eachMission,
-								astronauts: astronauts
+								astronauts: viewModel.astronauts
 							)
 						) {
 							VStack {
