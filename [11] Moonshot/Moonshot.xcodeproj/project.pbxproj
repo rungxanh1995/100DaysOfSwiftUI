@@ -131,10 +131,18 @@
 		2CBF61EA28A323B2006CC7F8 /* Home List Item */ = {
 			isa = PBXGroup;
 			children = (
+				2CBF61ED28A32598006CC7F8 /* Label */,
+			);
+			path = "Home List Item";
+			sourceTree = "<group>";
+		};
+		2CBF61ED28A32598006CC7F8 /* Label */ = {
+			isa = PBXGroup;
+			children = (
 				2CBF61E828A3234D006CC7F8 /* MissionListLabelView.swift */,
 				2CBF61EB28A323E5006CC7F8 /* MissionListLabelViewModel.swift */,
 			);
-			path = "Home List Item";
+			path = Label;
 			sourceTree = "<group>";
 		};
 		2CE604F328A1EE8F00899F36 /* JSON */ = {
