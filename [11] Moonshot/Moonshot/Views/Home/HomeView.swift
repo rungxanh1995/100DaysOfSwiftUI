@@ -39,18 +39,10 @@ struct HomeView: View {
 									.frame(width: 100, height: 100)
 									.padding()
 								
-								VStack {
-									Text(eachMission.displayName)
-										.font(.system(.headline, design: .serif))
-										.foregroundColor(.white)
-									
-									Text(eachMission.formattedLaunchDate)
-										.font(.system(.caption, design: .serif))
-										.foregroundColor(.white.opacity(0.75))
-								}
-								.padding(.vertical)
-								.frame(maxWidth: .infinity)
-								.background(.moonshotLightColor)
+								MissionListLabelView(
+									viewModel: MissionListLabelViewModel(
+										mission: eachMission)
+								)
 							}
 							.clipShape(RoundedRectangle(cornerRadius: 10))
 							.overlay(
