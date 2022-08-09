@@ -8,34 +8,15 @@
 import SwiftUI
 
 struct MissionView: View {
-	internal struct CrewMember {
-		let role: String
-		let astronaut: Astronaut
-	}
 	
-	let mission: Mission
-	let crew: [CrewMember]
-	
-	init(mission: Mission, astronauts: [String: Astronaut]) {
-		self.mission = mission
-		
-		self.crew = mission.crew.map { eachMember in
-			if let astronaut = astronauts[eachMember.name] {
-				return CrewMember(
-					role: eachMember.role,
-					astronaut: astronaut
-				)
-			} else {
-				fatalError("Missing \(eachMember.name)")
-			}
-		}
-	}
+	@ObservedObject
+	var viewModel: MissionViewModel
 	
 	var body: some View {
 		GeometryReader { geometry in
 			ScrollView {
 				VStack {
-					Image(mission.imageName)
+					Image(viewModel.mission.imageName)
 						.resizable()
 						.scaledToFit()
 						.frame(maxWidth: geometry.size.width * 0.6)
@@ -53,7 +34,7 @@ struct MissionView: View {
 							.font(.system(.title, design: .serif).bold())
 							.padding(.bottom, 5)
 						
-						Text(mission.description)
+						Text(viewModel.mission.description)
 							.font(.system(.body, design: .serif))
 					}
 					.padding(.horizontal)
@@ -72,7 +53,7 @@ struct MissionView: View {
 						
 						ScrollView(.horizontal, showsIndicators: false) {
 							HStack {
-								ForEach(crew, id: \.role) { crewMember in
+								ForEach(viewModel.crew, id: \.role) { crewMember in
 									NavigationLink {
 										AstronautView(astronaut: crewMember.astronaut)
 									} label: {
@@ -106,7 +87,7 @@ struct MissionView: View {
 				.padding(.bottom)
 			}
 		}
-		.navigationTitle(mission.displayName)
+		.navigationTitle(viewModel.mission.displayName)
 		.navigationBarTitleDisplayMode(.inline)
 		.background(.moonshotDarkColor)
 	}
@@ -118,7 +99,10 @@ struct MissionView_Previews: PreviewProvider {
 	static private let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts", withExtension: "json")
 	
     static var previews: some View {
-		MissionView(mission: missions[0], astronauts: astronauts)
-			.preferredColorScheme(.dark)
+		MissionView(viewModel: MissionViewModel(
+			mission: missions[0],
+			astronauts: astronauts)
+		)
+		.preferredColorScheme(.dark)
     }
 }

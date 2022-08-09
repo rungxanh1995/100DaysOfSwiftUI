@@ -21,10 +21,15 @@ struct ContentView: View {
 			ScrollView {
 				LazyVGrid(columns: columns) {
 					ForEach(viewModel.missions) { eachMission in
+						
+						let eachMissionViewModel = MissionViewModel(
+							mission: eachMission,
+							astronauts: viewModel.astronauts
+						)
+						
 						NavigationLink(
 							destination: MissionView(
-								mission: eachMission,
-								astronauts: viewModel.astronauts
+								viewModel: eachMissionViewModel
 							)
 						) {
 							VStack {
