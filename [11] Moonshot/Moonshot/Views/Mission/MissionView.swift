@@ -19,12 +19,9 @@ struct MissionView: View {
 					MissionImageView(mission: viewModel.mission)
 						.frame(maxWidth: geometry.size.width * 0.6)
 					
-					/// Divider
-					Rectangle()
-						.frame(height: 1)
-						.foregroundColor(.moonshotLightColor)
-						.frame(maxWidth: geometry.size.width * 0.9)
-						.padding(.vertical)
+					ParagraphDividerView(
+						maxWidth: geometry.size.width * 0.9
+					)
 					
 					VStack(alignment: .leading) {
 						Text("Mission Highlights")
@@ -36,12 +33,9 @@ struct MissionView: View {
 					}
 					.padding(.horizontal)
 					
-					/// Divider
-					Rectangle()
-						.frame(height: 1)
-						.foregroundColor(.moonshotLightColor)
-						.frame(maxWidth: geometry.size.width * 0.9)
-						.padding(.vertical)
+					ParagraphDividerView(
+						maxWidth: geometry.size.width * 0.9
+					)
 					
 					VStack(alignment: .leading) {
 						Text("Crew List")

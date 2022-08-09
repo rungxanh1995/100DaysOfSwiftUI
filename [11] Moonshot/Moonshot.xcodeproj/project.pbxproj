@@ -23,6 +23,7 @@
 		2CBF61EC28A323E5006CC7F8 /* MissionListLabelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF61EB28A323E5006CC7F8 /* MissionListLabelViewModel.swift */; };
 		2CBF61F028A3261F006CC7F8 /* MissionListImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF61EF28A3261F006CC7F8 /* MissionListImageView.swift */; };
 		2CBF61F328A32792006CC7F8 /* MissionImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF61F228A32792006CC7F8 /* MissionImageView.swift */; };
+		2CBF61F628A32A2D006CC7F8 /* ParagraphDividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBF61F528A32A2D006CC7F8 /* ParagraphDividerView.swift */; };
 		2CE604F128A1EE6800899F36 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CE604EF28A1EE6800899F36 /* missions.json */; };
 		2CE604F228A1EE6800899F36 /* astronauts.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CE604F028A1EE6800899F36 /* astronauts.json */; };
 		2CE604F828A1EF0E00899F36 /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE604F728A1EF0E00899F36 /* Astronaut.swift */; };
@@ -48,6 +49,7 @@
 		2CBF61EB28A323E5006CC7F8 /* MissionListLabelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionListLabelViewModel.swift; sourceTree = "<group>"; };
 		2CBF61EF28A3261F006CC7F8 /* MissionListImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionListImageView.swift; sourceTree = "<group>"; };
 		2CBF61F228A32792006CC7F8 /* MissionImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionImageView.swift; sourceTree = "<group>"; };
+		2CBF61F528A32A2D006CC7F8 /* ParagraphDividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParagraphDividerView.swift; sourceTree = "<group>"; };
 		2CE604EF28A1EE6800899F36 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		2CE604F028A1EE6800899F36 /* astronauts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = astronauts.json; sourceTree = "<group>"; };
 		2CE604F728A1EF0E00899F36 /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				2C23F02F28A2CA56003B2869 /* MissionView.swift */,
 				2CBF61E328A31BD0006CC7F8 /* MissionViewModel.swift */,
 				2CBF61F128A32764006CC7F8 /* Image */,
+				2CBF61F428A32A1B006CC7F8 /* Divider */,
 			);
 			path = Mission;
 			sourceTree = "<group>";
@@ -165,6 +168,14 @@
 				2CBF61F228A32792006CC7F8 /* MissionImageView.swift */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		2CBF61F428A32A1B006CC7F8 /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				2CBF61F528A32A2D006CC7F8 /* ParagraphDividerView.swift */,
+			);
+			path = Divider;
 			sourceTree = "<group>";
 		};
 		2CE604F328A1EE8F00899F36 /* JSON */ = {
@@ -299,6 +310,7 @@
 				2CBF61DB28A2F9F9006CC7F8 /* AstronautView.swift in Sources */,
 				2C04B58228A1C5F900FDCE02 /* HomeView.swift in Sources */,
 				2CE604FD28A1F01500899F36 /* Bundle+Ext.swift in Sources */,
+				2CBF61F628A32A2D006CC7F8 /* ParagraphDividerView.swift in Sources */,
 				2C23F02C28A29911003B2869 /* ShapeStyle+Ext.swift in Sources */,
 				2CBF61EC28A323E5006CC7F8 /* MissionListLabelViewModel.swift in Sources */,
 				2CE604FA28A1EF5200899F36 /* Mission.swift in Sources */,
