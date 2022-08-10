@@ -23,15 +23,8 @@ struct MissionView: View {
 						maxWidth: geometry.size.width * 0.9
 					)
 					
-					VStack(alignment: .leading) {
-						Text("Mission Highlights")
-							.font(.system(.title, design: .serif).bold())
-							.padding(.bottom, 5)
-						
-						Text(viewModel.mission.description)
-							.font(.system(.body, design: .serif))
-					}
-					.padding(.horizontal)
+					MissionHighlightsView(mission: viewModel.mission)
+						.padding(.horizontal)
 					
 					ParagraphDividerView(
 						maxWidth: geometry.size.width * 0.9
