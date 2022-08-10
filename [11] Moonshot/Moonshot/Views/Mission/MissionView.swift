@@ -30,48 +30,12 @@ struct MissionView: View {
 						maxWidth: geometry.size.width * 0.9
 					)
 					
-					VStack(alignment: .leading) {
-						Text("Crew List")
-							.font(.system(.title, design: .serif).bold())
-							.padding(.bottom, 5)
-						
-						ScrollView(.horizontal, showsIndicators: false) {
-							HStack {
-								ForEach(viewModel.crew, id: \.role) { crewMember in
-									let eachAstronautViewModel = AstronautViewModel(
-										astronaut: crewMember.astronaut
-									)
-									
-									NavigationLink {
-										AstronautView(
-											viewModel: eachAstronautViewModel)
-									} label: {
-										HStack {
-											Image(crewMember.astronaut.id)
-												.resizable()
-												.frame(width: 104, height: 72)
-												.clipShape(Circle())
-												.overlay(
-													Circle()
-														.strokeBorder(.moonshotLightColor, lineWidth: 1)
-												)
-											
-											VStack(alignment: .leading) {
-												Text(crewMember.astronaut.name)
-													.foregroundColor(.white)
-													.font(.system(.headline, design: .serif))
-												Text(crewMember.role)
-													.font(.system(.callout, design: .serif))
-													.foregroundColor(.secondary)
-											}
-										}
-										.padding(.trailing)
-									}
-								}
-							}
-						}
-					}
-					.padding(.horizontal)
+					MissionCrewListView(
+						viewModel: MissionCrewListViewModel(
+							parentVM: viewModel
+						)
+					)
+					.padding(.trailing)
 				}
 				.padding(.bottom)
 			}

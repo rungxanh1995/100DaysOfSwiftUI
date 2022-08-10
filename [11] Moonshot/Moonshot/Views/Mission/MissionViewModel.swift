@@ -9,11 +9,6 @@ import Foundation
 
 class MissionViewModel: ObservableObject {
 	
-	internal struct CrewMember {
-		let role: String
-		let astronaut: Astronaut
-	}
-	
 	let mission: Mission
 	var crew: [CrewMember] { return _crew }
 	/// Sidestep the initialization process of Swift with a private property
