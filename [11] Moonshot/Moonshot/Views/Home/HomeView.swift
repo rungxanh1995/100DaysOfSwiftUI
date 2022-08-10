@@ -12,45 +12,23 @@ struct HomeView: View {
 	@StateObject
 	var viewModel: HomeViewModel = HomeViewModel()
 	
-	@State
-	private var isShowingGridLayout = false
-	
     var body: some View {
-		NavigationView {
-			Group {
-				if isShowingGridLayout {
-					HomeGridView(viewModel: viewModel)
-				} else {
-					HomeListView(viewModel: viewModel)
-				}
+		TabView {
+			NavigationView {
+				HomeGridView(viewModel: viewModel)
 			}
-			.preferredColorScheme(.dark)
-			.toolbar {
-				switchLayoutButton
+			.tabItem {
+				Label("Grid", systemImage: "square.grid.2x2")
 			}
-		}
-    }
-}
-
-private extension HomeView {
-	
-	@ViewBuilder
-	private var switchLayoutButton: some View {
-		Button {
-			withAnimation(.easeInOut(duration: 1)) {
-				isShowingGridLayout.toggle()
+			
+			NavigationView {
+				HomeListView(viewModel: viewModel)
 			}
-		} label: {
-			let layoutButtonTitle = isShowingGridLayout ? "Show List" : "Show Grid"
-			let layoutButtonIcon = Image(systemName: isShowingGridLayout ? "rectangle.grid.1x2.fill" : "square.grid.2x2.fill")
-			Label {
-				Text(layoutButtonTitle)
-			} icon: {
-				layoutButtonIcon
+			.tabItem {
+				Label("List", systemImage: "rectangle.grid.1x2")
 			}
 		}
-		.buttonStyle(.bordered)
-		.tint(.indigo)
+		.preferredColorScheme(.dark)
 	}
 }
 
