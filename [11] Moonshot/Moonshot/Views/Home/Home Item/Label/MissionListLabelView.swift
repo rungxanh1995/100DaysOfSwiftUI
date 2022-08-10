@@ -24,7 +24,6 @@ struct MissionListLabelView: View {
 		}
 		.padding(.vertical)
 		.frame(maxWidth: .infinity)
-		.background(.moonshotLightColor)
 	}
 }
 
@@ -35,5 +34,6 @@ struct MissionListLabelView_Previews: PreviewProvider {
         MissionListLabelView(
 			viewModel: MissionListLabelViewModel(mission: missions[0])
 		)
+		.preferredColorScheme(.dark)
     }
 }
