@@ -12,50 +12,46 @@ struct HomeView: View {
 	@StateObject
 	var viewModel: HomeViewModel = HomeViewModel()
 	
-	let columns = [
-		GridItem(.adaptive(minimum: 150))
-	]
+	@State
+	private var isShowingGridLayout = false
 	
     var body: some View {
 		NavigationView {
-			ScrollView {
-				LazyVGrid(columns: columns) {
-					ForEach(viewModel.missions) { eachMission in
-						
-						let eachMissionViewModel = MissionViewModel(
-							mission: eachMission,
-							astronauts: viewModel.astronauts
-						)
-						
-						NavigationLink(
-							destination: MissionView(
-								viewModel: eachMissionViewModel
-							)
-						) {
-							VStack {
-								MissionListImageView(
-									mission: eachMission
-								)
-								
-								MissionListLabelView(
-									viewModel: MissionListLabelViewModel(
-										mission: eachMission)
-								)
-							}
-							.clipShape(RoundedRectangle(cornerRadius: 10))
-							.overlay(
-								RoundedRectangle(cornerRadius: 10)
-									.stroke(.moonshotLightColor))
-						}
-					}
+			Group {
+				if isShowingGridLayout {
+					HomeGridView(viewModel: viewModel)
+				} else {
+					HomeListView(viewModel: viewModel)
 				}
-				.padding([.horizontal, .bottom])
 			}
-			.navigationTitle("Moonshot")
-			.background(.moonshotDarkColor)
 			.preferredColorScheme(.dark)
+			.toolbar {
+				switchLayoutButton
+			}
 		}
     }
+}
+
+private extension HomeView {
+	
+	@ViewBuilder
+	private var switchLayoutButton: some View {
+		Button {
+			withAnimation(.easeInOut(duration: 1)) {
+				isShowingGridLayout.toggle()
+			}
+		} label: {
+			let layoutButtonTitle = isShowingGridLayout ? "Show List" : "Show Grid"
+			let layoutButtonIcon = Image(systemName: isShowingGridLayout ? "rectangle.grid.1x2.fill" : "square.grid.2x2.fill")
+			Label {
+				Text(layoutButtonTitle)
+			} icon: {
+				layoutButtonIcon
+			}
+		}
+		.buttonStyle(.bordered)
+		.tint(.indigo)
+	}
 }
 
 struct ContentView_Previews: PreviewProvider {
