@@ -19,6 +19,12 @@ struct MissionView: View {
 					MissionBadgeView(mission: viewModel.mission)
 						.frame(maxWidth: geometry.size.width * 0.6)
 					
+					MissionLaunchDateBadge(
+						date: viewModel.mission.formattedLaunchDate
+					)
+					.padding(.top)
+
+					
 					ParagraphDividerView(
 						maxWidth: geometry.size.width * 0.9
 					)
