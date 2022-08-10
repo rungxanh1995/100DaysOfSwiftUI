@@ -16,7 +16,7 @@ struct MissionView: View {
 		GeometryReader { geometry in
 			ScrollView {
 				VStack {
-					MissionImageView(mission: viewModel.mission)
+					MissionBadgeView(mission: viewModel.mission)
 						.frame(maxWidth: geometry.size.width * 0.6)
 					
 					ParagraphDividerView(
