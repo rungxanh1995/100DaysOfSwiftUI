@@ -12,8 +12,8 @@ struct HomeView: View {
 	@StateObject
 	var viewModel: HomeViewModel = HomeViewModel()
 	
-	@State
-	private var isShowingGridLayout = false
+	@AppStorage(/* key: */ "showGrid")
+	private var isShowingGridLayout: Bool = true
 	
     var body: some View {
 		NavigationView {
