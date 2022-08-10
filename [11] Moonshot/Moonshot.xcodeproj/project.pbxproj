@@ -205,10 +205,19 @@
 			path = "Crew List";
 			sourceTree = "<group>";
 		};
+		2CBF620128A33BA9006CC7F8 /* Missions */ = {
+			isa = PBXGroup;
+			children = (
+				2CE604EF28A1EE6800899F36 /* missions.json */,
+			);
+			path = Missions;
+			sourceTree = "<group>";
+		};
 		2CE604F328A1EE8F00899F36 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
 				2CE604F428A1EE9E00899F36 /* Astronauts */,
+				2CBF620128A33BA9006CC7F8 /* Missions */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -217,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				2CE604F028A1EE6800899F36 /* astronauts.json */,
-				2CE604EF28A1EE6800899F36 /* missions.json */,
 			);
 			path = Astronauts;
 			sourceTree = "<group>";
