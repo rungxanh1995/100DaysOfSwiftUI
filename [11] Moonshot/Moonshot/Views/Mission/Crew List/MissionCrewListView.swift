@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MissionCrewListView: View {
 	
-	@ObservedObject
+	@EnvironmentObject
 	var viewModel: MissionCrewListViewModel
 	
     var body: some View {
@@ -72,9 +72,11 @@ struct MissionCrewListView_Previews: PreviewProvider {
 		mission: Missions.allMissions[0],
 		astronauts: Astronauts.allAstronauts
 	)
+	static private let missionCrewListVM = MissionCrewListViewModel(crew: missionViewModel.crew)
 	
     static var previews: some View {
-		MissionCrewListView(viewModel: MissionCrewListViewModel(parentVM: missionViewModel))
+		MissionCrewListView()
+			.environmentObject(missionCrewListVM)
 			.preferredColorScheme(.dark)
     }
 }
