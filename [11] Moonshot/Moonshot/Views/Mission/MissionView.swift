@@ -36,12 +36,11 @@ struct MissionView: View {
 						maxWidth: geometry.size.width * 0.9
 					)
 					
-					MissionCrewListView(
-						viewModel: MissionCrewListViewModel(
-							parentVM: viewModel
+					MissionCrewListView()
+						.padding(.trailing)
+						.environmentObject(
+							MissionCrewListViewModel(crew: viewModel.crew)
 						)
-					)
-					.padding(.trailing)
 				}
 				.padding(.bottom)
 			}

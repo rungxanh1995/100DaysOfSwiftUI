@@ -7,19 +7,16 @@
 
 import Foundation
 
-/// Relies on its parent view model of type `MissionViewModel`,
-/// due to the way the original source JSON is structured:
-/// each Apollo mission's crew members is mapped to a
-/// corresponding astronauts name.
+/// Use this view model as an `@EnvironmentObject`,
+/// as its initializer requires a parameter of type `[CrewMember]`.
 ///
-/// I couldn't pass a mission object to its initializer, because its crew
-/// is of `Mission`\'s nested type `Crew`, and not compatible
-/// with `CrewMember` type
+/// Therefore, you would need its parent view to create this class's instance
+/// and pass an array of `CrewMember`\'s
 final class MissionCrewListViewModel: ObservableObject {
 	
 	let crew: [CrewMember]
 	
-	init(parentVM: MissionViewModel) {
-		self.crew = parentVM.crew
+	init(crew: [CrewMember]) {
+		self.crew = crew
 	}
 }
