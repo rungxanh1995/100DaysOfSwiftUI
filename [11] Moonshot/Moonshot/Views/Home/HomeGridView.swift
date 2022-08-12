@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeGridView: View {
 	
 	@ObservedObject
-	var viewModel: HomeViewModel
+	var viewModel: HomeView.ViewModel
 	
 	let columns = [
 		GridItem(.adaptive(minimum: 150))
@@ -58,6 +58,6 @@ struct HomeGridView: View {
 
 struct HomeGridView_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeGridView(viewModel: HomeViewModel())
+		HomeGridView(viewModel: HomeView.ViewModel())
 	}
 }

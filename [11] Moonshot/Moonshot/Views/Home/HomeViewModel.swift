@@ -7,9 +7,18 @@
 
 import Foundation
 
-class HomeViewModel: ObservableObject {
-	
-	let astronauts = Astronauts.allAstronauts
-	let missions = Missions.allMissions
-	
+extension HomeView {
+	final class ViewModel: ObservableObject {
+		
+		let astronauts: [String: Astronaut]
+		let missions: [Mission]
+		
+		init(
+			astronauts: [String: Astronaut] = Astronauts.allAstronauts,
+			missions: [Mission] = Missions.allMissions
+		) {
+			self.astronauts = astronauts
+			self.missions = missions
+		}
+	}
 }
