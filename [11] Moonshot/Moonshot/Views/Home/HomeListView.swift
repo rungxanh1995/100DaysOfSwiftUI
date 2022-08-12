@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeListView: View {
 	
 	@ObservedObject
-	var viewModel: HomeViewModel
+	var viewModel: HomeView.ViewModel
 	
 	let columns = [
 		GridItem(.adaptive(minimum: 1000))  // Large width to make the grid look like a list
@@ -54,7 +54,10 @@ struct HomeListView: View {
 
 struct HomeListView_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeListView(viewModel: HomeViewModel())
+		let viewModel = HomeView.ViewModel()
+		viewModel.getData()
+		
+		return HomeListView(viewModel: viewModel)
 			.preferredColorScheme(.dark)
 	}
 }
