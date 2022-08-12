@@ -57,10 +57,11 @@ private extension MissionCrewListView {
 			
 			VStack(alignment: .leading) {
 				Text(member.astronaut.name)
-					.font(.system(.headline, design: .serif))
+					.font(.system(.body, design: .serif))
 					.foregroundColor(.white)
+					.padding(.bottom, 6)
 				Text(member.role)
-					.font(.system(.callout, design: .serif))
+					.font(.system(.caption, design: .serif).italic())
 					.foregroundColor(.secondary)
 			}
 		}
