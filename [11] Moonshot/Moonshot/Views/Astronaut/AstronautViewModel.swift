@@ -7,10 +7,12 @@
 
 import Foundation
 
-class AstronautViewModel: ObservableObject {
-	let astronaut: Astronaut
-	
-	init(astronaut: Astronaut) {
-		self.astronaut = astronaut
+extension AstronautView {
+	final class ViewModel: ObservableObject {
+		let astronaut: Astronaut
+		
+		init(astronaut: Astronaut) {
+			self.astronaut = astronaut
+		}
 	}
 }

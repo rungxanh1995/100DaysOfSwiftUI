@@ -10,7 +10,7 @@ import SwiftUI
 struct AstronautView: View {
 	
 	@ObservedObject
-	var viewModel: AstronautViewModel
+	var viewModel: Self.ViewModel
 	
     var body: some View {
 		GeometryReader { geoProxy in
@@ -43,7 +43,7 @@ struct AstronautView_Previews: PreviewProvider {
 	
     static var previews: some View {
 		AstronautView(
-			viewModel: AstronautViewModel(astronaut: astronauts["white"]!)
+			viewModel: AstronautView.ViewModel(astronaut: astronauts["white"]!)
 		)
 		.preferredColorScheme(.dark)
     }

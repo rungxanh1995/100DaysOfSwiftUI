@@ -10,7 +10,7 @@ import SwiftUI
 struct MissionCrewListView: View {
 	
 	@EnvironmentObject
-	var viewModel: MissionCrewListViewModel
+	var viewModel: Self.ViewModel
 	
     var body: some View {
 		VStack(alignment: .leading) {
@@ -23,7 +23,7 @@ struct MissionCrewListView: View {
 				HStack {
 					ForEach(viewModel.crew, id: \.role) { crewMember in
 						
-						let eachAstronautViewModel = AstronautViewModel(
+						let eachAstronautViewModel = AstronautView.ViewModel(
 							astronaut: crewMember.astronaut
 						)
 						
@@ -68,11 +68,11 @@ private extension MissionCrewListView {
 }
 
 struct MissionCrewListView_Previews: PreviewProvider {
-	static private let missionViewModel = MissionViewModel(
+	static private let missionViewModel = MissionView.ViewModel(
 		mission: Missions.allMissions[0],
 		astronauts: Astronauts.allAstronauts
 	)
-	static private let missionCrewListVM = MissionCrewListViewModel(crew: missionViewModel.crew)
+	static private let missionCrewListVM = MissionCrewListView.ViewModel(crew: missionViewModel.crew)
 	
     static var previews: some View {
 		MissionCrewListView()

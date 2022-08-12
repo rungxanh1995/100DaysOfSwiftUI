@@ -10,7 +10,7 @@ import SwiftUI
 struct MissionListLabelView: View {
 	
 	@ObservedObject
-	var viewModel: MissionListLabelViewModel
+	var viewModel: Self.ViewModel
 	
 	var body: some View {
 		VStack {
@@ -32,7 +32,7 @@ struct MissionListLabelView_Previews: PreviewProvider {
 	
     static var previews: some View {
         MissionListLabelView(
-			viewModel: MissionListLabelViewModel(mission: missions[0])
+			viewModel: MissionListLabelView.ViewModel(mission: missions[0])
 		)
 		.preferredColorScheme(.dark)
     }

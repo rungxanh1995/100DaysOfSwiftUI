@@ -21,7 +21,7 @@ struct HomeGridView: View {
 			LazyVGrid(columns: columns) {
 				ForEach(viewModel.missions) { eachMission in
 					
-					let eachMissionViewModel = MissionViewModel(
+					let eachMissionViewModel = MissionView.ViewModel(
 						mission: eachMission,
 						astronauts: viewModel.astronauts
 					)
@@ -37,7 +37,7 @@ struct HomeGridView: View {
 							)
 							
 							MissionListLabelView(
-								viewModel: MissionListLabelViewModel(
+								viewModel: MissionListLabelView.ViewModel(
 									mission: eachMission)
 							)
 							.background(.moonshotLightColor)

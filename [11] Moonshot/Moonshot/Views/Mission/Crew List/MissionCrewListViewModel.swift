@@ -7,16 +7,18 @@
 
 import Foundation
 
-/// Use this view model as an `@EnvironmentObject`,
-/// as its initializer requires a parameter of type `[CrewMember]`.
-///
-/// Therefore, you would need its parent view to create this class's instance
-/// and pass an array of `CrewMember`\'s
-final class MissionCrewListViewModel: ObservableObject {
-	
-	let crew: [CrewMember]
-	
-	init(crew: [CrewMember]) {
-		self.crew = crew
+extension MissionCrewListView {
+	/// Use this view model as an `@EnvironmentObject`,
+	/// as its initializer requires a parameter of type `[CrewMember]`.
+	///
+	/// Therefore, you would need its parent view to create this class's instance
+	/// and pass an array of `CrewMember`\'s
+	final class ViewModel: ObservableObject {
+		
+		let crew: [CrewMember]
+		
+		init(crew: [CrewMember]) {
+			self.crew = crew
+		}
 	}
 }

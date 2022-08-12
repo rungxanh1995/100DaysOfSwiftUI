@@ -21,7 +21,7 @@ struct HomeListView: View {
 			LazyVGrid(columns: columns) {
 				ForEach(viewModel.missions) { eachMission in
 					
-					let eachMissionViewModel = MissionViewModel(
+					let eachMissionViewModel = MissionView.ViewModel(
 						mission: eachMission,
 						astronauts: viewModel.astronauts
 					)
@@ -36,7 +36,7 @@ struct HomeListView: View {
 							.padding(.leading)
 							
 							MissionListLabelView(
-								viewModel: MissionListLabelViewModel(mission: eachMission)
+								viewModel: MissionListLabelView.ViewModel(mission: eachMission)
 							)
 							.padding(.trailing)
 						}
