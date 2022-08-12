@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+	
+	@StateObject
+	var viewModel: ViewModel
+	
+	init(viewModel: HomeView.ViewModel = .init()) {
+		_viewModel = StateObject(wrappedValue: viewModel)
+	}
+	
     var body: some View {
 		Text("Hello, world")
 			.padding()
