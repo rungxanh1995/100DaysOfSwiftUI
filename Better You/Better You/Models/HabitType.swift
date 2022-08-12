@@ -8,7 +8,6 @@
 import Foundation
 
 enum HabitType: String, Codable, CaseIterable {
-	case hourly = "Hourly"
 	case daily = "Daily"
 	case weekly = "Weekly"
 	case biweekly = "Bi-weekly"
