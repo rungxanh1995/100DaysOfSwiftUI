@@ -33,6 +33,7 @@ struct MissionCrewListView: View {
 							)
 						} label: {
 							crewMemberView(of: crewMember)
+								.padding(.leading)
 						}
 					}
 				}
@@ -48,7 +49,8 @@ private extension MissionCrewListView {
 		HStack {
 			Image(member.astronaut.id)
 				.resizable()
-				.frame(width: 104, height: 72)
+				.scaledToFill()
+				.frame(width: 64, height: 64)
 				.clipShape(Circle())
 				.overlay(
 					Circle()
@@ -65,6 +67,11 @@ private extension MissionCrewListView {
 					.foregroundColor(.secondary)
 			}
 		}
+		.padding()
+		.overlay(
+			Capsule()
+				.stroke(.moonshotLightColor)
+			)
 	}
 }
 
