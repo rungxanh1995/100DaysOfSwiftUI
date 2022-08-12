@@ -12,6 +12,13 @@ struct HomeView: View {
 	@StateObject
 	var viewModel: ViewModel
 	
+	/// This should match a mission id.
+	///
+	/// For example: 1, 7, 8, etc.
+	/// Refer to missions JSON file to know which number to choose.
+	@State
+	private(set) var defaultMissionView: Int? = nil
+	
 	init(viewModel: HomeView.ViewModel = .init()) {
 		_viewModel = StateObject(wrappedValue: viewModel)
 	}
@@ -19,21 +26,44 @@ struct HomeView: View {
     var body: some View {
 		TabView {
 			NavigationView {
-				HomeGridView(viewModel: viewModel)
+				HomeGridView(
+					viewModel: viewModel,
+					selectedView: $defaultMissionView
+				)
 			}
 			.tabItem {
 				Label("Grid", systemImage: "square.grid.2x2")
 			}
 			
 			NavigationView {
-				HomeListView(viewModel: viewModel)
+				HomeListView(
+					viewModel: viewModel,
+					selectedView: $defaultMissionView
+				)
 			}
 			.tabItem {
 				Label("List", systemImage: "rectangle.grid.1x2")
 			}
 		}
 		.preferredColorScheme(.dark)
-		.onAppear(perform: viewModel.getData)
+		.onAppear {
+			viewModel.getData()
+			decideDefaultMissionViewOnLargeScreens()
+		}
+	}
+}
+
+extension HomeView {
+	/// Link to tutorial:
+	/// <a>https://dev.to/maeganwilson_/default-a-view-in-navigationview-with-swiftui-183p</a>
+	private func decideDefaultMissionViewOnLargeScreens() -> Void {
+		let deviceIdiom = UIDevice.current.userInterfaceIdiom
+		if deviceIdiom == .phone {
+			self.defaultMissionView = nil
+			return
+		}
+		
+		self.defaultMissionView = 1
 	}
 }
 

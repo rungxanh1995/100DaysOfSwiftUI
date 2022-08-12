@@ -12,8 +12,11 @@ struct HomeGridView: View {
 	@ObservedObject
 	var viewModel: HomeView.ViewModel
 	
+	@Binding
+	var selectedView: Int?
+	
 	let columns = [
-		GridItem(.adaptive(minimum: 150))
+		GridItem(.adaptive(minimum: 120))
 	]
 	
 	var body: some View {
@@ -29,7 +32,9 @@ struct HomeGridView: View {
 					NavigationLink(
 						destination: MissionView(
 							viewModel: eachMissionViewModel
-						)
+						),
+						tag: eachMissionViewModel.mission.id,
+						selection: $selectedView
 					) {
 						VStack {
 							MissionListImageView(
@@ -57,10 +62,13 @@ struct HomeGridView: View {
 }
 
 struct HomeGridView_Previews: PreviewProvider {
+	@State
+	private static var selectedView: Int? = 1
+	
 	static var previews: some View {
 		let viewModel = HomeView.ViewModel()
 		viewModel.getData()
 		
-		return HomeGridView(viewModel: viewModel)
+		return HomeGridView(viewModel: viewModel, selectedView: $selectedView)
 	}
 }
