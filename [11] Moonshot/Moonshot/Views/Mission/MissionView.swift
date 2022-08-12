@@ -10,7 +10,7 @@ import SwiftUI
 struct MissionView: View {
 	
 	@ObservedObject
-	var viewModel: MissionViewModel
+	var viewModel: Self.ViewModel
 	
 	var body: some View {
 		GeometryReader { geometry in
@@ -57,7 +57,7 @@ struct MissionView_Previews: PreviewProvider {
 	static private let astronauts: [String: Astronaut] = Astronauts.allAstronauts
 	
     static var previews: some View {
-		MissionView(viewModel: MissionViewModel(
+		MissionView(viewModel: MissionView.ViewModel(
 			mission: missions[0],
 			astronauts: astronauts)
 		)

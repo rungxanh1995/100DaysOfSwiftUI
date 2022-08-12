@@ -68,7 +68,7 @@ private extension MissionCrewListView {
 }
 
 struct MissionCrewListView_Previews: PreviewProvider {
-	static private let missionViewModel = MissionViewModel(
+	static private let missionViewModel = MissionView.ViewModel(
 		mission: Missions.allMissions[0],
 		astronauts: Astronauts.allAstronauts
 	)
