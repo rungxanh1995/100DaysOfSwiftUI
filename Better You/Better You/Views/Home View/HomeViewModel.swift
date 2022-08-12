@@ -11,22 +11,12 @@ extension HomeView {
 	
 	final class ViewModel: ObservableObject {
 		// MARK: - Persistence Properties
-		private let dailyPersistence: Persitence
-		private let weeklyPersistence: Persitence
-		private let biweeklyPersistence: Persitence
-		private let monthlyPersistence: Persitence
+		private let persistenceHandler: BYPersistenceHandler
 		
 		init(
-			dailyPersistence: Persitence = BYPersistence(/* for: */ habitType: .daily),
-			weeklyPersistence: Persitence = BYPersistence(/* for: */ habitType: .weekly),
-			biweeklyPersistence: Persitence = BYPersistence(/* for: */ habitType: .biweekly),
-			monthlyPersistence: Persitence = BYPersistence(/* for: */ habitType: .monthly)
+			persistenceHandler: BYPersistenceHandler = BYPersistenceHandler()
 		) {
-			self.dailyPersistence = dailyPersistence
-			self.weeklyPersistence = weeklyPersistence
-			self.biweeklyPersistence = biweeklyPersistence
-			self.monthlyPersistence = monthlyPersistence
-			
+			self.persistenceHandler = persistenceHandler
 			loadSavedHabitsOrDefault()
 		}
 		
@@ -34,28 +24,28 @@ extension HomeView {
 		@Published
 		private(set) var dailyHabits = [HabitItem]() {
 			didSet {
-				dailyPersistence.encodeAndSave(dailyHabits)
+				persistenceHandler.daily.encodeAndSave(dailyHabits)
 			}
 		}
 		
 		@Published
 		private(set) var weeklyHabits = [HabitItem]() {
 			didSet {
-				weeklyPersistence.encodeAndSave(weeklyHabits)
+				persistenceHandler.weekly.encodeAndSave(weeklyHabits)
 			}
 		}
 		
 		@Published
 		private(set) var biweeklyHabits = [HabitItem]() {
 			didSet {
-				biweeklyPersistence.encodeAndSave(biweeklyHabits)
+				persistenceHandler.biweekly.encodeAndSave(biweeklyHabits)
 			}
 		}
 		
 		@Published
 		private(set) var monthlyHabits = [HabitItem]() {
 			didSet {
-				monthlyPersistence.encodeAndSave(monthlyHabits)
+				persistenceHandler.monthly.encodeAndSave(monthlyHabits)
 			}
 		}
 		
@@ -65,19 +55,19 @@ extension HomeView {
 		// MARK: - Methods
 		
 		private func loadSavedHabitsOrDefault() {
-			dailyHabits = dailyPersistence.decodeAndReturnSavedDataOrNil(
+			dailyHabits = persistenceHandler.daily.decodeAndReturnSavedDataOrNil(
 				type: [HabitItem].self
 			) ?? []
 			
-			weeklyHabits = weeklyPersistence.decodeAndReturnSavedDataOrNil(
+			weeklyHabits = persistenceHandler.weekly.decodeAndReturnSavedDataOrNil(
 				type: [HabitItem].self
 			) ?? []
 			
-			biweeklyHabits = biweeklyPersistence.decodeAndReturnSavedDataOrNil(
+			biweeklyHabits = persistenceHandler.biweekly.decodeAndReturnSavedDataOrNil(
 				type: [HabitItem].self
 			) ?? []
 			
-			monthlyHabits = monthlyPersistence.decodeAndReturnSavedDataOrNil(
+			monthlyHabits = persistenceHandler.monthly.decodeAndReturnSavedDataOrNil(
 				type: [HabitItem].self
 			) ?? []
 		}

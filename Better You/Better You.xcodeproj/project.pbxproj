@@ -19,6 +19,7 @@
 		2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADAE28A7002600AB08DC /* BYPersistence.swift */; };
 		2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB028A701DD00AB08DC /* Persistence.swift */; };
 		2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB228A7025D00AB08DC /* HomeViewModel.swift */; };
+		2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB428A709FA00AB08DC /* BYPersistenceHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		2C0CADAE28A7002600AB08DC /* BYPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYPersistence.swift; sourceTree = "<group>"; };
 		2C0CADB028A701DD00AB08DC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2C0CADB228A7025D00AB08DC /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2C0CADB428A709FA00AB08DC /* BYPersistenceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYPersistenceHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			children = (
 				2C0CADB028A701DD00AB08DC /* Persistence.swift */,
 				2C0CADAE28A7002600AB08DC /* BYPersistence.swift */,
+				2C0CADB428A709FA00AB08DC /* BYPersistenceHandler.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				2C0CADAB28A6FF7100AB08DC /* HabitType.swift in Sources */,
 				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
+				2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
 				2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */,
 				2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */,
