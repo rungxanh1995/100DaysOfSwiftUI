@@ -39,7 +39,7 @@ struct MissionView: View {
 					MissionCrewListView()
 						.padding(.trailing)
 						.environmentObject(
-							MissionCrewListViewModel(crew: viewModel.crew)
+							MissionCrewListView.ViewModel(crew: viewModel.crew)
 						)
 				}
 				.padding(.bottom)
