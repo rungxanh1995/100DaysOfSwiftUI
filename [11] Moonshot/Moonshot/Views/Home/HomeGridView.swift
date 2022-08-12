@@ -37,7 +37,7 @@ struct HomeGridView: View {
 							)
 							
 							MissionListLabelView(
-								viewModel: MissionListLabelViewModel(
+								viewModel: MissionListLabelView.ViewModel(
 									mission: eachMission)
 							)
 							.background(.moonshotLightColor)

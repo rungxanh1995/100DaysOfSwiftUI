@@ -36,7 +36,7 @@ struct HomeListView: View {
 							.padding(.leading)
 							
 							MissionListLabelView(
-								viewModel: MissionListLabelViewModel(mission: eachMission)
+								viewModel: MissionListLabelView.ViewModel(mission: eachMission)
 							)
 							.padding(.trailing)
 						}

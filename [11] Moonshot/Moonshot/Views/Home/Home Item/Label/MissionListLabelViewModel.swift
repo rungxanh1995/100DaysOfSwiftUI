@@ -7,11 +7,13 @@
 
 import Foundation
 
-class MissionListLabelViewModel: ObservableObject {
-	
-	let mission: Mission
-	
-	init(mission: Mission) {
-		self.mission = mission
+extension MissionListLabelView {
+	final class ViewModel: ObservableObject {
+		
+		let mission: Mission
+		
+		init(mission: Mission) {
+			self.mission = mission
+		}
 	}
 }
