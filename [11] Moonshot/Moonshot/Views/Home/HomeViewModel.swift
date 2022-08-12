@@ -10,13 +10,21 @@ import Foundation
 extension HomeView {
 	final class ViewModel: ObservableObject {
 		
-		private(set) var astronauts = [String: Astronaut]()
-		private(set) var missions = [Mission]()
+		var astronauts = [String: Astronaut]()
+		var missions = [Mission]()
+		
+		private let astronautsApiService: ApiService
+		private let missionsApiService: ApiService
 		
 		init(
 			astronautsApiService: ApiService = AstronautsApiService(),
 			missionsApiService: ApiService = MissionsApiService()
 		) {
+			self.astronautsApiService = astronautsApiService
+			self.missionsApiService = missionsApiService
+		}
+		
+		func getData() -> Void {
 			astronautsApiService.fetchData { [weak self] decodedAstronautsDict in
 				self?.astronauts = decodedAstronautsDict
 			}
