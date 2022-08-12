@@ -10,7 +10,11 @@ import SwiftUI
 struct HomeView: View {
 	
 	@StateObject
-	var viewModel: ViewModel = ViewModel()
+	var viewModel: ViewModel
+	
+	init(viewModel: HomeView.ViewModel = .init()) {
+		_viewModel = StateObject(wrappedValue: viewModel)
+	}
 	
     var body: some View {
 		TabView {
@@ -29,11 +33,15 @@ struct HomeView: View {
 			}
 		}
 		.preferredColorScheme(.dark)
+		.onAppear(perform: viewModel.getData)
 	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+		let viewModel = HomeView.ViewModel()
+		viewModel.getData()
+		
+        return HomeView(viewModel: viewModel)
     }
 }
