@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		2C0CAD7D28A6FDCA00AB08DC /* Better_YouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD7C28A6FDCA00AB08DC /* Better_YouApp.swift */; };
-		2C0CAD7F28A6FDCA00AB08DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD7E28A6FDCA00AB08DC /* ContentView.swift */; };
+		2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD7E28A6FDCA00AB08DC /* HomeView.swift */; };
 		2C0CAD8128A6FDCB00AB08DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0CAD8028A6FDCB00AB08DC /* Assets.xcassets */; };
 		2C0CAD8428A6FDCB00AB08DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0CAD8328A6FDCB00AB08DC /* Preview Assets.xcassets */; };
 		2C0CAD8E28A6FDCB00AB08DC /* Better_YouTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD8D28A6FDCB00AB08DC /* Better_YouTests.swift */; };
 		2C0CAD9828A6FDCB00AB08DC /* Better_YouUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD9728A6FDCB00AB08DC /* Better_YouUITests.swift */; };
 		2C0CAD9A28A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD9928A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift */; };
+		2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADA828A6FE8700AB08DC /* HabitItem.swift */; };
+		2C0CADAB28A6FF7100AB08DC /* HabitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADAA28A6FF7100AB08DC /* HabitType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		2C0CAD7928A6FDCA00AB08DC /* Better You.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Better You.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0CAD7C28A6FDCA00AB08DC /* Better_YouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_YouApp.swift; sourceTree = "<group>"; };
-		2C0CAD7E28A6FDCA00AB08DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C0CAD7E28A6FDCA00AB08DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2C0CAD8028A6FDCB00AB08DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0CAD8328A6FDCB00AB08DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C0CAD8928A6FDCB00AB08DC /* Better YouTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better YouTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		2C0CAD9328A6FDCB00AB08DC /* Better YouUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Better YouUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0CAD9728A6FDCB00AB08DC /* Better_YouUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_YouUITests.swift; sourceTree = "<group>"; };
 		2C0CAD9928A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_YouUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2C0CADA828A6FE8700AB08DC /* HabitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitItem.swift; sourceTree = "<group>"; };
+		2C0CADAA28A6FF7100AB08DC /* HabitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				2C0CAD7C28A6FDCA00AB08DC /* Better_YouApp.swift */,
-				2C0CAD7E28A6FDCA00AB08DC /* ContentView.swift */,
+				2C0CADA728A6FE7600AB08DC /* Models */,
+				2C0CADA628A6FE6F00AB08DC /* Views */,
 				2C0CAD8028A6FDCB00AB08DC /* Assets.xcassets */,
 				2C0CAD8228A6FDCB00AB08DC /* Preview Content */,
 			);
@@ -125,6 +130,31 @@
 				2C0CAD9928A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift */,
 			);
 			path = "Better YouUITests";
+			sourceTree = "<group>";
+		};
+		2C0CADA628A6FE6F00AB08DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C0CADAC28A6FFB100AB08DC /* Home View */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2C0CADA728A6FE7600AB08DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2C0CADA828A6FE8700AB08DC /* HabitItem.swift */,
+				2C0CADAA28A6FF7100AB08DC /* HabitType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2C0CADAC28A6FFB100AB08DC /* Home View */ = {
+			isa = PBXGroup;
+			children = (
+				2C0CAD7E28A6FDCA00AB08DC /* HomeView.swift */,
+			);
+			path = "Home View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0CAD7F28A6FDCA00AB08DC /* ContentView.swift in Sources */,
+				2C0CADAB28A6FF7100AB08DC /* HabitType.swift in Sources */,
+				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
+				2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */,
 				2C0CAD7D28A6FDCA00AB08DC /* Better_YouApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
