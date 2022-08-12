@@ -16,6 +16,8 @@
 		2C0CAD9A28A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CAD9928A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift */; };
 		2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADA828A6FE8700AB08DC /* HabitItem.swift */; };
 		2C0CADAB28A6FF7100AB08DC /* HabitType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADAA28A6FF7100AB08DC /* HabitType.swift */; };
+		2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADAE28A7002600AB08DC /* BYPersistence.swift */; };
+		2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB028A701DD00AB08DC /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		2C0CAD9928A6FDCB00AB08DC /* Better_YouUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Better_YouUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2C0CADA828A6FE8700AB08DC /* HabitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitItem.swift; sourceTree = "<group>"; };
 		2C0CADAA28A6FF7100AB08DC /* HabitType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitType.swift; sourceTree = "<group>"; };
+		2C0CADAE28A7002600AB08DC /* BYPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYPersistence.swift; sourceTree = "<group>"; };
+		2C0CADB028A701DD00AB08DC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0CAD7C28A6FDCA00AB08DC /* Better_YouApp.swift */,
+				2C0CADAD28A7001D00AB08DC /* Persistence */,
 				2C0CADA728A6FE7600AB08DC /* Models */,
 				2C0CADA628A6FE6F00AB08DC /* Views */,
 				2C0CAD8028A6FDCB00AB08DC /* Assets.xcassets */,
@@ -155,6 +160,15 @@
 				2C0CAD7E28A6FDCA00AB08DC /* HomeView.swift */,
 			);
 			path = "Home View";
+			sourceTree = "<group>";
+		};
+		2C0CADAD28A7001D00AB08DC /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2C0CADB028A701DD00AB08DC /* Persistence.swift */,
+				2C0CADAE28A7002600AB08DC /* BYPersistence.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0CADAB28A6FF7100AB08DC /* HabitType.swift in Sources */,
+				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
+				2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */,
 				2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */,
 				2C0CAD7D28A6FDCA00AB08DC /* Better_YouApp.swift in Sources */,
 			);
