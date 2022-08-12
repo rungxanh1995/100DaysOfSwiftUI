@@ -23,7 +23,7 @@ struct MissionCrewListView: View {
 				HStack {
 					ForEach(viewModel.crew, id: \.role) { crewMember in
 						
-						let eachAstronautViewModel = AstronautViewModel(
+						let eachAstronautViewModel = AstronautView.ViewModel(
 							astronaut: crewMember.astronaut
 						)
 						
