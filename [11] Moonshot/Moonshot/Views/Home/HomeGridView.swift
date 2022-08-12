@@ -58,6 +58,9 @@ struct HomeGridView: View {
 
 struct HomeGridView_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeGridView(viewModel: HomeView.ViewModel())
+		let viewModel = HomeView.ViewModel()
+		viewModel.getData()
+		
+		return HomeGridView(viewModel: viewModel)
 	}
 }

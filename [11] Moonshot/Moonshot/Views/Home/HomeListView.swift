@@ -54,7 +54,10 @@ struct HomeListView: View {
 
 struct HomeListView_Previews: PreviewProvider {
 	static var previews: some View {
-		HomeListView(viewModel: HomeView.ViewModel())
+		let viewModel = HomeView.ViewModel()
+		viewModel.getData()
+		
+		return HomeListView(viewModel: viewModel)
 			.preferredColorScheme(.dark)
 	}
 }
