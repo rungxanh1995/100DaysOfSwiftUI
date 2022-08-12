@@ -10,15 +10,20 @@ import Foundation
 extension HomeView {
 	final class ViewModel: ObservableObject {
 		
-		let astronauts: [String: Astronaut]
-		let missions: [Mission]
+		private(set) var astronauts = [String: Astronaut]()
+		private(set) var missions = [Mission]()
 		
 		init(
-			astronauts: [String: Astronaut] = Astronauts.allAstronauts,
-			missions: [Mission] = Missions.allMissions
+			astronautsApiService: ApiService = AstronautsApiService(),
+			missionsApiService: ApiService = MissionsApiService()
 		) {
-			self.astronauts = astronauts
-			self.missions = missions
+			astronautsApiService.fetchData { [weak self] decodedAstronautsDict in
+				self?.astronauts = decodedAstronautsDict
+			}
+			
+			missionsApiService.fetchData { [weak self] decodedMissions in
+				self?.missions = decodedMissions
+			}
 		}
 	}
 }
