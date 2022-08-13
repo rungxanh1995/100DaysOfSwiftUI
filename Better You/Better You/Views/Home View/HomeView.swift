@@ -26,24 +26,7 @@ struct HomeView: View {
 						emptyHabitsText
 					} else {
 						ForEach(viewModel.dailyHabits) { item in
-							HStack(alignment: .top) {
-								VStack(alignment: .leading) {
-									Text(item.name)
-										.font(.system(.headline, design: .rounded))
-									
-									if item.notes != "" {
-										Text(item.notes)
-											.font(.system(.caption2, design: .rounded))
-											.foregroundColor(.secondary)
-											.fixedSize(horizontal: false, vertical: true)
-									}
-								}
-								
-								Spacer()
-								
-								Text("\(item.completedTimes)")
-								.font(.system(.callout, design: .monospaced).bold())
-							}
+							HomeListCell(item: item)
 						}
 					}
 				}
