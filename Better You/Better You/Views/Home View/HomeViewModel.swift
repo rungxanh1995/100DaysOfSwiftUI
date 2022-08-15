@@ -74,7 +74,7 @@ extension HomeView {
 		
 		func addHabit(
 			name: inout String,
-			type: HabitType,
+			category: HabitItem.Category,
 			completedTimes: Int,
 			notes: String
 		) -> Void {
@@ -83,7 +83,7 @@ extension HomeView {
 			
 			let newItem = HabitItem(
 				name: name,
-				type: type,
+				category: category,
 				completedTimes: moddedCompletedTimes,
 				notes: notes
 			)
@@ -91,7 +91,7 @@ extension HomeView {
 		}
 		
 		private func addHabit(_ newItem: HabitItem) -> Void {
-			switch newItem.type {
+			switch newItem.category {
 				case .daily:
 					dailyHabits.append(newItem)
 				case .weekly:

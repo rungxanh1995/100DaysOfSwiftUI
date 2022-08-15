@@ -12,15 +12,15 @@ final class BYPersistence: Persitence {
 	
 	private static let proxy = UserDefaults.standard
 	
-	private let habitType: HabitType
+	private let habitCategory: HabitItem.Category
 	
-	init(habitType: HabitType) {
-		self.habitType = habitType
+	init(habitCategory: HabitItem.Category) {
+		self.habitCategory = habitCategory
 	}
 	
 	private var persistenceKey: String {
 		if type(of: Self.proxy) == UserDefaults.self {
-			return "\(habitType.rawValue).habits"
+			return "\(habitCategory.rawValue).habits"
 		}
 		
 		return "genericKey"

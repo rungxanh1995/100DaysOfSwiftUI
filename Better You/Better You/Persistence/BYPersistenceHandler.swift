@@ -14,10 +14,10 @@ final class BYPersistenceHandler {
 	let monthly: Persitence
 	
 	init(
-		dailyPersistence: Persitence = BYPersistence(/* for: */ habitType: .daily),
-		weeklyPersistence: Persitence = BYPersistence(/* for: */ habitType: .weekly),
-		biweeklyPersistence: Persitence = BYPersistence(/* for: */ habitType: .biweekly),
-		monthlyPersistence: Persitence = BYPersistence(/* for: */ habitType: .monthly)
+		dailyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .daily),
+		weeklyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .weekly),
+		biweeklyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .biweekly),
+		monthlyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .monthly)
 	) {
 		self.daily = dailyPersistence
 		self.weekly = weeklyPersistence

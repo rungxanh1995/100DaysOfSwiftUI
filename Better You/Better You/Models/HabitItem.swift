@@ -10,7 +10,7 @@ import Foundation
 struct HabitItem: Codable, Identifiable {
 	var id: UUID = UUID()
 	let name: String
-	let type: HabitType
+	let category: Self.Category
 	let completedTimes: Int
 	let notes: String
 }

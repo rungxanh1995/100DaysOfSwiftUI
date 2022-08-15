@@ -36,7 +36,7 @@ struct HomeListCell_Previews: PreviewProvider {
     static var previews: some View {
 		let sampleItem = HabitItem(
 			name: "Work Out 🏋🏻‍♂️",
-			type: .daily,
+			category: .daily,
 			completedTimes: 3,
 			notes: ""
 		)
