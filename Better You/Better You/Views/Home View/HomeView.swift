@@ -28,6 +28,46 @@ struct HomeView: View {
 						ForEach(viewModel.dailyHabits) { item in
 							HomeListCell(item: item)
 						}
+						.onDelete(perform: viewModel.deleteDailyHabits)
+					}
+				}
+				
+				Section(
+					header: Text("Weekly Habits")
+				) {
+					if viewModel.weeklyHabits.isEmpty {
+						emptyHabitsText
+					} else {
+						ForEach(viewModel.weeklyHabits) { item in
+							HomeListCell(item: item)
+						}
+						.onDelete(perform: viewModel.deleteWeeklyHabits)
+					}
+				}
+				
+				Section(
+					header: Text("Bi-weekly Habits")
+				) {
+					if viewModel.biweeklyHabits.isEmpty {
+						emptyHabitsText
+					} else {
+						ForEach(viewModel.biweeklyHabits) { item in
+							HomeListCell(item: item)
+						}
+						.onDelete(perform: viewModel.deleteBiweeklyHabits)
+					}
+				}
+				
+				Section(
+					header: Text("Monthly Habits")
+				) {
+					if viewModel.monthlyHabits.isEmpty {
+						emptyHabitsText
+					} else {
+						ForEach(viewModel.monthlyHabits) { item in
+							HomeListCell(item: item)
+						}
+						.onDelete(perform: viewModel.deleteMonthlyHabits)
 					}
 				}
 			}
