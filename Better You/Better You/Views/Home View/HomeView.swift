@@ -16,6 +16,9 @@ struct HomeView: View {
 		_viewModel = StateObject(wrappedValue: viewModel)
 	}
 	
+	@State
+	var isShowingAddHabit: Bool = false
+	
     var body: some View {
 		NavigationView {
 			Form {
@@ -74,11 +77,16 @@ struct HomeView: View {
 			.navigationTitle("Better You")
 			.toolbar {
 				Button {
-					// code to pull up add view
+					isShowingAddHabit.toggle()
 				} label: {
 					Image(systemName: "plus")
 				}
 				.buttonStyle(.bordered)
+			}
+			.sheet(isPresented: $isShowingAddHabit) {
+				AddHabitView(
+					viewModel: .init(parentVM: self.viewModel)
+				)
 			}
 		}
     }
