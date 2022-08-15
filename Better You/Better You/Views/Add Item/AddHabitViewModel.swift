@@ -22,6 +22,9 @@ extension AddHabitView {
 		var habitCategory: HabitItem.Category = .daily
 		
 		@Published
+		var startDate: Date = Date()
+		
+		@Published
 		var habitCompletedTimes: Int = 1
 		let reasonableCompletedTimes: ClosedRange<Int> = 0...100
 		
@@ -33,10 +36,17 @@ extension AddHabitView {
 		func addHabit(
 			name: inout String,
 			category: HabitItem.Category,
+			startDate: Date,
 			completedTimes: Int,
 			notes: String
 		) -> Void {
-			listViewModel.addHabit(name: &name, category: category, completedTimes: completedTimes, notes: notes)
+			listViewModel.addHabit(
+				name: &name,
+				category: category,
+				startDate: startDate,
+				completedTimes: completedTimes,
+				notes: notes
+			)
 		}
 	}
 }

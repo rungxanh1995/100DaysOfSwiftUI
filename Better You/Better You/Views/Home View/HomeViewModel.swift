@@ -75,6 +75,7 @@ extension HomeView {
 		func addHabit(
 			name: inout String,
 			category: HabitItem.Category,
+			startDate: Date,
 			completedTimes: Int,
 			notes: String
 		) -> Void {
@@ -84,6 +85,7 @@ extension HomeView {
 			let newItem = HabitItem(
 				name: name,
 				category: category,
+				startDate: startDate,
 				completedTimes: moddedCompletedTimes,
 				notes: notes
 			)

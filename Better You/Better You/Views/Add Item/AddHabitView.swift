@@ -74,6 +74,7 @@ extension AddHabitView {
 		viewModel.addHabit(
 			name: &viewModel.habitName,
 			category: viewModel.habitCategory,
+			startDate: viewModel.startDate,
 			completedTimes: viewModel.habitCompletedTimes,
 			notes: viewModel.habitNotes
 		)

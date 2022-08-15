@@ -11,6 +11,7 @@ struct HabitItem: Codable, Identifiable {
 	var id: UUID = UUID()
 	let name: String
 	let category: Self.Category
+	let startDate: Date
 	let completedTimes: Int
 	let notes: String
 }
