@@ -23,6 +23,7 @@ extension AddHabitView {
 		
 		@Published
 		var startDate: Date = Date()
+		let dateRangeUntilToday: PartialRangeThrough<Date> = ...Date()
 		
 		@Published
 		var habitCompletedTimes: Int = 1
