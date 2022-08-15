@@ -36,6 +36,13 @@ struct AddHabitView: View {
 						}
 					}
 					
+					DatePicker(
+						"Date Started",
+						selection: $viewModel.startDate,
+						in: viewModel.dateRangeUntilToday,
+						displayedComponents: .date
+					)
+					
 					HStack {
 						Text("Completed Times:")
 						Stepper(
