@@ -12,6 +12,11 @@ struct HabitItem: Codable, Identifiable {
 	let name: String
 	let category: Self.Category
 	let startDate: Date
-	let completedTimes: Int
+	var lastUpdated: Date = Date()
+	var completedTimes: Int {
+		didSet {
+			lastUpdated = Date()
+		}
+	}
 	let notes: String
 }
