@@ -28,10 +28,10 @@ struct BYHabitDetailCell: View {
 				.padding(.bottom)
 			
 			Text(caption)
-				.font(.system(.caption, design: .rounded))
+				.font(.system(.caption2, design: .rounded))
 		}
 		.padding()
-		.frame(maxWidth: .infinity, maxHeight: 200)
+		.frame(maxWidth: .infinity, maxHeight: .infinity)
 		.background(.regularMaterial)
 		.clipShape(RoundedRectangle(cornerRadius: 12))
 		.overlay(
