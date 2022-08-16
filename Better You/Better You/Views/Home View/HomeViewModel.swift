@@ -9,6 +9,15 @@ import Foundation
 
 extension HomeView {
 	
+	/// Plays as the main manager for all types of habits.
+	/// I know it's violating SRP and a bit lengthy at the moment.
+	///
+	/// I attempted to refactor all habits to a separate class with designated code
+	/// to handle persistence, yet a bug caused the habits to be overwritten
+	/// when saved into `UserDefaults`.
+	///
+	/// I'd be happy to come back and refactor again anytime I could
+	/// figure out a solution.
 	final class ViewModel: ObservableObject {
 		// MARK: - Persistence Properties
 		private let persistenceHandler: BYPersistenceHandler
