@@ -61,7 +61,7 @@ extension BYHabitDetailView {
 				Button("Edit") { isShowingEditHabit.toggle() }
 			}
 			.sheet(isPresented: $isShowingEditHabit) {
-				Text("Edit screen for habit: \(viewModel.item.name)")
+				BYHabitDetailView.EditMode(viewModel: self.viewModel)
 			}
 		}
 	}
