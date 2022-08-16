@@ -13,9 +13,7 @@ struct BYHabitDetailView: View {
 	var viewModel: Self.ViewModel
 	
     var body: some View {
-		NavigationStack {
-			Self.ViewMode(viewModel: viewModel)
-		}
+		Self.ViewMode(viewModel: viewModel)
     }
 }
 
