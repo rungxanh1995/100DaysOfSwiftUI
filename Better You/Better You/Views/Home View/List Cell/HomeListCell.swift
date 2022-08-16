@@ -8,16 +8,17 @@
 import SwiftUI
 
 struct HomeListCell: View {
-	let item: HabitItem
+	@ObservedObject
+	var viewModel: Self.ViewModel
 	
-    var body: some View {
+	var body: some View {
 		HStack(alignment: .top) {
 			VStack(alignment: .leading) {
-				Text(item.name)
+				Text(viewModel.item.name)
 					.font(.system(.headline, design: .rounded))
 				
-				if item.notes != "" {
-					Text(item.notes)
+				if viewModel.item.notes != "" {
+					Text(viewModel.item.notes)
 						.font(.system(.caption2, design: .rounded))
 						.foregroundColor(.secondary)
 						.fixedSize(horizontal: false, vertical: true)
@@ -26,24 +27,19 @@ struct HomeListCell: View {
 			
 			Spacer()
 			
-			Text("\(checkIcon) \(item.completedTimes)")
+			Text("\(checkIcon) \(viewModel.item.completedTimes)")
 				.font(.system(.body, design: .rounded).bold())
-				.foregroundColor(colorForCompletedTimes())
+				.foregroundColor(viewModel.colorForCompletedTimes())
 		}
-    }
+	}
+}
+
+private extension HomeListCell {
 	
 	@ViewBuilder
-	private var checkIcon: Image {
-		Image(systemName: "checkmark.circle.fill").symbolRenderingMode(.hierarchical)
-	}
-	
-	func colorForCompletedTimes() -> Color {
-		switch item.completedTimes {
-			case 0..<5: return Color.mint
-			case 5..<10: return Color.orange
-			case 10..<Int.max: return Color.red
-			default: return Color.primary
-		}
+	var checkIcon: Image {
+		Image(systemName: "checkmark.circle.fill")
+			.symbolRenderingMode(.hierarchical)
 	}
 }
 
@@ -56,6 +52,10 @@ struct HomeListCell_Previews: PreviewProvider {
 			completedTimes: 17,
 			notes: "At school gymnasium"
 		)
-        HomeListCell(item: sampleItem)
+        HomeListCell(
+			viewModel: HomeListCell.ViewModel(
+				item: sampleItem
+			)
+		)
     }
 }

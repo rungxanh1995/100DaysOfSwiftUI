@@ -23,6 +23,7 @@
 		2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB728A728E900AB08DC /* HomeListCell.swift */; };
 		2C28253F28AAE3C600F68F2B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28253E28AAE3C600F68F2B /* AddHabitView.swift */; };
 		2C28254128AAE42500F68F2B /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */; };
+		2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		2C0CADB728A728E900AB08DC /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		2C28253E28AAE3C600F68F2B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
+		2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0CADB728A728E900AB08DC /* HomeListCell.swift */,
+				2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */,
 			);
 			path = "List Cell";
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				2C0CADAB28A6FF7100AB08DC /* HabitCategory.swift in Sources */,
 				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
 				2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */,
+				2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */,
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
 				2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,

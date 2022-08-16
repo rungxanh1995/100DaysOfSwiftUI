@@ -29,7 +29,7 @@ struct HomeView: View {
 						emptyHabitsText
 					} else {
 						ForEach(viewModel.dailyHabits) { item in
-							HomeListCell(item: item)
+							HomeListCell(viewModel: .init(item: item))
 						}
 						.onDelete(perform: viewModel.deleteDailyHabits)
 					}
@@ -42,7 +42,7 @@ struct HomeView: View {
 						emptyHabitsText
 					} else {
 						ForEach(viewModel.weeklyHabits) { item in
-							HomeListCell(item: item)
+							HomeListCell(viewModel: .init(item: item))
 						}
 						.onDelete(perform: viewModel.deleteWeeklyHabits)
 					}
@@ -55,7 +55,7 @@ struct HomeView: View {
 						emptyHabitsText
 					} else {
 						ForEach(viewModel.biweeklyHabits) { item in
-							HomeListCell(item: item)
+							HomeListCell(viewModel: .init(item: item))
 						}
 						.onDelete(perform: viewModel.deleteBiweeklyHabits)
 					}
@@ -68,7 +68,7 @@ struct HomeView: View {
 						emptyHabitsText
 					} else {
 						ForEach(viewModel.monthlyHabits) { item in
-							HomeListCell(item: item)
+							HomeListCell(viewModel: .init(item: item))
 						}
 						.onDelete(perform: viewModel.deleteMonthlyHabits)
 					}
