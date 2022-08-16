@@ -9,11 +9,18 @@ import SwiftUI
 
 extension BYHabitDetailView {
 	final class ViewModel: ObservableObject {
+		@Published
 		var item: HabitItem
 		
 		init(item: HabitItem) {
 			self.item = item
 		}
+		
+		let dateRangeUntilToday: PartialRangeThrough<Date> = ...Date()
+		
+		let habitCategories: [HabitItem.Category] = HabitItem.Category.allCases
+		
+		let reasonableCompletedTimes: ClosedRange<Int> = 0...100
 		
 		func colorForCompletedTimes() -> Color {
 			switch item.completedTimes {
