@@ -9,14 +9,14 @@ import Foundation
 
 struct HabitItem: Codable, Identifiable {
 	var id: UUID = UUID()
-	let name: String
-	let category: Self.Category
-	let startDate: Date
+	var name: String
+	var category: Self.Category
+	var startDate: Date
 	var lastUpdated: Date = Date()
 	var completedTimes: Int {
 		didSet {
 			lastUpdated = Date()
 		}
 	}
-	let notes: String
+	var notes: String
 }
