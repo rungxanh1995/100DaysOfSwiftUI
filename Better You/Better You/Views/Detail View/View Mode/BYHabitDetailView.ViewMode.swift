@@ -48,8 +48,9 @@ extension BYHabitDetailView {
 				}
 				.padding([.horizontal, .bottom])
 				
-				Text("Last updated on...")
+				Text("Last updated at \(viewModel.item.lastUpdated.formatted(date: .numeric, time: .shortened))")
 					.font(.system(.caption, design: .rounded))
+					.foregroundColor(viewModel.colorForLastUpdated())
 			}
 			.navigationTitle("Habit Detail")
 			.navigationBarTitleDisplayMode(.inline)
