@@ -26,10 +26,25 @@ struct HomeListCell: View {
 			
 			Spacer()
 			
-			Text("\(item.completedTimes)")
-				.font(.system(.callout, design: .monospaced).bold())
+			Text("\(checkIcon) \(item.completedTimes)")
+				.font(.system(.body, design: .rounded).bold())
+				.foregroundColor(colorForCompletedTimes())
 		}
     }
+	
+	@ViewBuilder
+	private var checkIcon: Image {
+		Image(systemName: "checkmark.circle.fill").symbolRenderingMode(.hierarchical)
+	}
+	
+	func colorForCompletedTimes() -> Color {
+		switch item.completedTimes {
+			case 0..<5: return Color.mint
+			case 5..<10: return Color.orange
+			case 10..<Int.max: return Color.red
+			default: return Color.primary
+		}
+	}
 }
 
 struct HomeListCell_Previews: PreviewProvider {
@@ -38,8 +53,8 @@ struct HomeListCell_Previews: PreviewProvider {
 			name: "Work Out 🏋🏻‍♂️",
 			category: .daily,
 			startDate: Date(),
-			completedTimes: 3,
-			notes: ""
+			completedTimes: 17,
+			notes: "At school gymnasium"
 		)
         HomeListCell(item: sampleItem)
     }
