@@ -21,32 +21,30 @@ extension BYHabitDetailView {
 		var body: some View {
 			ScrollView {
 				LazyVGrid(columns: columns) {
-					Group {
-						BYHabitDetailCell(
-							title: viewModel.item.name,
-							caption: "Name"
-						)
-						
-						BYHabitDetailCell(
-							title: viewModel.item.notes,
-							caption: "Notes"
-						)
-						
-						BYHabitDetailCell(
-							title: viewModel.item.category.rawValue,
-							caption: "Frequency"
-						)
-						
-						BYHabitDetailCell(
-							title: viewModel.item.startDate.formatted(date: .abbreviated, time: .omitted),
-							caption: "Start Date"
-						)
-						
-						BYHabitDetailCell(
-							title: viewModel.item.completedTimes.formatted(),
-							caption: "Completed Times"
-						)
-					}
+					BYHabitDetailCell(
+						title: viewModel.item.name,
+						caption: "Name"
+					)
+					
+					BYHabitDetailCell(
+						title: viewModel.item.notes,
+						caption: "Notes"
+					)
+					
+					BYHabitDetailCell(
+						title: viewModel.item.category.rawValue,
+						caption: "Frequency"
+					)
+					
+					BYHabitDetailCell(
+						title: viewModel.item.startDate.formatted(date: .abbreviated, time: .omitted),
+						caption: "Start Date"
+					)
+					
+					BYHabitDetailCell(
+						title: viewModel.item.completedTimes.formatted(),
+						caption: "Completed Times"
+					)
 				}
 				.padding([.horizontal, .bottom])
 				
@@ -54,6 +52,7 @@ extension BYHabitDetailView {
 					.font(.system(.caption, design: .rounded))
 			}
 			.navigationTitle("Habit Detail")
+			.navigationBarTitleDisplayMode(.inline)
 		}
 	}
 }
