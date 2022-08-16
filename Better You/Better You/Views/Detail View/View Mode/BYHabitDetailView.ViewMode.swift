@@ -18,6 +18,9 @@ extension BYHabitDetailView {
 			GridItem(.adaptive(minimum: 150, maximum: 180))
 		]
 		
+		@State
+		var isShowingEditHabit: Bool = false
+		
 		var body: some View {
 			ScrollView {
 				LazyVGrid(columns: columns) {
@@ -54,6 +57,12 @@ extension BYHabitDetailView {
 			}
 			.navigationTitle("Habit Detail")
 			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				Button("Edit") { isShowingEditHabit.toggle() }
+			}
+			.sheet(isPresented: $isShowingEditHabit) {
+				Text("Edit screen for habit: \(viewModel.item.name)")
+			}
 		}
 	}
 }
