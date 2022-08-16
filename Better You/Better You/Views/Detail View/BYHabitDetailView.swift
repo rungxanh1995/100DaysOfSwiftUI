@@ -8,50 +8,13 @@
 import SwiftUI
 
 struct BYHabitDetailView: View {
-	let item: HabitItem
 	
-	let columns = [
-		GridItem(.adaptive(minimum: 150, maximum: 180))
-	]
+	@ObservedObject
+	var viewModel: Self.ViewModel
 	
     var body: some View {
 		NavigationStack {
-			ScrollView {
-				LazyVGrid(columns: columns) {
-					Group {
-						BYHabitDetailCell(
-							title: item.name,
-							caption: "Name"
-						)
-						
-						
-						BYHabitDetailCell(
-							title: item.notes,
-							caption: "Notes"
-						)
-						
-						BYHabitDetailCell(
-							title: item.category.rawValue,
-							caption: "Frequency"
-						)
-						
-						BYHabitDetailCell(
-							title: item.startDate.formatted(date: .abbreviated, time: .omitted),
-							caption: "Start Date"
-						)
-						
-						BYHabitDetailCell(
-							title: item.completedTimes.formatted(),
-							caption: "Completed Times"
-						)
-					}
-				}
-				.padding([.horizontal, .bottom])
-				
-				Text("Last updated on...")
-					.font(.system(.caption, design: .rounded))
-			}
-			.navigationTitle("Habit Detail")
+			Self.ViewMode(viewModel: viewModel)
 		}
     }
 }
@@ -89,6 +52,6 @@ struct BYHabitDetailView_Previews: PreviewProvider {
 			completedTimes: 17,
 			notes: "At school gymnasium"
 		)
-        BYHabitDetailView(item: sampleItem)
+		BYHabitDetailView(viewModel: .init(item: sampleItem))
     }
 }

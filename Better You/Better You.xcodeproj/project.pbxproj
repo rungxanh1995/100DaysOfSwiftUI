@@ -26,6 +26,7 @@
 		2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */; };
 		2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */; };
 		2CE8B49428AB2B20007525C2 /* BYHabitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */; };
+		2CE8B49728AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49628AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
 		2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.swift; sourceTree = "<group>"; };
 		2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailViewModel.swift; sourceTree = "<group>"; };
+		2CE8B49628AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.ViewMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,8 +217,17 @@
 			children = (
 				2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */,
 				2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */,
+				2CE8B49528AB2DC7007525C2 /* View Mode */,
 			);
 			path = "Detail View";
+			sourceTree = "<group>";
+		};
+		2CE8B49528AB2DC7007525C2 /* View Mode */ = {
+			isa = PBXGroup;
+			children = (
+				2CE8B49628AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift */,
+			);
+			path = "View Mode";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
 				2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
+				2CE8B49728AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift in Sources */,
 				2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */,
 				2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */,
 				2C0CAD7D28A6FDCA00AB08DC /* Better_YouApp.swift in Sources */,
