@@ -25,6 +25,7 @@
 		2C28254128AAE42500F68F2B /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */; };
 		2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */; };
 		2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */; };
+		2CE8B49428AB2B20007525C2 /* BYHabitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
 		2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
 		2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.swift; sourceTree = "<group>"; };
+		2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */,
+				2CE8B49328AB2B20007525C2 /* BYHabitDetailViewModel.swift */,
 			);
 			path = "Detail View";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */,
 				2C0CADAB28A6FF7100AB08DC /* HabitCategory.swift in Sources */,
 				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
+				2CE8B49428AB2B20007525C2 /* BYHabitDetailViewModel.swift in Sources */,
 				2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */,
 				2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */,
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
