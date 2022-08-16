@@ -9,7 +9,7 @@ import SwiftUI
 
 extension BYHabitDetailView {
 	final class ViewModel: ObservableObject {
-		let item: HabitItem
+		var item: HabitItem
 		
 		init(item: HabitItem) {
 			self.item = item
