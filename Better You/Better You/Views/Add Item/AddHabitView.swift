@@ -29,7 +29,7 @@ struct AddHabitView: View {
 						selection: $viewModel.habitCategory
 					) {
 						ForEach(
-							viewModel.habitCategories,
+							Constants.ForHabit.allategories,
 							id: \.self
 						) { category in
 							Text(category.rawValue)
@@ -39,7 +39,7 @@ struct AddHabitView: View {
 					DatePicker(
 						"Date Started",
 						selection: $viewModel.startDate,
-						in: viewModel.dateRangeUntilToday,
+						in: Constants.ForHabit.dateRangeUntilToday,
 						displayedComponents: .date
 					)
 					
@@ -48,7 +48,7 @@ struct AddHabitView: View {
 						Stepper(
 							"\(viewModel.habitCompletedTimes)",
 							value: $viewModel.habitCompletedTimes,
-							in: viewModel.reasonableCompletedTimes
+							in: Constants.ForHabit.reasonableCompletedTimes
 						)
 					}
 				}
