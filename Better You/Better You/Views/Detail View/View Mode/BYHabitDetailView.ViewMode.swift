@@ -42,7 +42,7 @@ extension BYHabitDetailView {
 					)
 					
 					BYHabitDetailCell(
-						title: viewModel.item.startDate.formatted(date: .abbreviated, time: .omitted),
+						title: viewModel.item.shortStartDate,
 						caption: "Start Date"
 					)
 					
@@ -53,7 +53,7 @@ extension BYHabitDetailView {
 				}
 				.padding([.horizontal, .bottom])
 				
-				Text("Last updated at \(viewModel.item.lastUpdated.formatted(date: .numeric, time: .shortened))")
+				Text("Last updated at \(viewModel.item.formattedLastUpdated)")
 					.font(.system(.caption, design: .rounded))
 					.foregroundColor(viewModel.colorForLastUpdated())
 			}

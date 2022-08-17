@@ -32,7 +32,7 @@ struct HomeListCell: View {
 					.font(.system(.body, design: .rounded).bold())
 					.foregroundColor(viewModel.colorForCompletedTimes())
 				
-				Text("Since \(viewModel.item.startDate.formatted(date: .numeric, time: .omitted))")
+				Text("Since \(viewModel.item.numericStartDate)")
 					.font(.system(.caption2, design: .rounded))
 					.foregroundColor(.secondary)
 			}
