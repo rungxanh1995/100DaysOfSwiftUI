@@ -23,6 +23,14 @@ struct HabitItem: Codable, Identifiable {
 		didSet { lastUpdated = Date() }
 	}
 	
+	var numericStartDate: String {
+		startDate.formatted(date: .numeric, time: .omitted)
+	}
+	
+	var shortStartDate: String {
+		startDate.formatted(date: .abbreviated, time: .omitted)
+	}
+	
 	var lastUpdated: Date = Date()
 	
 	var completedTimes: Int {
