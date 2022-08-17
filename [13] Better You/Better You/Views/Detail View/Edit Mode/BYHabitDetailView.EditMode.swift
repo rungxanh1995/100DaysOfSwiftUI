@@ -15,7 +15,6 @@ extension BYHabitDetailView {
 		var viewModel: BYHabitDetailView.ViewModel
 		
 		var body: some View {
-			// TODO: Refactor into separate edit view
 			NavigationView {
 				Form {
 					Section(
@@ -46,19 +45,27 @@ extension BYHabitDetailView {
 					Section(
 						header: Text("Notes")
 					) {
-						TextField(
-							"Notes",
-							text: $viewModel.item.notes,
-							prompt: Text("Add extra notes..."),
-							axis: .vertical
-						)
+						if #available(iOS 16.0, *) {
+							TextField(
+								"Notes",
+								text: $viewModel.item.notes,
+								prompt: Text("Add extra notes..."),
+								axis: .vertical
+							)
+						} else {
+							// Fallback on earlier versions
+							TextField(
+								"Notes",
+								text: $viewModel.item.notes,
+								prompt: Text("Add extra notes")
+							)
+						}
 					}
 				}
 				
 				.navigationTitle("Edit Habit")
 				.toolbar {
 					Button("Done") {
-						// TODO: Edit habit item, then dismiss view
 						viewModel.updateHabitItemInItsSource()
 						dismissThisView()
 					}
