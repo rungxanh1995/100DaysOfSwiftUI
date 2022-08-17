@@ -29,10 +29,12 @@ extension BYHabitDetailView {
 						caption: "Name"
 					)
 					
-					BYHabitDetailCell(
-						title: viewModel.item.notes,
-						caption: "Notes"
-					)
+					if viewModel.item.notes.isEmpty == false {
+						BYHabitDetailCell(
+							title: viewModel.item.notes,
+							caption: "Notes"
+						)
+					}
 					
 					BYHabitDetailCell(
 						title: viewModel.item.category.rawValue,
