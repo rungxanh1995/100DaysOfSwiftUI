@@ -15,7 +15,6 @@ extension BYHabitDetailView {
 		var viewModel: BYHabitDetailView.ViewModel
 		
 		var body: some View {
-			// TODO: Refactor into separate edit view
 			NavigationView {
 				Form {
 					Section(
@@ -67,7 +66,6 @@ extension BYHabitDetailView {
 				.navigationTitle("Edit Habit")
 				.toolbar {
 					Button("Done") {
-						// TODO: Edit habit item, then dismiss view
 						viewModel.updateHabitItemInItsSource()
 						dismissThisView()
 					}
