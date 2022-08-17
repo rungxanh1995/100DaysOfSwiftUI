@@ -50,6 +50,6 @@ struct BYHabitDetailView_Previews: PreviewProvider {
 			completedTimes: 17,
 			notes: "At school gymnasium"
 		)
-		BYHabitDetailView(viewModel: .init(item: sampleItem))
+		BYHabitDetailView(viewModel: .init(item: sampleItem, parentVM: .init()))
     }
 }

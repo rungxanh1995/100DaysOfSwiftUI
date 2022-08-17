@@ -71,6 +71,7 @@ extension BYHabitDetailView {
 				.toolbar {
 					Button("Done") {
 						// TODO: Edit habit item, then dismiss view
+						viewModel.updateHabitItemInItsSource()
 						dismissThisView()
 					}
 				}

@@ -122,6 +122,30 @@ extension HomeView {
 			return amount < 0 ? 0 : amount
 		}
 		
+		func updateHabits(with item: HabitItem) -> Void {
+			guard let index = getIndex(of: item) else { return }
+			
+			switch item.category {
+				case .daily: dailyHabits[index] = item
+				case .weekly: weeklyHabits[index] = item
+				case .biweekly: biweeklyHabits[index] = item
+				case .monthly: monthlyHabits[index] = item
+			}
+		}
+		
+		private func getIndex(of item: HabitItem) -> Int? {
+			switch item.category {
+				case .daily:
+					return dailyHabits.firstIndex { $0.id == item.id }
+				case .weekly:
+					return weeklyHabits.firstIndex { $0.id == item.id }
+				case .biweekly:
+					return biweeklyHabits.firstIndex { $0.id == item.id }
+				case .monthly:
+					return monthlyHabits.firstIndex { $0.id == item.id }
+			}
+		}
+		
 		func deleteDailyHabits(at offsets: IndexSet) -> Void {
 			dailyHabits.remove(atOffsets: offsets)
 		}

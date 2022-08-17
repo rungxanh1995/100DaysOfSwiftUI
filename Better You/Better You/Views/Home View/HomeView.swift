@@ -31,7 +31,7 @@ struct HomeView: View {
 						ForEach(viewModel.dailyHabits) { item in
 							NavigationLink {
 								BYHabitDetailView(
-									viewModel: .init(item: item)
+									viewModel: .init(item: item, parentVM: self.viewModel)
 								)
 							} label: {
 								HomeListCell(viewModel: .init(item: item))
@@ -50,7 +50,7 @@ struct HomeView: View {
 						ForEach(viewModel.weeklyHabits) { item in
 							NavigationLink {
 								BYHabitDetailView(
-									viewModel: .init(item: item)
+									viewModel: .init(item: item, parentVM: self.viewModel)
 								)
 							} label: {
 								HomeListCell(viewModel: .init(item: item))
@@ -69,7 +69,7 @@ struct HomeView: View {
 						ForEach(viewModel.biweeklyHabits) { item in
 							NavigationLink {
 								BYHabitDetailView(
-									viewModel: .init(item: item)
+									viewModel: .init(item: item, parentVM: self.viewModel)
 								)
 							} label: {
 								HomeListCell(viewModel: .init(item: item))
@@ -88,7 +88,7 @@ struct HomeView: View {
 						ForEach(viewModel.monthlyHabits) { item in
 							NavigationLink {
 								BYHabitDetailView(
-									viewModel: .init(item: item)
+									viewModel: .init(item: item, parentVM: self.viewModel)
 								)
 							} label: {
 								HomeListCell(viewModel: .init(item: item))

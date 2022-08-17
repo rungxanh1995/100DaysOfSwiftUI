@@ -12,8 +12,11 @@ extension BYHabitDetailView {
 		@Published
 		var item: HabitItem
 		
-		init(item: HabitItem) {
+		let parentVM: HomeView.ViewModel
+		
+		init(item: HabitItem, parentVM: HomeView.ViewModel) {
 			self.item = item
+			self.parentVM = parentVM
 		}
 		
 		func colorForCompletedTimes() -> Color {
@@ -27,6 +30,10 @@ extension BYHabitDetailView {
 		
 		func colorForLastUpdated() -> Color {
 			return Color.secondary
+		}
+		
+		func updateHabitItemInItsSource() -> Void {
+			parentVM.updateHabits(with: item)
 		}
 	}
 }
