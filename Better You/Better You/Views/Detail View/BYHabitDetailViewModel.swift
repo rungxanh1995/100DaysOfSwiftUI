@@ -16,12 +16,6 @@ extension BYHabitDetailView {
 			self.item = item
 		}
 		
-		let dateRangeUntilToday: PartialRangeThrough<Date> = ...Date()
-		
-		let habitCategories: [HabitItem.Category] = HabitItem.Category.allCases
-		
-		let reasonableCompletedTimes: ClosedRange<Int> = 0...100
-		
 		func colorForCompletedTimes() -> Color {
 			switch item.completedTimes {
 				case 0..<5: return Color.mint

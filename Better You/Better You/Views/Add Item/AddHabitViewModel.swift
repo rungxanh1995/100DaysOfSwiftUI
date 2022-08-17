@@ -23,17 +23,13 @@ extension AddHabitView {
 		
 		@Published
 		var startDate: Date = Date()
-		let dateRangeUntilToday: PartialRangeThrough<Date> = ...Date()
 		
 		@Published
 		var habitCompletedTimes: Int = 1
-		let reasonableCompletedTimes: ClosedRange<Int> = 0...100
 		
 		@Published
 		var habitNotes: String = ""
-		
-		let habitCategories: [HabitItem.Category] = HabitItem.Category.allCases
-		
+				
 		func addHabit(
 			name: inout String,
 			category: HabitItem.Category,
