@@ -14,9 +14,10 @@ struct HabitItem: Codable, Identifiable {
 		didSet { lastUpdated = Date() }
 	}
 	
-	var category: Self.Category {
-		didSet { lastUpdated = Date() }
-	}
+	/// Once chosen, cannot be modified.
+	/// I haven't figured out how to move a habit
+	/// from once category to another when edited.
+	let category: Self.Category
 	
 	var startDate: Date {
 		didSet { lastUpdated = Date() }
