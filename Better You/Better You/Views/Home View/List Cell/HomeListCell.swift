@@ -13,7 +13,7 @@ struct HomeListCell: View {
 	
 	var body: some View {
 		HStack(alignment: .top) {
-			VStack(alignment: .leading) {
+			VStack(alignment: .leading, spacing: 8) {
 				Text(viewModel.item.name)
 					.font(.system(.headline, design: .rounded))
 				
@@ -27,7 +27,7 @@ struct HomeListCell: View {
 			
 			Spacer()
 			
-			VStack(alignment: .trailing) {
+			VStack(alignment: .trailing, spacing: 8) {
 				Text("\(checkIcon) \(viewModel.item.completedTimes)")
 					.font(.system(.body, design: .rounded).bold())
 					.foregroundColor(viewModel.colorForCompletedTimes())
