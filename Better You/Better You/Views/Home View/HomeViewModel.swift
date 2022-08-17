@@ -81,6 +81,8 @@ extension HomeView {
 			) ?? []
 		}
 		
+		// MARK: - CRUD Operations
+		
 		func addHabit(
 			name: inout String,
 			category: HabitItem.Category,
