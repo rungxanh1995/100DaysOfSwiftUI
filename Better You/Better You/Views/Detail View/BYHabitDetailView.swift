@@ -17,30 +17,6 @@ struct BYHabitDetailView: View {
     }
 }
 
-struct BYHabitDetailCell: View {
-	let title: String
-	let caption: LocalizedStringKey
-	
-	var body: some View {
-		VStack {
-			Text(title)
-				.font(.system(.title3, design: .rounded).bold())
-				.padding(.bottom)
-			
-			Text(caption)
-				.font(.system(.caption2, design: .rounded))
-		}
-		.padding()
-		.frame(maxWidth: .infinity, maxHeight: .infinity)
-		.background(.regularMaterial)
-		.clipShape(RoundedRectangle(cornerRadius: 12))
-		.overlay(
-			RoundedRectangle(cornerRadius: 12)
-				.stroke(.quaternary)
-		)
-	}
-}
-
 struct BYHabitDetailView_Previews: PreviewProvider {
     static var previews: some View {
 		let sampleItem = HabitItem(
