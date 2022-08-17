@@ -31,7 +31,7 @@ extension BYHabitDetailView {
 							selection: $viewModel.item.category
 						) {
 							ForEach(
-								viewModel.habitCategories,
+								Constants.ForHabit.allategories,
 								id: \.self
 							) { category in
 								Text(category.rawValue)
@@ -41,7 +41,7 @@ extension BYHabitDetailView {
 						DatePicker(
 							"Date Started",
 							selection: $viewModel.item.startDate,
-							in: viewModel.dateRangeUntilToday,
+							in: Constants.ForHabit.dateRangeUntilToday,
 							displayedComponents: .date
 						)
 						
@@ -50,7 +50,7 @@ extension BYHabitDetailView {
 							Stepper(
 								"\(viewModel.item.completedTimes)",
 								value: $viewModel.item.completedTimes,
-								in: viewModel.reasonableCompletedTimes
+								in: Constants.ForHabit.reasonableCompletedTimes
 							)
 						}
 					}
