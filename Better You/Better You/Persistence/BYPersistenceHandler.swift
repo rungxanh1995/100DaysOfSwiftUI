@@ -10,18 +10,15 @@ import Foundation
 final class BYPersistenceHandler {
 	let daily: Persitence
 	let weekly: Persitence
-	let biweekly: Persitence
 	let monthly: Persitence
 	
 	init(
 		dailyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .daily),
 		weeklyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .weekly),
-		biweeklyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .biweekly),
 		monthlyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .monthly)
 	) {
 		self.daily = dailyPersistence
 		self.weekly = weeklyPersistence
-		self.biweekly = biweeklyPersistence
 		self.monthly = monthlyPersistence
 	}
 }

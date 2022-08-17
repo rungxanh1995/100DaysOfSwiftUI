@@ -61,25 +61,6 @@ struct HomeView: View {
 				}
 				
 				Section(
-					header: Text("Bi-weekly Habits")
-				) {
-					if viewModel.biweeklyHabits.isEmpty {
-						emptyHabitsText
-					} else {
-						ForEach(viewModel.biweeklyHabits) { item in
-							NavigationLink {
-								BYHabitDetailView(
-									viewModel: .init(item: item, parentVM: self.viewModel)
-								)
-							} label: {
-								HomeListCell(viewModel: .init(item: item))
-							}
-						}
-						.onDelete(perform: viewModel.deleteBiweeklyHabits)
-					}
-				}
-				
-				Section(
 					header: Text("Monthly Habits")
 				) {
 					if viewModel.monthlyHabits.isEmpty {

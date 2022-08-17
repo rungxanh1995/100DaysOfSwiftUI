@@ -45,13 +45,6 @@ extension HomeView {
 		}
 		
 		@Published
-		private(set) var biweeklyHabits = [HabitItem]() {
-			didSet {
-				persistenceHandler.biweekly.encodeAndSave(biweeklyHabits)
-			}
-		}
-		
-		@Published
 		private(set) var monthlyHabits = [HabitItem]() {
 			didSet {
 				persistenceHandler.monthly.encodeAndSave(monthlyHabits)
@@ -69,10 +62,6 @@ extension HomeView {
 			) ?? []
 			
 			weeklyHabits = persistenceHandler.weekly.decodeAndReturnSavedDataOrNil(
-				type: [HabitItem].self
-			) ?? []
-			
-			biweeklyHabits = persistenceHandler.biweekly.decodeAndReturnSavedDataOrNil(
 				type: [HabitItem].self
 			) ?? []
 			
@@ -109,8 +98,6 @@ extension HomeView {
 					dailyHabits.append(newItem)
 				case .weekly:
 					weeklyHabits.append(newItem)
-				case .biweekly:
-					biweeklyHabits.append(newItem)
 				case .monthly:
 					monthlyHabits.append(newItem)
 			}
@@ -130,7 +117,6 @@ extension HomeView {
 			switch item.category {
 				case .daily: dailyHabits[index] = item
 				case .weekly: weeklyHabits[index] = item
-				case .biweekly: biweeklyHabits[index] = item
 				case .monthly: monthlyHabits[index] = item
 			}
 		}
@@ -141,8 +127,6 @@ extension HomeView {
 					return dailyHabits.firstIndex { $0.id == item.id }
 				case .weekly:
 					return weeklyHabits.firstIndex { $0.id == item.id }
-				case .biweekly:
-					return biweeklyHabits.firstIndex { $0.id == item.id }
 				case .monthly:
 					return monthlyHabits.firstIndex { $0.id == item.id }
 			}
@@ -154,10 +138,6 @@ extension HomeView {
 		
 		func deleteWeeklyHabits(at offsets: IndexSet) -> Void {
 			weeklyHabits.remove(atOffsets: offsets)
-		}
-		
-		func deleteBiweeklyHabits(at offsets: IndexSet) -> Void {
-			biweeklyHabits.remove(atOffsets: offsets)
 		}
 		
 		func deleteMonthlyHabits(at offsets: IndexSet) -> Void {
