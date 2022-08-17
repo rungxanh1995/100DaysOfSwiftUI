@@ -33,6 +33,10 @@ struct HabitItem: Codable, Identifiable {
 	
 	var lastUpdated: Date = Date()
 	
+	var formattedLastUpdated: String {
+		lastUpdated.formatted(date: .numeric, time: .shortened)
+	}
+	
 	var completedTimes: Int {
 		didSet { lastUpdated = Date() }
 	}
