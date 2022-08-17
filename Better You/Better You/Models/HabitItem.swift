@@ -9,14 +9,26 @@ import Foundation
 
 struct HabitItem: Codable, Identifiable {
 	var id: UUID = UUID()
-	var name: String
-	var category: Self.Category
-	var startDate: Date
-	var lastUpdated: Date = Date()
-	var completedTimes: Int {
-		didSet {
-			lastUpdated = Date()
-		}
+	
+	var name: String {
+		didSet { lastUpdated = Date() }
 	}
-	var notes: String
+	
+	var category: Self.Category {
+		didSet { lastUpdated = Date() }
+	}
+	
+	var startDate: Date {
+		didSet { lastUpdated = Date() }
+	}
+	
+	var lastUpdated: Date = Date()
+	
+	var completedTimes: Int {
+		didSet { lastUpdated = Date() }
+	}
+	
+	var notes: String {
+		didSet { lastUpdated = Date() }
+	}
 }
