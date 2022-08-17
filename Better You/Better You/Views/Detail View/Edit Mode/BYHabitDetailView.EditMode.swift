@@ -26,18 +26,6 @@ extension BYHabitDetailView {
 							text: $viewModel.item.name
 						)
 						
-						Picker(
-							"Type",
-							selection: $viewModel.item.category
-						) {
-							ForEach(
-								Constants.ForHabit.allategories,
-								id: \.self
-							) { category in
-								Text(category.rawValue)
-							}
-						}
-						
 						DatePicker(
 							"Date Started",
 							selection: $viewModel.item.startDate,
