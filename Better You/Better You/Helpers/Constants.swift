@@ -8,9 +8,11 @@
 import Foundation
 
 
-struct Constants {
+enum Constants {
 	/// Provides access to constants when creating or editing a `HabitItem`.
-	struct ForHabit {
+	///
+	/// Defined as an enum to prevent calling its initializer
+	internal enum ForHabit {
 		static let dateRangeUntilToday: PartialRangeThrough<Date> = ...Date()
 		
 		static let reasonableCompletedTimes: ClosedRange<Int> = 0...100
