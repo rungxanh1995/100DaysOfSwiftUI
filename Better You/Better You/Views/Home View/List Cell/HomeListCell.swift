@@ -27,9 +27,16 @@ struct HomeListCell: View {
 			
 			Spacer()
 			
-			Text("\(checkIcon) \(viewModel.item.completedTimes)")
-				.font(.system(.body, design: .rounded).bold())
-				.foregroundColor(viewModel.colorForCompletedTimes())
+			VStack(alignment: .trailing) {
+				Text("\(checkIcon) \(viewModel.item.completedTimes)")
+					.font(.system(.body, design: .rounded).bold())
+					.foregroundColor(viewModel.colorForCompletedTimes())
+				
+				Text("Since \(viewModel.item.startDate.formatted(date: .numeric, time: .omitted))")
+					.font(.system(.caption2, design: .rounded))
+					.foregroundColor(.secondary)
+			}
+			
 		}
 	}
 }
