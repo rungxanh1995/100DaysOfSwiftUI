@@ -45,21 +45,11 @@ extension BYHabitDetailView {
 					Section(
 						header: Text("Notes")
 					) {
-						if #available(iOS 16.0, *) {
-							TextField(
-								"Notes",
-								text: $viewModel.item.notes,
-								prompt: Text("Add extra notes..."),
-								axis: .vertical
-							)
-						} else {
-							// Fallback on earlier versions
-							TextField(
-								"Notes",
-								text: $viewModel.item.notes,
-								prompt: Text("Add extra notes")
-							)
-						}
+						TextField(
+							"Notes",
+							text: $viewModel.item.notes,
+							prompt: Text("Add extra notes")
+						)
 					}
 				}
 				
