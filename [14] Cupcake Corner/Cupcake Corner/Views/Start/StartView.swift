@@ -40,7 +40,7 @@ struct StartView: View {
 				
 				Section {
 					NavigationLink {
-						AddressView(orderWrapper: viewModel)
+						AddressView(viewModel: .init(order: viewModel.order))
 					} label: {
 						Text("Delivery details")
 					}
