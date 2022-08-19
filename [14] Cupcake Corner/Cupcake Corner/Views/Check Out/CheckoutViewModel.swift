@@ -25,30 +25,50 @@ extension CheckoutView {
 		}
 		
 		func placeOrder() async -> Void {
-			// 1. Convert our current order object into some JSON data that can be sent
-			guard let encoded = try? JSONEncoder().encode(self.order) else {
-				print("Failed to encode order")
-				return
+			guard let encodedData = encodeOrderObject() else { return }
+			let networkRequest = createAndConfigNetworkRequest()
+			await runRequestAndProcessResponse(networkRequest, from: encodedData)
+		}
+		
+		/// Convert current order object into some JSON data that can be sent
+		private func encodeOrderObject() -> Data? {
+			if let encoded = try? JSONEncoder().encode(self.order) {
+				return encoded
 			}
 			
-			// 2. Tell Swift how to send that data over a network call
+			print("Failed to encode order")
+			return nil
+		}
+		
+		/// Set up an `URLRequest` to send data over a network call
+		private func createAndConfigNetworkRequest() -> URLRequest {
 			let url = URL(string: "https://reqres.in/api/cupcakes")!
 			var request = URLRequest(url: url)
 			request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 			request.httpMethod = "POST"
 			
-			// 3. Run that request and process the response
+			return request
+		}
+		
+		/// Run a pre-configured network request,
+		/// and process the response sent back from an API service
+		private func runRequestAndProcessResponse(_ request: URLRequest, from inputData: Data) async -> Void {
 			do {
-				let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
-				// handle the result
-				let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-				DispatchQueue.main.async { [weak self] in
-					self?.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Cupcake.types[decodedOrder.item.type].rawValue.lowercased()) cupcakes is on its way!"
-					self?.showingConfirmation.toggle()
-				}
+				let urlSession = URLSession.shared
+				let (dataReceivedFromApiService, _) = try await urlSession.upload(for: request, from: inputData)
+				
+				let decodedOrder = try JSONDecoder().decode(Order.self, from: dataReceivedFromApiService)
+				updateConfirmationContent(from: decodedOrder)
 				
 			} catch {
 				print("Checkout failed.")
+			}
+		}
+		
+		private func updateConfirmationContent(from decodedOrder: Order) {
+			DispatchQueue.main.async { [weak self] in
+				self?.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Cupcake.types[decodedOrder.item.type].rawValue.lowercased()) cupcakes is on its way!"
+				self?.showingConfirmation.toggle()
 			}
 		}
 	}
