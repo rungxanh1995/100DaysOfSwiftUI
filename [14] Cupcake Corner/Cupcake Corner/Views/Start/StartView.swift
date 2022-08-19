@@ -63,7 +63,12 @@ struct StartView: View {
 					NavigationLink {
 						AddressView(viewModel: .init(order: viewModel.order))
 					} label: {
-						Text("Delivery Details")
+						HStack {
+							Image(systemName: "shippingbox")
+								.symbolRenderingMode(.hierarchical)
+							Text("Set Delivery Details")
+						}
+						.font(.headline)
 					}
 				}
 			}
