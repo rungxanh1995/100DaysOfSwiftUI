@@ -9,10 +9,19 @@ import Foundation
 
 struct Address: Codable {
 	
-	var contactName: String = ""
-	var streetAddress: String = ""
-	var city: String = ""
-	var zipCode: String = ""
+	// MARK: - Codable Properties
+	var contactName: String
+	var streetAddress: String
+	var city: String
+	var zipCode: String
+	
+	// MARK: - Initializers
+	init() {
+		self.contactName = ""
+		self.streetAddress = ""
+		self.city = ""
+		self.zipCode = ""
+	}
 	
 	var hasValidAddress: Bool {
 		return (anyFieldIsEmpty || anyFieldContainsOnlyWhiteSpaces) ? false : true
