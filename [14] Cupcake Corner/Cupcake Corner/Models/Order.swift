@@ -7,13 +7,6 @@
 
 import Foundation
 
-final class OrderWrapper: ObservableObject {
-	@Published var order: Order
-	
-	init(order: Order) {
-		self.order = order
-	}
-}
 struct Order: Codable {
 	
 	// MARK: - Properties

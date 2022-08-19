@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CheckoutView: View {
-	@ObservedObject var orderWrapper: OrderWrapper
+	@ObservedObject var orderWrapper: StartView.ViewModel
 	
 	@State private var confirmationMessage = ""
 	@State private var showingConfirmation = false

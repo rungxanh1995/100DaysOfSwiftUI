@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AddressView: View {
-	@ObservedObject var orderWrapper: OrderWrapper
+	@ObservedObject var orderWrapper: StartView.ViewModel
 	
 	var body: some View {
 		Form {
