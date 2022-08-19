@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct StartView: View {
 	@StateObject
 	private var orderWrapper: OrderWrapper
 	
@@ -53,6 +53,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-		ContentView(orderWrapper: .init(order: .init()))
+		StartView(orderWrapper: .init(order: .init()))
     }
 }
