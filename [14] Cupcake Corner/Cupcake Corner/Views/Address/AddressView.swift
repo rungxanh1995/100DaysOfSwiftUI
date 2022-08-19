@@ -21,7 +21,7 @@ struct AddressView: View {
 			
 			Section {
 				NavigationLink {
-					CheckoutView(orderWrapper: viewModel)
+					CheckoutView(viewModel: .init(order: viewModel.order))
 				} label: {
 					Text("Check Out")
 				}
