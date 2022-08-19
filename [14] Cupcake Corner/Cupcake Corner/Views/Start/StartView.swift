@@ -47,6 +47,7 @@ struct StartView: View {
 				}
 			}
 			.navigationTitle("Cupcake Corner")
+		}
     }
 }
 
