@@ -19,9 +19,9 @@ struct StartView: View {
 		NavigationView {
 			Form {
 				Section {
-					Picker("Select your cake type", selection: $orderWrapper.order.type) {
-						ForEach(OrderWrapper.Order.types.indices, id: \.self) {
-							Text(OrderWrapper.Order.types[$0])
+					Picker("Select your cake type", selection: $orderWrapper.order.item.type) {
+						ForEach(Cupcake.types.indices, id: \.self) {
+							Text("\(Cupcake.types[$0].rawValue)")
 						}
 					}
 					
@@ -29,12 +29,12 @@ struct StartView: View {
 				}
 				
 				Section {
-					Toggle("Any special requests?", isOn: $orderWrapper.order.specialRequestEnabled.animation())
+					Toggle("Any special requests?", isOn: $orderWrapper.order.withSpecialRequest.animation())
 					
-					if orderWrapper.order.specialRequestEnabled {
-						Toggle("Add extra frosting", isOn: $orderWrapper.order.extraFrosting)
+					if orderWrapper.order.withSpecialRequest {
+						Toggle("Add extra frosting", isOn: $orderWrapper.order.item.moreFrostingAdded)
 						
-						Toggle("Add extra sprinkles", isOn: $orderWrapper.order.addSprinkles)
+						Toggle("Add extra sprinkles", isOn: $orderWrapper.order.item.sprinklesAdded)
 					}
 				}
 				
