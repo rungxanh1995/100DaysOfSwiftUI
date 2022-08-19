@@ -59,15 +59,21 @@ extension CheckoutView {
 				
 				let decodedOrder = try JSONDecoder().decode(Order.self, from: dataReceivedFromApiService)
 				updateConfirmationContent(from: decodedOrder)
-				
 			} catch {
-				print("Checkout failed.")
+				updateConfirmationContentForFailure()
 			}
 		}
 		
 		private func updateConfirmationContent(from decodedOrder: Order) {
 			DispatchQueue.main.async { [weak self] in
 				self?.confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Cupcake.types[decodedOrder.item.type].rawValue.lowercased()) cupcakes is on its way!"
+				self?.showingConfirmation.toggle()
+			}
+		}
+		
+		private func updateConfirmationContentForFailure() -> Void {
+			DispatchQueue.main.async { [weak self] in
+				self?.confirmationMessage = "Checkout Failed! Please check your Internet connection and try again later."
 				self?.showingConfirmation.toggle()
 			}
 		}
