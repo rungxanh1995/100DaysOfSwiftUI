@@ -77,9 +77,9 @@
 		2C3A5CCB28ADDEEF002D98DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C12D5D728ADD55900D1CD1E /* StartView.swift */,
-				2C3A5CCF28ADE13B002D98DF /* AddressView.swift */,
-				2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */,
+				2CAD8C0F28AF158E00EE3551 /* Start */,
+				2CAD8C1028AF15B300EE3551 /* Address */,
+				2CAD8C1128AF15BC00EE3551 /* Check Out */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -90,6 +90,30 @@
 				2C3A5CCC28ADDEFF002D98DF /* Order.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2CAD8C0F28AF158E00EE3551 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				2C12D5D728ADD55900D1CD1E /* StartView.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		2CAD8C1028AF15B300EE3551 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A5CCF28ADE13B002D98DF /* AddressView.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		2CAD8C1128AF15BC00EE3551 /* Check Out */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */,
+			);
+			path = "Check Out";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
