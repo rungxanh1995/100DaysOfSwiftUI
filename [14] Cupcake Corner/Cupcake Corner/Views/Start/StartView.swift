@@ -18,31 +18,52 @@ struct StartView: View {
     var body: some View {
 		NavigationView {
 			Form {
-				Section {
-					Picker("Select your cake type", selection: $viewModel.order.item.type) {
+				Section(
+					header: Text("Required selections")
+				) {
+					Picker("Cake type", selection: $viewModel.order.item.type) {
 						ForEach(Cupcake.types.indices, id: \.self) {
 							Text("\(Cupcake.types[$0].rawValue)")
 						}
 					}
 					
-					Stepper("Number of cakes: \(viewModel.order.quantity)", value: $viewModel.order.quantity, in: 3...20)
+					Stepper(
+						"Batch size: \(viewModel.order.quantity)",
+						value: $viewModel.order.quantity,
+						in: 3...20
+					)
 				}
 				
-				Section {
+				Section(
+					header: Text("Optional requests")
+				) {
 					Toggle("Any special requests?", isOn: $viewModel.order.withSpecialRequest.animation())
 					
 					if viewModel.order.withSpecialRequest {
-						Toggle("Add extra frosting", isOn: $viewModel.order.item.moreFrostingAdded)
+						Toggle(
+							"🧁 Extra frosting",
+							isOn: $viewModel.order.item.moreFrostingAdded
+						)
+						.font(.callout)
+						.padding(.leading)
 						
-						Toggle("Add extra sprinkles", isOn: $viewModel.order.item.sprinklesAdded)
+						Toggle(
+							"✨ Extra sprinkles",
+							isOn: $viewModel.order.item.sprinklesAdded
+						)
+						.font(.callout)
+						.padding(.leading)
 					}
 				}
+				.listRowSeparator(.hidden)
 				
-				Section {
+				Section(
+					header: Text("Next step")
+				) {
 					NavigationLink {
 						AddressView(viewModel: .init(order: viewModel.order))
 					} label: {
-						Text("Delivery details")
+						Text("Delivery Details")
 					}
 				}
 			}
