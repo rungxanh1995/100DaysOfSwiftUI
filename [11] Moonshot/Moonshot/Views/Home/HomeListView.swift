@@ -12,9 +12,6 @@ struct HomeListView: View {
 	@ObservedObject
 	var viewModel: HomeView.ViewModel
 	
-	@Binding
-	var selectedView: Int?
-	
 	let columns = [
 		GridItem(.adaptive(minimum: 1000))  // Large width to make the grid look like a list
 	]
@@ -32,9 +29,7 @@ struct HomeListView: View {
 					NavigationLink(
 						destination: MissionView(
 							viewModel: eachMissionViewModel
-						),
-						tag: eachMissionViewModel.mission.id,
-						selection: $selectedView
+						)
 					) {
 						HStack {
 							MissionListImageView(
@@ -67,7 +62,7 @@ struct HomeListView_Previews: PreviewProvider {
 		let viewModel = HomeView.ViewModel()
 		viewModel.getData()
 		
-		return HomeListView(viewModel: viewModel, selectedView: $selectedView)
+		return HomeListView(viewModel: viewModel)
 			.preferredColorScheme(.dark)
 	}
 }
