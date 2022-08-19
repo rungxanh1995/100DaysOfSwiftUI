@@ -47,12 +47,11 @@ struct StartView: View {
 				}
 			}
 			.navigationTitle("Cupcake Corner")
-		}
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-		StartView(viewModel: .init(order: .init()))
+		  StartView(viewModel: .init(order: .init()))
     }
 }

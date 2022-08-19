@@ -42,7 +42,6 @@ struct CheckoutView: View {
 		.navigationTitle("Check out")
 		.navigationBarTitleDisplayMode(.inline)
 	}
-	
 }
 
 struct CheckoutView_Previews: PreviewProvider {
