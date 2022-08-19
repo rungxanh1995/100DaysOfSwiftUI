@@ -62,7 +62,7 @@ struct CheckoutView: View {
 		do {
 			let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
 			// handle the result
-			let decodedOrder = try JSONDecoder().decode(OrderWrapper.Order.self, from: data)
+			let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
 			confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Cupcake.types[decodedOrder.item.type].rawValue.lowercased()) cupcakes is on its way!"
 			showingConfirmation = true
 		} catch {
