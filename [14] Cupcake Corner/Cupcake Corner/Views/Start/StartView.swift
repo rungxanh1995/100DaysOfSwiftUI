@@ -18,6 +18,21 @@ struct StartView: View {
     var body: some View {
 		NavigationView {
 			Form {
+				HStack(alignment: .center) {
+					Spacer()
+					AsyncImage(url: URL(string: "https://cdn.dribbble.com/users/21264/screenshots/1282595/media/e38f40834c14e52559a1c65cec518c98.png"), scale: 3) { image in
+						image
+							.resizable()
+							.scaledToFit()
+							.cornerRadius(12)
+							.padding(.vertical)
+					} placeholder: {
+						ProgressView()
+					}
+					.frame(height: 233)
+					Spacer()
+				}
+				
 				Section(
 					header: Text("Required selections")
 				) {
