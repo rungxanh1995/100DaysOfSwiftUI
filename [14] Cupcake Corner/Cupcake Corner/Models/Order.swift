@@ -7,59 +7,53 @@
 
 import Foundation
 
-final class OrderWrapper: ObservableObject {
-	@Published var order: Order
+struct Order: Codable {
 	
-	init(order: Order) {
-		self.order = order
+	// MARK: - Properties
+	var item: Cupcake
+	var quantity: Int
+	
+	var withSpecialRequest: Bool {
+		didSet {
+			if withSpecialRequest == false {
+				item.moreFrostingAdded = false
+				item.sprinklesAdded = false
+			}
+		}
 	}
 	
-	internal struct Order: Codable {
-		static let types = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
+	var address: Address
+	
+	var cost: Double {
+		// $2 per cake
+		var cost = Double(quantity) * 2.00
 		
-		var type = 0
-		var quantity = 3
+		// complicated cakes cost more
+		cost += (Double(item.type) / 2)
 		
-		var specialRequestEnabled = false {
-			didSet {
-				if specialRequestEnabled == false {
-					extraFrosting = false
-					addSprinkles = false
-				}
-			}
-		}
-		var extraFrosting = false
-		var addSprinkles = false
-		var cost: Double {
-			// $2 per cake
-			var cost = Double(quantity) * 2
-			
-			// complicated cakes cost more
-			cost += (Double(type) / 2)
-			
-			// $1/cake for extra frosting
-			if extraFrosting {
-				cost += Double(quantity)
-			}
-			
-			// $0.50/cake for sprinkles
-			if addSprinkles {
-				cost += Double(quantity) / 2
-			}
-			
-			return cost
+		// $1/cake for extra frosting
+		if item.moreFrostingAdded {
+			cost += Double(quantity)
 		}
 		
-		var name = ""
-		var streetAddress = ""
-		var city = ""
-		var zip = ""
-		var hasValidAddress: Bool {
-			if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
-				return false
-			}
-			
-			return true
+		// $0.50/cake for sprinkles
+		if item.sprinklesAdded {
+			cost += Double(quantity) * 0.50
 		}
+		
+		return cost
+	}
+	
+	// MARK: - Initializer
+	init(
+		item: Cupcake = .init(),
+		quantity: Int = 3,
+		withSpecialRequest: Bool = false,
+		address: Address = .init()
+	) {
+		self.item = item
+		self.quantity = quantity
+		self.withSpecialRequest = withSpecialRequest
+		self.address = address
 	}
 }

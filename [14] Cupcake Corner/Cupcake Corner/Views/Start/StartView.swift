@@ -9,50 +9,49 @@ import SwiftUI
 
 struct StartView: View {
 	@StateObject
-	private var orderWrapper: OrderWrapper
+	private var viewModel: StartView.ViewModel
 	
-	init(orderWrapper: OrderWrapper = .init(order: .init())) {
-		_orderWrapper = StateObject(wrappedValue: orderWrapper)
+	init(viewModel: StartView.ViewModel = .init(order: .init())) {
+		_viewModel = StateObject(wrappedValue: viewModel)
 	}
 	
     var body: some View {
 		NavigationView {
 			Form {
 				Section {
-					Picker("Select your cake type", selection: $orderWrapper.order.type) {
-						ForEach(OrderWrapper.Order.types.indices, id: \.self) {
-							Text(OrderWrapper.Order.types[$0])
+					Picker("Select your cake type", selection: $viewModel.order.item.type) {
+						ForEach(Cupcake.types.indices, id: \.self) {
+							Text("\(Cupcake.types[$0].rawValue)")
 						}
 					}
 					
-					Stepper("Number of cakes: \(orderWrapper.order.quantity)", value: $orderWrapper.order.quantity, in: 3...20)
+					Stepper("Number of cakes: \(viewModel.order.quantity)", value: $viewModel.order.quantity, in: 3...20)
 				}
 				
 				Section {
-					Toggle("Any special requests?", isOn: $orderWrapper.order.specialRequestEnabled.animation())
+					Toggle("Any special requests?", isOn: $viewModel.order.withSpecialRequest.animation())
 					
-					if orderWrapper.order.specialRequestEnabled {
-						Toggle("Add extra frosting", isOn: $orderWrapper.order.extraFrosting)
+					if viewModel.order.withSpecialRequest {
+						Toggle("Add extra frosting", isOn: $viewModel.order.item.moreFrostingAdded)
 						
-						Toggle("Add extra sprinkles", isOn: $orderWrapper.order.addSprinkles)
+						Toggle("Add extra sprinkles", isOn: $viewModel.order.item.sprinklesAdded)
 					}
 				}
 				
 				Section {
 					NavigationLink {
-						AddressView(orderWrapper: orderWrapper)
+						AddressView(viewModel: .init(order: viewModel.order))
 					} label: {
 						Text("Delivery details")
 					}
 				}
 			}
 			.navigationTitle("Cupcake Corner")
-		}
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-		StartView(orderWrapper: .init(order: .init()))
+		  StartView(viewModel: .init(order: .init()))
     }
 }

@@ -14,6 +14,9 @@
 		2C3A5CCD28ADDEFF002D98DF /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A5CCC28ADDEFF002D98DF /* Order.swift */; };
 		2C3A5CD028ADE13B002D98DF /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A5CCF28ADE13B002D98DF /* AddressView.swift */; };
 		2C3A5CD228ADE1CA002D98DF /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */; };
+		2C8F520428AFCEF3005949B3 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520328AFCEF3005949B3 /* StartViewModel.swift */; };
+		2C8F520628AFD08A005949B3 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520528AFD08A005949B3 /* AddressViewModel.swift */; };
+		2C8F520828AFD183005949B3 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520728AFD183005949B3 /* CheckoutViewModel.swift */; };
 		2CAD8C1528AF16F400EE3551 /* Cupcake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD8C1428AF16F400EE3551 /* Cupcake.swift */; };
 		2CAD8C1728AF1B4C00EE3551 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD8C1628AF1B4C00EE3551 /* Address.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +30,9 @@
 		2C3A5CCC28ADDEFF002D98DF /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		2C3A5CCF28ADE13B002D98DF /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
 		2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		2C8F520328AFCEF3005949B3 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
+		2C8F520528AFD08A005949B3 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
+		2C8F520728AFD183005949B3 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
 		2CAD8C1428AF16F400EE3551 /* Cupcake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cupcake.swift; sourceTree = "<group>"; };
 		2CAD8C1628AF1B4C00EE3551 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				2C12D5D728ADD55900D1CD1E /* StartView.swift */,
+				2C8F520328AFCEF3005949B3 /* StartViewModel.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -110,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3A5CCF28ADE13B002D98DF /* AddressView.swift */,
+				2C8F520528AFD08A005949B3 /* AddressViewModel.swift */,
 			);
 			path = Address;
 			sourceTree = "<group>";
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */,
+				2C8F520728AFD183005949B3 /* CheckoutViewModel.swift */,
 			);
 			path = "Check Out";
 			sourceTree = "<group>";
@@ -192,7 +201,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C8F520828AFD183005949B3 /* CheckoutViewModel.swift in Sources */,
 				2C3A5CCD28ADDEFF002D98DF /* Order.swift in Sources */,
+				2C8F520428AFCEF3005949B3 /* StartViewModel.swift in Sources */,
+				2C8F520628AFD08A005949B3 /* AddressViewModel.swift in Sources */,
 				2C3A5CD028ADE13B002D98DF /* AddressView.swift in Sources */,
 				2C3A5CD228ADE1CA002D98DF /* CheckoutView.swift in Sources */,
 				2C12D5D828ADD55900D1CD1E /* StartView.swift in Sources */,
