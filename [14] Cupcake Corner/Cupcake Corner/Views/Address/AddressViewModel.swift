@@ -12,6 +12,10 @@ extension AddressView {
 		@Published
 		var order: Order
 		
+		var orderHasValidAddress: Bool {
+			return order.address.hasValidAddress
+		}
+		
 		init(order: Order) {
 			self.order = order
 		}
