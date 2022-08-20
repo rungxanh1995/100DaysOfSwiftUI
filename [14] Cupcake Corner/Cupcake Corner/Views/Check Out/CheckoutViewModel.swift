@@ -27,7 +27,7 @@ extension CheckoutView {
 		) {
 			self.order = order
 			self.apiService = OrderServiceImpl(order: order)
-			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
+			self.decorativeCupcakeImage = Constants.ImageUrl.randomCupcake
 			confirmationMessage = ""
 			showingConfirmation = false
 		}

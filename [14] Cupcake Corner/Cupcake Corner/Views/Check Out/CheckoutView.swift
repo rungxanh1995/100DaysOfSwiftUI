@@ -45,7 +45,7 @@ extension CheckoutView {
 	
 	@ViewBuilder
 	var decorativeCupcakeImage: some View {
-		AsyncImage(url: Constants.randomDecorativeCupcakeUrl, scale: 3) { phase in
+		AsyncImage(url: viewModel.decorativeCupcakeImage, scale: 3) { phase in
 			switch phase {
 				case .empty:
 					ProgressView()

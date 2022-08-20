@@ -16,12 +16,12 @@ extension StartView {
 		
 		init(order: Order) {
 			self.order = order
-			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
+			self.decorativeCupcakeImage = Constants.ImageUrl.randomCupcake
 		}
 		
 		func startNewOrder() -> Void {
 			self.order = .init()
-			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
+			self.decorativeCupcakeImage = Constants.ImageUrl.randomCupcake
 		}
 	}
 }
