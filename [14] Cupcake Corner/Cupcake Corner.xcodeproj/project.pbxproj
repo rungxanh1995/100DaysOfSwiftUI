@@ -16,6 +16,7 @@
 		2C3A5CD228ADE1CA002D98DF /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */; };
 		2C3F86A728B05E3300E35E5A /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F86A628B05E3300E35E5A /* GifImage.swift */; };
 		2C3F86AA28B05F1200E35E5A /* deliveryTruck.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2C3F86A928B05F1200E35E5A /* deliveryTruck.gif */; };
+		2C3F86AC28B0677B00E35E5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3F86AB28B0677B00E35E5A /* Constants.swift */; };
 		2C8F520428AFCEF3005949B3 /* StartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520328AFCEF3005949B3 /* StartViewModel.swift */; };
 		2C8F520628AFD08A005949B3 /* AddressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520528AFD08A005949B3 /* AddressViewModel.swift */; };
 		2C8F520828AFD183005949B3 /* CheckoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F520728AFD183005949B3 /* CheckoutViewModel.swift */; };
@@ -34,6 +35,7 @@
 		2C3A5CD128ADE1CA002D98DF /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		2C3F86A628B05E3300E35E5A /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
 		2C3F86A928B05F1200E35E5A /* deliveryTruck.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = deliveryTruck.gif; sourceTree = "<group>"; };
+		2C3F86AB28B0677B00E35E5A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C8F520328AFCEF3005949B3 /* StartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewModel.swift; sourceTree = "<group>"; };
 		2C8F520528AFD08A005949B3 /* AddressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewModel.swift; sourceTree = "<group>"; };
 		2C8F520728AFD183005949B3 /* CheckoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewModel.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3F86A928B05F1200E35E5A /* deliveryTruck.gif */,
+				2C3F86AB28B0677B00E35E5A /* Constants.swift */,
 			);
 			path = "Other Assets";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				2CAD8C1528AF16F400EE3551 /* Cupcake.swift in Sources */,
 				2C12D5D628ADD55900D1CD1E /* Cupcake_CornerApp.swift in Sources */,
 				2CAD8C1728AF1B4C00EE3551 /* Address.swift in Sources */,
+				2C3F86AC28B0677B00E35E5A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

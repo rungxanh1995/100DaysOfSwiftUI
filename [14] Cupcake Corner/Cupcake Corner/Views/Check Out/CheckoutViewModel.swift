@@ -12,6 +12,8 @@ extension CheckoutView {
 		@Published
 		var order: Order
 		
+		private(set) var decorativeCupcakeImage: URL?
+		
 		@Published
 		private(set) var confirmationMessage: String
 		
@@ -20,6 +22,7 @@ extension CheckoutView {
 		
 		init(order: Order) {
 			self.order = order
+			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
 			confirmationMessage = ""
 			showingConfirmation = false
 		}

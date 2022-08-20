@@ -29,6 +29,15 @@ struct StartView: View {
 					Text("Cupcake Corner")
 						.font(.system(.title3, design: .serif).bold())
 				}
+				
+				ToolbarItem(placement: .navigationBarTrailing) {
+					Button {
+						// Create a new cupcake order
+					} label: {
+						Image(systemName: "plus.app.fill")
+							.symbolRenderingMode(.hierarchical)
+					}
+				}
 			}
 		}
     }
@@ -39,7 +48,7 @@ extension StartView {
 	var decorativeCupcakeImage: some View {
 		HStack(alignment: .center) {
 			Spacer()
-			AsyncImage(url: URL(string: "https://cdn.dribbble.com/users/21264/screenshots/1282595/media/e38f40834c14e52559a1c65cec518c98.png"), scale: 3) { phase in
+			AsyncImage(url: viewModel.decorativeCupcakeImage, scale: 3) { phase in
 				switch phase {
 					case .empty:
 						ProgressView()

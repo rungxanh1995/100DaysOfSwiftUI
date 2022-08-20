@@ -12,8 +12,11 @@ extension StartView {
 		@Published
 		var order: Order
 		
+		private(set) var decorativeCupcakeImage: URL?
+		
 		init(order: Order) {
 			self.order = order
+			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
 		}
 	}
 }
