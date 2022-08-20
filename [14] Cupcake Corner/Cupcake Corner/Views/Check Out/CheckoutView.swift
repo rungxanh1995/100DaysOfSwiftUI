@@ -14,9 +14,7 @@ struct CheckoutView: View {
 		ScrollView {
 			VStack {
 				if viewModel.showingConfirmation {
-					Text("Delivery animated image here")
-						.frame(width: 200, height: 150)
-						.border(.gray)
+					decorativeDeliveryGifImage
 					orderConfirmationMessage
 				} else {
 					decorativeCupcakeImage
@@ -37,6 +35,14 @@ struct CheckoutView: View {
 }
 
 extension CheckoutView {
+	@ViewBuilder
+	var decorativeDeliveryGifImage: some View {
+		GifImage("deliveryTruck")
+			.frame(width: 300, height: 160)
+			.cornerRadius(12)
+			.padding()
+	}
+	
 	@ViewBuilder
 	var decorativeCupcakeImage: some View {
 		AsyncImage(url: URL(string: "https://hws.dev/img/cupcakes@3x.jpg"), scale: 3) { phase in
