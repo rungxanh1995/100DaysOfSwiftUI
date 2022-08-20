@@ -73,6 +73,7 @@ extension CheckoutView {
 	@ViewBuilder
 	var orderConfirmationMessage: some View {
 		Text(viewModel.confirmationMessage)
+			.font(.title3)
 			.padding()
 			.multilineTextAlignment(.center)
 	}
