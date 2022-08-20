@@ -12,24 +12,62 @@ struct AddressView: View {
 	
 	var body: some View {
 		Form {
-			Section {
-				TextField("Name", text: $viewModel.order.address.contactName)
-				TextField("Street Address", text: $viewModel.order.address.streetAddress)
-				TextField("City", text: $viewModel.order.address.city)
-				TextField("Zip", text: $viewModel.order.address.zipCode)
+			deliveryAddressFields
+			linkToCheckout
+		}
+		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .principal) {
+				Text("Delivery Info")
+					.font(.system(.title3, design: .serif).bold())
 			}
-			
-			Section {
-				NavigationLink {
-					CheckoutView(viewModel: .init(order: viewModel.order))
-				} label: {
+		}
+	}
+}
+
+extension AddressView {
+	@ViewBuilder
+	var deliveryAddressFields: some View {
+		Section(
+			header: Text("Customer Details"),
+			footer: Text("All fields are required")
+		) {
+			TextField(
+				"Contact Name",
+				text: $viewModel.order.address.contactName
+			)
+			TextField(
+				"Street Address",
+				text: $viewModel.order.address.streetAddress
+			)
+			TextField(
+				"City",
+				text: $viewModel.order.address.city
+			)
+			TextField(
+				"Zip Code",
+				text: $viewModel.order.address.zipCode
+			)
+		}
+	}
+	
+	@ViewBuilder
+	var linkToCheckout: some View {
+		Section(
+			header: Text("Next step")
+		) {
+			NavigationLink {
+				CheckoutView(viewModel: .init(order: viewModel.order))
+			} label: {
+				HStack {
+					Image(systemName: "creditcard")
+						.symbolRenderingMode(.hierarchical)
 					Text("Check Out")
 				}
+				.font(.headline)
 			}
-			.disabled(viewModel.orderHasValidAddress == false)
 		}
-		.navigationTitle("Delivery details")
-		.navigationBarTitleDisplayMode(.inline)
+		.disabled(viewModel.orderHasValidAddress == false)
 	}
 }
 
