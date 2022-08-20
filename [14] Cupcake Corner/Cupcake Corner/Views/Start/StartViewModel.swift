@@ -12,6 +12,8 @@ extension StartView {
 		@Published
 		var order: Order
 		
+		let allowedBatchRange: ClosedRange<Int> = 3...20
+		
 		private(set) var decorativeCupcakeImage: URL?
 		
 		init(order: Order) {
