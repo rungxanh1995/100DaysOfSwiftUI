@@ -83,7 +83,7 @@ extension StartView {
 			Stepper(
 				"Batch size: \(viewModel.order.quantity)",
 				value: $viewModel.order.quantity,
-				in: 3...20
+				in: viewModel.allowedBatchRange
 			)
 		}
 	}
