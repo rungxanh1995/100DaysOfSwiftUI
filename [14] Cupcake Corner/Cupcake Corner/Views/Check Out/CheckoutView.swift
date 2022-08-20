@@ -66,7 +66,7 @@ extension CheckoutView {
 	
 	@ViewBuilder
 	var orderTotal: some View {
-		Text("Your total is \(viewModel.order.cost, format: .currency(code: "USD"))")
+		Text("Your total is \(viewModel.order.cost, format: .currency(code: Locale.current.currencyCode ?? "USD"))")
 			.font(.title)
 	}
 	
