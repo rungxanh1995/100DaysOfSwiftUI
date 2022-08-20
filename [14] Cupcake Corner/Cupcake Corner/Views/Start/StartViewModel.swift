@@ -18,6 +18,11 @@ extension StartView {
 			self.order = order
 			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
 		}
+		
+		func startNewOrder() -> Void {
+			self.order = .init()
+			self.decorativeCupcakeImage = Constants.randomDecorativeCupcakeUrl
+		}
 	}
 }
 

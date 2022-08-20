@@ -32,7 +32,7 @@ struct StartView: View {
 				
 				ToolbarItem(placement: .navigationBarTrailing) {
 					Button {
-						// Create a new cupcake order
+						viewModel.startNewOrder()
 					} label: {
 						Image(systemName: "plus.app.fill")
 							.symbolRenderingMode(.hierarchical)
