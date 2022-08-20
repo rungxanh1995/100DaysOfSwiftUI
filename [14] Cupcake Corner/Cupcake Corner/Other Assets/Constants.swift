@@ -8,6 +8,11 @@
 import Foundation
 
 struct Constants {
+	struct Api {
+		static let baseUrl: URL = URL(string: "https://reqres.in".appending(Api.endpoint))!
+		static let endpoint: String = "/api/cupcakes"
+	}
+	
 	private static let decorativeCupcakeImageUrls: [URL?] = [
 		URL(string: "https://cdn.dribbble.com/users/21264/screenshots/1282595/media/e38f40834c14e52559a1c65cec518c98.png"),
 		URL(string: "https://hws.dev/img/cupcakes@3x.jpg"),
