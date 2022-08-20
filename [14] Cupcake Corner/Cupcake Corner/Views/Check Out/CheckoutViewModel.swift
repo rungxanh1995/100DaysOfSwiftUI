@@ -13,7 +13,7 @@ extension CheckoutView {
 		var order: Order
 		
 		private(set) var decorativeCupcakeImage: URL?
-		
+
 		@Published
 		private(set) var confirmationMessage: String
 		
@@ -49,7 +49,7 @@ extension CheckoutView {
 			var request = URLRequest(url: url)
 			request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 			request.httpMethod = "POST"
-			
+
 			return request
 		}
 		
