@@ -30,7 +30,12 @@ extension CheckoutView {
 		func placeOrder() async -> Void {
 			guard let encodedData = encodeOrderObject() else { return }
 			let networkRequest = createAndConfigNetworkRequest()
-			await runRequestAndProcessResponse(networkRequest, from: encodedData)
+			do {
+				let confirmedOrder = try await fetch(networkRequest, from: encodedData)
+				updateConfirmationContent(from: confirmedOrder)
+			} catch {
+				updateConfirmationContentForFailure()
+			}
 		}
 		
 		/// Convert current order object into some JSON data that can be sent
@@ -54,16 +59,10 @@ extension CheckoutView {
 		
 		/// Run a pre-configured network request,
 		/// and process the response sent back from an API service
-		private func runRequestAndProcessResponse(_ request: URLRequest, from inputData: Data) async -> Void {
-			do {
+		private func fetch(_ request: URLRequest, from inputData: Data) async throws -> Order {
 				let urlSession = URLSession.shared
 				let (dataReceivedFromApiService, _) = try await urlSession.upload(for: request, from: inputData)
-				
-				let decodedOrder = try JSONDecoder().decode(Order.self, from: dataReceivedFromApiService)
-				updateConfirmationContent(from: decodedOrder)
-			} catch {
-				updateConfirmationContentForFailure()
-			}
+				return try JSONDecoder().decode(Order.self, from: dataReceivedFromApiService)
 		}
 		
 		private func updateConfirmationContent(from decodedOrder: Order) {
