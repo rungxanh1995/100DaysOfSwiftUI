@@ -21,8 +21,8 @@ final class OrderServiceImpl: OrderService {
 	}
 	
 	private static func configNetworkRequest() -> URLRequest {
-		let url = Constants.Api.baseUrl
-		var request = URLRequest(url: url)
+		let url = URL(string: Constants.Api.baseUrl.appending(Constants.Api.endpoint))
+		var request = URLRequest(url: url!)
 		request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 		request.httpMethod = "POST"
 		

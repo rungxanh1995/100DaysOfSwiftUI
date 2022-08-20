@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
 	struct Api {
-		static let baseUrl: URL = URL(string: "https://reqres.in".appending(Api.endpoint))!
+		static let baseUrl: String = "https://reqres.in"
 		static let endpoint: String = "/api/cupcakes"
 	}
 	
