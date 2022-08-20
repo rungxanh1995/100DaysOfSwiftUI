@@ -45,8 +45,7 @@ extension CheckoutView {
 		
 		/// Set up an `URLRequest` to send data over a network call
 		private func createAndConfigNetworkRequest() -> URLRequest {
-			let url = URL(string: "https://reqres.in/api/cupcakes")!
-			var request = URLRequest(url: url)
+			var request = URLRequest(url: Constants.Api.baseUrl)
 			request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 			request.httpMethod = "POST"
 
