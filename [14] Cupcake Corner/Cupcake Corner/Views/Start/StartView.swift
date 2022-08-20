@@ -39,6 +39,7 @@ struct StartView: View {
 					}
 				}
 			}
+		}
     }
 }
 
