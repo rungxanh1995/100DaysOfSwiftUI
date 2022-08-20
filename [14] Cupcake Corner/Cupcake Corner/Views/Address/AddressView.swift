@@ -15,8 +15,13 @@ struct AddressView: View {
 			deliveryAddressFields
 			linkToCheckout
 		}
-		.navigationTitle("Delivery Info")
 		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .principal) {
+				Text("Delivery Info")
+					.font(.system(.title3, design: .serif).bold())
+			}
+		}
 	}
 }
 

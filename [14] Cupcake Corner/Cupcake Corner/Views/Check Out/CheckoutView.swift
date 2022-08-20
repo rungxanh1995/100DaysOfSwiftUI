@@ -39,8 +39,13 @@ struct CheckoutView: View {
 			}
 			.animation(.easeInOut, value: viewModel.showingConfirmation)
 		}
-		.navigationTitle("Check out")
 		.navigationBarTitleDisplayMode(.inline)
+		.toolbar {
+			ToolbarItem(placement: .principal) {
+				Text("Check Out")
+					.font(.system(.title3, design: .serif).bold())
+			}
+		}
 	}
 }
 

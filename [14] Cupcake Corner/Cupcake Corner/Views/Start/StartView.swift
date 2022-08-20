@@ -23,7 +23,13 @@ struct StartView: View {
 				optionalRequestsView
 				linkToDeliveryView
 			}
-			.navigationTitle("Cupcake Corner")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .principal) {
+					Text("Cupcake Corner")
+						.font(.system(.title3, design: .serif).bold())
+				}
+			}
 		}
     }
 }
