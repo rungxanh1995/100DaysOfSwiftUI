@@ -60,7 +60,10 @@ extension BYHabitDetailView {
 			.navigationTitle("Habit Detail")
 			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
-				Button("Edit") { isShowingEditHabit.toggle() }
+				Button("Edit") {
+					isShowingEditHabit.toggle()
+					haptic(.success)
+				}
 			}
 			.sheet(isPresented: $isShowingEditHabit) {
 				BYHabitDetailView.EditMode(viewModel: self.viewModel)

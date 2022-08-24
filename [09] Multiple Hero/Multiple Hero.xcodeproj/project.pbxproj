@@ -12,7 +12,9 @@
 		2C3A76E8289835EC00316017 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A76E7289835EC00316017 /* ContentView.swift */; };
 		2C3A76EA289835EC00316017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A76E9289835EC00316017 /* Assets.xcassets */; };
 		2C3A76ED289835EC00316017 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A76EC289835EC00316017 /* Preview Assets.xcassets */; };
+		2C4D1BE428B5B5AA00ABACCE /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BE328B5B5AA00ABACCE /* UserDefaultsKey.swift */; };
 		2C96A5FD289B7424004B5251 /* UserProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5FC289B7424004B5251 /* UserProgress.swift */; };
+		2CB841C528B46A610040FE9F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB841C428B46A610040FE9F /* HapticManager.swift */; };
 		2CB921B62898722D00C251BA /* MHGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921B52898722D00C251BA /* MHGame.swift */; };
 		2CB921BB289873C100C251BA /* StatefulPreviewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */; };
 		2CB921BD2898740B00C251BA /* MHSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB921BC2898740B00C251BA /* MHSettingsView.swift */; };
@@ -39,7 +41,9 @@
 		2C3A76E7289835EC00316017 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C3A76E9289835EC00316017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3A76EC289835EC00316017 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2C4D1BE328B5B5AA00ABACCE /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		2C96A5FC289B7424004B5251 /* UserProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgress.swift; sourceTree = "<group>"; };
+		2CB841C428B46A610040FE9F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CB921B52898722D00C251BA /* MHGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHGame.swift; sourceTree = "<group>"; };
 		2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatefulPreviewWrapper.swift; sourceTree = "<group>"; };
 		2CB921BC2898740B00C251BA /* MHSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MHSettingsView.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				2CB921C228988BAD00C251BA /* Extensions */,
 				2C24C31C289AFF0D00D6DBE3 /* Localizations */,
 				2CB921B92898739300C251BA /* Helpers */,
+				2CB841C628B46A660040FE9F /* Haptics */,
 				2C3A76E9289835EC00316017 /* Assets.xcassets */,
 				2C3A76EB289835EC00316017 /* Preview Content */,
 			);
@@ -115,6 +120,22 @@
 				2C3A76EC289835EC00316017 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2C4D1BE228B5B59D00ABACCE /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D1BE328B5B5AA00ABACCE /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		2CB841C628B46A660040FE9F /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				2CB841C428B46A610040FE9F /* HapticManager.swift */,
+			);
+			path = Haptics;
 			sourceTree = "<group>";
 		};
 		2CB921B3289871F300C251BA /* Views */ = {
@@ -147,6 +168,7 @@
 		2CB921B92898739300C251BA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2C4D1BE228B5B59D00ABACCE /* UserDefaults */,
 				2CB921BA289873C100C251BA /* StatefulPreviewWrapper.swift */,
 			);
 			path = Helpers;
@@ -245,9 +267,11 @@
 				2CF87B1C289A11E70058D2AC /* View+Ext.swift in Sources */,
 				2C3A76E8289835EC00316017 /* ContentView.swift in Sources */,
 				2CF87B162899E6700058D2AC /* MHButtonView.swift in Sources */,
+				2C4D1BE428B5B5AA00ABACCE /* UserDefaultsKey.swift in Sources */,
 				2CF87B122898B4F00058D2AC /* MHKeypadActionHandler.swift in Sources */,
 				2CB921CB2898AB4A00C251BA /* MHKeypadStyleModifier.swift in Sources */,
 				2CB921C12898894100C251BA /* MHQuestion.swift in Sources */,
+				2CB841C528B46A610040FE9F /* HapticManager.swift in Sources */,
 				2CF87B1A289A0B7D0058D2AC /* MHMascot.swift in Sources */,
 				2C3A76E6289835EC00316017 /* Multiple_HeroApp.swift in Sources */,
 				2CF87B182899ED680058D2AC /* MHBackgroundView.swift in Sources */,
