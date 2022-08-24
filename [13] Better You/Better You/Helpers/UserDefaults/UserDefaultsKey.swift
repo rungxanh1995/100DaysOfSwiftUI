@@ -9,4 +9,5 @@ import Foundation
 
 enum UserDefaultsKey {
 	static let hapticsEnabled: String = "hapticsEnabled"
+	static let darkModeEnabled: String = "darkModeEnabled"
 }
