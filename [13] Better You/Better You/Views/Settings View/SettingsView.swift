@@ -11,13 +11,17 @@ struct SettingsView: View {
 	@AppStorage(UserDefaultsKey.hapticsEnabled)
 	private var isHapticsEnabled: Bool = true
 	
+	@AppStorage(UserDefaultsKey.darkModeEnabled)
+	private var isDarkModeEnabled: Bool = false
+	
 	var body: some View {
 		NavigationView {
 			Form {
 				Section(
-					header: Text("Vibrations")
+					header: Text("General")
 				) {
 					haptics
+					darkMode
 				}
 				
 				Section(
@@ -37,6 +41,12 @@ private extension SettingsView {
 	@ViewBuilder
 	private var haptics: some View {
 		Toggle("Enable Haptics", isOn: $isHapticsEnabled)
+			.tint(.teal)
+	}
+	
+	@ViewBuilder
+	private var darkMode: some View {
+		Toggle("Dark Mode", isOn: $isDarkModeEnabled)
 			.tint(.teal)
 	}
 	
