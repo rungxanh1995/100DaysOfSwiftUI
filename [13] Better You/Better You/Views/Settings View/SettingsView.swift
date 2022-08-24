@@ -27,9 +27,7 @@ struct SettingsView: View {
 				Section(
 					footer: Text("Be careful, this removes all your habit trackers. You have been warned!")
 				) {
-					Button("Reset to Original", role: .destructive) {
-						resetDefaults()
-					}
+					resetAppButton
 				}
 			}
 			.navigationTitle("Settings")
@@ -51,6 +49,13 @@ private extension SettingsView {
 				Text(theme.title)
 					.tag(theme.rawValue)
 			}
+		}
+	}
+	
+	@ViewBuilder
+	private var resetAppButton: some View {
+		Button("Reset to Original", role: .destructive) {
+			resetDefaults()
 		}
 	}
 	
