@@ -21,7 +21,7 @@ struct SettingsView: View {
 					header: Text("General")
 				) {
 					haptics
-					darkMode
+					appTheme
 				}
 				
 				Section(
@@ -45,7 +45,7 @@ private extension SettingsView {
 	}
 	
 	@ViewBuilder
-	private var darkMode: some View {
+	private var appTheme: some View {
 		Picker("Color Theme", selection: $systemTheme) {
 			ForEach(SchemeType.allCases) { (theme) in
 				Text(theme.title)

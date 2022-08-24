@@ -27,6 +27,8 @@
 		2C9022D628AC65E9006CA718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D528AC65E9006CA718 /* Constants.swift */; };
 		2C9022D928AC83AA006CA718 /* BYHabitDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */; };
 		2CA9D9E328B64DE500DFED61 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E228B64DE500DFED61 /* SchemeType.swift */; };
+		2CA9D9E628B652DD00DFED61 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E528B652DD00DFED61 /* View+Ext.swift */; };
+		2CA9D9E928B6595900DFED61 /* SchemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E828B6595900DFED61 /* SchemeModifier.swift */; };
 		2CB841C328B4696D0040FE9F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB841C228B4696D0040FE9F /* HapticManager.swift */; };
 		2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */; };
 		2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */; };
@@ -75,6 +77,8 @@
 		2C9022D528AC65E9006CA718 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailCell.swift; sourceTree = "<group>"; };
 		2CA9D9E228B64DE500DFED61 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
+		2CA9D9E528B652DD00DFED61 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		2CA9D9E828B6595900DFED61 /* SchemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModifier.swift; sourceTree = "<group>"; };
 		2CB841C228B4696D0040FE9F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
 		2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.swift; sourceTree = "<group>"; };
@@ -209,8 +213,8 @@
 		2C4D1BE528B5B9C200ABACCE /* Settings View */ = {
 			isa = PBXGroup;
 			children = (
-				2CA9D9E128B64DCF00DFED61 /* Scheme Type */,
 				2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */,
+				2CA9D9E128B64DCF00DFED61 /* Scheme Type */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -234,6 +238,8 @@
 		2C9022D428AC65E1006CA718 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2CA9D9E728B6594E00DFED61 /* Modifiers */,
+				2CA9D9E428B652D600DFED61 /* Extensions */,
 				2C4D1BE828B5BA4300ABACCE /* UserDefaults */,
 				2C9022D528AC65E9006CA718 /* Constants.swift */,
 				2C4D1BEB28B5BFA900ABACCE /* Symbols.swift */,
@@ -255,6 +261,22 @@
 				2CA9D9E228B64DE500DFED61 /* SchemeType.swift */,
 			);
 			path = "Scheme Type";
+			sourceTree = "<group>";
+		};
+		2CA9D9E428B652D600DFED61 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9D9E528B652DD00DFED61 /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2CA9D9E728B6594E00DFED61 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2CA9D9E828B6595900DFED61 /* SchemeModifier.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		2CB841C128B4695B0040FE9F /* Haptics */ = {
@@ -423,6 +445,7 @@
 				2C4D1BEA28B5BA4F00ABACCE /* UserDefaultsKey.swift in Sources */,
 				2C0CADAB28A6FF7100AB08DC /* HabitCategory.swift in Sources */,
 				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
+				2CA9D9E628B652DD00DFED61 /* View+Ext.swift in Sources */,
 				2C4D1BE728B5B9D800ABACCE /* SettingsView.swift in Sources */,
 				2CE8B49428AB2B20007525C2 /* BYHabitDetailViewModel.swift in Sources */,
 				2CB841C328B4696D0040FE9F /* HapticManager.swift in Sources */,
@@ -431,6 +454,7 @@
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
 				2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
+				2CA9D9E928B6595900DFED61 /* SchemeModifier.swift in Sources */,
 				2CE8B49728AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift in Sources */,
 				2C9022D328AC62F8006CA718 /* BYHabitDetailView.EditMode.swift in Sources */,
 				2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */,

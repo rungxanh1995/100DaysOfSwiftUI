@@ -23,6 +23,7 @@ struct Better_YouApp: App {
 						Text("Settings")
 					}
 			}
+			.setUpColorTheme()
         }
     }
 }
