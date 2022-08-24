@@ -14,12 +14,12 @@ struct Better_YouApp: App {
 			TabView {
 				HomeView()
 					.tabItem {
-						Image(systemName: "house")
+						Symbols.house
 						Text("Home")
 					}
 				SettingsView()
 					.tabItem {
-						Image(systemName: "gear")
+						Symbols.gear
 						Text("Settings")
 					}
 			}
