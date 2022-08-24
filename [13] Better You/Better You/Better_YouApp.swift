@@ -11,7 +11,18 @@ import SwiftUI
 struct Better_YouApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+			TabView {
+				HomeView()
+					.tabItem {
+						Image(systemName: "house")
+						Text("Home")
+					}
+				SettingsView()
+					.tabItem {
+						Image(systemName: "gear")
+						Text("Settings")
+					}
+			}
         }
     }
 }
