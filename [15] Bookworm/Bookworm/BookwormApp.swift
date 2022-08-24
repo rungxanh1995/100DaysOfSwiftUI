@@ -13,7 +13,7 @@ struct BookwormApp: App {
 	
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
 				.environment(
 					\.managedObjectContext,
 					 persistence.container.viewContext
