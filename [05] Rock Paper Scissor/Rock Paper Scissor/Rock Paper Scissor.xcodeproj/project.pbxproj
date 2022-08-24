@@ -37,6 +37,7 @@
 		2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */; };
 		2CDDE18528867842002E1914 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE18428867842002E1914 /* View+Ext.swift */; };
 		2CEA30CF28B5AC0100F7BED8 /* RPSSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */; };
+		2CEA30D228B5AFB300F7BED8 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSShadowModifier.swift; sourceTree = "<group>"; };
 		2CDDE18428867842002E1914 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSSettingsView.swift; sourceTree = "<group>"; };
+		2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 		2CDDE16628862616002E1914 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2CEA30D028B5AFA700F7BED8 /* UserDefaults */,
 				2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */,
 			);
 			path = Helper;
@@ -235,6 +238,14 @@
 				2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		2CEA30D028B5AFA700F7BED8 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +333,7 @@
 				2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */,
 				2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */,
 				2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */,
+				2CEA30D228B5AFB300F7BED8 /* UserDefaultsKey.swift in Sources */,
 				2CDDE14D2885EE07002E1914 /* RPSGestureType.swift in Sources */,
 				2CDDE16328860862002E1914 /* RPSGameOverView.swift in Sources */,
 				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
