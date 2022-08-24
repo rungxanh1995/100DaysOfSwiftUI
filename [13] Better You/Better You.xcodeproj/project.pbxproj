@@ -23,6 +23,7 @@
 		2C4D1BE728B5B9D800ABACCE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */; };
 		2C4D1BEA28B5BA4F00ABACCE /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BE928B5BA4F00ABACCE /* UserDefaultsKey.swift */; };
 		2C4D1BEC28B5BFA900ABACCE /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BEB28B5BFA900ABACCE /* Symbols.swift */; };
+		2C4D1BEF28B5C46100ABACCE /* DarkModeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BEE28B5C46100ABACCE /* DarkModeModifier.swift */; };
 		2C9022D328AC62F8006CA718 /* BYHabitDetailView.EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D228AC62F8006CA718 /* BYHabitDetailView.EditMode.swift */; };
 		2C9022D628AC65E9006CA718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D528AC65E9006CA718 /* Constants.swift */; };
 		2C9022D928AC83AA006CA718 /* BYHabitDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */; };
@@ -70,6 +71,7 @@
 		2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2C4D1BE928B5BA4F00ABACCE /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		2C4D1BEB28B5BFA900ABACCE /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
+		2C4D1BEE28B5C46100ABACCE /* DarkModeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeModifier.swift; sourceTree = "<group>"; };
 		2C9022D228AC62F8006CA718 /* BYHabitDetailView.EditMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.EditMode.swift; sourceTree = "<group>"; };
 		2C9022D528AC65E9006CA718 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailCell.swift; sourceTree = "<group>"; };
@@ -220,6 +222,14 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		2C4D1BED28B5C44500ABACCE /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D1BEE28B5C46100ABACCE /* DarkModeModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		2C9022D128AC62C6006CA718 /* Edit Mode */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 		2C9022D428AC65E1006CA718 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2C4D1BED28B5C44500ABACCE /* Modifiers */,
 				2C4D1BE828B5BA4300ABACCE /* UserDefaults */,
 				2C9022D528AC65E9006CA718 /* Constants.swift */,
 				2C4D1BEB28B5BFA900ABACCE /* Symbols.swift */,
@@ -416,6 +427,7 @@
 				2CB841C328B4696D0040FE9F /* HapticManager.swift in Sources */,
 				2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */,
 				2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */,
+				2C4D1BEF28B5C46100ABACCE /* DarkModeModifier.swift in Sources */,
 				2C0CADB328A7025D00AB08DC /* HomeViewModel.swift in Sources */,
 				2C0CADB528A709FA00AB08DC /* BYPersistenceHandler.swift in Sources */,
 				2C0CADA928A6FE8700AB08DC /* HabitItem.swift in Sources */,
