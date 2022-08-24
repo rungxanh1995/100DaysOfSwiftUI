@@ -44,11 +44,13 @@ struct RPSGame {
 	
 	mutating private func updateOngoingGame(basedOn isCorrectGuess: Bool) {
 		if isCorrectGuess {
+			haptic(.success)
 			scoreAlert.updateContent(
 				title: "Correct",
 				message: "🎉"
 			)
 		} else {
+			haptic(.error)
 			scoreAlert.updateContent(
 				title: "Wrong",
 				message: "😵"

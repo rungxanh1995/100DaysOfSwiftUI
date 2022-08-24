@@ -13,6 +13,7 @@
 		2C55C9D42883986A00BD9538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C55C9D32883986A00BD9538 /* Preview Assets.xcassets */; };
 		2C695A6428A1B59900E4F4AE /* RPSGameplayHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */; };
 		2CA3F81C28878A1D00EB73AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3F81E28878A1D00EB73AD /* Localizable.strings */; };
+		2CB841C928B46AD20040FE9F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB841C828B46AD20040FE9F /* HapticManager.swift */; };
 		2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */; };
 		2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */; };
 		2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBFF8792883AD52009F2EDD /* RPSGame.swift */; };
@@ -35,6 +36,8 @@
 		2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE17F2886567C002E1914 /* RPSAlert.swift */; };
 		2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */; };
 		2CDDE18528867842002E1914 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE18428867842002E1914 /* View+Ext.swift */; };
+		2CEA30CF28B5AC0100F7BED8 /* RPSSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */; };
+		2CEA30D228B5AFB300F7BED8 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,7 @@
 		2CA3F81D28878A1D00EB73AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2CA3F81F28878A2000EB73AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2CA3F82028878A2100EB73AD /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2CB841C828B46AD20040FE9F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CBFF8742883AB39009F2EDD /* RPSGestureStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGestureStore.swift; sourceTree = "<group>"; };
 		2CBFF8772883AC8C009F2EDD /* Array+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Ext.swift"; sourceTree = "<group>"; };
 		2CBFF8792883AD52009F2EDD /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
@@ -70,6 +74,8 @@
 		2CDDE17F2886567C002E1914 /* RPSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSAlert.swift; sourceTree = "<group>"; };
 		2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSShadowModifier.swift; sourceTree = "<group>"; };
 		2CDDE18428867842002E1914 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSSettingsView.swift; sourceTree = "<group>"; };
+		2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 				2CBFF8762883AC7B009F2EDD /* Extensions */,
 				2CBFF86D2883A935009F2EDD /* Models */,
 				2CDDE1562885F618002E1914 /* Views */,
+				2CB841C728B46AC80040FE9F /* Haptics */,
 				2CDDE1702886346E002E1914 /* Other Resources */,
 				2CDDE16628862616002E1914 /* Helper */,
 				2C55C9D02883986A00BD9538 /* Assets.xcassets */,
@@ -131,6 +138,14 @@
 				2CA3F81E28878A1D00EB73AD /* Localizable.strings */,
 			);
 			path = Translations;
+			sourceTree = "<group>";
+		};
+		2CB841C728B46AC80040FE9F /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				2CB841C828B46AD20040FE9F /* HapticManager.swift */,
+			);
+			path = Haptics;
 			sourceTree = "<group>";
 		};
 		2CBFF86D2883A935009F2EDD /* Models */ = {
@@ -174,6 +189,7 @@
 				2CDDE15D2886073E002E1914 /* RPSScoreView.swift */,
 				2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */,
 				2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */,
+				2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -181,6 +197,7 @@
 		2CDDE16628862616002E1914 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2CEA30D028B5AFA700F7BED8 /* UserDefaults */,
 				2CDDE16728862630002E1914 /* StatefulPreviewWrapper.swift */,
 			);
 			path = Helper;
@@ -221,6 +238,14 @@
 				2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */,
 			);
 			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		2CEA30D028B5AFA700F7BED8 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2CEA30D128B5AFB300F7BED8 /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */,
+				2CEA30CF28B5AC0100F7BED8 /* RPSSettingsView.swift in Sources */,
 				2CDDE1502885EEA0002E1914 /* RPSGameMode.swift in Sources */,
 				2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */,
 				2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */,
@@ -307,6 +333,7 @@
 				2CBFF87A2883AD52009F2EDD /* RPSGame.swift in Sources */,
 				2C55C9CF2883986900BD9538 /* RPSEntireGameView.swift in Sources */,
 				2CBFF8782883AC8C009F2EDD /* Array+Ext.swift in Sources */,
+				2CEA30D228B5AFB300F7BED8 /* UserDefaultsKey.swift in Sources */,
 				2CDDE14D2885EE07002E1914 /* RPSGestureType.swift in Sources */,
 				2CDDE16328860862002E1914 /* RPSGameOverView.swift in Sources */,
 				2CDDE15A288601FF002E1914 /* RPSGestureImageView.swift in Sources */,
@@ -316,6 +343,7 @@
 				2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */,
 				2CDDE18528867842002E1914 /* View+Ext.swift in Sources */,
 				2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */,
+				2CB841C928B46AD20040FE9F /* HapticManager.swift in Sources */,
 				2CDDE15E2886073E002E1914 /* RPSScoreView.swift in Sources */,
 				2CDDE16128860818002E1914 /* RPSGestureSelectionView.swift in Sources */,
 				2CDDE1522885F007002E1914 /* QuizGameProtocol.swift in Sources */,
