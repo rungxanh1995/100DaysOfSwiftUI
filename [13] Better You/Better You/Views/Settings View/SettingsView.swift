@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
-	@AppStorage(UserDefaultsKey.hapticsEnabled)
-	private var isHapticsEnabled: Bool = true
+	@StateObject
+	private var viewModel: ViewModel
 	
-	@AppStorage(UserDefaultsKey.systemTheme)
-	private var systemTheme: Int = SchemeType.allCases.first!.rawValue
-	
-	@State
-	private var isConfirmingResetData: Bool = false
+	init(viewModel: SettingsView.ViewModel = .init()) {
+		_viewModel = StateObject(wrappedValue: viewModel)
+	}
 	
 	var body: some View {
 		NavigationView {
@@ -36,11 +34,11 @@ struct SettingsView: View {
 			.navigationTitle("Settings")
 			.confirmationDialog(
 				"This action cannot be undone",
-				isPresented: $isConfirmingResetData,
+				isPresented: $viewModel.isConfirmingResetData,
 				titleVisibility: .visible
 			) {
 				Button("Delete", role: .destructive) {
-					resetDefaults()
+					viewModel.resetDefaults()
 				}
 				Button("Cancel", role: .cancel) { }
 			}
@@ -51,13 +49,16 @@ struct SettingsView: View {
 private extension SettingsView {
 	@ViewBuilder
 	private var haptics: some View {
-		Toggle("Enable Haptics", isOn: $isHapticsEnabled)
-			.tint(.teal)
+		Toggle(
+			"Enable Haptics",
+			isOn: $viewModel.isHapticsEnabled
+		)
+		.tint(.teal)
 	}
 	
 	@ViewBuilder
 	private var appTheme: some View {
-		Picker("Color Theme", selection: $systemTheme) {
+		Picker("Color Theme", selection: $viewModel.systemTheme) {
 			ForEach(SchemeType.allCases) { (theme) in
 				Text(theme.title)
 					.tag(theme.rawValue)
@@ -68,16 +69,7 @@ private extension SettingsView {
 	@ViewBuilder
 	private var resetAppButton: some View {
 		Button("Reset to Original", role: .destructive) {
-			isConfirmingResetData.toggle()
-		}
-	}
-	
-	/// Reset app data
-	private func resetDefaults() {
-		let defaults = UserDefaults.standard
-		let dictionary = defaults.dictionaryRepresentation()
-		dictionary.keys.forEach { key in
-			defaults.removeObject(forKey: key)
+			viewModel.isConfirmingResetData.toggle()
 		}
 	}
 }

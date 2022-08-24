@@ -29,6 +29,7 @@
 		2CA9D9E328B64DE500DFED61 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E228B64DE500DFED61 /* SchemeType.swift */; };
 		2CA9D9E628B652DD00DFED61 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E528B652DD00DFED61 /* View+Ext.swift */; };
 		2CA9D9E928B6595900DFED61 /* SchemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9E828B6595900DFED61 /* SchemeModifier.swift */; };
+		2CA9D9EB28B6857200DFED61 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA9D9EA28B6857200DFED61 /* SettingsViewModel.swift */; };
 		2CB841C328B4696D0040FE9F /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB841C228B4696D0040FE9F /* HapticManager.swift */; };
 		2CE8B48F28AB1EA8007525C2 /* HomeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */; };
 		2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */; };
@@ -79,6 +80,7 @@
 		2CA9D9E228B64DE500DFED61 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
 		2CA9D9E528B652DD00DFED61 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		2CA9D9E828B6595900DFED61 /* SchemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModifier.swift; sourceTree = "<group>"; };
+		2CA9D9EA28B6857200DFED61 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2CB841C228B4696D0040FE9F /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		2CE8B48E28AB1EA8007525C2 /* HomeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCellViewModel.swift; sourceTree = "<group>"; };
 		2CE8B49128AB226E007525C2 /* BYHabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */,
+				2CA9D9EA28B6857200DFED61 /* SettingsViewModel.swift */,
 				2CA9D9E128B64DCF00DFED61 /* Scheme Type */,
 			);
 			path = "Settings View";
@@ -458,6 +461,7 @@
 				2CE8B49728AB2DF1007525C2 /* BYHabitDetailView.ViewMode.swift in Sources */,
 				2C9022D328AC62F8006CA718 /* BYHabitDetailView.EditMode.swift in Sources */,
 				2C0CADB128A701DD00AB08DC /* Persistence.swift in Sources */,
+				2CA9D9EB28B6857200DFED61 /* SettingsViewModel.swift in Sources */,
 				2C0CAD7F28A6FDCA00AB08DC /* HomeView.swift in Sources */,
 				2C0CAD7D28A6FDCA00AB08DC /* Better_YouApp.swift in Sources */,
 				2C28253F28AAE3C600F68F2B /* AddHabitView.swift in Sources */,
