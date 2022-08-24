@@ -11,8 +11,8 @@ struct SettingsView: View {
 	@AppStorage(UserDefaultsKey.hapticsEnabled)
 	private var isHapticsEnabled: Bool = true
 	
-	@AppStorage(UserDefaultsKey.darkModeEnabled)
-	private var isDarkModeEnabled: Bool = false
+	@AppStorage(UserDefaultsKey.systemTheme)
+	private var systemTheme: Int = SchemeType.allCases.first!.rawValue
 	
 	var body: some View {
 		NavigationView {
@@ -46,8 +46,12 @@ private extension SettingsView {
 	
 	@ViewBuilder
 	private var darkMode: some View {
-		Toggle("Dark Mode", isOn: $isDarkModeEnabled)
-			.tint(.teal)
+		Picker("Color Theme", selection: $systemTheme) {
+			ForEach(SchemeType.allCases) { (theme) in
+				Text(theme.title)
+					.tag(theme.rawValue)
+			}
+		}
 	}
 	
 	/// Reset app data
