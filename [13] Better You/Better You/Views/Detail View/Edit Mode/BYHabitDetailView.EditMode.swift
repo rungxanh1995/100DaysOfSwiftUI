@@ -57,6 +57,7 @@ extension BYHabitDetailView {
 				.toolbar {
 					Button("Done") {
 						viewModel.updateHabitItemInItsSource()
+						haptic(.success)
 						dismissThisView()
 					}
 				}

@@ -39,6 +39,7 @@ struct SettingsView: View {
 			) {
 				Button("Delete", role: .destructive) {
 					viewModel.resetDefaults()
+					haptic(.success)
 				}
 				Button("Cancel", role: .cancel) { }
 			}
