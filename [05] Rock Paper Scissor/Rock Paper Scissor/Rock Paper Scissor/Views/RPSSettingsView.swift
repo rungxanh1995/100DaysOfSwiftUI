@@ -35,6 +35,7 @@ struct RPSSettingsView: View {
 private extension RPSSettingsView {
 	var haptics: some View {
 		Toggle("Enable Vibrations", isOn: $isHapticsEnabled)
+			.font(.system(.body, design: .serif))
 	}
 	
 	var navBarCloseButton: some View {
