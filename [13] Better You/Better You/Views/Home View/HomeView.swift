@@ -85,9 +85,8 @@ struct HomeView: View {
 					isShowingAddHabit.toggle()
 					haptic(.success)
 				} label: {
-					Image(systemName: "plus")
+					Image(systemName: "plus.circle")
 				}
-				.buttonStyle(.bordered)
 			}
 			.sheet(isPresented: $isShowingAddHabit) {
 				AddHabitView(
@@ -102,7 +101,7 @@ extension HomeView {
 	@ViewBuilder
 	private var emptyHabitsText: some View {
 		
-		let emptyHabitListSentence: LocalizedStringKey = "Nothing yet. Tap \(Image(systemName: "plus.rectangle.fill")) to add more"
+		let emptyHabitListSentence: LocalizedStringKey = "Nothing yet. Tap \(Image(systemName: "plus.circle")) to add more"
 		
 		HStack {
 			Spacer()
