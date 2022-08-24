@@ -14,6 +14,9 @@ struct SettingsView: View {
 	@AppStorage(UserDefaultsKey.systemTheme)
 	private var systemTheme: Int = SchemeType.allCases.first!.rawValue
 	
+	@State
+	private var isConfirmingResetData: Bool = false
+	
 	var body: some View {
 		NavigationView {
 			Form {
@@ -25,12 +28,22 @@ struct SettingsView: View {
 				}
 				
 				Section(
-					footer: Text("Be careful, this removes all your habit trackers. You have been warned!")
+					footer: Text("Be careful, this removes all your habit trackers! Restart the app to see changes")
 				) {
 					resetAppButton
 				}
 			}
 			.navigationTitle("Settings")
+			.confirmationDialog(
+				"This action cannot be undone",
+				isPresented: $isConfirmingResetData,
+				titleVisibility: .visible
+			) {
+				Button("Delete", role: .destructive) {
+					resetDefaults()
+				}
+				Button("Cancel", role: .cancel) { }
+			}
 		}
 	}
 }
@@ -55,7 +68,7 @@ private extension SettingsView {
 	@ViewBuilder
 	private var resetAppButton: some View {
 		Button("Reset to Original", role: .destructive) {
-			resetDefaults()
+			isConfirmingResetData.toggle()
 		}
 	}
 	
