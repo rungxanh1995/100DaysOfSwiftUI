@@ -56,12 +56,16 @@ extension BYHabitDetailView {
 				.navigationTitle("Edit Habit")
 				.toolbar {
 					Button("Done") {
-						viewModel.updateHabitItemInItsSource()
-						haptic(.success)
-						dismissThisView()
+						didTapDoneButton()
 					}
 				}
 			}
+		}
+	
+		private func didTapDoneButton() -> Void {
+			viewModel.updateHabitItemInItsSource()
+			haptic(.success)
+			dismissThisView()
 		}
 	}
 }
