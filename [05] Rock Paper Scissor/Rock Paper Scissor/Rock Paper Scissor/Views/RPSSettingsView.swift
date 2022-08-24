@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct RPSSettingsView: View {
+	
+	@AppStorage(UserDefaultKeys.hapticsEnabled)
+	private var isHapticsEnabled: Bool = true
+	
 	@Environment(\.dismiss) var dismissView
 	
 	var body: some View {
@@ -30,7 +34,7 @@ struct RPSSettingsView: View {
 
 private extension RPSSettingsView {
 	var haptics: some View {
-		Toggle("Enable Vibrations", isOn: .constant(true))
+		Toggle("Enable Vibrations", isOn: $isHapticsEnabled)
 	}
 	
 	var navBarCloseButton: some View {
