@@ -11,7 +11,19 @@ import SwiftUI
 struct Better_YouApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+			TabView {
+				HomeView()
+					.tabItem {
+						Symbols.house
+						Text("Home")
+					}
+				SettingsView()
+					.tabItem {
+						Symbols.gear
+						Text("Settings")
+					}
+			}
+			.setUpColorTheme()
         }
     }
 }

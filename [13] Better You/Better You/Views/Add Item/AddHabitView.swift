@@ -84,7 +84,7 @@ extension AddHabitView {
 			completedTimes: viewModel.habitCompletedTimes,
 			notes: viewModel.habitNotes
 		)
-		
+		haptic(.success)
 		dismissThisView()
 	}
 }

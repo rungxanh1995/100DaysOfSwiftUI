@@ -83,6 +83,7 @@ struct HomeView: View {
 			.toolbar {
 				Button {
 					isShowingAddHabit.toggle()
+					haptic(.success)
 				} label: {
 					Image(systemName: "plus")
 				}
