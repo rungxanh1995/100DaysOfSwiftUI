@@ -54,9 +54,19 @@ extension BYHabitDetailView {
 				}
 				
 				.navigationTitle("Edit Habit")
+				.navigationBarTitleDisplayMode(.inline)
 				.toolbar {
-					Button("Done") {
-						didTapDoneButton()
+					ToolbarItem(placement: .navigationBarLeading) {
+						Button("Cancel") {
+							dismissThisView()
+						}
+					}
+					
+					ToolbarItem(placement: .navigationBarTrailing) {
+						Button("Done") {
+							didTapDoneButton()
+						}
+						.font(.headline)
 					}
 				}
 			}
