@@ -20,6 +20,8 @@
 		2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0CADB728A728E900AB08DC /* HomeListCell.swift */; };
 		2C28253F28AAE3C600F68F2B /* AddHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28253E28AAE3C600F68F2B /* AddHabitView.swift */; };
 		2C28254128AAE42500F68F2B /* AddHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */; };
+		2C4D1BE728B5B9D800ABACCE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */; };
+		2C4D1BEA28B5BA4F00ABACCE /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1BE928B5BA4F00ABACCE /* UserDefaultsKey.swift */; };
 		2C9022D328AC62F8006CA718 /* BYHabitDetailView.EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D228AC62F8006CA718 /* BYHabitDetailView.EditMode.swift */; };
 		2C9022D628AC65E9006CA718 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D528AC65E9006CA718 /* Constants.swift */; };
 		2C9022D928AC83AA006CA718 /* BYHabitDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */; };
@@ -64,6 +66,8 @@
 		2C0CADB728A728E900AB08DC /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		2C28253E28AAE3C600F68F2B /* AddHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitView.swift; sourceTree = "<group>"; };
 		2C28254028AAE42500F68F2B /* AddHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHabitViewModel.swift; sourceTree = "<group>"; };
+		2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2C4D1BE928B5BA4F00ABACCE /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		2C9022D228AC62F8006CA718 /* BYHabitDetailView.EditMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailView.EditMode.swift; sourceTree = "<group>"; };
 		2C9022D528AC65E9006CA718 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C9022D828AC83AA006CA718 /* BYHabitDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BYHabitDetailCell.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				2C0CADAC28A6FFB100AB08DC /* Home View */,
+				2C4D1BE528B5B9C200ABACCE /* Settings View */,
 				2C28253D28AAE3B400F68F2B /* Add Item */,
 				2CE8B49028AB221D007525C2 /* Detail View */,
 			);
@@ -197,6 +202,22 @@
 			path = "Add Item";
 			sourceTree = "<group>";
 		};
+		2C4D1BE528B5B9C200ABACCE /* Settings View */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D1BE628B5B9D800ABACCE /* SettingsView.swift */,
+			);
+			path = "Settings View";
+			sourceTree = "<group>";
+		};
+		2C4D1BE828B5BA4300ABACCE /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2C4D1BE928B5BA4F00ABACCE /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		2C9022D128AC62C6006CA718 /* Edit Mode */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +229,7 @@
 		2C9022D428AC65E1006CA718 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2C4D1BE828B5BA4300ABACCE /* UserDefaults */,
 				2C9022D528AC65E9006CA718 /* Constants.swift */,
 			);
 			path = Helpers;
@@ -382,8 +404,10 @@
 				2C9022D928AC83AA006CA718 /* BYHabitDetailCell.swift in Sources */,
 				2CE8B49228AB226E007525C2 /* BYHabitDetailView.swift in Sources */,
 				2C9022D628AC65E9006CA718 /* Constants.swift in Sources */,
+				2C4D1BEA28B5BA4F00ABACCE /* UserDefaultsKey.swift in Sources */,
 				2C0CADAB28A6FF7100AB08DC /* HabitCategory.swift in Sources */,
 				2C0CADAF28A7002600AB08DC /* BYPersistence.swift in Sources */,
+				2C4D1BE728B5B9D800ABACCE /* SettingsView.swift in Sources */,
 				2CE8B49428AB2B20007525C2 /* BYHabitDetailViewModel.swift in Sources */,
 				2CB841C328B4696D0040FE9F /* HapticManager.swift in Sources */,
 				2C0CADB828A728E900AB08DC /* HomeListCell.swift in Sources */,
