@@ -15,6 +15,9 @@ struct RPSEntireGameView: View {
 	@State
 	private var isShowingHelpView = false
 	
+	@State
+	private var isShowingSettingsView = false
+	
 	var body: some View {
 		let isGameOver = currentGame.checkIfGameOver()
 		
@@ -37,7 +40,8 @@ struct RPSEntireGameView: View {
 					Spacer()
 					RPSScoreView(score: currentGame.userScore)
 					Spacer()
-					hiddenPlaceholderButton
+					settingsButton
+						.offset(x: -20)
 				}
 			}
 		}
@@ -54,6 +58,9 @@ struct RPSEntireGameView: View {
 		}
 		.sheet(isPresented: $isShowingHelpView) {
 			RPSGameplayHelpView()
+		}
+		.sheet(isPresented: $isShowingSettingsView) {
+			RPSSettingsView()
 		}
 	}
 }
@@ -74,11 +81,13 @@ private extension RPSEntireGameView {
 	/// A hidden button that does nothing,
 	/// used as a workaround to center the score view at bottom of main game view
 	@ViewBuilder
-	var hiddenPlaceholderButton: some View {
-		Button { } label: {
-			Image(systemName: "face.smiling")
+	var settingsButton: some View {
+		Button {
+			isShowingSettingsView.toggle()
+		} label: {
+			Image(systemName: "gear.circle.fill")
 				.font(.title)
-				.hidden()
+				.foregroundColor(.white)
 		}
 	}
 }
