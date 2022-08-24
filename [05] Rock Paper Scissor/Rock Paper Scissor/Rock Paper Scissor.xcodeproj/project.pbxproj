@@ -36,6 +36,7 @@
 		2CDDE1802886567C002E1914 /* RPSAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE17F2886567C002E1914 /* RPSAlert.swift */; };
 		2CDDE183288677E6002E1914 /* RPSShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */; };
 		2CDDE18528867842002E1914 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDDE18428867842002E1914 /* View+Ext.swift */; };
+		2CEA30CF28B5AC0100F7BED8 /* RPSSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		2CDDE17F2886567C002E1914 /* RPSAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSAlert.swift; sourceTree = "<group>"; };
 		2CDDE182288677E6002E1914 /* RPSShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSShadowModifier.swift; sourceTree = "<group>"; };
 		2CDDE18428867842002E1914 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				2CDDE15D2886073E002E1914 /* RPSScoreView.swift */,
 				2CDDE159288601FF002E1914 /* RPSGestureImageView.swift */,
 				2C695A6328A1B59900E4F4AE /* RPSGameplayHelpView.swift */,
+				2CEA30CE28B5AC0100F7BED8 /* RPSSettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CBFF8752883AB39009F2EDD /* RPSGestureStore.swift in Sources */,
+				2CEA30CF28B5AC0100F7BED8 /* RPSSettingsView.swift in Sources */,
 				2CDDE1502885EEA0002E1914 /* RPSGameMode.swift in Sources */,
 				2CDDE16A288630C7002E1914 /* RPSRibbonHeaderView.swift in Sources */,
 				2CDDE16828862630002E1914 /* StatefulPreviewWrapper.swift in Sources */,
