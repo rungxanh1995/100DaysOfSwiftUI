@@ -59,10 +59,12 @@ class MHKeypadActionHandler {
 		game.updateScore(basedOn: answerResult)
 		
 		if answerResult == true {
+			haptic(.success)
 			withAnimation(.easeInOut(duration: 1)) {
 				game.animatingIncreaseScore = true
 			}
 		} else {
+			haptic(.error)
 			withAnimation(.easeInOut(duration: 1)) {
 				game.animatingDecreaseScore = true
 			}

@@ -12,12 +12,16 @@ struct MHSettingsView: View {
 	@EnvironmentObject
 	var game: MHGame
 	
+	@AppStorage(UserDefaultKeys.hapticsEnabled)
+	private var isHapticsEnabled: Bool = true
+	
     var body: some View {
 		VStack(spacing: 20) {
 			gameNameAndInstructionView
 			Spacer()
 			selectUpperboundForTablesView
 			selectNumberOfQuestionsView
+			haptics
 			playButton
 			Spacer()
 			introductoryTextView
@@ -80,6 +84,12 @@ extension MHSettingsView {
 			.pickerStyle(.segmented)
 		}
 		.font(.system(.headline, design: .rounded))
+	}
+	
+	@ViewBuilder
+	private var haptics: some View {
+		Toggle("Enable Haptics", isOn: $isHapticsEnabled)
+			.font(.system(.headline, design: .rounded))
 	}
 	
 	@ViewBuilder
