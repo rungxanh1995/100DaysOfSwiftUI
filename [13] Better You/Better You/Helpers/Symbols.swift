@@ -10,4 +10,5 @@ import SwiftUI
 enum Symbols {
 	static let house: Image = .init(systemName: "house")
 	static let gear: Image = .init(systemName: "gear")
+	static let link: Image = .init(systemName: "link")
 }

@@ -30,6 +30,26 @@ struct SettingsView: View {
 				) {
 					resetAppButton
 				}
+				
+				Section(
+					header: Text("Contact Developer")
+				) {
+					HStack {
+						Symbols.link
+						Link(
+							"Twitter",
+							destination: viewModel.twitterLink
+						)
+					}
+					
+					HStack {
+						Symbols.link
+						Link(
+							"GitHub",
+							destination: viewModel.githubLink
+						)
+					}
+				}
 			}
 			.navigationTitle("Settings")
 			.confirmationDialog(

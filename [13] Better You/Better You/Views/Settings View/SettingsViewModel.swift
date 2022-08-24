@@ -18,6 +18,9 @@ extension SettingsView {
 		@Published
 		var isConfirmingResetData: Bool = false
 		
+		let twitterLink: URL = URL(string: "https://twitter.com/rungxanh1995")!
+		let githubLink: URL = URL(string: "https://github.com/rungxanh1995")!
+		
 		init() { }
 		
 		/// Reset app data
