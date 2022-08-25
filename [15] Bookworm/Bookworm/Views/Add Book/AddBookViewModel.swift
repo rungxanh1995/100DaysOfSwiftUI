@@ -53,6 +53,7 @@ extension AddBookView {
 			newBook.rating = Int16(rating)
 			newBook.genre = genre
 			newBook.review = review
+			newBook.addedDate = Date.now
 			
 			saveThenRefetchData()
 		}

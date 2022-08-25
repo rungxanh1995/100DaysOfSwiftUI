@@ -90,12 +90,20 @@ private extension DetailView {
 			
 			Divider()
 			
-			HStack {
-				Text("You rated it")
-				RatingView(rating: .constant(Int(viewModel.book.rating)))
+			VStack {
+				if let addedDate = viewModel.bookAddedDate {
+					Text("Added \(addedDate)")
+						.font(.caption)
+				}
+				
+				HStack {
+					Text("You rated it")
+					RatingView(rating: .constant(Int(viewModel.book.rating)))
+				}
+				.font(.caption)
 			}
-			.font(.caption)
-			.padding()
+			.foregroundColor(.secondary)
+			.padding(.bottom)
 		}
 	}
 }

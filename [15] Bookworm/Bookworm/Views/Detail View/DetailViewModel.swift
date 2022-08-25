@@ -14,6 +14,9 @@ extension DetailView {
 		var bookContainsReview: Bool {
 			!(book.review?.isEmpty ?? true)
 		}
+		var bookAddedDate: String? {
+			book.addedDate?.formatted(date: .abbreviated, time: .shortened)
+		}
 		
 		/// Needed to perform a refetch in `HomeView` after adding a book
 		let parentVM: HomeView.ViewModel
