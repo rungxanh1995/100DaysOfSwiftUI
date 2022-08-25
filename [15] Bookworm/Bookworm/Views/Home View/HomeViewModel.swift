@@ -17,28 +17,17 @@ extension HomeView {
 		
 		private let storageProvider: StorageProvider
 		
-		init(storageProvider: StorageProvider = .standard) {
+		init(storageProvider: StorageProvider = StorageProviderImpl.standard) {
 			self.storageProvider = storageProvider
 			fetchBooks()
 		}
 		
 		func fetchBooks() -> Void {
-			let bookRequest = NSFetchRequest<Book>(entityName: "Book")
-			savedBooks = loadBooksAndHandleError(from: bookRequest)
-		}
-		
-		fileprivate func loadBooksAndHandleError(from request: NSFetchRequest<Book>) -> [Book] {
-			do {
-				let context: NSManagedObjectContext = storageProvider.container.viewContext
-				return try context.fetch(request)
-			} catch let error {
-				print("Error fetching books. \(error.localizedDescription)")
-				return [Book]()
-			}
+			savedBooks = storageProvider.fetch()
 		}
 		
 		func addBook(_ title: String, author: String, rating: Int, genre: String, review: String) -> Void {
-			let context = storageProvider.container.viewContext
+			let context = storageProvider.context
 			
 			let newBook = Book(context: context)
 			newBook.id = UUID()
@@ -55,19 +44,15 @@ extension HomeView {
 			guard let index = indexSet.first else { return }
 			let book = savedBooks[index]
 			
-			let context = storageProvider.container.viewContext
+			let context = storageProvider.context
 			context.delete(book)
 			
 			saveThenRefetchData()
 		}
 		
 		private func saveThenRefetchData() -> Void {
-			do {
-				try storageProvider.container.viewContext.save()
-				fetchBooks()
-			} catch let error {
-				print("Error saving data. \(error.localizedDescription)")
-			}
+			storageProvider.saveAndHandleError()
+			fetchBooks()
 		}
 	}
 }

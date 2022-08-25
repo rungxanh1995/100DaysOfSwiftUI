@@ -7,12 +7,20 @@
 
 import CoreData
 
-final class StorageProvider {
+protocol StorageProvider {
+	var context: NSManagedObjectContext { get }
+	func fetch<T>() -> T
+	func saveAndHandleError() -> Void
+}
+
+/// Implementation of a `StorageProvider` for a desired Core Data entity
+final class StorageProviderImpl: StorageProvider {
 	
 	/// Singleton instance to use in the app
-	static let standard: StorageProvider = .init()
+	static let standard: StorageProviderImpl = .init()
 	
-	let container: NSPersistentContainer
+	private let container: NSPersistentContainer
+	let context: NSManagedObjectContext
 	
 	private init() {
 		container = .init(name: "Bookworm")
@@ -20,6 +28,30 @@ final class StorageProvider {
 			if let error = error {
 				fatalError("Core Data failed to load: \(error.localizedDescription)")
 			}
+		}
+		context = container.viewContext
+	}
+	
+	func fetch<T>() -> T {
+		let bookRequest = NSFetchRequest<Book>(entityName: "Book")
+		return loadBooksAndHandleError(from: bookRequest) as! T
+	}
+	
+	fileprivate func loadBooksAndHandleError(from request: NSFetchRequest<Book>) -> [Book] {
+		do {
+			let context: NSManagedObjectContext = container.viewContext
+			return try context.fetch(request)
+		} catch let error {
+			print("Error fetching books. \(error.localizedDescription)")
+			return [Book]()
+		}
+	}
+	
+	func saveAndHandleError() -> Void {
+		do {
+			try container.viewContext.save()
+		} catch let error {
+			print("Error saving data. \(error.localizedDescription)")
 		}
 	}
 }
