@@ -26,12 +26,28 @@ struct HomeListCell: View {
 			Spacer()
 			
 			VStack(alignment: .trailing) {
+				HStack(spacing: 3) {
+					Text("\(book.rating)")
+						.font(.headline)
+					Symbols.starFilled
+						.font(.caption)	// as SF Symbol is a tad big
+				}
+				.foregroundColor(colorForRating())
+				
 				Text(book.genre ?? "Unknown Genre")
 					.font(.caption)
 					.foregroundColor(.secondary)
 			}
 		}
-    }
+	}
+	
+	private func colorForRating() -> Color {
+		switch book.rating {
+			case 1: return .red
+			case 2, 3: return .yellow
+			default: return .teal
+		}
+	}
 }
 
 struct HomeListCell_Previews: PreviewProvider {
