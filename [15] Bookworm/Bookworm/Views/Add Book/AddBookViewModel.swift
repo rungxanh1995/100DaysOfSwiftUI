@@ -13,18 +13,22 @@ extension AddBookView {
 		@Published var title: String = ""
 		@Published var author: String = ""
 		@Published var rating: Int = 3
-		@Published var genre: String = "Fantasy"
+		@Published var genre: String = "Programming"
 		@Published var review: String = ""
 		
 		let genres = [
+			"Programming",
+			"Business",
+			"Self-help",
 			"Fantasy",
 			"Horror",
 			"Kids",
 			"Mystery",
 			"Poetry",
 			"Romance",
-			"Thriller"
-		]
+			"Thriller",
+			"Other"
+		].sorted()
 		
 		private let storageProvider: StorageProvider
 		
