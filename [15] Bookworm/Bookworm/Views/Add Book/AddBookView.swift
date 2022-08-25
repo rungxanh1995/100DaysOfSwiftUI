@@ -41,6 +41,8 @@ struct AddBookView: View {
 						viewModel.addBook()
 						dismiss()
 					}
+					.font(.headline)
+					.disabled(viewModel.invalidNecessaryInputs)
 				}
 			}
 			.navigationTitle("Add Book")

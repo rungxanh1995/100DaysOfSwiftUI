@@ -43,6 +43,7 @@ extension AddBookView {
 			self.parentVM = parentVM
 		}
 		
+		// MARK: - Persistence
 		func addBook() -> Void {
 			let context = storageProvider.context
 			
@@ -61,6 +62,24 @@ extension AddBookView {
 		private func saveThenRefetchData() -> Void {
 			storageProvider.saveAndHandleError()
 			parentVM.fetchBooks()
+		}
+		
+		// MARK: - Input Validation
+		var invalidNecessaryInputs: Bool {
+			!hasNecessaryInputs
+		}
+		
+		private var hasNecessaryInputs: Bool {
+			return (anyNecessaryFieldIsEmpty || anyNecessaryFieldContainsOnlyWhiteSpaces) ? false : true
+		}
+		
+		private var anyNecessaryFieldIsEmpty: Bool {
+			title.isEmpty || author.isEmpty
+		}
+		
+		private var anyNecessaryFieldContainsOnlyWhiteSpaces: Bool {
+			title.trimmingCharacters(in: .whitespaces) == ""
+			|| author.trimmingCharacters(in: .whitespaces) == ""
 		}
 	}
 }
