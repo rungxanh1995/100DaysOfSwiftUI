@@ -24,7 +24,7 @@ struct HomeView: View {
 			List {
 				ForEach(viewModel.savedBooks) { book in
 					NavigationLink {
-						DetailView(book: book)
+						DetailView(viewModel: .init(book: book, parentVM: viewModel))
 					} label: {
 						HStack(spacing: 16) {
 							EmojiRatingView(rating: book.rating)
