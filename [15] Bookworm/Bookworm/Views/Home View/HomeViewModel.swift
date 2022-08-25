@@ -23,21 +23,9 @@ extension HomeView {
 		}
 		
 		func fetchBooks() -> Void {
-			savedBooks = storageProvider.fetch()
-		}
-		
-		func addBook(_ title: String, author: String, rating: Int, genre: String, review: String) -> Void {
-			let context = storageProvider.context
-			
-			let newBook = Book(context: context)
-			newBook.id = UUID()
-			newBook.title = title
-			newBook.author = author
-			newBook.rating = Int16(rating)
-			newBook.genre = genre
-			newBook.review = review
-			
-			saveThenRefetchData()
+			DispatchQueue.main.async { [unowned self] in
+				savedBooks = storageProvider.fetch()
+			}
 		}
 		
 		func deleteBook(at indexSet: IndexSet)  -> Void {
