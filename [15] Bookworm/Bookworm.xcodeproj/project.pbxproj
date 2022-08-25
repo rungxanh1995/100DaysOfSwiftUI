@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08C9CA28B7C0B9001B8EE5 /* AddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C08C9C928B7C0B9001B8EE5 /* AddBookViewModel.swift */; };
 		2C2C6C7F28B6FADB00965651 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C6C7E28B6FADB00965651 /* Symbols.swift */; };
 		2C2C6C8128B6FBA300965651 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C6C8028B6FBA300965651 /* HomeViewModel.swift */; };
 		2C7373F628B1170600C31BFF /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7373F528B1170600C31BFF /* BookwormApp.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C08C9C928B7C0B9001B8EE5 /* AddBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookViewModel.swift; sourceTree = "<group>"; };
 		2C2C6C7E28B6FADB00965651 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2C2C6C8028B6FBA300965651 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		2C7373F228B1170600C31BFF /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				2C902B6628B3F347000F95A2 /* AddBookView.swift */,
+				2C08C9C928B7C0B9001B8EE5 /* AddBookViewModel.swift */,
 			);
 			path = "Add Book";
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				2C902B6D28B40BE4000F95A2 /* DetailView.swift in Sources */,
 				2C2C6C8128B6FBA300965651 /* HomeViewModel.swift in Sources */,
 				2C902B6728B3F347000F95A2 /* AddBookView.swift in Sources */,
+				2C08C9CA28B7C0B9001B8EE5 /* AddBookViewModel.swift in Sources */,
 				2C7373F828B1170600C31BFF /* HomeView.swift in Sources */,
 				2C902B6328B3D162000F95A2 /* Bookworm.xcdatamodeld in Sources */,
 				2C902B6B28B40AB4000F95A2 /* EmojiRatingView.swift in Sources */,
