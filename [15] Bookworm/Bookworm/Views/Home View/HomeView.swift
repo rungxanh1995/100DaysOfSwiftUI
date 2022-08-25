@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
-	@Environment(\.managedObjectContext)
-	var context
 	
-	@FetchRequest(
-		entity: Book.entity(),
-		sortDescriptors: [
-			NSSortDescriptor(keyPath: \Book.title, ascending: true),
-			NSSortDescriptor(keyPath: \Book.author, ascending: true)
-		]
-	)
-	var books: FetchedResults<Book>
+	@StateObject
+	var viewModel: HomeView.ViewModel
+	
+	init(viewModel: HomeView.ViewModel = .init()) {
+		_viewModel = StateObject(wrappedValue: viewModel)
+	}
 	
 	@State
 	private var showingAddScreen: Bool = false
@@ -26,7 +22,7 @@ struct HomeView: View {
     var body: some View {
 		NavigationView {
 			List {
-				ForEach(books) { book in
+				ForEach(viewModel.savedBooks) { book in
 					NavigationLink {
 						DetailView(book: book)
 					} label: {
@@ -44,7 +40,7 @@ struct HomeView: View {
 						}
 					}
 				}
-				.onDelete(perform: deleteBooks)
+				.onDelete(perform: viewModel.deleteBook)
 			}
 			.navigationTitle("Bookworm")
 			.toolbar {
@@ -61,19 +57,11 @@ struct HomeView: View {
 				}
 			}
 			.sheet(isPresented: $showingAddScreen) {
+				// TODO: Make view model for AddBookView
 				AddBookView()
 			}
 		}
     }
-	
-	func deleteBooks(at offsets: IndexSet) {
-		for offset in offsets {
-			let book = books[offset]
-			context.delete(book)
-		}
-		
-		try? context.save()
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {

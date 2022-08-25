@@ -9,15 +9,10 @@ import SwiftUI
 
 @main
 struct BookwormApp: App {
-	let persistence: StorageProviderImpl = StorageProviderImpl.standard
 	
     var body: some Scene {
         WindowGroup {
             HomeView()
-				.environment(
-					\.managedObjectContext,
-					 persistence.context
-				)
         }
     }
 }
