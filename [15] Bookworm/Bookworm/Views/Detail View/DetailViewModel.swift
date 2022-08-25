@@ -11,6 +11,9 @@ extension DetailView {
 	
 	final class ViewModel: ObservableObject {
 		let book: Book
+		var bookContainsReview: Bool {
+			!(book.review?.isEmpty ?? true)
+		}
 		
 		/// Needed to perform a refetch in `HomeView` after adding a book
 		let parentVM: HomeView.ViewModel

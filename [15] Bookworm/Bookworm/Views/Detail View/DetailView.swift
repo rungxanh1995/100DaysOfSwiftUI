@@ -35,8 +35,10 @@ struct DetailView: View {
 				.font(.title)
 				.foregroundColor(.secondary)
 			
-			Text(viewModel.book.review ?? "No review")
-				.padding()
+			if viewModel.bookContainsReview {
+				Text(viewModel.book.review ?? "No review")
+					.padding()
+			}
 			
 			RatingView(rating: .constant(Int(viewModel.book.rating)))
 				.font(.largeTitle)
