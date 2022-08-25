@@ -21,30 +21,14 @@ struct DetailView: View {
 	
     var body: some View {
 		ScrollView {
-			ZStack(alignment: .bottomTrailing) {
-				Image(viewModel.book.genre ?? "Fantasy")
-					.resizable()
-					.scaledToFit()
-				
-				Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
-					.font(.caption)
-					.fontWeight(.black)
-					.padding(8)
-					.foregroundColor(.white)
-					.background(.black.opacity(0.75))
-					.clipShape(Capsule())
-					.offset(x: -5, y: -5)
-			}
+			decorativeImage
+				.padding([.leading, .top, .trailing])
 			
-			Text(viewModel.book.author ?? "Unknown author")
-				.font(.title)
-				.foregroundColor(.secondary)
-			
-			Text(viewModel.book.review ?? "No review")
+			bookDetails
+				.frame(maxWidth: .infinity)
+				.background(.regularMaterial)
+				.cornerRadius(10)
 				.padding()
-			
-			RatingView(rating: .constant(Int(viewModel.book.rating)))
-				.font(.largeTitle)
 		}
 		.navigationTitle(viewModel.book.title ?? "Unknown Book")
 		.navigationBarTitleDisplayMode(.inline)
@@ -56,9 +40,10 @@ struct DetailView: View {
 			}
 			.confirmationDialog(
 				"Are you sure?",
-				isPresented: $showingDeleteAlert
+				isPresented: $showingDeleteAlert,
+				titleVisibility: .visible
 			) {
-				Button("Delete This Book", role: .destructive) {
+				Button("Delete Book", role: .destructive) {
 					viewModel.deleteBook()
 					dismiss()
 				}
@@ -69,21 +54,48 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-	
-	static var previews: some View {
-		let context = StorageProviderImpl.standard.context
-		let book = Book(context: context)
-		book.title = "Test book"
-		book.author = "Test author"
-		book.genre = "Fantasy"
-		book.rating = 4
-		book.review = "This was a great book; I really enjoyed it."
-		
-		return NavigationView {
-			DetailView(
-				viewModel: .init(book: book, parentVM: .init())
+private extension DetailView {
+	@ViewBuilder
+	var decorativeImage: some View {
+		ZStack(alignment: .bottomTrailing) {
+			Image(viewModel.book.genre ?? "Fantasy")
+				.resizable()
+				.scaledToFit()
+				.cornerRadius(10)
+			
+			ImageWatermark(
+				text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
 			)
+		}
+	}
+	
+	@ViewBuilder
+	var bookDetails: some View {
+		VStack() {
+			VStack(spacing: 0) {
+				Text(viewModel.book.title ?? "Unknown Book")
+					.font(.system(.title, design: .serif))
+					.multilineTextAlignment(.center)
+				
+				Text("by \(viewModel.book.author ?? "Unknown author")")
+			}
+			.padding()
+			
+			if viewModel.bookContainsReview {
+				Text(viewModel.book.review ?? "No review")
+					.font(.system(.callout, design: .serif).italic())
+					.frame(maxWidth: .infinity)
+					.padding()
+			}
+			
+			Divider()
+			
+			HStack {
+				Text("You rated it")
+				RatingView(rating: .constant(Int(viewModel.book.rating)))
+			}
+			.font(.caption)
+			.padding()
 		}
 	}
 }

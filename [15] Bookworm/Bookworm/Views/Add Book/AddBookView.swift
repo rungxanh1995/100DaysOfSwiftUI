@@ -47,11 +47,3 @@ struct AddBookView: View {
 		}
     }
 }
-
-struct AddBookView_Previews: PreviewProvider {
-	
-    static var previews: some View {
-		let parentVM: HomeView.ViewModel = .init()
-		AddBookView(viewModel: .init(parentVM: parentVM))
-    }
-}
