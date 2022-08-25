@@ -52,6 +52,14 @@
 			path = "Add Book";
 			sourceTree = "<group>";
 		};
+		2C2C6C7B28B6FA1F00965651 /* Detail View */ = {
+			isa = PBXGroup;
+			children = (
+				2C902B6C28B40BE4000F95A2 /* DetailView.swift */,
+			);
+			path = "Detail View";
+			sourceTree = "<group>";
+		};
 		2C37C05928B6DE350086F419 /* Home View */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,7 +112,7 @@
 				2C2C6C7A28B6F68C00965651 /* Add Book */,
 				2C902B6828B40971000F95A2 /* RatingView.swift */,
 				2C902B6A28B40AB4000F95A2 /* EmojiRatingView.swift */,
-				2C902B6C28B40BE4000F95A2 /* DetailView.swift */,
+				2C2C6C7B28B6FA1F00965651 /* Detail View */,
 			);
 			path = Views;
 			sourceTree = "<group>";
