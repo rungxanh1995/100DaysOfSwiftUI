@@ -19,10 +19,10 @@ struct AddBookView: View {
 		NavigationView {
 			Form {
 				Section {
-					TextField("Name of book", text: $viewModel.title)
-					TextField("Author's name", text: $viewModel.author)
+					TextField("Name of Book", text: $viewModel.title)
+					TextField("Name of Author(s)", text: $viewModel.author)
 					
-					Picker("Genre", selection: $viewModel.genre) {
+					Picker("Select Genre", selection: $viewModel.genre) {
 						ForEach(viewModel.genres, id: \.self) {
 							Text($0)
 						}
@@ -31,19 +31,34 @@ struct AddBookView: View {
 				
 				Section {
 					TextEditor(text: $viewModel.review)
-					RatingView(rating: $viewModel.rating)
+					HStack {
+						Text("Tap stars to rate")
+							.foregroundColor(.secondary)
+						Spacer()
+						RatingView(rating: $viewModel.rating)
+					}
 				} header: {
 					Text("Write a review")
 				}
-				
-				Section {
-					Button("Save") {
-						viewModel.addBook()
+			}
+			.navigationTitle("Add Book")
+			.navigationBarTitleDisplayMode(.inline)
+			.toolbar {
+				ToolbarItem(placement: .navigationBarLeading) {
+					Button("Cancel") {
 						dismiss()
 					}
 				}
+				
+				ToolbarItem(placement: .navigationBarTrailing) {
+					Button("Add") {
+						viewModel.addBook()
+						dismiss()
+					}
+					.font(.headline)
+					.disabled(viewModel.invalidNecessaryInputs)
+				}
 			}
-			.navigationTitle("Add Book")
 		}
     }
 }
