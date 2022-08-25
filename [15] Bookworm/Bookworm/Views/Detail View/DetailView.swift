@@ -25,11 +25,13 @@ struct DetailView: View {
 				Image(viewModel.book.genre ?? "Fantasy")
 					.resizable()
 					.scaledToFit()
+					.cornerRadius(10)
 				
 				ImageWatermark(
 					text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
 				)
 			}
+			.padding()
 			
 			Text(viewModel.book.author ?? "Unknown author")
 				.font(.title)

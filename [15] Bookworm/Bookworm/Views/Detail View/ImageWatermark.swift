@@ -17,7 +17,7 @@ struct ImageWatermark: View {
 			.padding(10)
 			.foregroundColor(.white)
 			.background(.black.opacity(0.75))
-			.cornerRadius(5)
+			.cornerRadius(10)
 			.offset(x: -5, y: -5)
 	}
 }
