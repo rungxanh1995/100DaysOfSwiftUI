@@ -21,46 +21,14 @@ struct DetailView: View {
 	
     var body: some View {
 		ScrollView {
-			ZStack(alignment: .bottomTrailing) {
-				Image(viewModel.book.genre ?? "Fantasy")
-					.resizable()
-					.scaledToFit()
-					.cornerRadius(10)
-				
-				ImageWatermark(
-					text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
-				)
-			}
-			.padding([.leading, .top, .trailing])
+			decorativeImage
+				.padding([.leading, .top, .trailing])
 			
-			VStack() {
-				VStack(spacing: 0) {
-					Text(viewModel.book.title ?? "Unknown Book")
-						.font(.system(.title, design: .serif))
-					
-					Text("by \(viewModel.book.author ?? "Unknown author")")
-				}
+			bookDetails
+				.frame(maxWidth: .infinity)
+				.background(.regularMaterial)
+				.cornerRadius(10)
 				.padding()
-				
-				
-				if viewModel.bookContainsReview {
-					Text(viewModel.book.review ?? "No review")
-						.font(.system(.callout, design: .serif).italic())
-						.frame(maxWidth: .infinity)
-						.padding()
-				}
-				
-				HStack {
-					Text("You rated it")
-					RatingView(rating: .constant(Int(viewModel.book.rating)))
-				}
-				.font(.caption)
-				.padding()
-			}
-			.frame(maxWidth: .infinity)
-			.background(.regularMaterial)
-			.cornerRadius(10)
-			.padding()
 		}
 		.navigationTitle(viewModel.book.title ?? "Unknown Book")
 		.navigationBarTitleDisplayMode(.inline)
@@ -84,4 +52,47 @@ struct DetailView: View {
 			}
 		}
     }
+}
+
+private extension DetailView {
+	@ViewBuilder
+	var decorativeImage: some View {
+		ZStack(alignment: .bottomTrailing) {
+			Image(viewModel.book.genre ?? "Fantasy")
+				.resizable()
+				.scaledToFit()
+				.cornerRadius(10)
+			
+			ImageWatermark(
+				text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
+			)
+		}
+	}
+	
+	@ViewBuilder
+	var bookDetails: some View {
+		VStack() {
+			VStack(spacing: 0) {
+				Text(viewModel.book.title ?? "Unknown Book")
+					.font(.system(.title, design: .serif))
+				
+				Text("by \(viewModel.book.author ?? "Unknown author")")
+			}
+			.padding()
+			
+			if viewModel.bookContainsReview {
+				Text(viewModel.book.review ?? "No review")
+					.font(.system(.callout, design: .serif).italic())
+					.frame(maxWidth: .infinity)
+					.padding()
+			}
+			
+			HStack {
+				Text("You rated it")
+				RatingView(rating: .constant(Int(viewModel.book.rating)))
+			}
+			.font(.caption)
+			.padding()
+		}
+	}
 }
