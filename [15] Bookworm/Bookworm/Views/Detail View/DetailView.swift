@@ -31,9 +31,9 @@ struct DetailView: View {
 					text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
 				)
 			}
-			.padding(.horizontal)
+			.padding([.leading, .top, .trailing])
 			
-			VStack(spacing: 20) {
+			VStack() {
 				VStack(spacing: 0) {
 					Text(viewModel.book.title ?? "Unknown Book")
 						.font(.system(.title, design: .serif))
