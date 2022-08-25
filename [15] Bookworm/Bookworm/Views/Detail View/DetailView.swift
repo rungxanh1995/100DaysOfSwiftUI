@@ -31,19 +31,36 @@ struct DetailView: View {
 					text: Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
 				)
 			}
-			.padding()
+			.padding(.horizontal)
 			
-			Text(viewModel.book.author ?? "Unknown author")
-				.font(.title)
-				.foregroundColor(.secondary)
-			
-			if viewModel.bookContainsReview {
-				Text(viewModel.book.review ?? "No review")
-					.padding()
+			VStack(spacing: 20) {
+				VStack(spacing: 0) {
+					Text(viewModel.book.title ?? "Unknown Book")
+						.font(.system(.title, design: .serif))
+					
+					Text("by \(viewModel.book.author ?? "Unknown author")")
+				}
+				.padding()
+				
+				
+				if viewModel.bookContainsReview {
+					Text(viewModel.book.review ?? "No review")
+						.font(.system(.callout, design: .serif).italic())
+						.frame(maxWidth: .infinity)
+						.padding()
+				}
+				
+				HStack {
+					Text("You rated it")
+					RatingView(rating: .constant(Int(viewModel.book.rating)))
+				}
+				.font(.caption)
+				.padding()
 			}
-			
-			RatingView(rating: .constant(Int(viewModel.book.rating)))
-				.font(.largeTitle)
+			.frame(maxWidth: .infinity)
+			.background(.regularMaterial)
+			.cornerRadius(10)
+			.padding()
 		}
 		.navigationTitle(viewModel.book.title ?? "Unknown Book")
 		.navigationBarTitleDisplayMode(.inline)
