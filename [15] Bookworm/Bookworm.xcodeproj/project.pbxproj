@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C2C6C7F28B6FADB00965651 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C6C7E28B6FADB00965651 /* Symbols.swift */; };
 		2C7373F628B1170600C31BFF /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7373F528B1170600C31BFF /* BookwormApp.swift */; };
 		2C7373F828B1170600C31BFF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7373F728B1170600C31BFF /* HomeView.swift */; };
 		2C7373FA28B1170700C31BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7373F928B1170700C31BFF /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C2C6C7E28B6FADB00965651 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2C7373F228B1170600C31BFF /* Bookworm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bookworm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7373F528B1170600C31BFF /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		2C7373F728B1170600C31BFF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		2C2C6C7D28B6FACB00965651 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C6C7E28B6FADB00965651 /* Symbols.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		2C37C05928B6DE350086F419 /* Home View */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 				2CB841C028B45DC40040FE9F /* Persistence */,
 				2CB841BF28B45DB90040FE9F /* Models */,
 				2CB841BE28B45DB10040FE9F /* Views */,
+				2C2C6C7D28B6FACB00965651 /* Utils */,
 				2C7373F928B1170700C31BFF /* Assets.xcassets */,
 				2C7373FB28B1170700C31BFF /* Preview Content */,
 			);
@@ -211,6 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2C6C7F28B6FADB00965651 /* Symbols.swift in Sources */,
 				2C902B6528B3D1B2000F95A2 /* StoragePervider.swift in Sources */,
 				2C902B6D28B40BE4000F95A2 /* DetailView.swift in Sources */,
 				2C902B6728B3F347000F95A2 /* AddBookView.swift in Sources */,
