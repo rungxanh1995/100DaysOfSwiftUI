@@ -9,25 +9,24 @@ import CoreData
 import SwiftUI
 
 struct DetailView: View {
-	@Environment(\.managedObjectContext)
-	private var context
 	
 	@Environment(\.dismiss)
 	private var dismiss
 	
+	@ObservedObject
+	var viewModel: DetailView.ViewModel
+	
 	@State
 	private var showingDeleteAlert: Bool = false
-	
-	let book: Book
 	
     var body: some View {
 		ScrollView {
 			ZStack(alignment: .bottomTrailing) {
-				Image(book.genre ?? "Fantasy")
+				Image(viewModel.book.genre ?? "Fantasy")
 					.resizable()
 					.scaledToFit()
 				
-				Text(book.genre?.uppercased() ?? "FANTASY")
+				Text(viewModel.book.genre?.uppercased() ?? "FANTASY")
 					.font(.caption)
 					.fontWeight(.black)
 					.padding(8)
@@ -37,17 +36,17 @@ struct DetailView: View {
 					.offset(x: -5, y: -5)
 			}
 			
-			Text(book.author ?? "Unknown author")
+			Text(viewModel.book.author ?? "Unknown author")
 				.font(.title)
 				.foregroundColor(.secondary)
 			
-			Text(book.review ?? "No review")
+			Text(viewModel.book.review ?? "No review")
 				.padding()
 			
-			RatingView(rating: .constant(Int(book.rating)))
+			RatingView(rating: .constant(Int(viewModel.book.rating)))
 				.font(.largeTitle)
 		}
-		.navigationTitle(book.title ?? "Unknown Book")
+		.navigationTitle(viewModel.book.title ?? "Unknown Book")
 		.navigationBarTitleDisplayMode(.inline)
 		.toolbar {
 			Button {
@@ -60,26 +59,21 @@ struct DetailView: View {
 				isPresented: $showingDeleteAlert
 			) {
 				Button("Delete This Book", role: .destructive) {
-					deleteBook()
+					viewModel.deleteBook()
+					dismiss()
 				}
 			} message: {
 				Text("You cannot undo this action")
 			}
 		}
     }
-	
-	func deleteBook() {
-		context.delete(book)
-		try? context.save()
-		dismiss()
-	}
 }
 
 struct DetailView_Previews: PreviewProvider {
-	static let moc = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
 	
 	static var previews: some View {
-		let book = Book(context: moc)
+		let context = StorageProviderImpl.standard.context
+		let book = Book(context: context)
 		book.title = "Test book"
 		book.author = "Test author"
 		book.genre = "Fantasy"
@@ -87,7 +81,9 @@ struct DetailView_Previews: PreviewProvider {
 		book.review = "This was a great book; I really enjoyed it."
 		
 		return NavigationView {
-			DetailView(book: book)
+			DetailView(
+				viewModel: .init(book: book, parentVM: .init())
+			)
 		}
 	}
 }

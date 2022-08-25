@@ -7,18 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
-	@Environment(\.managedObjectContext)
-	var context
+struct HomeView: View {
 	
-	@FetchRequest(
-		entity: Book.entity(),
-		sortDescriptors: [
-			NSSortDescriptor(keyPath: \Book.title, ascending: true),
-			NSSortDescriptor(keyPath: \Book.author, ascending: true)
-		]
-	)
-	var books: FetchedResults<Book>
+	@StateObject
+	var viewModel: HomeView.ViewModel
+	
+	init(viewModel: HomeView.ViewModel = .init()) {
+		_viewModel = StateObject(wrappedValue: viewModel)
+	}
 	
 	@State
 	private var showingAddScreen: Bool = false
@@ -26,9 +22,9 @@ struct ContentView: View {
     var body: some View {
 		NavigationView {
 			List {
-				ForEach(books) { book in
+				ForEach(viewModel.savedBooks) { book in
 					NavigationLink {
-						DetailView(book: book)
+						DetailView(viewModel: .init(book: book, parentVM: viewModel))
 					} label: {
 						HStack(spacing: 16) {
 							EmojiRatingView(rating: book.rating)
@@ -44,7 +40,7 @@ struct ContentView: View {
 						}
 					}
 				}
-				.onDelete(perform: deleteBooks)
+				.onDelete(perform: viewModel.deleteBook)
 			}
 			.navigationTitle("Bookworm")
 			.toolbar {
@@ -61,23 +57,16 @@ struct ContentView: View {
 				}
 			}
 			.sheet(isPresented: $showingAddScreen) {
-				AddBookView()
+				AddBookView(
+					viewModel: .init(parentVM: viewModel)
+				)
 			}
 		}
     }
-	
-	func deleteBooks(at offsets: IndexSet) {
-		for offset in offsets {
-			let book = books[offset]
-			context.delete(book)
-		}
-		
-		try? context.save()
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
     }
 }

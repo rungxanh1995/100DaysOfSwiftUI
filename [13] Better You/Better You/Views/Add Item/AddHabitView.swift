@@ -64,11 +64,20 @@ struct AddHabitView: View {
 				}
 			}
 			.navigationTitle("Add Habit")
+			.navigationBarTitleDisplayMode(.inline)
 			.toolbar {
-				Button(action: addNewHabitThenDismissView) {
-					Image(systemName: "checkmark")
+				ToolbarItem(placement: .navigationBarLeading) {
+					Button("Cancel") {
+						dismissThisView()
+					}
 				}
-				.buttonStyle(.bordered)
+				
+				ToolbarItem(placement: .navigationBarTrailing) {
+					Button("Add") {
+						addNewHabitThenDismissView()
+					}
+					.font(.headline)
+				}
 			}
 		}
     }
@@ -84,7 +93,7 @@ extension AddHabitView {
 			completedTimes: viewModel.habitCompletedTimes,
 			notes: viewModel.habitNotes
 		)
-		
+		haptic(.success)
 		dismissThisView()
 	}
 }
