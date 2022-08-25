@@ -68,22 +68,3 @@ struct DetailView: View {
 		}
     }
 }
-
-struct DetailView_Previews: PreviewProvider {
-	
-	static var previews: some View {
-		let context = StorageProviderImpl.standard.context
-		let book = Book(context: context)
-		book.title = "Test book"
-		book.author = "Test author"
-		book.genre = "Fantasy"
-		book.rating = 4
-		book.review = "This was a great book; I really enjoyed it."
-		
-		return NavigationView {
-			DetailView(
-				viewModel: .init(book: book, parentVM: .init())
-			)
-		}
-	}
-}
