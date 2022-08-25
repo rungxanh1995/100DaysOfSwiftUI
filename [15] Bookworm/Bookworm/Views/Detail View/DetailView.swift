@@ -75,6 +75,7 @@ private extension DetailView {
 			VStack(spacing: 0) {
 				Text(viewModel.book.title ?? "Unknown Book")
 					.font(.system(.title, design: .serif))
+					.multilineTextAlignment(.center)
 				
 				Text("by \(viewModel.book.author ?? "Unknown author")")
 			}
@@ -86,6 +87,8 @@ private extension DetailView {
 					.frame(maxWidth: .infinity)
 					.padding()
 			}
+			
+			Divider()
 			
 			HStack {
 				Text("You rated it")
