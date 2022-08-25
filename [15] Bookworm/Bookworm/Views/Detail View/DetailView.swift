@@ -53,9 +53,10 @@ struct DetailView: View {
 			}
 			.confirmationDialog(
 				"Are you sure?",
-				isPresented: $showingDeleteAlert
+				isPresented: $showingDeleteAlert,
+				titleVisibility: .visible
 			) {
-				Button("Delete This Book", role: .destructive) {
+				Button("Delete Book", role: .destructive) {
 					viewModel.deleteBook()
 					dismiss()
 				}
