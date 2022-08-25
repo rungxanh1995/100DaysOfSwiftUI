@@ -26,7 +26,7 @@ extension AddBookView {
 			"Thriller"
 		]
 		
-		let storageProvider: StorageProvider
+		private let storageProvider: StorageProvider
 		
 		/// Needed to perform a refetch in `HomeView` after adding a book
 		let parentVM: HomeView.ViewModel
