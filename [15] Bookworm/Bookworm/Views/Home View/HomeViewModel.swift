@@ -15,9 +15,9 @@ extension HomeView {
 		@Published
 		var savedBooks: [Book] = [Book]()
 		
-		private let storageProvider: StoragePervider
+		private let storageProvider: StorageProvider
 		
-		init(storageProvider: StoragePervider = .standard) {
+		init(storageProvider: StorageProvider = .standard) {
 			self.storageProvider = storageProvider
 			fetchBooks()
 		}

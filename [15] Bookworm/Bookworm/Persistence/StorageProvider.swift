@@ -7,10 +7,10 @@
 
 import CoreData
 
-final class StoragePervider {
+final class StorageProvider {
 	
 	/// Singleton instance to use in the app
-	static let standard: StoragePervider = .init()
+	static let standard: StorageProvider = .init()
 	
 	let container: NSPersistentContainer
 	

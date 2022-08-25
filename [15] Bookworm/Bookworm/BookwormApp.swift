@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct BookwormApp: App {
-	let persistence: StoragePervider = StoragePervider.standard
+	let persistence: StorageProvider = StorageProvider.standard
 	
     var body: some Scene {
         WindowGroup {
