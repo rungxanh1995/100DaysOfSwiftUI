@@ -57,8 +57,9 @@ struct HomeView: View {
 				}
 			}
 			.sheet(isPresented: $showingAddScreen) {
-				// TODO: Make view model for AddBookView
-				AddBookView()
+				AddBookView(
+					viewModel: .init(parentVM: viewModel)
+				)
 			}
 		}
     }
