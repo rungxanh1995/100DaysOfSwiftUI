@@ -18,11 +18,11 @@ struct RatingView: View {
 	var offImage: Image?
 	var onImage: Image = Symbols.starFilled
 	
-	private let offColor = Color.gray
-	private let onColor = Color.yellow
+	private let offColor = Color.secondary
+	private let onColor = Color.red
 	
     var body: some View {
-		HStack {
+		HStack(spacing: 0) {
 			if label.isEmpty == false {
 				Text(label)
 			}
