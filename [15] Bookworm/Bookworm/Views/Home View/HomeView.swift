@@ -26,18 +26,7 @@ struct HomeView: View {
 					NavigationLink {
 						DetailView(viewModel: .init(book: book, parentVM: viewModel))
 					} label: {
-						HStack(spacing: 16) {
-							EmojiRatingView(rating: book.rating)
-								.font(.title)
-							
-							VStack(alignment: .leading) {
-								Text(book.title ?? "Unknown Title")
-									.font(.headline)
-								Text(book.author ?? "Unknown Author")
-									.font(.callout)
-									.foregroundColor(.secondary)
-							}
-						}
+						HomeListCell(book: book)
 					}
 				}
 				.onDelete(perform: viewModel.deleteBook)
