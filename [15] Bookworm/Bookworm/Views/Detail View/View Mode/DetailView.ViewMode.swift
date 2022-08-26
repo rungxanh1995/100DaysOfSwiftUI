@@ -133,7 +133,7 @@ extension DetailView.ViewMode {
 				.accessibilityLabel("Edit this book")
 		}
 		.sheet(isPresented: $isShowingEdit) {
-			Text("\(viewModel.book.title ?? "No title")")
+			DetailView.EditMode(viewModel: viewModel)
 		}
 	}
 }
