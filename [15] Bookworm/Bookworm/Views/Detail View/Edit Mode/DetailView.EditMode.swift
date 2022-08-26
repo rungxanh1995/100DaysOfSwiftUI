@@ -27,6 +27,12 @@ extension DetailView {
 							"Name of Author",
 							text: $viewModel.newBookAuthor
 						)
+						
+						Picker("Select Genre", selection: $viewModel.newBookGenre) {
+							ForEach(Constants.bookGenresSorted, id: \.self) {
+								Text($0)
+							}
+						}
 					}
 					
 					Section(
