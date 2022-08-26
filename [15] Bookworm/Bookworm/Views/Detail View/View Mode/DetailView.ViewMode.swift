@@ -20,41 +20,32 @@ extension DetailView {
 		@State
 		private var showingDeleteAlert: Bool = false
 		
+		@State
+		private var isShowingEdit: Bool = false
+		
 		var body: some View {
-			ScrollView {
-				decorativeImage
-					.padding([.leading, .top, .trailing])
-				
-				bookDetails
-					.frame(maxWidth: .infinity)
-					.background(.regularMaterial)
-					.cornerRadius(10)
-					.padding()
-			}
-			.navigationTitle(viewModel.book.title ?? "Unknown Book")
-			.navigationBarTitleDisplayMode(.inline)
-			.toolbar {
-				Button {
-					showingDeleteAlert = true
-				} label: {
-					Label("Delete this book", systemImage: "trash")
+				ScrollView {
+					decorativeImage
+						.padding([.leading, .top, .trailing])
+					
+					bookDetails
+						.frame(maxWidth: .infinity)
+						.background(.regularMaterial)
+						.cornerRadius(10)
+						.padding()
 				}
-				.confirmationDialog(
-					"Are you sure?",
-					isPresented: $showingDeleteAlert,
-					titleVisibility: .visible
-				) {
-					Button("Delete Book", role: .destructive) {
-						viewModel.deleteBook()
-						dismiss()
+				.navigationTitle(viewModel.book.title ?? "Unknown Book")
+				.navigationBarTitleDisplayMode(.inline)
+				.toolbar {
+					ToolbarItem(placement: .primaryAction) {
+						editBookButton
 					}
-				} message: {
-					Text("You cannot undo this action")
+					
+					ToolbarItem(placement: .destructiveAction) {
+						deleteBookButton
+					}
 				}
-			}
 		}
-		
-		
 	}
 }
 
@@ -108,6 +99,39 @@ extension DetailView.ViewMode {
 			}
 			.foregroundColor(.secondary)
 			.padding(.bottom)
+		}
+	}
+	
+	@ViewBuilder
+	private var deleteBookButton: some View {
+		Button {
+			showingDeleteAlert.toggle()
+		} label: {
+			Label("Delete this book", systemImage: "trash")
+		}
+		.confirmationDialog(
+			"Are you sure?",
+			isPresented: $showingDeleteAlert,
+			titleVisibility: .visible
+		) {
+			Button("Delete Book", role: .destructive) {
+				viewModel.deleteBook()
+				dismiss()
+			}
+		} message: {
+			Text("You cannot undo this action")
+		}
+	}
+	
+	@ViewBuilder
+	private var editBookButton: some View {
+		Button {
+			isShowingEdit.toggle()
+		} label: {
+			Label("Edit this book", systemImage: "pencil")
+		}
+		.sheet(isPresented: $isShowingEdit) {
+			Text("\(viewModel.book.title ?? "No title")")
 		}
 	}
 }
