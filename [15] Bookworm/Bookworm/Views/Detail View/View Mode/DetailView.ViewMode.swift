@@ -107,7 +107,8 @@ extension DetailView.ViewMode {
 		Button {
 			showingDeleteAlert.toggle()
 		} label: {
-			Label("Delete this book", systemImage: "trash")
+			Symbols.trash
+				.accessibilityLabel("Delete this book")
 		}
 		.confirmationDialog(
 			"Are you sure?",
@@ -128,7 +129,8 @@ extension DetailView.ViewMode {
 		Button {
 			isShowingEdit.toggle()
 		} label: {
-			Label("Edit this book", systemImage: "pencil")
+			Symbols.pencil
+				.accessibilityLabel("Edit this book")
 		}
 		.sheet(isPresented: $isShowingEdit) {
 			Text("\(viewModel.book.title ?? "No title")")
