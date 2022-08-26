@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct HomeListCell: View {
-	let book: Book
+	/// Marked `@ObservedObject` to re-render
+	/// upon change from parent view.
+	///
+	/// Link for more info: https://www.hackingwithswift.com/forums/swiftui/list-fails-to-update-when-detail-saved-core-data/4523/4526
+	@ObservedObject
+	var book: Book
 	
     var body: some View {
 		HStack(alignment: .top) {

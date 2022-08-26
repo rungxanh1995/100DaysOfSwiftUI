@@ -56,7 +56,6 @@ extension DetailView {
 		}
 		
 		private func didTapDoneButton() -> Void {
-			// FIXME: Content in DetailView updates, but doesn't in HomeView
 			viewModel.updateBook()
 			dismiss()
 		}
