@@ -53,6 +53,7 @@ struct AddBookView: View {
 				ToolbarItem(placement: .navigationBarTrailing) {
 					Button("Add") {
 						viewModel.addBook()
+						haptic(.success)
 						dismiss()
 					}
 					.font(.headline)

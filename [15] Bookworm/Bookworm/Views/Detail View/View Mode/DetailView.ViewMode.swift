@@ -106,6 +106,7 @@ extension DetailView.ViewMode {
 	private var deleteBookButton: some View {
 		Button {
 			showingDeleteAlert.toggle()
+			haptic(.warning)
 		} label: {
 			Symbols.trash
 				.accessibilityLabel("Delete this book")
@@ -128,6 +129,7 @@ extension DetailView.ViewMode {
 	private var editBookButton: some View {
 		Button {
 			isShowingEdit.toggle()
+			haptic(.success)
 		} label: {
 			Symbols.pencil
 				.accessibilityLabel("Edit this book")

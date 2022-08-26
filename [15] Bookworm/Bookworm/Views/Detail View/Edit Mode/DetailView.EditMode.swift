@@ -63,6 +63,7 @@ extension DetailView {
 		
 		private func didTapDoneButton() -> Void {
 			viewModel.updateBook()
+			haptic(.success)
 			dismiss()
 		}
 	}
