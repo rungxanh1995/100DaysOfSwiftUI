@@ -44,7 +44,6 @@ final class StorageProviderImpl: StorageProvider {
 	
 	fileprivate func loadBooksAndHandleError(from request: NSFetchRequest<Book>) -> [Book] {
 		do {
-			let context: NSManagedObjectContext = container.viewContext
 			return try context.fetch(request)
 		} catch let error {
 			print("Error fetching books. \(error.localizedDescription)")
@@ -54,7 +53,9 @@ final class StorageProviderImpl: StorageProvider {
 	
 	func saveAndHandleError() -> Void {
 		do {
-			try container.viewContext.save()
+			if context.hasChanges {
+				try context.save()
+			}
 		} catch let error {
 			print("Error saving data. \(error.localizedDescription)")
 		}
