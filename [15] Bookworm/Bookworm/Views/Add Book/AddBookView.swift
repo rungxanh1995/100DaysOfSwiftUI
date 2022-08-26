@@ -23,7 +23,7 @@ struct AddBookView: View {
 					TextField("Name of Author(s)", text: $viewModel.author)
 					
 					Picker("Select Genre", selection: $viewModel.genre) {
-						ForEach(viewModel.genres, id: \.self) {
+						ForEach(Constants.bookGenresSorted, id: \.self) {
 							Text($0)
 						}
 					}

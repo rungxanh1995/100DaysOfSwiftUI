@@ -16,20 +16,6 @@ extension AddBookView {
 		@Published var genre: String = "Programming"
 		@Published var review: String = ""
 		
-		let genres = [
-			"Programming",
-			"Business",
-			"Self-help",
-			"Fantasy",
-			"Horror",
-			"Kids",
-			"Mystery",
-			"Poetry",
-			"Romance",
-			"Thriller",
-			"Other"
-		].sorted()
-		
 		private let storageProvider: StorageProvider
 		
 		/// Needed to perform a refetch in `HomeView` after adding a book
