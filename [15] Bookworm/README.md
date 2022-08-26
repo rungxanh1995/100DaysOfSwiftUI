@@ -16,6 +16,10 @@ I developed extra features beyond the scope of its original tutorial with due re
 	</thead>
 	<tbody>
 		<tr>
+			<td>New Edit view</td>
+			<td>Using experience I learned from [Better You](https://github.com/rungxanh1995/100DaysOfSwiftUI/tree/main/%5B13%5D%20Better%20You) and further research, I added an Edit view to update your logged book record, and of course this works well with Core Data.</td>
+		</tr>
+		<tr>
 			<td>UI Elements</td>
 			<td>Revamped the UI of the whole app to provide users a more pleasing experience.</td>
 		</tr>
