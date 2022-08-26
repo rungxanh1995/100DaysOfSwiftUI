@@ -33,8 +33,13 @@ final class StorageProviderImpl: StorageProvider {
 	}
 	
 	func fetch<T>() -> T {
-		let bookRequest = NSFetchRequest<Book>(entityName: "Book")
-		return loadBooksAndHandleError(from: bookRequest) as! T
+		let fetchRequest: NSFetchRequest<Book> = Book.fetchRequest()
+		// Sort fetch results by title, then author
+		fetchRequest.sortDescriptors = [
+			NSSortDescriptor(keyPath: \Book.title, ascending: true),
+			NSSortDescriptor(keyPath: \Book.author, ascending: true)
+		]
+		return loadBooksAndHandleError(from: fetchRequest) as! T
 	}
 	
 	fileprivate func loadBooksAndHandleError(from request: NSFetchRequest<Book>) -> [Book] {
