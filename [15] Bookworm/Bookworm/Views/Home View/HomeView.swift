@@ -36,6 +36,7 @@ struct HomeView: View {
 				ToolbarItem(placement: .navigationBarTrailing) {
 					Button {
 						showingAddScreen.toggle()
+						haptic(.success)
 					} label: {
 						Label("Add Book", systemImage: "plus")
 					}
