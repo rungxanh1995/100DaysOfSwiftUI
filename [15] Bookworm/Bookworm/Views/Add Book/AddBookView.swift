@@ -31,12 +31,7 @@ struct AddBookView: View {
 				
 				Section {
 					TextEditor(text: $viewModel.review)
-					HStack {
-						Text("Tap stars to rate")
-							.foregroundColor(.secondary)
-						Spacer()
-						RatingView(rating: $viewModel.rating)
-					}
+					RatingView(rating: $viewModel.rating, label: "Tap stars to rate")
 				} header: {
 					Text("Write a review")
 				}
