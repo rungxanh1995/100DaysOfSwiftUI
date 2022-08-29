@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CandyBar" representedClassName="CandyBar" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="origin" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Country" inverseName="candy" inverseEntity="Country"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Country" representedClassName="Country" syncable="YES">
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="shortName" optional="YES" attributeType="String"/>
+        <relationship name="candy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CandyBar" inverseName="origin" inverseEntity="CandyBar"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="shortName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Movie" representedClassName="Movie" syncable="YES">
+        <attribute name="director" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Singer" representedClassName="Singer" syncable="YES">
+        <attribute name="firstName" attributeType="String" defaultValueString="Unknown"/>
+        <attribute name="lastName" attributeType="String" defaultValueString="Unknown"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="firstName"/>
+                <constraint value="lastName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Starship" representedClassName="Starship" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="universe" attributeType="String"/>
+    </entity>
+    <entity name="Wizard" representedClassName="Wizard" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Movie" positionX="151.23046875" positionY="31.06640625" width="128" height="74"/>
+        <element name="Starship" positionX="151.828125" positionY="154.203125" width="128" height="59"/>
+        <element name="Wizard" positionX="151.03515625" positionY="248.421875" width="128" height="44"/>
+        <element name="Singer" positionX="153.7109375" positionY="338.265625" width="128" height="59"/>
+        <element name="CandyBar" positionX="324.21875" positionY="87.84765625" width="128" height="73"/>
+        <element name="Country" positionX="326.87890625" positionY="203.81640625" width="128" height="88"/>
+    </elements>
+</model>
