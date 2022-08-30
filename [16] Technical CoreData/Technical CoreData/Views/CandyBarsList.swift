@@ -29,7 +29,11 @@ struct CandyBarsList: View {
 			Button("Add") {
 				addExamples()
 			}
+			.buttonStyle(.bordered)
+			.tint(.red)
 		}
+		.navigationTitle("Candybars List")
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 
