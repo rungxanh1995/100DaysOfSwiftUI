@@ -12,13 +12,48 @@ struct ContentView: View {
 	@Environment(\.managedObjectContext)
 	var managedObjectContext
 	
-	
-	
     var body: some View {
-//		WizardsList()
-//		StarshipsList()
-//		SingersList()
-		CandyBarsList()
+		NavigationView {
+			List {
+				Section(
+					header: Text("Entity Uniqueness"),
+					footer: Text("Demonstrate how to ensure entity uniqueness using constraints")
+				) {
+					NavigationLink("🧙🏻‍♂️ Wizards List") {
+						WizardsList()
+					}
+				}
+				
+				Section(
+					header: Text("Filtering Fetch Results"),
+					footer: Text("Demonstrate how to filter fetch results using predicates")
+				) {
+					NavigationLink("🚀 Starships List") {
+						StarshipsList()
+					}
+				}
+				
+				Section(
+					header: Text("Custom Filtered List"),
+					footer: Text("Demonstrate how to make a custom filtered list")
+				) {
+					NavigationLink("🎤 Singers List") {
+						SingersList()
+					}
+				}
+				
+				Section(
+					header: Text("Entity Relationships"),
+					footer: Text("Demonstrate how to manage relationships between entities, e.g. one-to-many.")
+				) {
+					NavigationLink("🍫 Candybars List") {
+						CandyBarsList()
+					}
+				}
+			}
+			.navigationTitle("Technical Core Data")
+			.navigationBarTitleDisplayMode(.inline)
+		}
     }
 }
 
