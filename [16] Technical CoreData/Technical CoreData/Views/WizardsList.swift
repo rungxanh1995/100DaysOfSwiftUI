@@ -22,18 +22,27 @@ struct WizardsList: View {
 				Text(wizard.name ?? "--")
 			}
 			
-			Button("Add") {
-				addSameEntityExample()
-			}
-			
-			Button("Save") {
-				do {
-					try managedObjectContext.save()
-				} catch {
-					print(error.localizedDescription)
+			HStack {
+				Button("Add") {
+					addSameEntityExample()
+				}
+				
+				Spacer()
+				
+				Button("Save") {
+					do {
+						try managedObjectContext.save()
+					} catch {
+						print(error.localizedDescription)
+					}
 				}
 			}
+			.padding()
+			.buttonStyle(.bordered)
+			.tint(.red)
 		}
+		.navigationTitle("Wizards List")
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 

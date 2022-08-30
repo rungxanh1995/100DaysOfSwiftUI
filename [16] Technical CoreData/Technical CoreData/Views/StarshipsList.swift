@@ -33,7 +33,11 @@ struct StarshipsList: View {
 			Button("Add Examples") {
 				addExamples()
 			}
+			.buttonStyle(.bordered)
+			.tint(.red)
 		}
+		.navigationTitle("Starships List")
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 

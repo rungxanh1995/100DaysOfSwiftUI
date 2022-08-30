@@ -26,11 +26,15 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
 	init(
 		filterKey: String,
 		filterValue: String,
+		predicateType: Predicates.Types,
+		sortDescriptors: [NSSortDescriptor] = [NSSortDescriptor](),
 		@ViewBuilder content: @escaping (T) -> Content
 	) {
+		let predicate: NSPredicate = Predicates.Factory
+			.createPredicate(for: predicateType, key: filterKey, value: filterValue)
 		_fetchRequest = FetchRequest<T>(
-			sortDescriptors: [],
-			predicate: Predicates.beginsWith(key: filterKey, value: filterValue)
+			sortDescriptors: sortDescriptors,
+			predicate: predicate
 		)
 		self.content = content
 	}

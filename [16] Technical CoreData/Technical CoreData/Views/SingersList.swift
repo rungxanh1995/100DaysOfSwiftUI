@@ -16,12 +16,19 @@ struct SingersList: View {
 	@State
 	private var lastNameFilter: String = "A"
 	
+	/// Test challenge of passing sort descriptor to `FilteredList`
+	let sortDescriptors: [NSSortDescriptor] = [
+		NSSortDescriptor(keyPath: \Singer.firstName, ascending: true)
+	]
+	
     var body: some View {
 		VStack {
 			// list of matching singers
 			FilteredList(
 				filterKey: "lastName",
-				filterValue: lastNameFilter
+				filterValue: lastNameFilter,
+				predicateType: .beginsWith,
+				sortDescriptors: sortDescriptors
 			) { (singer: Singer) in
 				Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
 			}
@@ -44,7 +51,11 @@ struct SingersList: View {
 				}
 			}
 			.padding()
+			.buttonStyle(.bordered)
+			.tint(.red)
 		}
+		.navigationTitle("Singers List")
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 
