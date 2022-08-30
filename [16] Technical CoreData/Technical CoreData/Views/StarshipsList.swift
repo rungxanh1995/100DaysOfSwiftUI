@@ -36,7 +36,7 @@ struct StarshipsList: View {
 			.buttonStyle(.bordered)
 			.tint(.red)
 		}
-		.navigationTitle("Wizards List")
+		.navigationTitle("Starships List")
 		.navigationBarTitleDisplayMode(.inline)
     }
 }
