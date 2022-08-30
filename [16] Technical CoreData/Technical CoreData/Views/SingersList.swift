@@ -21,7 +21,8 @@ struct SingersList: View {
 			// list of matching singers
 			FilteredList(
 				filterKey: "lastName",
-				filterValue: lastNameFilter
+				filterValue: lastNameFilter,
+				predicateType: .beginsWith
 			) { (singer: Singer) in
 				Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
 			}
