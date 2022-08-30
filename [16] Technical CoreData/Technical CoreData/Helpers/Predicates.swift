@@ -15,6 +15,21 @@ enum Predicates {
 		case notBeginsWith
 	}
 	
+	static func generate(
+		for type: Predicates.Types,
+		key: String,
+		value: String
+	) -> NSPredicate {
+		switch type {
+			case .contains:
+				return Predicates.contains(key: key, value: value)
+			case .beginsWith:
+				return Predicates.beginsWith(key: key, value: value)
+			case .notBeginsWith:
+				return Predicates.notBeginsWith(key: key, value: value)
+		}
+	}
+	
 	static let shipNamesNotStartsWithD: NSPredicate = Predicates.notBeginsWith(key: "name", value: "D")
 	static let shipsInSomeUniverses: NSPredicate = Predicates.inValues(key: "universe", values: ["Aliens", "Firefly", "Star Trek"])
 
