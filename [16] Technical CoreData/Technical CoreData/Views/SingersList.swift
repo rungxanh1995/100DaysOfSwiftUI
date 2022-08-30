@@ -17,8 +17,8 @@ struct SingersList: View {
 	private var lastNameFilter: String = "A"
 	
 	/// Test challenge of passing sort descriptor to `FilteredList`
-	let sortDescriptors: [NSSortDescriptor] = [
-		NSSortDescriptor(keyPath: \Singer.firstName, ascending: true)
+	let sortDescriptors: [SortDescriptor] = [
+		SortDescriptor<Singer>(\.firstName)
 	]
 	
     var body: some View {

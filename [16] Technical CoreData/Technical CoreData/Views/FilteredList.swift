@@ -27,7 +27,7 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
 		filterKey: String,
 		filterValue: String,
 		predicateType: Predicates.Types,
-		sortDescriptors: [NSSortDescriptor] = [NSSortDescriptor](),
+		sortDescriptors: [SortDescriptor<T>] = [SortDescriptor<T>](),
 		@ViewBuilder content: @escaping (T) -> Content
 	) {
 		let predicate: NSPredicate = Predicates.Factory
