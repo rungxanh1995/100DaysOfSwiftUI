@@ -51,7 +51,11 @@ struct SingersList: View {
 				}
 			}
 			.padding()
+			.buttonStyle(.bordered)
+			.tint(.red)
 		}
+		.navigationTitle("Singers List")
+		.navigationBarTitleDisplayMode(.inline)
     }
 }
 
