@@ -27,9 +27,11 @@ struct FilteredList<T: NSManagedObject, Content: View>: View {
 		filterKey: String,
 		filterValue: String,
 		predicateType: Predicates.Types,
+//		sortDescriptors: [NSSortDescriptor]?,
 		@ViewBuilder content: @escaping (T) -> Content
 	) {
-		let predicate: _ = Predicates.generate(for: predicateType, key: filterKey, value: filterValue)
+		let predicate: NSPredicate = Predicates.Factory
+			.createPredicate(for: predicateType, key: filterKey, value: filterValue)
 		_fetchRequest = FetchRequest<T>(
 			sortDescriptors: [],
 			predicate: predicate

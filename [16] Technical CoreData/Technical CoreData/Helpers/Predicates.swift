@@ -15,21 +15,6 @@ enum Predicates {
 		case notBeginsWith
 	}
 	
-	static func generate(
-		for type: Predicates.Types,
-		key: String,
-		value: String
-	) -> NSPredicate {
-		switch type {
-			case .contains:
-				return Predicates.contains(key: key, value: value)
-			case .beginsWith:
-				return Predicates.beginsWith(key: key, value: value)
-			case .notBeginsWith:
-				return Predicates.notBeginsWith(key: key, value: value)
-		}
-	}
-	
 	static let shipNamesNotStartsWithD: NSPredicate = Predicates.notBeginsWith(key: "name", value: "D")
 	static let shipsInSomeUniverses: NSPredicate = Predicates.inValues(key: "universe", values: ["Aliens", "Firefly", "Star Trek"])
 
@@ -48,5 +33,28 @@ enum Predicates {
 	
 	static func inValues(key: String, values: [String]) -> NSPredicate {
 		NSPredicate(format: "%K IN %@", key, values)
+	}
+}
+
+extension Predicates {
+	
+	enum Factory {
+		/// Generates an `NSPredicate` instance to filter a fetch request.
+		///
+		/// Implementation of Simple Factory pattern idiom.
+		static func createPredicate(
+			for type: Predicates.Types,
+			key: String,
+			value: String
+		) -> NSPredicate {
+			switch type {
+				case .contains:
+					return Predicates.contains(key: key, value: value)
+				case .beginsWith:
+					return Predicates.beginsWith(key: key, value: value)
+				case .notBeginsWith:
+					return Predicates.notBeginsWith(key: key, value: value)
+			}
+		}
 	}
 }
