@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ContentView {
+extension HomeView {
 	/// View model specialized for `ContentView`
 	final class ViewModel: ObservableObject {
 		@Published

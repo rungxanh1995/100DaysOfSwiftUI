@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72D28BFA41100F15D4B /* SocialieApp.swift */; };
-		2C50F73028BFA41100F15D4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72F28BFA41100F15D4B /* ContentView.swift */; };
+		2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72F28BFA41100F15D4B /* HomeView.swift */; };
 		2C50F73228BFA41200F15D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C50F73128BFA41200F15D4B /* Assets.xcassets */; };
 		2C50F73528BFA41200F15D4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C50F73428BFA41200F15D4B /* Preview Assets.xcassets */; };
 		2C50F73D28BFA68800F15D4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F73C28BFA68800F15D4B /* User.swift */; };
@@ -21,7 +21,7 @@
 /* Begin PBXFileReference section */
 		2C50F72A28BFA41100F15D4B /* Socialie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socialie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C50F72D28BFA41100F15D4B /* SocialieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialieApp.swift; sourceTree = "<group>"; };
-		2C50F72F28BFA41100F15D4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2C50F72F28BFA41100F15D4B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		2C50F73128BFA41200F15D4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C50F73428BFA41200F15D4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C50F73C28BFA68800F15D4B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 		2C50F74728BFAF0700F15D4B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C50F72F28BFA41100F15D4B /* ContentView.swift */,
+				2C50F72F28BFA41100F15D4B /* HomeView.swift */,
 				2C50F74828BFAF4C00F15D4B /* ContentViewModel.swift */,
 			);
 			path = Views;
@@ -192,7 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C50F73028BFA41100F15D4B /* ContentView.swift in Sources */,
+				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
 				2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */,
 				2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */,
 				2C50F74928BFAF4C00F15D4B /* ContentViewModel.swift in Sources */,
