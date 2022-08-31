@@ -14,7 +14,7 @@ struct HomeListView: View {
     var body: some View {
 		List(viewModel.users) { eachUser in
 			NavigationLink(
-				destination: Text(eachUser.name)
+				destination: UserView(user: eachUser)
 			) {
 				HomeListCell(user: eachUser)
 				
