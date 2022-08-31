@@ -12,15 +12,11 @@ struct OnlineIndicator: View {
 	
 	var body: some View {
 		Image(systemName:"circle.fill")
-			.font(.callout)
+			.font(.caption)
 			.foregroundColor(isOnline ? .green : nil)
 			.background(.white)
 			.clipShape(Circle())
-			.overlay(Circle().stroke(.white, lineWidth: 3.0))
-			.shadow(
-				color: isOnline ? .green : .gray,
-				radius: isOnline ? 3 : 1
-			)
+			.overlay(Circle().stroke(.white, lineWidth: 2.0))
 	}
 }
 
