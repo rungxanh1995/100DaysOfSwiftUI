@@ -15,7 +15,7 @@
 		2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F73F28BFA7D200F15D4B /* Constants.swift */; };
 		2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */; };
 		2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74528BFADD100F15D4B /* ApiService.swift */; };
-		2C50F74928BFAF4C00F15D4B /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74828BFAF4C00F15D4B /* ContentViewModel.swift */; };
+		2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74828BFAF4C00F15D4B /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		2C50F73F28BFA7D200F15D4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 		2C50F74528BFADD100F15D4B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		2C50F74828BFAF4C00F15D4B /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		2C50F74828BFAF4C00F15D4B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F72F28BFA41100F15D4B /* HomeView.swift */,
-				2C50F74828BFAF4C00F15D4B /* ContentViewModel.swift */,
+				2C50F74828BFAF4C00F15D4B /* HomeViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
 				2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */,
 				2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */,
-				2C50F74928BFAF4C00F15D4B /* ContentViewModel.swift in Sources */,
+				2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
 				2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ContentViewModel.swift
+//  HomeViewModel.swift
 //  Socialie
 //
 //  Created by Joe Pham on 2022-08-31.
@@ -8,7 +8,7 @@
 import Foundation
 
 extension HomeView {
-	/// View model specialized for `ContentView`
+	/// View model specialized for `HomeView`
 	final class ViewModel: ObservableObject {
 		@Published
 		var users: [User]
