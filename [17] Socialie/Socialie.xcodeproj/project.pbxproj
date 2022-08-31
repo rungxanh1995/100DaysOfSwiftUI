@@ -13,6 +13,7 @@
 		2C50F73528BFA41200F15D4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C50F73428BFA41200F15D4B /* Preview Assets.xcassets */; };
 		2C50F73D28BFA68800F15D4B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F73C28BFA68800F15D4B /* User.swift */; };
 		2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F73F28BFA7D200F15D4B /* Constants.swift */; };
+		2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2C50F73428BFA41200F15D4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2C50F73C28BFA68800F15D4B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2C50F73F28BFA7D200F15D4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +86,18 @@
 		2C50F73E28BFA7C600F15D4B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2C50F74128BFAA3900F15D4B /* Extensions */,
 				2C50F73F28BFA7D200F15D4B /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		2C50F74128BFAA3900F15D4B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				2C50F73028BFA41100F15D4B /* ContentView.swift in Sources */,
 				2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
+				2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
