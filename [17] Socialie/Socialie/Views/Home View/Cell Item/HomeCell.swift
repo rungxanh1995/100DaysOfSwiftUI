@@ -13,6 +13,7 @@ struct HomeCell: View {
 	var body: some View {
 		VStack(spacing: 0) {
 			HomeCellImage(user: user)
+				.padding()
 			HomeCellLabel(user: user)
 		}
 		.clipShape(RoundedRectangle(cornerRadius: 10))

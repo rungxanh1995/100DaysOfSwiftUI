@@ -22,7 +22,6 @@ struct HomeCellImage: View {
 				isOnline: user.isActive
 			)
 		}
-		.padding()
 	}
 }
 
