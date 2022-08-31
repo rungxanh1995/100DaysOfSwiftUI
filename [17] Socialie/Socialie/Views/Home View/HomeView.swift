@@ -17,11 +17,12 @@ struct HomeView: View {
 	}
 	
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-			.task {
-				await vm.fetchData()
-			}
+		NavigationView {
+			HomeGridView(viewModel: vm)
+				.task {
+					await vm.fetchData()
+				}
+		}
     }
 }
 
