@@ -24,6 +24,8 @@
 		2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268A28BFF29E00B11C87 /* HomeListView.swift */; };
 		2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268C28BFF69600B11C87 /* HomeListCell.swift */; };
 		2C7D269028C0008900B11C87 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268F28C0008900B11C87 /* UserView.swift */; };
+		2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269128C00DD000B11C87 /* View+Ext.swift */; };
+		2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269428C00E2400B11C87 /* CardModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		2C7D268A28BFF29E00B11C87 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		2C7D268C28BFF69600B11C87 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		2C7D268F28C0008900B11C87 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		2C7D269128C00DD000B11C87 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		2C7D269428C00E2400B11C87 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		2C50F73E28BFA7C600F15D4B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2C7D269328C00DED00B11C87 /* View Modifiers */,
 				2C50F74128BFAA3900F15D4B /* Extensions */,
 				2C50F73F28BFA7D200F15D4B /* Constants.swift */,
 			);
@@ -117,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */,
+				2C7D269128C00DD000B11C87 /* View+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -194,6 +200,14 @@
 			path = "User View";
 			sourceTree = "<group>";
 		};
+		2C7D269328C00DED00B11C87 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				2C7D269428C00E2400B11C87 /* CardModifier.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,9 +278,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
 				2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */,
+				2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */,
 				2C7D267E28BFD1D500B11C87 /* OnlineIndicator.swift in Sources */,
 				2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */,
 				2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */,
