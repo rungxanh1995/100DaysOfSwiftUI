@@ -13,7 +13,7 @@ struct HomeListCell: View {
 	
 	var body: some View {
 		HStack(spacing: 12) {
-			HomeCellImage(user: user)
+			HomeCellImage(user: user, size: 40.0)
 			VStack(alignment: .leading) {
 				Text(user.name)
 					.font(.headline)
