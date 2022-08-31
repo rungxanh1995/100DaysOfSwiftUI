@@ -16,14 +16,40 @@ struct HomeView: View {
 		_vm = StateObject(wrappedValue: vm)
 	}
 	
+	@State
+	private var isGridLayout: Bool = true
+	
     var body: some View {
 		NavigationView {
-			HomeGridView(viewModel: vm)
-				.task {
-					await vm.fetchData()
+			Group {
+				if isGridLayout {
+					HomeGridView(viewModel: vm)
+				} else {
+					HomeListView(viewModel: vm)
 				}
+			}
+			.task {
+				await vm.fetchData()
+			}
+			.toolbar {
+				layoutSwitchButton
+			}
 		}
     }
+}
+
+private extension HomeView {
+	@ViewBuilder
+	var layoutSwitchButton: some View {
+		Button {
+			isGridLayout.toggle()
+		} label: {
+			Label(
+				"Layout",
+				systemImage: isGridLayout ? "list.bullet" : "square.grid.2x2.fill"
+			)
+		}
+	}
 }
 
 struct HomeView_Previews: PreviewProvider {
