@@ -25,4 +25,11 @@ struct User: Identifiable, Codable, Hashable {
 	let registered: String
 	let tags: [String]
 	let friends: [Friend]
+	
+	/// Converts UTC date string to human-readable  format
+	var formattedRegisterDate: String {
+		let dateFormatter = ISO8601DateFormatter()
+		let date = dateFormatter.date(from: registered)
+		return date?.formatted() ?? "Misformatted Registered Date"
+	}
 }
