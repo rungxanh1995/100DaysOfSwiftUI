@@ -60,9 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				2C50F72D28BFA41100F15D4B /* SocialieApp.swift */,
-				2C50F72F28BFA41100F15D4B /* ContentView.swift */,
 				2C50F74428BFADC600F15D4B /* Service */,
 				2C50F73B28BFA67800F15D4B /* Models */,
+				2C50F74728BFAF0700F15D4B /* Views */,
 				2C50F73E28BFA7C600F15D4B /* Utils */,
 				2C50F73128BFA41200F15D4B /* Assets.xcassets */,
 				2C50F73328BFA41200F15D4B /* Preview Content */,
@@ -109,6 +109,14 @@
 				2C50F74528BFADD100F15D4B /* ApiService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2C50F74728BFAF0700F15D4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C50F72F28BFA41100F15D4B /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
