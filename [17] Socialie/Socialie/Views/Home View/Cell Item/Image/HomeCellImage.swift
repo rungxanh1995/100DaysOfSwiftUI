@@ -9,13 +9,14 @@ import SwiftUI
 
 struct HomeCellImage: View {
 	private(set) var user: User
+	var size: CGFloat = 60.0
 	
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
 			Image(systemName: "person.crop.circle.fill")
 				.resizable()
 				.scaledToFit()
-				.frame(width: 60, height: 60)
+				.frame(width: size, height: size)
 				.foregroundColor(user.isActive ? .green : nil)
 			
 			OnlineIndicator(
