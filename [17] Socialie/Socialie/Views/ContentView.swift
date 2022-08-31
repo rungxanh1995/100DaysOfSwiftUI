@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+	
+	@StateObject
+	private var vm: Self.ViewModel
+	
+	init(vm: Self.ViewModel = .init()) {
+		_vm = StateObject(wrappedValue: vm)
+	}
+	
     var body: some View {
         Text("Hello, world!")
             .padding()
+			.task {
+				await vm.fetchData()
+			}
     }
 }
 
