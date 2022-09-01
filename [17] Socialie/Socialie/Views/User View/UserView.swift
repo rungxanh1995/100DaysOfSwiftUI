@@ -72,13 +72,32 @@ private extension UserView {
 			Text("Contact")
 				.font(.title2.bold())
 				.foregroundColor(Color.accentColor)
+			
 			Divider()
-			Text("Working at \(user.company)")
-			HStack(alignment: .top) {
-				Text("Email:")
+			
+			// Company name
+			HStack {
+				Image(systemName: "building.2")
+					.accessibilityLabel("Company")
+				Text("Working at \(user.company)")
+			}
+			.padding(.vertical, 4)
+			
+			// Email
+			HStack {
+				Image(systemName: "envelope")
+					.accessibilityLabel("Email")
 				Link(user.email, destination: URL(string: "mailto:\(user.email)")!)
 			}
-			Text("Address: \(user.address)")
+			.padding(.vertical, 4)
+			
+			// Address
+			HStack {
+				Image(systemName: "map")
+					.accessibilityLabel("Address")
+				Text(user.address)
+			}
+			.padding(.vertical, 4)
 		}
 		.expandToInfinity()
 		.padding()
