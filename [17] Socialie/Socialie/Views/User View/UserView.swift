@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+struct UserFriend {
+	let id: String
+	let friend: User.Friend
+}
+
 struct UserView: View {
 	private(set) var user: User
 	
@@ -16,7 +21,7 @@ struct UserView: View {
 			contactCard
 			aboutCard
 			tagsCard
-			// TODO: Add view for friend list
+			friendListCard
 		}
 		.navigationTitle(user.name)
 		.navigationBarTitleDisplayMode(.inline)
@@ -24,6 +29,40 @@ struct UserView: View {
 }
 
 private extension UserView {
+	
+	// MARK: - Friend list card
+	@ViewBuilder
+	var friendListCard: some View {
+		let userFriends: [UserFriend] = mapFriendsToUserFriendsList(user.friends)
+		
+		return VStack(alignment: .leading) {
+			Text("Friends")
+				.font(.title2.bold())
+				.foregroundColor(Color.accentColor)
+			
+			ScrollView(.horizontal, showsIndicators: false) {
+				HStack {
+					ForEach(userFriends, id: \.id) { userFriend in
+						NavigationLink {
+							Text(userFriend.friend.name)
+						} label: {
+							Text(userFriend.friend.name)
+						}
+					}
+				}
+			}
+		}
+		.expandToInfinity()
+		.padding()
+		.asCard()
+	}
+	
+	func mapFriendsToUserFriendsList(_ friends: [User.Friend]) -> [UserFriend] {
+		user.friends.map { eachFriend in
+			return UserFriend(id: eachFriend.id, friend: eachFriend)
+		}
+	}
+	
 	// MARK: - Main user info card
 	@ViewBuilder
 	var mainInfoCard: some View {
