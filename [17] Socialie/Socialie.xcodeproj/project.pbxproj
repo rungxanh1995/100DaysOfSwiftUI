@@ -28,6 +28,8 @@
 		2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269428C00E2400B11C87 /* CardModifier.swift */; };
 		2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED774828C03C0B00A193D5 /* Symbols.swift */; };
 		2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */; };
+		2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776828C1167600A193D5 /* UserViewModel.swift */; };
+		2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776A28C116B800A193D5 /* UserFriend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		2C7D269428C00E2400B11C87 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		2CED774828C03C0B00A193D5 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItemModifier.swift; sourceTree = "<group>"; };
+		2CED776828C1167600A193D5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		2CED776A28C116B800A193D5 /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F73C28BFA68800F15D4B /* User.swift */,
+				2CED776A28C116B800A193D5 /* UserFriend.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7D268F28C0008900B11C87 /* UserView.swift */,
+				2CED776828C1167600A193D5 /* UserViewModel.swift */,
 			);
 			path = "User View";
 			sourceTree = "<group>";
@@ -297,10 +303,12 @@
 				2C7D269028C0008900B11C87 /* UserView.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
 				2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */,
+				2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */,
 				2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */,
 				2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
+				2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */,
 				2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */,
 				2C7D267C28BFCC5000B11C87 /* HomeGridView.swift in Sources */,
 			);

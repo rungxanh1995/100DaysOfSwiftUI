@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-struct UserFriend {
-	let id: String
-	let friend: User.Friend
-}
-
 struct UserView: View {
 	private(set) var user: User
 	
