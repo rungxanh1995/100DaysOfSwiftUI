@@ -15,6 +15,8 @@ enum Symbols {
 		static let email: Image = .init(systemName: "envelope")
 		static let map: Image = .init(systemName: "map")
 		static let dotCircle: Image = .init(systemName:"circle.fill")
+		
+		static let tools: Image = .init(systemName: "wrench.and.screwdriver.fill").symbolRenderingMode(.hierarchical)
 	}
 	
 	enum Labels {

@@ -32,6 +32,7 @@
 		2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776A28C116B800A193D5 /* UserFriend.swift */; };
 		2CED776E28C1196B00A193D5 /* UserFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776D28C1196B00A193D5 /* UserFriendList.swift */; };
 		2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */; };
+		2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED777128C12BB000A193D5 /* UnderDevelopmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		2CED776A28C116B800A193D5 /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
 		2CED776D28C1196B00A193D5 /* UserFriendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendList.swift; sourceTree = "<group>"; };
 		2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendListViewModel.swift; sourceTree = "<group>"; };
+		2CED777128C12BB000A193D5 /* UnderDevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderDevelopmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				2C7D267D28BFD1D500B11C87 /* OnlineIndicator.swift */,
+				2CED777128C12BB000A193D5 /* UnderDevelopmentView.swift */,
 			);
 			path = "Other Views";
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */,
+				2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
