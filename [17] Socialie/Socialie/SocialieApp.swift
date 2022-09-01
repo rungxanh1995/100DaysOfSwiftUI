@@ -9,6 +9,14 @@ import SwiftUI
 
 @main
 struct SocialieApp: App {
+	
+	init() {
+		// Configure segmented picker colouring
+		UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(.accentColor)
+		UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+		UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(.accentColor)], for: .normal)
+	}
+	
     var body: some Scene {
         WindowGroup {
             HomeView()

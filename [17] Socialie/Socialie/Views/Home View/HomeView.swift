@@ -9,30 +9,36 @@ import SwiftUI
 
 struct HomeView: View {
 	
+	/// Helps selecting the layout of `HomeView`
+	private enum Layout {
+		case asGrid
+		case asList
+	}
+	
 	@StateObject
 	private var vm: Self.ViewModel
 	
+	@State
+	private var selectedLayout: Layout
+	
 	init(vm: Self.ViewModel = .init()) {
 		_vm = StateObject(wrappedValue: vm)
+		selectedLayout = .asGrid
 	}
-	
-	@State
-	private var isGridLayout: Bool = true
 	
     var body: some View {
 		NavigationView {
 			Group {
-				if isGridLayout {
-					HomeGridView(viewModel: vm)
-				} else {
-					HomeListView(viewModel: vm)
+				switch selectedLayout {
+					case .asGrid: HomeGridView(viewModel: vm)
+					case .asList: HomeListView(viewModel: vm)
 				}
 			}
 			.task {
 				await vm.fetchData()
 			}
 			.toolbar {
-				layoutSwitchButton
+				layoutSwitcher
 			}
 		}
     }
@@ -40,15 +46,15 @@ struct HomeView: View {
 
 private extension HomeView {
 	@ViewBuilder
-	var layoutSwitchButton: some View {
-		Button {
-			isGridLayout.toggle()
-		} label: {
-			Label(
-				"Layout",
-				systemImage: isGridLayout ? "list.bullet" : "square.grid.2x2.fill"
-			)
+	var layoutSwitcher: some View {
+		Picker("Choose layout", selection: $selectedLayout) {
+			Symbols.Labels.grid
+				.tag(Layout.asGrid)
+			
+			Symbols.Labels.list
+				.tag(Layout.asList)
 		}
+		.pickerStyle(.segmented)
 	}
 }
 

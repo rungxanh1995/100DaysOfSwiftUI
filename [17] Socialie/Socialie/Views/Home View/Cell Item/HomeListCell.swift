@@ -19,7 +19,7 @@ struct HomeListCell: View {
 					.font(.headline)
 				Text(user.isActive ? "Online" : "Offline")
 					.font(.callout)
-					.foregroundColor(.secondary)
+					.foregroundColor(user.isActive ? .green : .secondary)
 			}
 		}
 	}
