@@ -13,11 +13,12 @@ struct HomeCellImage: View {
 	
 	var body: some View {
 		ZStack(alignment: .bottomTrailing) {
-			Image(systemName: "person.crop.circle.fill")
+			Symbols.Images.person
 				.resizable()
 				.scaledToFit()
 				.frame(width: size, height: size)
 				.foregroundColor(user.isActive ? .green : .secondary)
+				.accessibilityLabel("Person image")
 			
 			OnlineIndicator(
 				isOnline: user.isActive

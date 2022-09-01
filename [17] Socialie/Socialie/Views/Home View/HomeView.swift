@@ -48,17 +48,11 @@ private extension HomeView {
 	@ViewBuilder
 	var layoutSwitcher: some View {
 		Picker("Choose layout", selection: $selectedLayout) {
-			Label(
-				"As Grid",
-				systemImage: "square.grid.2x2.fill"
-			)
-			.tag(Layout.asGrid)
+			Symbols.Labels.grid
+				.tag(Layout.asGrid)
 			
-			Label(
-				"As List",
-				systemImage: "list.bullet"
-			)
-			.tag(Layout.asList)
+			Symbols.Labels.list
+				.tag(Layout.asList)
 		}
 		.pickerStyle(.segmented)
 	}

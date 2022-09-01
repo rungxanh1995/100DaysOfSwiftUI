@@ -77,7 +77,7 @@ private extension UserView {
 			
 			// Company name
 			HStack {
-				Image(systemName: "building.2")
+				Symbols.Images.building
 					.accessibilityLabel("Company")
 				Text("Working at \(user.company)")
 			}
@@ -85,7 +85,7 @@ private extension UserView {
 			
 			// Email
 			HStack {
-				Image(systemName: "envelope")
+				Symbols.Images.email
 					.accessibilityLabel("Email")
 				Link(user.email, destination: URL(string: "mailto:\(user.email)")!)
 			}
@@ -93,7 +93,7 @@ private extension UserView {
 			
 			// Address
 			HStack {
-				Image(systemName: "map")
+				Symbols.Images.map
 					.accessibilityLabel("Address")
 				Text(user.address)
 			}
