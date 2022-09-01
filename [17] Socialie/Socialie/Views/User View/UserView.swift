@@ -57,7 +57,6 @@ private extension UserView {
 					.foregroundColor(.secondary)
 			}
 			.frame(maxWidth: .infinity)
-			
 		}
 		.expandToInfinity()
 		.padding()
@@ -71,8 +70,6 @@ private extension UserView {
 			Text("Contact")
 				.font(.title2.bold())
 				.foregroundColor(Color.accentColor)
-			
-			Divider()
 			
 			// Company name
 			HStack {
@@ -110,8 +107,8 @@ private extension UserView {
 			Text("About")
 				.font(.title2.bold())
 				.foregroundColor(Color.accentColor)
-			Divider()
 			Text(user.about)
+				.padding(.vertical, 4)
 		}
 		.expandToInfinity()
 		.padding()
@@ -125,7 +122,6 @@ private extension UserView {
 			Text("Tags")
 				.font(.title2.bold())
 				.foregroundColor(Color.accentColor)
-			Divider()
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {
