@@ -26,6 +26,7 @@ struct UserFriendList: View {
 							UnderDevelopmentView()
 						} label: {
 							Text(userFriend.friend.name)
+								.asTagChip()
 						}
 					}
 				}

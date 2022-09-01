@@ -139,8 +139,14 @@ private extension UserView {
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {
-					ForEach(vm.user.tags, id: \.self) {
-						Text($0).asTagChip()
+					ForEach(vm.user.tags, id: \.self) { tag in
+						NavigationLink {
+							// Spared for when I'm able to deploy a dedicated view
+							UnderDevelopmentView()
+						} label: {
+							Text(tag)
+								.asTagChip()
+						}
 					}
 				}
 			}
