@@ -22,7 +22,8 @@ struct UserFriendList: View {
 				HStack {
 					ForEach(vm.userFriends, id: \.id) { userFriend in
 						NavigationLink {
-							Text(userFriend.friend.name)
+							// Spared for when I'm able to deploy a dedicated view
+							UnderDevelopmentView()
 						} label: {
 							Text(userFriend.friend.name)
 						}
