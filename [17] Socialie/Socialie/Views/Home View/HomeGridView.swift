@@ -23,7 +23,7 @@ struct HomeGridView: View {
 					NavigationLink(
 						destination: UserView(user: eachUser)
 					) {
-						HomeCell(user: eachUser)
+						HomeGridCell(user: eachUser)
 					}
 				}
 			}

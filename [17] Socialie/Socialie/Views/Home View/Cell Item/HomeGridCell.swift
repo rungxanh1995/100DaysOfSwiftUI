@@ -1,5 +1,5 @@
 //
-//  HomeCell.swift
+//  HomeGridCell.swift
 //  Socialie
 //
 //  Created by Joe Pham on 2022-08-31.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeCell: View {
+struct HomeGridCell: View {
 	var user: User
 	
 	var body: some View {
@@ -25,6 +25,6 @@ struct HomeCell: View {
 
 struct HomeCell_Previews: PreviewProvider {
     static var previews: some View {
-		HomeCell(user: User.sampleUser)
+		HomeGridCell(user: User.sampleUser)
     }
 }

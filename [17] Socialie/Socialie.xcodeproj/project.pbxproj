@@ -20,7 +20,7 @@
 		2C7D267E28BFD1D500B11C87 /* OnlineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D267D28BFD1D500B11C87 /* OnlineIndicator.swift */; };
 		2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268228BFE8CB00B11C87 /* HomeCellImage.swift */; };
 		2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268428BFEA5700B11C87 /* HomeCellLabel.swift */; };
-		2C7D268828BFEFAD00B11C87 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268728BFEFAD00B11C87 /* HomeCell.swift */; };
+		2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268728BFEFAD00B11C87 /* HomeGridCell.swift */; };
 		2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268A28BFF29E00B11C87 /* HomeListView.swift */; };
 		2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268C28BFF69600B11C87 /* HomeListCell.swift */; };
 		2C7D269028C0008900B11C87 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268F28C0008900B11C87 /* UserView.swift */; };
@@ -43,7 +43,7 @@
 		2C7D267D28BFD1D500B11C87 /* OnlineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineIndicator.swift; sourceTree = "<group>"; };
 		2C7D268228BFE8CB00B11C87 /* HomeCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellImage.swift; sourceTree = "<group>"; };
 		2C7D268428BFEA5700B11C87 /* HomeCellLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellLabel.swift; sourceTree = "<group>"; };
-		2C7D268728BFEFAD00B11C87 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		2C7D268728BFEFAD00B11C87 /* HomeGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridCell.swift; sourceTree = "<group>"; };
 		2C7D268A28BFF29E00B11C87 /* HomeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListView.swift; sourceTree = "<group>"; };
 		2C7D268C28BFF69600B11C87 /* HomeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeListCell.swift; sourceTree = "<group>"; };
 		2C7D268F28C0008900B11C87 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		2C7D267F28BFE35400B11C87 /* Cell Item */ = {
 			isa = PBXGroup;
 			children = (
-				2C7D268728BFEFAD00B11C87 /* HomeCell.swift */,
+				2C7D268728BFEFAD00B11C87 /* HomeGridCell.swift */,
 				2C7D268C28BFF69600B11C87 /* HomeListCell.swift */,
 				2C7D268028BFE77000B11C87 /* Image */,
 				2C7D268128BFE78200B11C87 /* Label */,
@@ -293,7 +293,7 @@
 				2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
-				2C7D268828BFEFAD00B11C87 /* HomeCell.swift in Sources */,
+				2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */,
 				2C7D267C28BFCC5000B11C87 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
