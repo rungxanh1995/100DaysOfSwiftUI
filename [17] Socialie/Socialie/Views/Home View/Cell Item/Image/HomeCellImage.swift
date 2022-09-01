@@ -17,7 +17,7 @@ struct HomeCellImage: View {
 				.resizable()
 				.scaledToFit()
 				.frame(width: size, height: size)
-				.foregroundColor(user.isActive ? .green : nil)
+				.foregroundColor(user.isActive ? .green : .secondary)
 			
 			OnlineIndicator(
 				isOnline: user.isActive
