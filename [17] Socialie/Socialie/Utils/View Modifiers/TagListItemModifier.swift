@@ -7,18 +7,14 @@
 
 import SwiftUI
 
-/// Modify a `Text` to look like a tag chip item,
-/// making use of `Button` for a built-in appearance.
+/// Modify a `Text` to look like a tag chip item
 struct TagListItemModifier: ViewModifier {
 	func body(content: Content) -> some View {
-		Button {
-			// no action
-		} label: {
-			content
-				.font(.callout)
-				.padding(8)
-				.background(Color.accentColor.opacity(0.25))
-				.clipShape(Capsule())
-		}
+		content
+			.font(.callout)
+			.padding(8)
+			.foregroundColor(Color.accentColor)
+			.background(Color.accentColor.opacity(0.25))
+			.clipShape(Capsule())
 	}
 }

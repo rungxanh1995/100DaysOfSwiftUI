@@ -8,42 +8,44 @@
 import SwiftUI
 
 struct UserView: View {
-	private(set) var user: User
+	@ObservedObject
+	private(set) var vm: Self.ViewModel
 	
     var body: some View {
 		ScrollView {
 			mainInfoCard
 			contactCard
+			friendListCard
 			aboutCard
 			tagsCard
-			// TODO: Add view for friend list
 		}
-		.navigationTitle(user.name)
+		.navigationTitle(vm.user.name)
 		.navigationBarTitleDisplayMode(.inline)
     }
 }
 
 private extension UserView {
+	
 	// MARK: - Main user info card
 	@ViewBuilder
 	var mainInfoCard: some View {
 		VStack(alignment: .leading) {
 			// Main content
 			HStack(spacing: 20) {
-				HomeCellImage(user: user)
+				HomeCellImage(user: vm.user)
 				VStack(alignment: .leading) {
 					// Name
-					Text(user.name)
+					Text(vm.user.name)
 						.font(.title3.bold())
 						.foregroundColor(Color.accentColor)
 					// Age and Active status
 					HStack(spacing: 4) {
-						Text("\(user.age) years old")
+						Text("\(vm.user.age) years old")
 							.font(.callout)
 						Text("•")
-						Text(user.isActive ? "Online" : "Offline")
+						Text(vm.user.isActive ? "Online" : "Offline")
 							.font(.callout)
-							.foregroundColor(user.isActive ? .green : .secondary)
+							.foregroundColor(vm.user.isActive ? .green : .secondary)
 					}
 				}
 			}
@@ -52,7 +54,7 @@ private extension UserView {
 			
 			// Footer
 			VStack {
-				Text("Joined \(user.formattedRegisterDate)")
+				Text("Joined \(vm.user.yearsAndMonthsSinceRegisteredUntilNow) ago on \(vm.user.formattedRegisterDate)")
 					.font(.caption)
 					.foregroundColor(.secondary)
 			}
@@ -75,7 +77,7 @@ private extension UserView {
 			HStack {
 				Symbols.Images.building
 					.accessibilityLabel("Company")
-				Text("Working at \(user.company)")
+				Text("Working at \(vm.user.company)")
 			}
 			.padding(.vertical, 4)
 			
@@ -83,7 +85,7 @@ private extension UserView {
 			HStack {
 				Symbols.Images.email
 					.accessibilityLabel("Email")
-				Link(user.email, destination: URL(string: "mailto:\(user.email)")!)
+				Link(vm.user.email, destination: URL(string: "mailto:\(vm.user.email)")!)
 			}
 			.padding(.vertical, 4)
 			
@@ -91,13 +93,25 @@ private extension UserView {
 			HStack {
 				Symbols.Images.map
 					.accessibilityLabel("Address")
-				Text(user.address)
+				Text(vm.user.address)
 			}
 			.padding(.vertical, 4)
 		}
 		.expandToInfinity()
 		.padding()
 		.asCard()
+	}
+	
+	// MARK: - Friend list card
+	@ViewBuilder
+	var friendListCard: some View {
+		UserFriendList()
+			.expandToInfinity()
+			.padding()
+			.asCard()
+			.environmentObject(
+				UserFriendList.ViewModel(friends: vm.friends)
+			)
 	}
 	
 	// MARK: - About card
@@ -107,7 +121,7 @@ private extension UserView {
 			Text("About")
 				.font(.title2.bold())
 				.foregroundColor(Color.accentColor)
-			Text(user.about)
+			Text(vm.user.about)
 				.padding(.vertical, 4)
 		}
 		.expandToInfinity()
@@ -125,8 +139,14 @@ private extension UserView {
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {
-					ForEach(user.tags, id: \.self) {
-						Text($0).asTagChip()
+					ForEach(vm.user.tags, id: \.self) { tag in
+						NavigationLink {
+							// Spared for when I'm able to deploy a dedicated view
+							UnderDevelopmentView()
+						} label: {
+							Text(tag)
+								.asTagChip()
+						}
 					}
 				}
 			}
@@ -139,6 +159,7 @@ private extension UserView {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-		UserView(user: User.sampleUser)
+		let user = User.sampleUser
+		UserView(vm: .init(user: user, friends: user.friends))
     }
 }

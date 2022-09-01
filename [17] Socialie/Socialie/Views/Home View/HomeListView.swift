@@ -14,7 +14,10 @@ struct HomeListView: View {
     var body: some View {
 		List(viewModel.users) { eachUser in
 			NavigationLink(
-				destination: UserView(user: eachUser)
+				destination: UserView(vm: .init(
+					user: eachUser,
+					friends: eachUser.friends
+				))
 			) {
 				HomeListCell(user: eachUser)
 				

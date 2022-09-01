@@ -21,7 +21,10 @@ struct HomeGridView: View {
 			LazyVGrid(columns: columns) {
 				ForEach(viewModel.users) { eachUser in
 					NavigationLink(
-						destination: UserView(user: eachUser)
+						destination: UserView(vm: .init(
+							user: eachUser,
+							friends: eachUser.friends
+						))
 					) {
 						HomeGridCell(user: eachUser)
 					}
