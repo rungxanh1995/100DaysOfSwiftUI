@@ -30,6 +30,8 @@
 		2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */; };
 		2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776828C1167600A193D5 /* UserViewModel.swift */; };
 		2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776A28C116B800A193D5 /* UserFriend.swift */; };
+		2CED776E28C1196B00A193D5 /* UserFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776D28C1196B00A193D5 /* UserFriendList.swift */; };
+		2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItemModifier.swift; sourceTree = "<group>"; };
 		2CED776828C1167600A193D5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2CED776A28C116B800A193D5 /* UserFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriend.swift; sourceTree = "<group>"; };
+		2CED776D28C1196B00A193D5 /* UserFriendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendList.swift; sourceTree = "<group>"; };
+		2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 			children = (
 				2C7D268F28C0008900B11C87 /* UserView.swift */,
 				2CED776828C1167600A193D5 /* UserViewModel.swift */,
+				2CED776C28C1191500A193D5 /* Friends List */,
 			);
 			path = "User View";
 			sourceTree = "<group>";
@@ -218,6 +223,15 @@
 				2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */,
 			);
 			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		2CED776C28C1191500A193D5 /* Friends List */ = {
+			isa = PBXGroup;
+			children = (
+				2CED776D28C1196B00A193D5 /* UserFriendList.swift */,
+				2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */,
+			);
+			path = "Friends List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
@@ -306,6 +321,7 @@
 				2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */,
 				2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */,
 				2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */,
+				2CED776E28C1196B00A193D5 /* UserFriendList.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
 				2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */,

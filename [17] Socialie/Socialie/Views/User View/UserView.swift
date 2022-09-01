@@ -29,26 +29,13 @@ private extension UserView {
 	// MARK: - Friend list card
 	@ViewBuilder
 	var friendListCard: some View {
-		VStack(alignment: .leading) {
-			Text("Friends")
-				.font(.title2.bold())
-				.foregroundColor(Color.accentColor)
-			
-			ScrollView(.horizontal, showsIndicators: false) {
-				HStack {
-					ForEach(vm.friends, id: \.id) { userFriend in
-						NavigationLink {
-							Text(userFriend.friend.name)
-						} label: {
-							Text(userFriend.friend.name)
-						}
-					}
-				}
-			}
-		}
-		.expandToInfinity()
-		.padding()
-		.asCard()
+		UserFriendList()
+			.expandToInfinity()
+			.padding()
+			.asCard()
+			.environmentObject(
+				UserFriendList.ViewModel(friends: vm.friends)
+			)
 	}
 	
 	// MARK: - Main user info card
