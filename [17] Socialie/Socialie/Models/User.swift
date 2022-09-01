@@ -36,7 +36,7 @@ struct User: Identifiable, Codable, Hashable {
 		let diffComponents = Calendar.current.dateComponents([.year, .month], from: registeredDate, to: Date.now)
 		let years = diffComponents.year
 		let months = diffComponents.month
-		return "\(years ?? 0) years \(months ?? 0) months"
+		return "\(years ?? 0)y \(months ?? 0)m"
 	}
 	
 	private var registeredDate: Date {
