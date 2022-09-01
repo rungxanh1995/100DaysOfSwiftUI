@@ -127,9 +127,12 @@ private extension UserView {
 				.foregroundColor(Color.accentColor)
 			Divider()
 			
-			// TODO: Make this looks like a flexbox instead of vertical
-			ForEach(user.tags, id: \.self) {
-				tagView(for: Text($0))
+			ScrollView(.horizontal, showsIndicators: false) {
+				HStack {
+					ForEach(user.tags, id: \.self) {
+						tagChips(for: Text($0))
+					}
+				}
 			}
 		}
 		.expandToInfinity()
@@ -138,16 +141,16 @@ private extension UserView {
 	}
 	
 	@ViewBuilder
-	private func tagView(for text: Text) -> some View {
-		text
-			.font(.caption)
-			.foregroundColor(.white)
-			.padding(4)
-			.background(Color.accentColor.opacity(0.75))
-			.clipShape(Capsule())
-			.overlay(
-				Capsule().stroke(Color.accentColor)
-			)
+	private func tagChips(for text: Text) -> some View {
+		Button {
+			// action code here
+		} label: {
+			text
+				.font(.callout)
+				.padding(8)
+				.background(Color.accentColor.opacity(0.25))
+				.clipShape(Capsule())
+		}
 	}
 }
 
