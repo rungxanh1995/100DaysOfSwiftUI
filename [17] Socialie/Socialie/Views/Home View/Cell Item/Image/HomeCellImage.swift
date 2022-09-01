@@ -61,13 +61,6 @@ struct HomeCellImage: View {
 	}
 }
 
-private extension HomeCellImage {
-
-	
-	
-}
-
-
 struct HomeCellImage_Previews: PreviewProvider {
     static var previews: some View {
 		HomeCellImage(user: User.sampleUser)
