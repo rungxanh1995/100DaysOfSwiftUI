@@ -15,8 +15,7 @@ struct UserView: View {
 			mainInfoCard
 			contactCard
 			aboutCard
-			
-			// TODO: Add view for tags
+			tagsCard
 			// TODO: Add view for friend list
 		}
 		.navigationTitle(user.name)
@@ -117,6 +116,38 @@ private extension UserView {
 		.expandToInfinity()
 		.padding()
 		.asCard()
+	}
+	
+	// MARK: - Tags card
+	@ViewBuilder
+	var tagsCard: some View {
+		VStack(alignment: .leading) {
+			Text("Tags")
+				.font(.title2.bold())
+				.foregroundColor(Color.accentColor)
+			Divider()
+			
+			// TODO: Make this looks like a flexbox instead of vertical
+			ForEach(user.tags, id: \.self) {
+				tagView(for: Text($0))
+			}
+		}
+		.expandToInfinity()
+		.padding()
+		.asCard()
+	}
+	
+	@ViewBuilder
+	private func tagView(for text: Text) -> some View {
+		text
+			.font(.caption)
+			.foregroundColor(.white)
+			.padding(4)
+			.background(Color.accentColor.opacity(0.75))
+			.clipShape(Capsule())
+			.overlay(
+				Capsule().stroke(Color.accentColor)
+			)
 	}
 }
 
