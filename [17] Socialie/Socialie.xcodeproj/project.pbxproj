@@ -26,6 +26,7 @@
 		2C7D269028C0008900B11C87 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268F28C0008900B11C87 /* UserView.swift */; };
 		2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269128C00DD000B11C87 /* View+Ext.swift */; };
 		2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269428C00E2400B11C87 /* CardModifier.swift */; };
+		2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED774828C03C0B00A193D5 /* Symbols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		2C7D268F28C0008900B11C87 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		2C7D269128C00DD000B11C87 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		2C7D269428C00E2400B11C87 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		2CED774828C03C0B00A193D5 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				2C7D269328C00DED00B11C87 /* View Modifiers */,
 				2C50F74128BFAA3900F15D4B /* Extensions */,
 				2C50F73F28BFA7D200F15D4B /* Constants.swift */,
+				2CED774828C03C0B00A193D5 /* Symbols.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */,
 				2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */,
 				2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */,
+				2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */,
 				2C7D269028C0008900B11C87 /* UserView.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
 				2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */,
