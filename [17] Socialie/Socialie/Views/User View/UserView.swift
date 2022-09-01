@@ -54,7 +54,7 @@ private extension UserView {
 			
 			// Footer
 			VStack {
-				Text("Joined \(vm.user.formattedRegisterDate)")
+				Text("Joined \(vm.user.yearsAndMonthsSinceRegisteredUntilNow) ago on \(vm.user.formattedRegisterDate)")
 					.font(.caption)
 					.foregroundColor(.secondary)
 			}

@@ -33,6 +33,7 @@
 		2CED776E28C1196B00A193D5 /* UserFriendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776D28C1196B00A193D5 /* UserFriendList.swift */; };
 		2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */; };
 		2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED777128C12BB000A193D5 /* UnderDevelopmentView.swift */; };
+		2CED777428C1372700A193D5 /* Calendar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED777328C1372700A193D5 /* Calendar+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,7 @@
 		2CED776D28C1196B00A193D5 /* UserFriendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendList.swift; sourceTree = "<group>"; };
 		2CED776F28C11A7900A193D5 /* UserFriendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendListViewModel.swift; sourceTree = "<group>"; };
 		2CED777128C12BB000A193D5 /* UnderDevelopmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderDevelopmentView.swift; sourceTree = "<group>"; };
+		2CED777328C1372700A193D5 /* Calendar+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Calendar+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		2C50F74128BFAA3900F15D4B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2CED777328C1372700A193D5 /* Calendar+Ext.swift */,
 				2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */,
 				2C7D269128C00DD000B11C87 /* View+Ext.swift */,
 			);
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */,
+				2CED777428C1372700A193D5 /* Calendar+Ext.swift in Sources */,
 				2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,

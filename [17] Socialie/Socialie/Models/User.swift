@@ -26,11 +26,23 @@ struct User: Identifiable, Codable, Hashable {
 	let tags: [String]
 	let friends: [Friend]
 	
+	// MARK: - Time properties
 	/// Converts UTC date string to human-readable  format
 	var formattedRegisterDate: String {
+		return registeredDate.formatted(date: .abbreviated, time: .omitted)
+	}
+	
+	var yearsAndMonthsSinceRegisteredUntilNow: String {
+		let diffComponents = Calendar.current.dateComponents([.year, .month], from: registeredDate, to: Date.now)
+		let years = diffComponents.year
+		let months = diffComponents.month
+		return "\(years ?? 0) years \(months ?? 0) months"
+	}
+	
+	private var registeredDate: Date {
 		let dateFormatter = ISO8601DateFormatter()
 		let date = dateFormatter.date(from: registered)
-		return date?.formatted() ?? "Misformatted Registered Date"
+		return date ?? Date.distantPast
 	}
 }
 
