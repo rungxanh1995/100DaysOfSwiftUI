@@ -8,6 +8,7 @@
 import Foundation
 
 extension UserView {
+	/// View model specialized for `UserView`
 	final class ViewModel: ObservableObject {
 		let user: User
 		var friends: [UserFriend] { return _friends }
