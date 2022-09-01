@@ -44,7 +44,7 @@ private extension UserView {
 						Text("•")
 						Text(user.isActive ? "Online" : "Offline")
 							.font(.callout)
-							.foregroundColor(user.isActive ? .green : .gray)
+							.foregroundColor(user.isActive ? .green : .secondary)
 					}
 				}
 			}
