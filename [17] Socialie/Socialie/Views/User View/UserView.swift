@@ -15,9 +15,9 @@ struct UserView: View {
 		ScrollView {
 			mainInfoCard
 			contactCard
+			friendListCard
 			aboutCard
 			tagsCard
-			friendListCard
 		}
 		.navigationTitle(vm.user.name)
 		.navigationBarTitleDisplayMode(.inline)
@@ -25,18 +25,6 @@ struct UserView: View {
 }
 
 private extension UserView {
-	
-	// MARK: - Friend list card
-	@ViewBuilder
-	var friendListCard: some View {
-		UserFriendList()
-			.expandToInfinity()
-			.padding()
-			.asCard()
-			.environmentObject(
-				UserFriendList.ViewModel(friends: vm.friends)
-			)
-	}
 	
 	// MARK: - Main user info card
 	@ViewBuilder
@@ -112,6 +100,18 @@ private extension UserView {
 		.expandToInfinity()
 		.padding()
 		.asCard()
+	}
+	
+	// MARK: - Friend list card
+	@ViewBuilder
+	var friendListCard: some View {
+		UserFriendList()
+			.expandToInfinity()
+			.padding()
+			.asCard()
+			.environmentObject(
+				UserFriendList.ViewModel(friends: vm.friends)
+			)
 	}
 	
 	// MARK: - About card
