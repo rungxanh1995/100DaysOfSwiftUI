@@ -130,7 +130,7 @@ private extension UserView {
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {
 					ForEach(user.tags, id: \.self) {
-						tagChips(for: Text($0))
+						Text($0).asTagChip()
 					}
 				}
 			}
@@ -138,19 +138,6 @@ private extension UserView {
 		.expandToInfinity()
 		.padding()
 		.asCard()
-	}
-	
-	@ViewBuilder
-	private func tagChips(for text: Text) -> some View {
-		Button {
-			// action code here
-		} label: {
-			text
-				.font(.callout)
-				.padding(8)
-				.background(Color.accentColor.opacity(0.25))
-				.clipShape(Capsule())
-		}
 	}
 }
 

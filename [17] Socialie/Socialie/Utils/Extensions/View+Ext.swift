@@ -22,4 +22,9 @@ extension View {
 			alignment: .leading
 		)
 	}
+	
+	/// Modify a `Text` to look like a tag chip item
+	func asTagChip() -> some View {
+		modifier(TagListItemModifier())
+	}
 }
