@@ -29,10 +29,11 @@ private extension UserView {
 	// MARK: - Main user info card
 	@ViewBuilder
 	var mainInfoCard: some View {
-		VStack(alignment: .leading) {
+		VStack(alignment: .center) {
 			// Main content
-			HStack(spacing: 20) {
+			HStack {
 				HomeCellImage(user: vm.user)
+					.padding(8)
 				VStack(alignment: .leading) {
 					// Name
 					Text(vm.user.name)
@@ -50,8 +51,6 @@ private extension UserView {
 				}
 			}
 			
-			Divider()
-			
 			// Footer
 			VStack {
 				Text("Joined \(vm.user.yearsAndMonthsSinceRegisteredUntilNow) ago on \(vm.user.formattedRegisterDate)")
@@ -62,16 +61,18 @@ private extension UserView {
 		}
 		.expandToInfinity()
 		.padding()
-		.asCard()
 	}
 	
 	// MARK: - Contact card
 	@ViewBuilder
 	var contactCard: some View {
 		VStack(alignment: .leading) {
-			Text("Contact")
-				.font(.title2.bold())
-				.foregroundColor(Color.accentColor)
+			HStack {
+				Spacer()
+				Text("Contact")
+					.font(.title3.bold())
+				Spacer()
+			}
 			
 			// Company name
 			HStack {
@@ -118,9 +119,13 @@ private extension UserView {
 	@ViewBuilder
 	var aboutCard: some View {
 		VStack(alignment: .leading) {
-			Text("About")
-				.font(.title2.bold())
-				.foregroundColor(Color.accentColor)
+			HStack {
+				Spacer()
+				Text("About")
+					.font(.title3.bold())
+				Spacer()
+			}
+			
 			Text(vm.user.about)
 				.padding(.vertical, 4)
 		}
@@ -133,9 +138,12 @@ private extension UserView {
 	@ViewBuilder
 	var tagsCard: some View {
 		VStack(alignment: .leading) {
-			Text("Tags")
-				.font(.title2.bold())
-				.foregroundColor(Color.accentColor)
+			HStack {
+				Spacer()
+				Text("Tags")
+					.font(.title3.bold())
+				Spacer()
+			}
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {

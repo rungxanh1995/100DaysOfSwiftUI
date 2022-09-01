@@ -19,7 +19,7 @@ struct HomeCellLabel: View {
 		.padding(.vertical, 8)
 		.frame(maxWidth: .infinity)
 		.foregroundColor(.white)
-		.background(Color.accentColor.opacity(0.75))
+		.background(Color.accentColor.opacity(0.5))
 	}
 }
 

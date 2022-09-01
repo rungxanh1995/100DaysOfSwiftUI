@@ -14,9 +14,12 @@ struct UserFriendList: View {
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			Text("Friends")
-				.font(.title2.bold())
-				.foregroundColor(Color.accentColor)
+			HStack {
+				Spacer()
+				Text("Friends")
+					.font(.title3.bold())
+				Spacer()
+			}
 			
 			ScrollView(.horizontal, showsIndicators: false) {
 				HStack {

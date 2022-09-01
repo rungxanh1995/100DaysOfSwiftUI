@@ -19,7 +19,7 @@ struct HomeGridCell: View {
 		.clipShape(RoundedRectangle(cornerRadius: 10))
 		.overlay(
 			RoundedRectangle(cornerRadius: 10)
-				.stroke(Color.accentColor.opacity(0.75)))
+				.stroke(Color.accentColor.opacity(0.25)))
 	}
 }
 

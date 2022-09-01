@@ -14,7 +14,7 @@ struct TagListItemModifier: ViewModifier {
 			.font(.callout)
 			.padding(8)
 			.foregroundColor(Color.accentColor)
-			.background(Color.accentColor.opacity(0.25))
+			.background(Color.accentColor.opacity(0.2))
 			.clipShape(Capsule())
 	}
 }
