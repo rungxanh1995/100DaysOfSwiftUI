@@ -11,5 +11,8 @@ enum Constants {
 	internal enum Url {
 		/// API URL string of source JSON to fetch
 		static let friendfaceURLString: String = "https://www.hackingwithswift.com/samples/friendface.json"
+		
+		static let personalTwitterLink: URL = URL(string: "https://twitter.com/rungxanh1995")!
+		static let personalGithubLink: URL = URL(string: "https://github.com/rungxanh1995")!
 	}
 }

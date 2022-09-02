@@ -27,4 +27,9 @@ extension View {
 	func asTagChip() -> some View {
 		modifier(TagListItemModifier())
 	}
+	
+	/// Configure the color theme of this application.
+	func setUpColorTheme() -> some View {
+		modifier(SchemeModifier())
+	}
 }

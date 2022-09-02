@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3B594C28C1ABCE00CAB1D2 /* UserDefaultsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B594B28C1ABCE00CAB1D2 /* UserDefaultsKey.swift */; };
+		2C3B594F28C1ABF000CAB1D2 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B594E28C1ABF000CAB1D2 /* HapticManager.swift */; };
+		2C3B595228C1AC1800CAB1D2 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595128C1AC1800CAB1D2 /* SchemeType.swift */; };
+		2C3B595428C1AC3500CAB1D2 /* SchemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595328C1AC3500CAB1D2 /* SchemeModifier.swift */; };
+		2C3B595728C1AC8B00CAB1D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595628C1AC8B00CAB1D2 /* SettingsView.swift */; };
+		2C3B595928C1ACF400CAB1D2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595828C1ACF400CAB1D2 /* SettingsViewModel.swift */; };
 		2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72D28BFA41100F15D4B /* SocialieApp.swift */; };
 		2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72F28BFA41100F15D4B /* HomeView.swift */; };
 		2C50F73228BFA41200F15D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C50F73128BFA41200F15D4B /* Assets.xcassets */; };
@@ -37,6 +43,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3B594B28C1ABCE00CAB1D2 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
+		2C3B594E28C1ABF000CAB1D2 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		2C3B595128C1AC1800CAB1D2 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
+		2C3B595328C1AC3500CAB1D2 /* SchemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModifier.swift; sourceTree = "<group>"; };
+		2C3B595628C1AC8B00CAB1D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2C3B595828C1ACF400CAB1D2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		2C50F72A28BFA41100F15D4B /* Socialie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socialie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C50F72D28BFA41100F15D4B /* SocialieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialieApp.swift; sourceTree = "<group>"; };
 		2C50F72F28BFA41100F15D4B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -78,6 +90,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C3B594A28C1ABBA00CAB1D2 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2C3B594B28C1ABCE00CAB1D2 /* UserDefaultsKey.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		2C3B594D28C1ABE800CAB1D2 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				2C3B594E28C1ABF000CAB1D2 /* HapticManager.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
+		2C3B595028C1AC0B00CAB1D2 /* ColorSchemes */ = {
+			isa = PBXGroup;
+			children = (
+				2C3B595128C1AC1800CAB1D2 /* SchemeType.swift */,
+				2C3B595328C1AC3500CAB1D2 /* SchemeModifier.swift */,
+			);
+			path = ColorSchemes;
+			sourceTree = "<group>";
+		};
+		2C3B595528C1AC7500CAB1D2 /* Settings View */ = {
+			isa = PBXGroup;
+			children = (
+				2C3B595628C1AC8B00CAB1D2 /* SettingsView.swift */,
+				2C3B595828C1ACF400CAB1D2 /* SettingsViewModel.swift */,
+			);
+			path = "Settings View";
+			sourceTree = "<group>";
+		};
 		2C50F72128BFA41100F15D4B = {
 			isa = PBXGroup;
 			children = (
@@ -128,10 +174,13 @@
 		2C50F73E28BFA7C600F15D4B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				2C7D269328C00DED00B11C87 /* View Modifiers */,
-				2C50F74128BFAA3900F15D4B /* Extensions */,
 				2C50F73F28BFA7D200F15D4B /* Constants.swift */,
 				2CED774828C03C0B00A193D5 /* Symbols.swift */,
+				2C3B595028C1AC0B00CAB1D2 /* ColorSchemes */,
+				2C50F74128BFAA3900F15D4B /* Extensions */,
+				2C3B594D28C1ABE800CAB1D2 /* Haptics */,
+				2C3B594A28C1ABBA00CAB1D2 /* UserDefaults */,
+				2C7D269328C00DED00B11C87 /* View Modifiers */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -159,6 +208,7 @@
 			children = (
 				2C7D268928BFF03700B11C87 /* Home View */,
 				2C7D268E28C0007B00B11C87 /* User View */,
+				2C3B595528C1AC7500CAB1D2 /* Settings View */,
 				2C7D268628BFEDBE00B11C87 /* Other Views */,
 			);
 			path = Views;
@@ -312,9 +362,11 @@
 			files = (
 				2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */,
 				2CED777428C1372700A193D5 /* Calendar+Ext.swift in Sources */,
+				2C3B594C28C1ABCE00CAB1D2 /* UserDefaultsKey.swift in Sources */,
 				2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
+				2C3B595428C1AC3500CAB1D2 /* SchemeModifier.swift in Sources */,
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
 				2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */,
 				2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */,
@@ -323,8 +375,11 @@
 				2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */,
 				2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */,
 				2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */,
+				2C3B595728C1AC8B00CAB1D2 /* SettingsView.swift in Sources */,
 				2C7D269028C0008900B11C87 /* UserView.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
+				2C3B595928C1ACF400CAB1D2 /* SettingsViewModel.swift in Sources */,
+				2C3B594F28C1ABF000CAB1D2 /* HapticManager.swift in Sources */,
 				2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */,
 				2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */,
 				2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */,
@@ -334,6 +389,7 @@
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
 				2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */,
 				2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */,
+				2C3B595228C1AC1800CAB1D2 /* SchemeType.swift in Sources */,
 				2C7D267C28BFCC5000B11C87 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

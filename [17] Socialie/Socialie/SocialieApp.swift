@@ -19,7 +19,19 @@ struct SocialieApp: App {
 	
     var body: some Scene {
         WindowGroup {
-            HomeView()
+			TabView {
+				HomeView()
+					.tabItem {
+						Symbols.Images.house
+						Text("Home")
+					}
+				SettingsView()
+					.tabItem {
+						Symbols.Images.gear
+						Text("Settings")
+					}
+			}
+			.setUpColorTheme()
         }
     }
 }
