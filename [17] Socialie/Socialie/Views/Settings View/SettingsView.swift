@@ -22,7 +22,6 @@ struct SettingsView: View {
 				Section(
 					header: Text("General")
 				) {
-					haptics
 					appTheme
 				}
 				
@@ -52,15 +51,6 @@ struct SettingsView: View {
 }
 
 private extension SettingsView {
-	@ViewBuilder
-	private var haptics: some View {
-		Toggle(
-			"Enable Haptics",
-			isOn: $isHapticsEnabled
-		)
-		.tint(.accentColor)
-	}
-	
 	@ViewBuilder
 	private var appTheme: some View {
 		Picker("Color Theme", selection: $systemTheme) {
