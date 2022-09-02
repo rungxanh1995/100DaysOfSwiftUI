@@ -37,6 +37,12 @@ extension HomeView {
 		func fetchData() async -> Void {
 			guard users.isEmpty else { return }
 			users = await apiService.fetchData()
+			sortAlphabetically(&users)
+		}
+		
+		fileprivate func sortAlphabetically(_ input: inout [User]) {
+			// Sort by name
+			input = input.sorted { $0.name < $1.name }
 		}
 	}
 }
