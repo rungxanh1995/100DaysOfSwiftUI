@@ -42,6 +42,7 @@ extension URLSession {
 		}
 		
 		let decoder = JSONDecoder()
+		decoder.dateDecodingStrategy = .iso8601
 		guard let decoded = try? decoder.decode(T.self, from: data) else {
 			throw DecodingError.badData
 		}

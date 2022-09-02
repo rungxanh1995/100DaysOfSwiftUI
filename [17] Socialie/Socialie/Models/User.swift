@@ -22,27 +22,21 @@ struct User: Identifiable, Codable, Hashable {
 	let email: String
 	let address: String
 	let about: String
-	let registered: String
+	let registered: Date
 	let tags: [String]
 	let friends: [Friend]
 	
 	// MARK: - Time properties
 	/// Converts UTC date string to human-readable  format
 	var formattedRegisterDate: String {
-		return registeredDate.formatted(date: .abbreviated, time: .omitted)
+		return registered.formatted(date: .abbreviated, time: .omitted)
 	}
 	
 	var yearsAndMonthsSinceRegisteredUntilNow: String {
-		let diffComponents = Calendar.current.dateComponents([.year, .month], from: registeredDate, to: Date.now)
+		let diffComponents = Calendar.current.dateComponents([.year, .month], from: registered, to: Date.now)
 		let years = diffComponents.year
 		let months = diffComponents.month
 		return "\(years ?? 0)y \(months ?? 0)m"
-	}
-	
-	private var registeredDate: Date {
-		let dateFormatter = ISO8601DateFormatter()
-		let date = dateFormatter.date(from: registered)
-		return date ?? Date.distantPast
 	}
 }
 
@@ -58,7 +52,7 @@ extension User {
 			email: "katherynhensley@makingway.com",
 			address: "872 Beadel Street, Swartzville, Iowa, 2084",
 			about: "Aliquip incididunt dolor anim ullamco dolor ullamco qui amet sit non et eiusmod. Dolore aliqua cillum amet eu ex culpa deserunt adipisicing tempor aute nisi. Laborum tempor eiusmod dolore voluptate ex est exercitation occaecat ullamco. Sunt aliquip culpa sunt consequat sunt nisi ipsum nisi fugiat.",
-			registered: "2015-06-13T03:46:17-01:00",
+			registered: ISO8601DateFormatter().date(from: "2015-06-13T03:46:17-01:00") ?? Date.distantPast,
 			tags: [
 				"fugiat",
 				"proident",
