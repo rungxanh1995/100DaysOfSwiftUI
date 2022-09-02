@@ -12,7 +12,7 @@ struct HomeListView: View {
 	var viewModel: HomeView.ViewModel
 	
     var body: some View {
-		List(viewModel.users) { eachUser in
+		List(viewModel.searchResults) { eachUser in
 			NavigationLink(
 				destination: UserView(vm: .init(
 					user: eachUser,

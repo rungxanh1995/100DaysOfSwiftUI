@@ -11,7 +11,20 @@ extension HomeView {
 	/// View model specialized for `HomeView`
 	final class ViewModel: ObservableObject {
 		@Published
-		var users: [User]
+		private var users: [User]
+		
+		@Published
+		var searchText = ""
+		
+		var searchResults: [User] {
+			if searchText.isEmpty {
+				return users
+			} else {
+				return users.filter { user in
+					user.name.contains(searchText)
+				}
+			}
+		}
 		
 		private let apiService: ApiService
 		

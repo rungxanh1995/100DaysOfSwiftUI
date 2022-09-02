@@ -19,14 +19,16 @@ struct HomeGridView: View {
 	var body: some View {
 		ScrollView {
 			LazyVGrid(columns: columns) {
-				ForEach(viewModel.users) { eachUser in
-					NavigationLink(
-						destination: UserView(vm: .init(
-							user: eachUser,
-							friends: eachUser.friends
-						))
-					) {
-						HomeGridCell(user: eachUser)
+				withAnimation {
+					ForEach(viewModel.searchResults) { eachUser in
+						NavigationLink(
+							destination: UserView(vm: .init(
+								user: eachUser,
+								friends: eachUser.friends
+							))
+						) {
+							HomeGridCell(user: eachUser)
+						}
 					}
 				}
 			}

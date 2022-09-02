@@ -40,6 +40,17 @@ struct HomeView: View {
 			.toolbar {
 				layoutSwitcher
 			}
+			.searchable(
+				text: $vm.searchText,
+				prompt: "Names"
+			) {
+				// Suggest search results
+				ForEach(vm.searchResults, id: \.self) { (suggestedUser: User) in
+					Text("Looking for \(suggestedUser.name)?")
+						.searchCompletion(suggestedUser.name)
+						.foregroundColor(.primary)
+				}
+			}
 		}
     }
 }
