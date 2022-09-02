@@ -35,9 +35,8 @@ extension HomeView {
 		
 		@MainActor
 		func fetchData() async -> Void {
-			if users.isEmpty {
-				users = await apiService.fetchData()
-			}
+			guard users.isEmpty else { return }
+			users = await apiService.fetchData()
 		}
 	}
 }
