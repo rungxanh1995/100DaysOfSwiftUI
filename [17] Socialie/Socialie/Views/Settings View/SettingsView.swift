@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
-	@StateObject
-	private var viewModel: ViewModel
 	
-	init(viewModel: SettingsView.ViewModel = .init()) {
-		_viewModel = StateObject(wrappedValue: viewModel)
-	}
+	// MARK: - Preference properties
+	@Preference(\.isHapticsEnabled)
+	var isHapticsEnabled
+	
+	@Preference(\.systemTheme)
+	var systemTheme
 	
 	var body: some View {
 		NavigationView {
@@ -55,14 +56,14 @@ private extension SettingsView {
 	private var haptics: some View {
 		Toggle(
 			"Enable Haptics",
-			isOn: $viewModel.isHapticsEnabled
+			isOn: $isHapticsEnabled
 		)
 		.tint(.accentColor)
 	}
 	
 	@ViewBuilder
 	private var appTheme: some View {
-		Picker("Color Theme", selection: $viewModel.systemTheme) {
+		Picker("Color Theme", selection: $systemTheme) {
 			ForEach(SchemeType.allCases) { (theme) in
 				Text(theme.title)
 					.tag(theme.rawValue)
