@@ -30,15 +30,19 @@ private extension UserView {
 	@ViewBuilder
 	var mainInfoCard: some View {
 		VStack(alignment: .center) {
-			// Main content
-			HStack {
+			HStack(alignment: .top) {
 				HomeCellImage(user: vm.user)
-					.padding(8)
-				VStack(alignment: .leading) {
+					.padding([.leading, .bottom, .trailing], 8)
+				VStack(alignment: .center) {
 					// Name
 					Text(vm.user.name)
 						.font(.title3.bold())
 						.foregroundColor(Color.accentColor)
+						.padding(8)
+						.frame(maxWidth: .infinity)
+						.background(Color.accentColor.opacity(0.2))
+						
+						.clipShape(Capsule())
 					// Age and Active status
 					HStack(spacing: 4) {
 						Text("\(vm.user.age) years old")
@@ -48,16 +52,12 @@ private extension UserView {
 							.font(.callout)
 							.foregroundColor(vm.user.isActive ? .green : .secondary)
 					}
+					
+					Text("Joined \(vm.user.yearsAndMonthsSinceRegisteredUntilNow) ago on \(vm.user.formattedRegisterDate)")
+						.font(.caption)
+						.foregroundColor(.secondary)
 				}
 			}
-			
-			// Footer
-			VStack {
-				Text("Joined \(vm.user.yearsAndMonthsSinceRegisteredUntilNow) ago on \(vm.user.formattedRegisterDate)")
-					.font(.caption)
-					.foregroundColor(.secondary)
-			}
-			.frame(maxWidth: .infinity)
 		}
 		.expandToInfinity()
 		.padding()
