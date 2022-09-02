@@ -32,6 +32,10 @@
 		2C7D269028C0008900B11C87 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268F28C0008900B11C87 /* UserView.swift */; };
 		2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269128C00DD000B11C87 /* View+Ext.swift */; };
 		2C7D269528C00E2400B11C87 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D269428C00E2400B11C87 /* CardModifier.swift */; };
+		2CB4E89B28C2361300305008 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E89A28C2361300305008 /* Preferences.swift */; };
+		2CB4E89F28C2397300305008 /* PreferenceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E89E28C2397300305008 /* PreferenceWrapper.swift */; };
+		2CB4E8A128C239CA00305008 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8A028C239CA00305008 /* UserDefaultWrapper.swift */; };
+		2CB4E8A428C23A3700305008 /* PublisherObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8A328C23A3700305008 /* PublisherObservableObject.swift */; };
 		2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED774828C03C0B00A193D5 /* Symbols.swift */; };
 		2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */; };
 		2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776828C1167600A193D5 /* UserViewModel.swift */; };
@@ -69,6 +73,10 @@
 		2C7D268F28C0008900B11C87 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		2C7D269128C00DD000B11C87 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		2C7D269428C00E2400B11C87 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
+		2CB4E89A28C2361300305008 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		2CB4E89E28C2397300305008 /* PreferenceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWrapper.swift; sourceTree = "<group>"; };
+		2CB4E8A028C239CA00305008 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
+		2CB4E8A328C23A3700305008 /* PublisherObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherObservableObject.swift; sourceTree = "<group>"; };
 		2CED774828C03C0B00A193D5 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItemModifier.swift; sourceTree = "<group>"; };
 		2CED776828C1167600A193D5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				2C3B594B28C1ABCE00CAB1D2 /* UserDefaultsKey.swift */,
+				2CB4E8A528C23A7500305008 /* Property Wrappers */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -179,6 +188,7 @@
 				2C3B595028C1AC0B00CAB1D2 /* ColorSchemes */,
 				2C50F74128BFAA3900F15D4B /* Extensions */,
 				2C3B594D28C1ABE800CAB1D2 /* Haptics */,
+				2CB4E89C28C2391F00305008 /* Preferences */,
 				2C3B594A28C1ABBA00CAB1D2 /* UserDefaults */,
 				2C7D269328C00DED00B11C87 /* View Modifiers */,
 			);
@@ -281,6 +291,40 @@
 			path = "View Modifiers";
 			sourceTree = "<group>";
 		};
+		2CB4E89C28C2391F00305008 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E89A28C2361300305008 /* Preferences.swift */,
+				2CB4E8A228C23A2400305008 /* Observable Publisher */,
+				2CB4E89D28C2396000305008 /* Property Wrappers */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		2CB4E89D28C2396000305008 /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E89E28C2397300305008 /* PreferenceWrapper.swift */,
+			);
+			path = "Property Wrappers";
+			sourceTree = "<group>";
+		};
+		2CB4E8A228C23A2400305008 /* Observable Publisher */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E8A328C23A3700305008 /* PublisherObservableObject.swift */,
+			);
+			path = "Observable Publisher";
+			sourceTree = "<group>";
+		};
+		2CB4E8A528C23A7500305008 /* Property Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E8A028C239CA00305008 /* UserDefaultWrapper.swift */,
+			);
+			path = "Property Wrappers";
+			sourceTree = "<group>";
+		};
 		2CED776C28C1191500A193D5 /* Friends List */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,7 +419,9 @@
 				2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */,
 				2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */,
 				2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */,
+				2CB4E89F28C2397300305008 /* PreferenceWrapper.swift in Sources */,
 				2C3B595728C1AC8B00CAB1D2 /* SettingsView.swift in Sources */,
+				2CB4E8A428C23A3700305008 /* PublisherObservableObject.swift in Sources */,
 				2C7D269028C0008900B11C87 /* UserView.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
 				2C3B595928C1ACF400CAB1D2 /* SettingsViewModel.swift in Sources */,
@@ -387,9 +433,11 @@
 				2CED776E28C1196B00A193D5 /* UserFriendList.swift in Sources */,
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
+				2CB4E8A128C239CA00305008 /* UserDefaultWrapper.swift in Sources */,
 				2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */,
 				2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */,
 				2C3B595228C1AC1800CAB1D2 /* SchemeType.swift in Sources */,
+				2CB4E89B28C2361300305008 /* Preferences.swift in Sources */,
 				2C7D267C28BFCC5000B11C87 /* HomeGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

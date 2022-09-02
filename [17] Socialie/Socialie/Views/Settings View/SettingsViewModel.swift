@@ -9,11 +9,11 @@ import SwiftUI
 
 extension SettingsView {
 	final class ViewModel: ObservableObject {
-		@AppStorage(UserDefaultsKey.hapticsEnabled)
-		var isHapticsEnabled: Bool = true
+		@Preference(\.isHapticsEnabled)
+		var isHapticsEnabled
 		
-		@AppStorage(UserDefaultsKey.systemTheme)
-		var systemTheme: Int = SchemeType.allCases.first!.rawValue
+		@Preference(\.systemTheme)
+		var systemTheme
 		
 		init() { }
 	}
