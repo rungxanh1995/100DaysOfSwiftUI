@@ -29,7 +29,7 @@ struct SettingsView: View {
 					header: Text("Contact Developer")
 				) {
 					HStack {
-						Symbols.Images.link
+						Symbols.Images.twitter
 						Link(
 							"Twitter",
 							destination: Constants.Url.personalTwitterLink
@@ -37,7 +37,7 @@ struct SettingsView: View {
 					}
 					
 					HStack {
-						Symbols.Images.link
+						Symbols.Images.github
 						Link(
 							"GitHub",
 							destination: Constants.Url.personalGithubLink

@@ -18,6 +18,8 @@ enum Symbols {
 		static let house: Image = .init(systemName: "house.fill").symbolRenderingMode(.hierarchical)
 		static let gear: Image = .init(systemName: "gearshape.fill").symbolRenderingMode(.hierarchical)
 		static let link: Image = .init(systemName: "link.circle").symbolRenderingMode(.hierarchical)
+		static let twitter: Image = .init("twitter").renderingMode(.original)
+		static let github: Image = .init("github").renderingMode(.original)
 		
 		static let tools: Image = .init(systemName: "wrench.and.screwdriver.fill").symbolRenderingMode(.hierarchical)
 	}
