@@ -60,9 +60,3 @@ struct HomeCellImage: View {
 		}
 	}
 }
-
-//struct HomeCellImage_Previews: PreviewProvider {
-//    static var previews: some View {
-//		HomeCellImage(user: User.sampleUser)
-//    }
-//}

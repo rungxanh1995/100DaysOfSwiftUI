@@ -22,9 +22,3 @@ struct HomeCellLabel: View {
 		.background(Color.accentColor.opacity(0.2))
 	}
 }
-
-//struct HomeCellLabel_Previews: PreviewProvider {
-//    static var previews: some View {
-//		HomeCellLabel(user: User.sampleUser)
-//    }
-//}

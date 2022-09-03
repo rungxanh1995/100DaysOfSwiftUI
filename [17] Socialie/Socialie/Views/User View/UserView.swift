@@ -145,15 +145,26 @@ private extension UserView {
 				Spacer()
 			}
 			
-			ScrollView(.horizontal, showsIndicators: false) {
+			if vm.user.tags.isEmpty {
 				HStack {
-					ForEach(vm.user.tags, id: \.self) { tag in
-						NavigationLink {
-							// Spared for when I'm able to deploy a dedicated view
-							UnderDevelopmentView()
-						} label: {
-							Text(tag)
-								.asTagChip()
+					Spacer()
+					Text("No tags yet...")
+						.font(.callout.italic())
+						.foregroundColor(.secondary)
+					Spacer()
+				}
+				.padding(4)
+			} else {
+				ScrollView(.horizontal, showsIndicators: false) {
+					HStack {
+						ForEach(vm.user.tags, id: \.self) { tag in
+							NavigationLink {
+								// Spared for when I'm able to deploy a dedicated view
+								UnderDevelopmentView()
+							} label: {
+								Text(tag)
+									.asTagChip()
+							}
 						}
 					}
 				}
@@ -164,10 +175,3 @@ private extension UserView {
 		.asCard()
 	}
 }
-
-//struct UserView_Previews: PreviewProvider {
-//    static var previews: some View {
-//		let user = User.sampleUser
-//		UserView(vm: .init(user: user, friends: user.friends))
-//    }
-//}

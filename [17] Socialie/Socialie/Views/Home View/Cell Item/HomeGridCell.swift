@@ -22,9 +22,3 @@ struct HomeGridCell: View {
 				.stroke(Color.accentColor.opacity(0.25)))
 	}
 }
-
-//struct HomeCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//		HomeGridCell(user: User.sampleUser)
-//    }
-//}

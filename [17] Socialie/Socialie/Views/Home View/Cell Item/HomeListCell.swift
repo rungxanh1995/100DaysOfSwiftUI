@@ -24,9 +24,3 @@ struct HomeListCell: View {
 		}
 	}
 }
-
-//struct HomeListCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//		HomeListCell(user: User.sampleUser)
-//    }
-//}
