@@ -21,15 +21,27 @@ struct UserFriendList: View {
 				Spacer()
 			}
 			
-			ScrollView(.horizontal, showsIndicators: false) {
+			if vm.userFriends.isEmpty {
 				HStack {
-					ForEach(vm.userFriends, id: \.id) { userFriend in
-						NavigationLink {
-							// Spared for when I'm able to deploy a dedicated view
-							UnderDevelopmentView()
-						} label: {
-							Text(userFriend.friend.name)
-								.asTagChip()
+					Spacer()
+					Text("No friends yet...")
+						.font(.callout.italic())
+						.foregroundColor(.secondary)
+					Spacer()
+				}
+				.padding(4)
+			} else {
+				ScrollView(.horizontal, showsIndicators: false) {
+					HStack {
+						
+						ForEach(vm.userFriends, id: \.id) { userFriend in
+							NavigationLink {
+								// Spared for when I'm able to deploy a dedicated view
+								UnderDevelopmentView()
+							} label: {
+								Text(userFriend.friend.name)
+									.asTagChip()
+							}
 						}
 					}
 				}
