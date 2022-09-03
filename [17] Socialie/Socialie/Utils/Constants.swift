@@ -15,4 +15,8 @@ enum Constants {
 		static let personalTwitterLink: URL = URL(string: "https://twitter.com/rungxanh1995")!
 		static let personalGithubLink: URL = URL(string: "https://github.com/rungxanh1995")!
 	}
+	
+	internal enum Persistence {
+		static let dataModelName: String = "Socialie"
+	}
 }

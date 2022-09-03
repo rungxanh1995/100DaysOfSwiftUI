@@ -40,6 +40,7 @@
 		2CB4E8DE28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DA28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift */; };
 		2CB4E8DF28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DB28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift */; };
 		2CB4E8E028C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DC28C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift */; };
+		2CB4E8E328C2D8B300305008 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8E228C2D8B300305008 /* StorageProvider.swift */; };
 		2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED774828C03C0B00A193D5 /* Symbols.swift */; };
 		2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */; };
 		2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776828C1167600A193D5 /* UserViewModel.swift */; };
@@ -85,6 +86,7 @@
 		2CB4E8DA28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2CB4E8DB28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2CB4E8DC28C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2CB4E8E228C2D8B300305008 /* StorageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		2CED774828C03C0B00A193D5 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItemModifier.swift; sourceTree = "<group>"; };
 		2CED776828C1167600A193D5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			children = (
 				2C50F72D28BFA41100F15D4B /* SocialieApp.swift */,
 				2C50F74428BFADC600F15D4B /* Service */,
+				2CB4E8E128C2D88D00305008 /* Persistence */,
 				2C50F73B28BFA67800F15D4B /* Models */,
 				2C50F74728BFAF0700F15D4B /* Views */,
 				2C50F73E28BFA7C600F15D4B /* Utils */,
@@ -353,6 +356,14 @@
 			path = Codegen;
 			sourceTree = "<group>";
 		};
+		2CB4E8E128C2D88D00305008 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E8E228C2D8B300305008 /* StorageProvider.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
 		2CED776C28C1191500A193D5 /* Friends List */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,6 +467,7 @@
 				2C7D269028C0008900B11C87 /* UserView.swift in Sources */,
 				2C50F73D28BFA68800F15D4B /* User.swift in Sources */,
 				2C3B594F28C1ABF000CAB1D2 /* HapticManager.swift in Sources */,
+				2CB4E8E328C2D8B300305008 /* StorageProvider.swift in Sources */,
 				2C7D268D28BFF69600B11C87 /* HomeListCell.swift in Sources */,
 				2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */,
 				2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */,
