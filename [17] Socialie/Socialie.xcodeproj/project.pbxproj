@@ -142,6 +142,15 @@
 			path = "Settings View";
 			sourceTree = "<group>";
 		};
+		2C4CDCC828C2E7E200498B6E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C50F74428BFADC600F15D4B /* Service */,
+				2CB4E8E128C2D88D00305008 /* Persistence */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		2C50F72128BFA41100F15D4B = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F72D28BFA41100F15D4B /* SocialieApp.swift */,
-				2C50F74428BFADC600F15D4B /* Service */,
-				2CB4E8E128C2D88D00305008 /* Persistence */,
+				2C4CDCC828C2E7E200498B6E /* Data */,
 				2C50F73B28BFA67800F15D4B /* Models */,
 				2C50F74728BFAF0700F15D4B /* Views */,
 				2C50F73E28BFA7C600F15D4B /* Utils */,
