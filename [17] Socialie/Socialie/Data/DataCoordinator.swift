@@ -71,6 +71,10 @@ final class DataCoordinator {
 		cached.cd_name = fetched.name
 	}
 	
+	func fetchCache() -> [CachedUser] {
+		storageProvider.fetch()
+	}
+	
 	func fetchData() async -> [User] {
 		await apiService.fetchData()
 	}

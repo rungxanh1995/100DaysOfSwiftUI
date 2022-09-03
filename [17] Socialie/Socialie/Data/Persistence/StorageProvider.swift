@@ -39,7 +39,7 @@ final class StorageProviderImpl: StorageProvider {
 		let fetchRequest: NSFetchRequest<CachedUser> = CachedUser.fetchRequest()
 		// Sort fetch results by name
 		fetchRequest.sortDescriptors = [
-			NSSortDescriptor(keyPath: \CachedUser.name, ascending: true)
+			NSSortDescriptor(keyPath: \CachedUser.cd_name, ascending: true)
 		]
 		return loadAndHandleError(from: fetchRequest) as! T
 	}

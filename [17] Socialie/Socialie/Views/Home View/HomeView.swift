@@ -45,7 +45,7 @@ struct HomeView: View {
 				prompt: "Names"
 			) {
 				// Suggest search results
-				ForEach(vm.searchResults, id: \.self) { (suggestedUser: User) in
+				ForEach(vm.searchResults, id: \.self) { (suggestedUser: CachedUser) in
 					Text("Looking for \(suggestedUser.name)?")
 						.searchCompletion(suggestedUser.name)
 						.foregroundColor(.primary)

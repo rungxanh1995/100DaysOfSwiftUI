@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeCellImage: View {
-	private(set) var user: User
+	private(set) var user: CachedUser
 	var size: CGFloat = 60.0
 	
 	@Environment(\.colorScheme)
@@ -61,8 +61,8 @@ struct HomeCellImage: View {
 	}
 }
 
-struct HomeCellImage_Previews: PreviewProvider {
-    static var previews: some View {
-		HomeCellImage(user: User.sampleUser)
-    }
-}
+//struct HomeCellImage_Previews: PreviewProvider {
+//    static var previews: some View {
+//		HomeCellImage(user: User.sampleUser)
+//    }
+//}

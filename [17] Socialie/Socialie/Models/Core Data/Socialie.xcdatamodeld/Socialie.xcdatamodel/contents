@@ -19,7 +19,7 @@
         <relationship name="cd_friends" toMany="YES" deletionRule="Nullify" destinationEntity="CachedFriend" inverseName="cd_user" inverseEntity="CachedFriend"/>
     </entity>
     <elements>
-        <element name="CachedUser" positionX="-54" positionY="-9" width="128" height="194"/>
         <element name="CachedFriend" positionX="-36" positionY="81" width="128" height="74"/>
+        <element name="CachedUser" positionX="-54" positionY="-9" width="128" height="194"/>
     </elements>
 </model>

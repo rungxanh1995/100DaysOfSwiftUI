@@ -11,33 +11,34 @@ extension HomeView {
 	/// View model specialized for `HomeView`
 	final class ViewModel: ObservableObject {
 		@Published
-		private var users: [User]
+		private var cachedUsers: [CachedUser]
 		
 		@Published
 		var searchText = ""
 		
-		var searchResults: [User] {
+		var searchResults: [CachedUser] {
 			if searchText.isEmpty {
-				return users
+				return cachedUsers
 			} else {
-				return users.filter { user in
-					user.name.contains(searchText)
+				return cachedUsers.filter { cachedUser in
+					cachedUser.name.contains(searchText)
 				}
 			}
 		}
 		
-		private let apiService: ApiService
+		private let dataCoordinator: DataCoordinator
 		
-		init(apiService: ApiService = SocialieApiService()) {
-			self.apiService = apiService
-			users = [User]()
+		init(dataCoordinator: DataCoordinator = .standard) {
+			self.dataCoordinator = dataCoordinator
+			cachedUsers = [CachedUser]()
 		}
 		
 		@MainActor
 		func fetchData() async -> Void {
-			guard users.isEmpty else { return }
-			users = await apiService.fetchData()
-			sortAlphabetically(&users)
+			guard cachedUsers.isEmpty else { return }
+			let fetchedUsers = await dataCoordinator.fetchData()
+			dataCoordinator.updateCache(with: fetchedUsers)
+			cachedUsers = dataCoordinator.fetchCache()
 		}
 		
 		fileprivate func sortAlphabetically(_ input: inout [User]) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct HomeListCell: View {
-	private(set) var user: User
+	private(set) var user: CachedUser
 	
 	var body: some View {
 		HStack(spacing: 12) {
@@ -25,8 +25,8 @@ struct HomeListCell: View {
 	}
 }
 
-struct HomeListCell_Previews: PreviewProvider {
-    static var previews: some View {
-		HomeListCell(user: User.sampleUser)
-    }
-}
+//struct HomeListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//		HomeListCell(user: User.sampleUser)
+//    }
+//}
