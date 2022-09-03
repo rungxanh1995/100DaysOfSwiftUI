@@ -164,10 +164,3 @@ private extension UserView {
 		.asCard()
 	}
 }
-
-//struct UserView_Previews: PreviewProvider {
-//    static var previews: some View {
-//		let user = User.sampleUser
-//		UserView(vm: .init(user: user, friends: user.friends))
-//    }
-//}
