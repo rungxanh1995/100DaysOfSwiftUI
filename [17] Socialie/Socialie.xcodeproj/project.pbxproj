@@ -12,6 +12,7 @@
 		2C3B595228C1AC1800CAB1D2 /* SchemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595128C1AC1800CAB1D2 /* SchemeType.swift */; };
 		2C3B595428C1AC3500CAB1D2 /* SchemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595328C1AC3500CAB1D2 /* SchemeModifier.swift */; };
 		2C3B595728C1AC8B00CAB1D2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3B595628C1AC8B00CAB1D2 /* SettingsView.swift */; };
+		2C4CDCCA28C2E82600498B6E /* DataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4CDCC928C2E82600498B6E /* DataCoordinator.swift */; };
 		2C50F72E28BFA41100F15D4B /* SocialieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72D28BFA41100F15D4B /* SocialieApp.swift */; };
 		2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F72F28BFA41100F15D4B /* HomeView.swift */; };
 		2C50F73228BFA41200F15D4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C50F73128BFA41200F15D4B /* Assets.xcassets */; };
@@ -57,6 +58,7 @@
 		2C3B595128C1AC1800CAB1D2 /* SchemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeType.swift; sourceTree = "<group>"; };
 		2C3B595328C1AC3500CAB1D2 /* SchemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModifier.swift; sourceTree = "<group>"; };
 		2C3B595628C1AC8B00CAB1D2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		2C4CDCC928C2E82600498B6E /* DataCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCoordinator.swift; sourceTree = "<group>"; };
 		2C50F72A28BFA41100F15D4B /* Socialie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Socialie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C50F72D28BFA41100F15D4B /* SocialieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialieApp.swift; sourceTree = "<group>"; };
 		2C50F72F28BFA41100F15D4B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		2C4CDCC828C2E7E200498B6E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				2C4CDCC928C2E82600498B6E /* DataCoordinator.swift */,
 				2C50F74428BFADC600F15D4B /* Service */,
 				2CB4E8E128C2D88D00305008 /* Persistence */,
 			);
@@ -459,6 +462,7 @@
 				2CB4E8DF28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift in Sources */,
 				2CB4E8DD28C2CBCE00305008 /* CachedUser+CoreDataClass.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
+				2C4CDCCA28C2E82600498B6E /* DataCoordinator.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
 				2C3B595428C1AC3500CAB1D2 /* SchemeModifier.swift in Sources */,
 				2C50F73028BFA41100F15D4B /* HomeView.swift in Sources */,
