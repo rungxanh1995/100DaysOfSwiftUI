@@ -10,18 +10,21 @@ import Foundation
 extension UserView {
 	/// View model specialized for `UserView`
 	final class ViewModel: ObservableObject {
-		let user: User
+		let user: CachedUser
 		var friends: [UserFriend] { return _friends }
 		private var _friends: [UserFriend]!
 		
-		init(user: User, friends: [User.Friend]) {
+		init(user: CachedUser, friends: [CachedFriend]) {
 			self.user = user
 			self._friends = mapFriendsToUserFriendsList(friends)
 		}
 		
-		fileprivate func mapFriendsToUserFriendsList(_ friends: [User.Friend]) -> [UserFriend] {
-			user.friends.map { eachFriend in
-				return UserFriend(id: eachFriend.id, friend: eachFriend)
+		fileprivate func mapFriendsToUserFriendsList(_ friends: [CachedFriend]) -> [UserFriend] {
+			user.friends.map { cachedFriend in
+				return UserFriend(
+					id: UUID().uuidString,
+					friend: cachedFriend
+				)
 			}
 		}
 	}

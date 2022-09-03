@@ -38,18 +38,18 @@ struct UserFriendList: View {
 	}
 }
 
-struct UserFriendList_Previews: PreviewProvider {
-	static private let userVM = UserView.ViewModel(
-		user: User.sampleUser,
-		friends: User.sampleUser.friends
-	)
-	
-	static private let userFriendsVM = UserFriendList.ViewModel(
-		friends: userVM.friends
-	)
-	
-	static var previews: some View {
-		UserFriendList()
-			.environmentObject(userFriendsVM)
-	}
-}
+//struct UserFriendList_Previews: PreviewProvider {
+//	static private let userVM = UserView.ViewModel(
+//		user: User.sampleUser,
+//		friends: User.sampleUser.friends
+//	)
+//	
+//	static private let userFriendsVM = UserFriendList.ViewModel(
+//		friends: userVM.friends
+//	)
+//	
+//	static var previews: some View {
+//		UserFriendList()
+//			.environmentObject(userFriendsVM)
+//	}
+//}

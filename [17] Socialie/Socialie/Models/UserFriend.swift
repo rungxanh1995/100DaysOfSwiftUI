@@ -7,9 +7,8 @@
 
 import Foundation
 
-/// Helps bridge the gap between a user and its friend list
-/// and turn it into `User`\'s inner `Friend` type
+/// Helps bridge the gap between a cached user and its friend list
 struct UserFriend {
 	let id: String
-	let friend: User.Friend
+	let friend: CachedFriend
 }

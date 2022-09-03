@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeCellLabel: View {
-	private(set) var user: User
+	private(set) var user: CachedUser
 	
 	var body: some View {
 		VStack {
@@ -23,8 +23,8 @@ struct HomeCellLabel: View {
 	}
 }
 
-struct HomeCellLabel_Previews: PreviewProvider {
-    static var previews: some View {
-		HomeCellLabel(user: User.sampleUser)
-    }
-}
+//struct HomeCellLabel_Previews: PreviewProvider {
+//    static var previews: some View {
+//		HomeCellLabel(user: User.sampleUser)
+//    }
+//}

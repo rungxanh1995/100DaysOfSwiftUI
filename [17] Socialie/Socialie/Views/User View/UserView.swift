@@ -165,9 +165,9 @@ private extension UserView {
 	}
 }
 
-struct UserView_Previews: PreviewProvider {
-    static var previews: some View {
-		let user = User.sampleUser
-		UserView(vm: .init(user: user, friends: user.friends))
-    }
-}
+//struct UserView_Previews: PreviewProvider {
+//    static var previews: some View {
+//		let user = User.sampleUser
+//		UserView(vm: .init(user: user, friends: user.friends))
+//    }
+//}

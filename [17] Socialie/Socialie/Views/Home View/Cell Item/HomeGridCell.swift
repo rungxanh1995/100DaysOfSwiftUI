@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeGridCell: View {
-	var user: User
+	var user: CachedUser
 	
 	var body: some View {
 		VStack(spacing: 0) {
@@ -23,8 +23,8 @@ struct HomeGridCell: View {
 	}
 }
 
-struct HomeCell_Previews: PreviewProvider {
-    static var previews: some View {
-		HomeGridCell(user: User.sampleUser)
-    }
-}
+//struct HomeCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//		HomeGridCell(user: User.sampleUser)
+//    }
+//}
