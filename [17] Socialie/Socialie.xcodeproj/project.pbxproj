@@ -35,6 +35,11 @@
 		2CB4E89F28C2397300305008 /* PreferenceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E89E28C2397300305008 /* PreferenceWrapper.swift */; };
 		2CB4E8A128C239CA00305008 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8A028C239CA00305008 /* UserDefaultWrapper.swift */; };
 		2CB4E8A428C23A3700305008 /* PublisherObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8A328C23A3700305008 /* PublisherObservableObject.swift */; };
+		2CB4E8C928C2C20600305008 /* Socialie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8C728C2C20600305008 /* Socialie.xcdatamodeld */; };
+		2CB4E8DD28C2CBCE00305008 /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8D928C2CBCE00305008 /* CachedUser+CoreDataClass.swift */; };
+		2CB4E8DE28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DA28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift */; };
+		2CB4E8DF28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DB28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift */; };
+		2CB4E8E028C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB4E8DC28C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift */; };
 		2CED774928C03C0B00A193D5 /* Symbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED774828C03C0B00A193D5 /* Symbols.swift */; };
 		2CED776728C10A1E00A193D5 /* TagListItemModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */; };
 		2CED776928C1167600A193D5 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED776828C1167600A193D5 /* UserViewModel.swift */; };
@@ -75,6 +80,11 @@
 		2CB4E89E28C2397300305008 /* PreferenceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWrapper.swift; sourceTree = "<group>"; };
 		2CB4E8A028C239CA00305008 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		2CB4E8A328C23A3700305008 /* PublisherObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherObservableObject.swift; sourceTree = "<group>"; };
+		2CB4E8C828C2C20600305008 /* Socialie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Socialie.xcdatamodel; sourceTree = "<group>"; };
+		2CB4E8D928C2CBCE00305008 /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2CB4E8DA28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2CB4E8DB28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2CB4E8DC28C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2CED774828C03C0B00A193D5 /* Symbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Symbols.swift; sourceTree = "<group>"; };
 		2CED776628C10A1E00A193D5 /* TagListItemModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListItemModifier.swift; sourceTree = "<group>"; };
 		2CED776828C1167600A193D5 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -171,6 +181,7 @@
 		2C50F73B28BFA67800F15D4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2CB4E8C628C2C1FE00305008 /* Core Data */,
 				2C50F73C28BFA68800F15D4B /* User.swift */,
 				2CED776A28C116B800A193D5 /* UserFriend.swift */,
 			);
@@ -322,6 +333,26 @@
 			path = "Property Wrappers";
 			sourceTree = "<group>";
 		};
+		2CB4E8C628C2C1FE00305008 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E8C728C2C20600305008 /* Socialie.xcdatamodeld */,
+				2CB4E8CA28C2C44400305008 /* Codegen */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		2CB4E8CA28C2C44400305008 /* Codegen */ = {
+			isa = PBXGroup;
+			children = (
+				2CB4E8D928C2CBCE00305008 /* CachedUser+CoreDataClass.swift */,
+				2CB4E8DA28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift */,
+				2CB4E8DB28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift */,
+				2CB4E8DC28C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift */,
+			);
+			path = Codegen;
+			sourceTree = "<group>";
+		};
 		2CED776C28C1191500A193D5 /* Friends List */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,9 +433,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CED777028C11A7900A193D5 /* UserFriendListViewModel.swift in Sources */,
+				2CB4E8E028C2CBCE00305008 /* CachedFriend+CoreDataProperties.swift in Sources */,
 				2CED777428C1372700A193D5 /* Calendar+Ext.swift in Sources */,
 				2C3B594C28C1ABCE00CAB1D2 /* UserDefaultsKey.swift in Sources */,
 				2CED777228C12BB000A193D5 /* UnderDevelopmentView.swift in Sources */,
+				2CB4E8DF28C2CBCE00305008 /* CachedFriend+CoreDataClass.swift in Sources */,
+				2CB4E8DD28C2CBCE00305008 /* CachedUser+CoreDataClass.swift in Sources */,
 				2C7D269228C00DD000B11C87 /* View+Ext.swift in Sources */,
 				2C7D268B28BFF29E00B11C87 /* HomeListView.swift in Sources */,
 				2C3B595428C1AC3500CAB1D2 /* SchemeModifier.swift in Sources */,
@@ -430,6 +464,8 @@
 				2C50F74028BFA7D200F15D4B /* Constants.swift in Sources */,
 				2C7D268528BFEA5700B11C87 /* HomeCellLabel.swift in Sources */,
 				2CB4E8A128C239CA00305008 /* UserDefaultWrapper.swift in Sources */,
+				2CB4E8C928C2C20600305008 /* Socialie.xcdatamodeld in Sources */,
+				2CB4E8DE28C2CBCE00305008 /* CachedUser+CoreDataProperties.swift in Sources */,
 				2CED776B28C116B800A193D5 /* UserFriend.swift in Sources */,
 				2C7D268828BFEFAD00B11C87 /* HomeGridCell.swift in Sources */,
 				2C3B595228C1AC1800CAB1D2 /* SchemeType.swift in Sources */,
@@ -635,6 +671,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CB4E8C728C2C20600305008 /* Socialie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CB4E8C828C2C20600305008 /* Socialie.xcdatamodel */,
+			);
+			currentVersion = 2CB4E8C828C2C20600305008 /* Socialie.xcdatamodel */;
+			path = Socialie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2C50F72228BFA41100F15D4B /* Project object */;
 }
