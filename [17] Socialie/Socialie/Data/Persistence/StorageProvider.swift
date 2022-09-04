@@ -8,6 +8,11 @@
 import CoreData
 
 protocol StorageProvider {
+	/// A workaround to not having to inject
+	/// a managed object context into `Environment`.
+	///
+	/// Use this so your views would not be dependent on
+	/// `@Environment\.managedObjectContext)`
 	var context: NSManagedObjectContext { get }
 	func fetch<T>() -> T
 	func saveAndHandleError() -> Void
