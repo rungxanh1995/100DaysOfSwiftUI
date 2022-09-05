@@ -22,6 +22,7 @@
 		2C50F74328BFAA4600F15D4B /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */; };
 		2C50F74628BFADD100F15D4B /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74528BFADD100F15D4B /* ApiService.swift */; };
 		2C50F74928BFAF4C00F15D4B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C50F74828BFAF4C00F15D4B /* HomeViewModel.swift */; };
+		2C57D10328C67FA5005E7809 /* SocialieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C57D10228C67FA5005E7809 /* SocialieTests.swift */; };
 		2C7D267C28BFCC5000B11C87 /* HomeGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D267B28BFCC5000B11C87 /* HomeGridView.swift */; };
 		2C7D267E28BFD1D500B11C87 /* OnlineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D267D28BFD1D500B11C87 /* OnlineIndicator.swift */; };
 		2C7D268328BFE8CB00B11C87 /* HomeCellImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7D268228BFE8CB00B11C87 /* HomeCellImage.swift */; };
@@ -52,6 +53,16 @@
 		2CED777428C1372700A193D5 /* Calendar+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CED777328C1372700A193D5 /* Calendar+Ext.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2C57D10428C67FA5005E7809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C50F72228BFA41100F15D4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C50F72928BFA41100F15D4B;
+			remoteInfo = Socialie;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2C3B594B28C1ABCE00CAB1D2 /* UserDefaultsKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKey.swift; sourceTree = "<group>"; };
 		2C3B594E28C1ABF000CAB1D2 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
@@ -69,6 +80,8 @@
 		2C50F74228BFAA4600F15D4B /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 		2C50F74528BFADD100F15D4B /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		2C50F74828BFAF4C00F15D4B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2C57D10028C67FA5005E7809 /* SocialieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C57D10228C67FA5005E7809 /* SocialieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialieTests.swift; sourceTree = "<group>"; };
 		2C7D267B28BFCC5000B11C87 /* HomeGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGridView.swift; sourceTree = "<group>"; };
 		2C7D267D28BFD1D500B11C87 /* OnlineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineIndicator.swift; sourceTree = "<group>"; };
 		2C7D268228BFE8CB00B11C87 /* HomeCellImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellImage.swift; sourceTree = "<group>"; };
@@ -101,6 +114,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C50F72728BFA41100F15D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C57D0FD28C67FA5005E7809 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -158,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F72C28BFA41100F15D4B /* Socialie */,
+				2C57D10128C67FA5005E7809 /* SocialieTests */,
 				2C50F72B28BFA41100F15D4B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2C50F72A28BFA41100F15D4B /* Socialie.app */,
+				2C57D10028C67FA5005E7809 /* SocialieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -244,6 +266,14 @@
 				2C7D268628BFEDBE00B11C87 /* Other Views */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2C57D10128C67FA5005E7809 /* SocialieTests */ = {
+			isa = PBXGroup;
+			children = (
+				2C57D10228C67FA5005E7809 /* SocialieTests.swift */,
+			);
+			path = SocialieTests;
 			sourceTree = "<group>";
 		};
 		2C7D267F28BFE35400B11C87 /* Cell Item */ = {
@@ -404,6 +434,24 @@
 			productReference = 2C50F72A28BFA41100F15D4B /* Socialie.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2C57D0FF28C67FA5005E7809 /* SocialieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C57D10828C67FA5005E7809 /* Build configuration list for PBXNativeTarget "SocialieTests" */;
+			buildPhases = (
+				2C57D0FC28C67FA5005E7809 /* Sources */,
+				2C57D0FD28C67FA5005E7809 /* Frameworks */,
+				2C57D0FE28C67FA5005E7809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C57D10528C67FA5005E7809 /* PBXTargetDependency */,
+			);
+			name = SocialieTests;
+			productName = SocialieTests;
+			productReference = 2C57D10028C67FA5005E7809 /* SocialieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -416,6 +464,10 @@
 				TargetAttributes = {
 					2C50F72928BFA41100F15D4B = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					2C57D0FF28C67FA5005E7809 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2C50F72928BFA41100F15D4B;
 					};
 				};
 			};
@@ -433,6 +485,7 @@
 			projectRoot = "";
 			targets = (
 				2C50F72928BFA41100F15D4B /* Socialie */,
+				2C57D0FF28C67FA5005E7809 /* SocialieTests */,
 			);
 		};
 /* End PBXProject section */
@@ -444,6 +497,13 @@
 			files = (
 				2C50F73528BFA41200F15D4B /* Preview Assets.xcassets in Resources */,
 				2C50F73228BFA41200F15D4B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C57D0FE28C67FA5005E7809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,7 +558,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2C57D0FC28C67FA5005E7809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C57D10328C67FA5005E7809 /* SocialieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C57D10528C67FA5005E7809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C50F72928BFA41100F15D4B /* Socialie */;
+			targetProxy = 2C57D10428C67FA5005E7809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		2C50F73628BFA41200F15D4B /* Debug */ = {
@@ -673,6 +749,42 @@
 			};
 			name = Release;
 		};
+		2C57D10628C67FA5005E7809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8R3P49X4ZM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rungxanh1995.SocialieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Socialie.app/Socialie";
+			};
+			name = Debug;
+		};
+		2C57D10728C67FA5005E7809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8R3P49X4ZM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.rungxanh1995.SocialieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Socialie.app/Socialie";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -690,6 +802,15 @@
 			buildConfigurations = (
 				2C50F73928BFA41200F15D4B /* Debug */,
 				2C50F73A28BFA41200F15D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2C57D10828C67FA5005E7809 /* Build configuration list for PBXNativeTarget "SocialieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C57D10628C67FA5005E7809 /* Debug */,
+				2C57D10728C67FA5005E7809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
