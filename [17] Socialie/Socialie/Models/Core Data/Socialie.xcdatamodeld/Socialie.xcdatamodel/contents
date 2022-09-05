@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CachedFriend" representedClassName="CachedFriend" syncable="YES">
+        <attribute name="cd_id" attributeType="String"/>
+        <attribute name="cd_name" attributeType="String"/>
+        <relationship name="cd_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CachedUser" inverseName="cd_friends" inverseEntity="CachedUser"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="cd_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="CachedUser" representedClassName="CachedUser" syncable="YES">
+        <attribute name="cd_about" attributeType="String"/>
+        <attribute name="cd_address" attributeType="String"/>
+        <attribute name="cd_age" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="cd_company" attributeType="String"/>
+        <attribute name="cd_email" attributeType="String"/>
+        <attribute name="cd_id" attributeType="String"/>
+        <attribute name="cd_isActive" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="cd_name" attributeType="String"/>
+        <attribute name="cd_registered" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="cd_tags" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <relationship name="cd_friends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CachedFriend" inverseName="cd_user" inverseEntity="CachedFriend"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="cd_id"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="CachedFriend" positionX="-36" positionY="81" width="128" height="74"/>
+        <element name="CachedUser" positionX="-54" positionY="-9" width="128" height="194"/>
+    </elements>
+</model>
