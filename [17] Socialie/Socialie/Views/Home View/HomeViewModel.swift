@@ -28,7 +28,7 @@ extension HomeView {
 		
 		private let dataCoordinator: DataCoordinator
 		
-		init(dataCoordinator: DataCoordinator = .standard) {
+		init(dataCoordinator: DataCoordinator = DataCoordinatorImpl.standard) {
 			self.dataCoordinator = dataCoordinator
 			cachedUsers = [CachedUser]()
 		}

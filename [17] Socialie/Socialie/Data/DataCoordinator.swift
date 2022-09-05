@@ -7,15 +7,24 @@
 
 import CoreData
 
+protocol DataCoordinator {
+	@MainActor
+	func updateCache(with fetchedUsers: [User]) -> Void
+	
+	func fetchCache() -> [CachedUser]
+	
+	func fetchData() async -> [User]
+}
+
 /// The coordinator of data from fetching decoded API data
 /// to caching them in persistence.
 ///
 /// This is the primary actor of the "scope creep" challenge
 /// of adding Core Data to Socialie.
-final class DataCoordinator {
+final class DataCoordinatorImpl: DataCoordinator {
 	
 	/// Singleton instance to use in the app
-	static let standard: DataCoordinator = .init()
+	static let standard: DataCoordinatorImpl = .init()
 	
 	private let apiService: ApiService
 	private let storageProvider: StorageProvider
