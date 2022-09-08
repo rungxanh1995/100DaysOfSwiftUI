@@ -12,11 +12,11 @@ import SwiftUI
 struct ContentView: View {
 	/// The image to be displayed on screen
 	@State
-	private var image: Image?
+	internal var image: Image?
 	
 	/// The underlying image picked by user
 	@State
-	private var inputImage: UIImage?
+	internal var inputImage: UIImage?
 	
 	@State
 	private var processedImage: UIImage?
@@ -32,7 +32,7 @@ struct ContentView: View {
 	private var filterRadius: Float = 10.0
 	
 	@State
-	private var showingImagePicker: Bool = false
+	internal var showingImagePicker: Bool = false
 	
 	@State
 	private var showingFilterSheet: Bool = false
@@ -40,24 +40,7 @@ struct ContentView: View {
     var body: some View {
 		NavigationView {
 			VStack {
-				ZStack {
-					Rectangle()
-						.fill(Color.accentColor.opacity(0.2))
-					
-					if inputImage == nil {
-						Text("Tap to select a picture")
-							.font(.headline)
-							.foregroundColor(.primary.opacity(0.5))						
-					}
-					
-					image?
-						.resizable()
-						.scaledToFit()
-						.shadow(radius: 5)
-				}
-				.onTapGesture {
-					showingImagePicker.toggle()
-				}
+				photoFrame
 				
 				HStack {
 					Text("Intensity")
@@ -161,3 +144,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

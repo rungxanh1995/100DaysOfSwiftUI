@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C0D275228C813BA00DFCAFB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D275128C813BA00DFCAFB /* ImageSaver.swift */; };
 		2C1DEE3828C775A6001A7869 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C1DEE3728C775A6001A7869 /* ImagePicker.swift */; };
+		2C48027128CA4D430015A0EA /* ContentSubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C48027028CA4D430015A0EA /* ContentSubViews.swift */; };
 		2CA3EAA328C6957500E0A9D6 /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3EAA228C6957500E0A9D6 /* InstafilterApp.swift */; };
 		2CA3EAA528C6957500E0A9D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3EAA428C6957500E0A9D6 /* ContentView.swift */; };
 		2CA3EAA728C6957600E0A9D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3EAA628C6957600E0A9D6 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 		2C0D275128C813BA00DFCAFB /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		2C1DEE3728C775A6001A7869 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		2C1DEE3928C78880001A7869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2C48027028CA4D430015A0EA /* ContentSubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSubViews.swift; sourceTree = "<group>"; };
 		2CA3EA9F28C6957500E0A9D6 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3EAA228C6957500E0A9D6 /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
 		2CA3EAA428C6957500E0A9D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				2C1DEE3928C78880001A7869 /* Info.plist */,
 				2CA3EAA228C6957500E0A9D6 /* InstafilterApp.swift */,
 				2CA3EAA428C6957500E0A9D6 /* ContentView.swift */,
+				2C48027028CA4D430015A0EA /* ContentSubViews.swift */,
 				2C1DEE3728C775A6001A7869 /* ImagePicker.swift */,
 				2C0D275128C813BA00DFCAFB /* ImageSaver.swift */,
 				2CA3EAA628C6957600E0A9D6 /* Assets.xcassets */,
@@ -149,6 +152,7 @@
 				2CA3EAA528C6957500E0A9D6 /* ContentView.swift in Sources */,
 				2CA3EAA328C6957500E0A9D6 /* InstafilterApp.swift in Sources */,
 				2C0D275228C813BA00DFCAFB /* ImageSaver.swift in Sources */,
+				2C48027128CA4D430015A0EA /* ContentSubViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
