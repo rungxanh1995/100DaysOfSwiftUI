@@ -44,9 +44,11 @@ struct ContentView: View {
 					Rectangle()
 						.fill(Color.accentColor.opacity(0.2))
 					
-					Text("Tap to select a picture")
-						.font(.headline)
-						.foregroundColor(.primary.opacity(0.5))
+					if inputImage == nil {
+						Text("Tap to select a picture")
+							.font(.headline)
+							.foregroundColor(.primary.opacity(0.5))						
+					}
 					
 					image?
 						.resizable()
