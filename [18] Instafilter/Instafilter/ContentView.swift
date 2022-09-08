@@ -26,7 +26,7 @@ struct ContentView: View {
 	let context: CIContext = .init()
 	
 	@State
-	private var filterIntensity: Float = 0.5
+	internal var filterIntensity: Float = 0.5
 	
 	@State
 	private var filterRadius: Float = 10.0
@@ -42,14 +42,8 @@ struct ContentView: View {
 			VStack {
 				photoFrame
 				
-				HStack {
-					Text("Intensity")
-					Slider(value: $filterIntensity)
-						.onChange(of: filterIntensity) { _ in
-							applyProcessing()
-						}
-				}
-				.padding(.vertical)
+				intensitySlider
+					.padding(.vertical)
 				
 				HStack {
 					Text("Radius")

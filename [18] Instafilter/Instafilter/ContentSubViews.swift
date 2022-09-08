@@ -29,4 +29,15 @@ extension ContentView {
 			self.showingImagePicker.toggle()
 		}
 	}
+	
+	@ViewBuilder
+	var intensitySlider: some View {
+		HStack {
+			Text("Intensity")
+			Slider(value: $filterIntensity)
+				.onChange(of: filterIntensity) { _ in
+					applyProcessing()
+				}
+		}
+	}
 }
