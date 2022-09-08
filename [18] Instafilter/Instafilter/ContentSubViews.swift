@@ -40,4 +40,15 @@ extension ContentView {
 				}
 		}
 	}
+	
+	@ViewBuilder
+	var radiusSlider: some View {
+		HStack {
+			Text("Radius")
+			Slider(value: $filterRadius)
+				.onChange(of: filterRadius) { _ in
+					self.applyProcessing()
+				}
+		}
+	}
 }

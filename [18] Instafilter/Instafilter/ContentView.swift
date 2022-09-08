@@ -29,7 +29,7 @@ struct ContentView: View {
 	internal var filterIntensity: Float = 0.5
 	
 	@State
-	private var filterRadius: Float = 10.0
+	internal var filterRadius: Float = 10.0
 	
 	@State
 	internal var showingImagePicker: Bool = false
@@ -43,16 +43,8 @@ struct ContentView: View {
 				photoFrame
 				
 				intensitySlider
-					.padding(.vertical)
-				
-				HStack {
-					Text("Radius")
-					Slider(value: $filterRadius)
-						.onChange(of: filterRadius) { _ in
-							applyProcessing()
-						}
-				}
-				
+				radiusSlider
+
 				HStack {
 					Button("Change Filter") {
 						showingFilterSheet.toggle()
