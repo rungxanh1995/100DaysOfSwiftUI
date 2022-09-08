@@ -29,6 +29,9 @@ struct ContentView: View {
 	private var filterIntensity: Float = 0.5
 	
 	@State
+	private var filterRadius: Float = 10.0
+	
+	@State
 	private var showingImagePicker: Bool = false
 	
 	@State
@@ -41,9 +44,11 @@ struct ContentView: View {
 					Rectangle()
 						.fill(Color.accentColor.opacity(0.2))
 					
-					Text("Tap to select a picture")
-						.font(.headline)
-						.foregroundColor(.primary.opacity(0.5))
+					if inputImage == nil {
+						Text("Tap to select a picture")
+							.font(.headline)
+							.foregroundColor(.primary.opacity(0.5))						
+					}
 					
 					image?
 						.resizable()
@@ -64,6 +69,14 @@ struct ContentView: View {
 				.padding(.vertical)
 				
 				HStack {
+					Text("Radius")
+					Slider(value: $filterRadius)
+						.onChange(of: filterRadius) { _ in
+							applyProcessing()
+						}
+				}
+				
+				HStack {
 					Button("Change Filter") {
 						showingFilterSheet.toggle()
 					}
@@ -71,6 +84,7 @@ struct ContentView: View {
 					Spacer()
 					
 					Button("Save", action: save)
+						.disabled(processedImage == nil)
 				}
 				.buttonStyle(.bordered)
 			}
@@ -111,7 +125,7 @@ struct ContentView: View {
 		let inputKeys = currentFilter.inputKeys
 		
 		if inputKeys.contains(kCIInputIntensityKey) { currentFilter.setValue(filterIntensity, forKey: kCIInputIntensityKey) }
-		if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterIntensity * 100, forKey: kCIInputRadiusKey) }
+		if inputKeys.contains(kCIInputRadiusKey) { currentFilter.setValue(filterRadius * 100, forKey: kCIInputRadiusKey) }
 		if inputKeys.contains(kCIInputScaleKey) { currentFilter.setValue(filterIntensity * 10, forKey: kCIInputScaleKey) }
 		
 		guard let outputImage = currentFilter.outputImage else { return }
