@@ -37,6 +37,9 @@ struct HomeView: View {
 			.task {
 				await vm.fetchData()
 			}
+			.refreshable {
+				await vm.fetchData()  // Pull to refresh
+			}
 			.toolbar {
 				layoutSwitcher
 			}
