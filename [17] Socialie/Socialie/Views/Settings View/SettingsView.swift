@@ -24,6 +24,7 @@ struct SettingsView: View {
 				) {
 					appTheme
 				}
+				.headerProminence(.increased)
 				
 				Section(
 					header: Text("Contact Developer")
@@ -44,6 +45,7 @@ struct SettingsView: View {
 						)
 					}
 				}
+				.headerProminence(.increased)
 			}
 			.navigationTitle("Settings")
 		}
