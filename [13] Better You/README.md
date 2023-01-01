@@ -29,7 +29,7 @@ I developed the app with knowledge learned from previous course modules, along w
 ## Challenges
 I faced challenges attempting to refactor persistence properties and habit arrays in `HomeView.ViewModel` into separate classes to comply to SOLID principles.
 
-A persistence bug caused data to be overwritten. Therefore, I noted that in my current code base. Hopefully going forward with the course, I'd be able to find a solution soon 🙂
+Also, for now once a habit item's category is set, it couldn't be edited. Therefore, I noted that in my current code base. Hopefully going forward with the course, I'd be able to find a solution soon 🙂
 
 ## Screenshot 📸
 ![screenshot](screenshots/screenshot.png)
