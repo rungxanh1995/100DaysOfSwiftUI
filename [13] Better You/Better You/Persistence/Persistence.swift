@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Persitence {
+protocol Persistence {
 	func encodeAndSave<T: Encodable>(_ items: T) -> Void
 	func decodeAndReturnSavedDataOrNil<T: Decodable>(type: T.Type) -> T?
 }

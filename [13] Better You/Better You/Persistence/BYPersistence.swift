@@ -8,7 +8,7 @@
 import Foundation
 
 /// Implementation class for persistence in Better You app
-final class BYPersistence: Persitence {
+final class BYPersistence: Persistence {
 	
 	private static let proxy = UserDefaults.standard
 	

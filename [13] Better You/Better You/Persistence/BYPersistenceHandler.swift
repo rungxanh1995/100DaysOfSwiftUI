@@ -8,14 +8,14 @@
 import Foundation
 
 final class BYPersistenceHandler {
-	let daily: Persitence
-	let weekly: Persitence
-	let monthly: Persitence
+	let daily: Persistence
+	let weekly: Persistence
+	let monthly: Persistence
 	
 	init(
-		dailyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .daily),
-		weeklyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .weekly),
-		monthlyPersistence: Persitence = BYPersistence(/* for: */ habitCategory: .monthly)
+		dailyPersistence: Persistence = BYPersistence(/* for: */ habitCategory: .daily),
+		weeklyPersistence: Persistence = BYPersistence(/* for: */ habitCategory: .weekly),
+		monthlyPersistence: Persistence = BYPersistence(/* for: */ habitCategory: .monthly)
 	) {
 		self.daily = dailyPersistence
 		self.weekly = weeklyPersistence
